@@ -1,0 +1,31 @@
+{
+    "geometry": {
+        "__type": "GeoPoint",
+        "type": "Point",
+        "coordinates": [
+            40.714269,
+            -74.005973
+        ]
+    },
+    "type": "Feature",
+    "properties": {
+        "Meeting Title": "SPRING VALLEY RESCUE",
+        "Meeting Title Link": "\/aa\/SPRING-VALLEY-RESCUE\/88728",
+        "Location": "Rockland County Alcohol Clinic",
+        "Location Link": "\/locations\/New-York\/Rockland-County-Alcohol-Clinic\/40027",
+        "Address": "Pomona Health Complex \nNew York, NY ",
+        "Day": "WEDNESDAY",
+        "Time": "20:00",
+        "Fellowship": "Alcoholics Anonymous",
+        "PAGE": 100,
+        "Url": "\/aa\/SPRING-VALLEY-RESCUE\/88728",
+        "Meeting Description": "Details: Format: Language: ",
+        "Details": null,
+        "Format": null,
+        "Language": null,
+        "Phone": null,
+        "Url:1": "\/locations\/New-York\/Rockland-County-Alcohol-Clinic\/40027",
+        "Location Description": "\n        Rockland County Alcohol Clinic\n        Pomona Health Complex \n                    (Bldg H) \n                New York, NY  USA        Drug Rehab in New York - Addiction Treatment in NY\n    ",
+        "Meeting Description:1": null
+    }
+}

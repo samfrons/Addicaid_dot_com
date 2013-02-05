@@ -1,0 +1,164 @@
+<header ng-include src="views['header']"></header>
+
+<nav>
+    <ul class="vertical" id="filter">
+        <li class="filterbuttons" id="statsicon"></li>
+        <li class="filterbuttons" id="rewardsicon"></li>
+        <li class="filterbuttons" id="feedicon"></li>
+        <li class="filterbuttons" id="backicon" ng-tap="$navigate.back()"></li>
+    </ul>
+</nav>
+
+
+<div class="dailydose_stats">42</br> points</div>
+<div id="meetings_tab">
+    <article id="meeting-result1" class="meeting-result">
+        <span class="side_icon" id="editicon"></span>
+        <hgroup class="hgroup_details profile">
+            <h2>Sam Frons</h2>
+            <h3 class="left_indent">24 | F</h3>
+            <h3>Brooklyn, NY</h3>
+            <h3>Casual recovery</h3>
+
+            <button class="buttons profile">message</button>
+            <button class="buttons profile">give prop</button>
+            <div id="right_result">
+
+                <aside class="badges profile">
+                    <h3>Addictions</h3>
+                    <img src="images/cannabis_icon.png">
+                    <img src="images/shopping.png">
+                    <img src="images/champagne_icon.png">
+                </aside>
+                <img class="profile standard user" src="images/samfrons.png">
+
+            </div>
+            <ul class="vertical" id="meeting_buttons">
+
+
+            </ul>
+
+        </hgroup>
+    </article>
+
+
+    <article id="interests" class="word_choice" >
+        <span class="side_icon" id="editicon"></span>
+        <div class="card_content">
+            <h1 class="introhead">Interests</h1>
+            <ul class="vertical interests">
+                <li><img src="images/list_icon.png"><span>writing</span></li>
+                <li><img src="images/fountain-pen-icon.png"><span>inking</span></li>
+                <li><img src="images/point-graph.png"><span>data</span></li>
+                <li><img src="images/chef-icon.png"><span>cooking</span></li>
+                
+            </ul>
+        </div>
+    </article>
+
+
+    <article id="dailydose" class="picture intro">
+        <span class="side_icon" id="editicon"></span>
+        <div class="card_content">
+            <h1 class="introhead">Rock Bottom</h1>
+            <p class="paragraph">Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows</p>
+            <h1 class="introhead second">Moment of Clarity</h1>
+            <p class="paragraph">Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows</p>
+        </div>
+    </article>
+    <article id="meeting-result1" class="meeting-result">
+        <span class="side_icon" id="meetingicon"></span>
+
+        <hgroup class="hgroup_details">
+            <h2>A Bridge Back</h2>
+            <h3 class="left_indent">St. Andrew's Church</h3>
+            <h4>20 Cardinal Hayes Place</h4>
+            <h5>Brooklyn, NY 11206 </h5>
+
+            <div id="right_result">
+                <aside class="badges">
+                    <img src="images/award_icon.png">
+                    <img src="images/wheelchair.png">
+                    <img src="images/large_group.png">
+                    <h3>42 members</h3>
+                </aside>
+                <hgroup class="date">
+                    <h3>MON</h3>
+                    <h3>7PM</h3>
+                    <p id="add_meeting">+</p>
+                </hgroup>
+
+            </div>
+            <ul class="vertical" id="meeting_buttons">
+                <li class="star"></li>
+                <button class="meeting_go_button">Go!</button>
+            </ul>
+
+        </hgroup>
+        <ul class="vertical" id="meeting_graphics">
+
+            <li>
+                <img src="images/award_icon.png">
+            </li>
+
+            <li>
+                <img src="images/wheelchair.png">
+            </li>
+
+            <li>
+                <img src="images/large_group.png">
+            </li>
+            <li>
+                <img src="images/coffee-cup-icon.png">
+            </li>
+
+            <li>
+                <img src="images/cupcake_icon.png">
+            </li>
+        </ul>
+
+        <h3>Meeting Members</h3>
+        <ul class="vertical" id="meeting_members">
+            <li><img src="images/member1.png"><span>bill</span></li>
+            <li><img src="images/member2.png"><span>bob</span></li>
+            <li><img src="images/member3.png"><span>suzzi</span></li>
+            <li><img src="images/member4.png"><span>jim</span></li>
+            <li><img src="images/member5.png"><span>anne</span></li>
+            <li><img src="images/member6.png"><span>harry</span></li>
+        </ul>
+
+        <h3>Meeting Feed</h3>
+        <ul id="comments">
+            <li>
+                <h4>That was a great meeting! The cookies were awesome!!!</h4>
+                <p>from suzzi <span id="post_time">20 minutes ago</span></p>
+            </li>
+
+            <li>
+                <h4>that was an awful meeting!</h4>
+                <p>from bill <span id="post_time">1 hour ago</span></p>
+            </li>
+
+            <form method="post" action="">
+                <textarea name="comments">
+                    Enter your comments here...
+                </textarea><br>
+                <button type="submit" value="Submit" id="comment_submit" />submit</button>
+            </form>
+
+
+        </ul></article>
+    <article id="dailydose" class="fill_in">
+        <span class="side_icon" id="editicon"></span>
+        <div class="card_content">
+            <ul class="vertical pictures" >
+                <li><img src="images/hope1.png"></li>
+                <li><img src="images/gilded.jpeg"></li>
+                <li><img src="images/9.jpeg"></li>
+                <li><img src="images/hope2.png"></li>
+                <li><img src="images/hope3.png"></li>
+                <li><img src="images/hope4.png"></li>
+            </ul>
+            <div class="dailydose_stats challenge"> 3</div>
+        </div>
+    </article>

@@ -1,0 +1,15 @@
+<header ng-include src="views['header']"></header>
+<nav>
+    <ul class="vertical" id="filter">
+        <li class="filterbuttons" id="meetingicon" ng-tap="$navigate.go('/meetings_map', 'slide')"></li>
+        <li class="filterbuttons" id="filtericon" ng-tap="$navigate.go('/meetings_filter', 'slide')"></li>
+    </ul>
+</nav>
+
+<div ng-repeat="card in cards">
+    <ng-include src="views.cards['meeting']"></ng-include>
+</div>
+        <article></article>
+
+<nav class="bottom_nav" ng-include src="views['footer']"></nav>
+

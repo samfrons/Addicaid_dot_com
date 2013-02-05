@@ -1,0 +1,21 @@
+<article id="dailydose" class="meeting-result" ng-style="cards[$index].expandedStyle">
+    <span class="side_icon" id="dailydoseicon"></span>
+    <div class="card_content">
+        <h1>So, what's it like today?</h1>
+        <ul class="listgrid" id="worddose">
+            <input type = "checkbox" id = "aa" class="radiogrid" value = "aa" /><label for = "aa">tumultous</label>
+            <input type = "checkbox" id = "aa" class="radiogrid" value = "aa" /><label for = "aa">tumultous</label>
+            <input type = "checkbox" id = "aa" class="radiogrid" value = "aa" /><label for = "aa">desperate</label>
+            <input type = "checkbox" id = "aa" class="radiogrid" value = "aa" /><label for = "aa">unbridled</label>
+            <input type = "checkbox" id = "aa" class="radiogrid" value = "aa" /><label for = "aa">desperate</label>
+            <input type = "checkbox" id = "aa" class="radiogrid" value = "aa" /><label for = "aa">unbridled</label>
+
+
+        </ul>
+        <button class="buttons">Share</button>
+        <button ng-class="multiClass([ 'buttons', cards[$index].secretButtonClass ])"
+                ng-tap="tapDDSubmit(cards[$index],'secret')">
+            {{cards[$index].secretButtonText}}
+        </button>
+    </div>
+</article>

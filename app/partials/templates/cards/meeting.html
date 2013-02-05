@@ -1,0 +1,65 @@
+<article id="meeting-result1" class="meeting-result" ui-show="cards[$index].isExpanded">
+    <span class="side_icon" id="meetingicon"></span>
+    <hgroup class="hgroup_details">
+        <h2>{{card.data.title}}</h2>
+        <h3 class="left_indent">{{card.data.location.title}}</h3>
+        <h4>{{card.data.location.address1}}</h4>
+        <h5>{{card.data.location.address2}}</h5>
+
+        <div id="right_result">
+            <aside class="badges">
+                <img src="images/award_icon.png">
+                <img src="images/wheelchair.png">
+                <img src="images/large_group.png">
+                <h3>{{cards[$index].data.numberOfMembers}} members</h3>
+            </aside>
+            <button class="expander" ui-toggle="cards[$index].isExpanded" ng-tap="cards[$index].isExpanded=!cards[$index].isExpanded"></button>
+            <hgroup class="date">
+                <h3>{{cards[$index].data.calendar.day}}</h3>
+                <h3>{{cards[$index].data.calendar.time}}</h3>
+                <p id="add_meeting">+</p>
+            </hgroup>
+        </div>
+        <ul class="vertical" id="meeting_buttons">
+            <li class="star"></li>
+            <button class="meeting_go_button"
+                    ng-tap="setMeetingGoing(cards[$index],!cards[$index].isGoing)"
+                    ui-toggle="cards[$index].isGoing">
+                {{ cards[$index].goingText }}
+            </button>
+        </ul>
+    </hgroup>
+
+    <ul class="vertical" id="meeting_graphics">
+        <li><img src="images/award_icon.png"></li>
+        <li><img src="images/wheelchair.png"></li>
+        <li><img src="images/large_group.png"></li>
+        <li><img src="images/coffee-cup-icon.png"></li>
+        <li><img src="images/cupcake_icon.png"></li>
+    </ul>
+
+    <h3>Meeting Members</h3>
+    <ul class="vertical" id="meeting_members">
+        <li ng-repeat="member in cards[$index].data.members">
+            <img ng-src="images/{{member.imageSrcName}}"><span>{{member.name}}</span>
+        </li>
+    </ul>
+
+    <h3>Meeting Feed</h3>
+    <ul id="comments">
+        <li>
+            <h4>That was a great meeting! The cookies were awesome!!!</h4>
+            <p>from suzzi <span id="post_time">20 minutes ago</span></p>
+        </li>
+        <li>
+            <h4>that was an awful meeting!</h4>
+            <p>from bill <span id="post_time">1 hour ago</span></p>
+        </li>
+        <form method="post" action="">
+            <textarea name="comments">
+                Enter your comments here...
+            </textarea><br>
+            <button type="submit" value="Submit" id="comment_submit" />submit</button>
+        </form>
+    </ul>
+</article>

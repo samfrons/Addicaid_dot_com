@@ -1,0 +1,32 @@
+{
+    "cardType" : "dailydose-word_choice",
+    "data" : {
+        "challengePoints" : "4",
+        "prompt" : "So what's it like today?",
+        "input" : {
+            "items" : [
+                {
+                    "label": "accepting"
+                },
+                {
+                    "label": "happy"
+                },
+                {
+                    "label": "unbridled!"
+                },
+                {
+                    "label": "hopeful"
+                },
+                {
+                    "label": "anxious"
+                },
+                {
+                    "label": "adventure!"
+                },
+                {
+                    "label": "desperate"
+                }
+            ]
+        }
+    }
+}

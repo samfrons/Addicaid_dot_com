@@ -1,0 +1,7 @@
+{
+    "cardType" : "dailydose-fill_in",
+    "data" : {
+        "prompt" : "Today I'm <input type=\"text\"> because it's<input type=\"text\">and there's no way to <input type=\"text\"> .",
+        "challengePoints" : "2"
+    }
+}
