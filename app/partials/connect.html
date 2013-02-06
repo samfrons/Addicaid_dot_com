@@ -1,0 +1,18 @@
+<header ng-include src="views['header']"></header>
+
+<nav>
+    <ul class="vertical" id="filter">
+
+        <li class="filterbuttons" id="statsicon"></li>
+        <li class="filterbuttons" id="rewardsicon"></li>
+        <li class="filterbuttons" id="feedicon"></li>
+        <li class="filterbuttons" id="editicon"></li>
+    </ul>
+</nav>
+
+<div ng-repeat="card in cards" ng-switch="card.cardType">
+    <ng-include ng-switch-when="user" src="views.cards['connect-standard']"></ng-include>
+</div>
+<article></article>
+
+<nav class="bottom_nav" ng-include src="views['footer']"></nav>

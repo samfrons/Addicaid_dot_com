@@ -1,0 +1,54 @@
+/* style.sass */
+/* line 7, ../sass/pages/_mainstyle.sass */
+ul { padding: 0; margin: 0; }
+
+/* line 11, ../sass/pages/_mainstyle.sass */
+ul li { list-style-type: none; display: inline-block; vertical-align: top; background-color: blue; padding: 0; margin: 0; }
+
+/* line 19, ../sass/pages/_mainstyle.sass */
+hgroup { line-height: 1em; }
+
+/* line 22, ../sass/pages/_mainstyle.sass */
+hgroup { color: yellow; }
+
+/* line 26, ../sass/pages/_mainstyle.sass */
+.grids { display: inline-block; vertical-align: top; }
+
+/* line 30, ../sass/pages/_mainstyle.sass */
+.grid-12 { background: red; color: yellow; }
+
+/* line 34, ../sass/pages/_mainstyle.sass */
+.grid-1 { width: 6.15%; color: green; }
+
+/* line 38, ../sass/pages/_mainstyle.sass */
+.grid-2 { width: 14.583%; }
+
+/* line 41, ../sass/pages/_mainstyle.sass */
+.grid-3 { width: 22.917%; }
+
+/* line 44, ../sass/pages/_mainstyle.sass */
+.grid-4 { width: 31.25%; }
+
+/* line 47, ../sass/pages/_mainstyle.sass */
+.grid-5 { width: 39.583%; }
+
+/* line 50, ../sass/pages/_mainstyle.sass */
+.grid-6 { width: 47.917%; }
+
+/* line 53, ../sass/pages/_mainstyle.sass */
+.grid-7 { width: 56.25%; }
+
+/* line 56, ../sass/pages/_mainstyle.sass */
+.grid-8 { width: 64.583%; }
+
+/* line 59, ../sass/pages/_mainstyle.sass */
+.grid-9 { width: 72.917%; }
+
+/* line 62, ../sass/pages/_mainstyle.sass */
+.grid-10 { width: 81.25%; }
+
+/* line 65, ../sass/pages/_mainstyle.sass */
+.grid-11 { width: 89.583%; }
+
+/* line 68, ../sass/pages/_mainstyle.sass */
+.grid-12 { width: 97.917%; width-margin: 0; }
