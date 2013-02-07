@@ -5,16 +5,16 @@
 angular.module('addicaidApp',
         [
             'addicaidApp.filters', 'addicaidApp.services', 'addicaidApp.directives',
-            'mobile-navigate',
-            'ui'
+            'mobile-navigate'
+//            'ui'
         ])
 
     .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
         $routeProvider
-            .when('/map', { templateUrl: 'views/map.html', controller: MapCtrl })
+//            .when('/map', { templateUrl: 'views/map.html', controller: MapCtrl })
             .when('/meetinglist', { templateUrl: 'views/meeting-list.html', controller: MeetingListCtrl })
-//            .when('/', { templateUrl: 'views/home', controller: HomeCtrl })
-            .otherwise({ redirectTo: '/meetinglist' });
+            .when("/", { templateUrl: 'views/meeting-list.html', controller: MeetingListCtrl })
+            .otherwise({ redirectTo: "/" });
         $locationProvider.html5Mode(true);
     }])
 

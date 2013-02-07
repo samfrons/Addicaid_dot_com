@@ -15,8 +15,8 @@ Backtrace:
 /Library/Ruby/Gems/1.8/gems/sass-3.2.5/bin/../lib/sass/../sass/exec.rb:41:in `parse'
 /Library/Ruby/Gems/1.8/gems/sass-3.2.5/bin/../lib/sass/../sass/exec.rb:21:in `parse!'
 /Library/Ruby/Gems/1.8/gems/sass-3.2.5/bin/sass:8
-/usr/bin/sass:19:in `load'
-/usr/bin/sass:19
+/usr/bin/sass:23:in `load'
+/usr/bin/sass:23
 */
 body:before {
   white-space: pre;

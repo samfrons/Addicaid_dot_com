@@ -7,16 +7,12 @@
     </hgroup>
 
     <aside class="grids grid-3">
-        <time>{{meeting.calendar.time.formatted}}</time>
-        <time datetime="monday">{{meeting.calendar.day.short}}</time>
-        <button>add rating</button>
+        <time>{{meeting.calendar.time}}</time>
+        <time datetime="monday">{{meeting.calendar.dayShort}}</time>
 
+        <button>add rating</button>
         <ul ng-repeat="rating in meeting.ratings" class="grids">
-            <li class="grids grid-2">{{rating.category}}<p class="voteNumber">{{rating.number}}</p></li>
-            <!--<li class="grids grid-2">snacks<p class="voteNumber">12</p></li>-->
-            <!--<li class="grids grid-2">coffee<p class="voteNumber">2</p></li>-->
-            <!--<li class="grids grid-2">fellowship<p class="voteNumber">40</p></li>-->
-            <!--<li class="grids grid-2">young people<p class="voteNumber">20</p></li>-->
+            <li class="grids grid-2">{{rating.category}}<p class="voteNumber">{{rating.votes}}</p></li>
         </ul>
     </aside>
     <!--

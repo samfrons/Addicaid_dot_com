@@ -1,16 +1,16 @@
-<ngInclude src="views.header"></ngInclude>
+<ng-include src="views.header"></ng-include>
 
 
 
 
 
-<div ng-repeat="card in cards">
-    <ng-include src="views.meetingList"></ng-include>
-</div>
+<article ng-repeat="meeting in meetings">
+    <ng-include src="views.meetingDetail"></ng-include>
+</article>
 
 
 
 
 
-<ngInclude src="views.footer"></ngInclude>
+<ng-include src="views.footer"></ng-include>
 
