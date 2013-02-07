@@ -1,0 +1,26 @@
+<article class="grids grid-12 meeting_entry">
+    <aside class="grids grid-1">{{meeting.fellowship.id}}</aside>
+    <hgroup class="grids grid-7">
+        <h1>{{meeting.title}}</h1>
+        <h2>{{meeting.location.title}}</h2>
+        <h3>{{meeting.location.address}}</h3>
+    </hgroup>
+
+    <aside class="grids grid-3">
+        <time>{{meeting.calendar.time.formatted}}</time>
+        <time datetime="monday">{{meeting.calendar.day.short}}</time>
+        <button>add rating</button>
+
+        <ul ng-repeat="rating in meeting.ratings" class="grids">
+            <li class="grids grid-2">{{rating.category}}<p class="voteNumber">{{rating.number}}</p></li>
+            <!--<li class="grids grid-2">snacks<p class="voteNumber">12</p></li>-->
+            <!--<li class="grids grid-2">coffee<p class="voteNumber">2</p></li>-->
+            <!--<li class="grids grid-2">fellowship<p class="voteNumber">40</p></li>-->
+            <!--<li class="grids grid-2">young people<p class="voteNumber">20</p></li>-->
+        </ul>
+    </aside>
+    <!--
+<button type="submit">directions</button>
+<button type="submit">go!</button>
+-->
+</article>
