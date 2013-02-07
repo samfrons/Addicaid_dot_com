@@ -41,11 +41,11 @@
     <body>
 
         <section class="view">
-        <header class="grids"><button class="grids grid-2">back</button><h1 class="grids grid-8">Meeting List</h1>
-            <button class="grids grid-2">settings</button></header>
+        <header class="grids grid-12"><button class="grids grid-2 back"><!--back--></button><h1 class="grids grid-8">Meeting List</h1>
+            <button class="grids grid-2 settings"><!--settings--></button></header>
         
         <article class="grids grid-12 meeting_entry">
-            <aside class="grids grid-1">fellowship type</aside>
+            <aside class="grids grid-1 fellowshipType AA">AA</aside>
             <hgroup class="grids grid-7">
             <h1>Meeting Title</h1>
             <h2>Meeting address</h2>
@@ -53,20 +53,20 @@
             </hgroup>
                 
                 <aside class="grids grid-3">
-                <time>10 AM</time>
+                <time class="time">10 AM</time><br/>
                 <time datetime="monday">MON</time>
-                <ul class="grids">
+                <ul class="grids ratings">
                 <button>add rating</button>
-                <li class="grids grid-2">snacks<p class="voteNumber">12</p></li>
-                <li class="grids grid-2">coffee<p class="voteNumber">2</p></li>
-                <li class="grids grid-2">fellowship<p class="voteNumber">40</p></li>
-                <li class="grids grid-2">young people<p class="voteNumber">20</p></li>
+                <li class="grids grid-3 snacks">snacks<p class="voteNumber">12</p></li>
+                <li class="grids grid-3 coffee">coffee<p class="voteNumber">2</p></li>
+                <li class="grids grid-3 fellowship">fellowship<p class="voteNumber">40</p></li>
+                <li class="grids grid-3 youngpeople">young people<p class="voteNumber">20</p></li>
             </ul>
                 </aside>
-                <!--
+               
             <button type="submit">directions</button>
             <button type="submit">go!</button>
-            -->
+          
         </article>
 <!--
         <article class="grids meeting_entry">
@@ -90,7 +90,7 @@
         </article>
     -->
           <nav>
-        <ul>
+        <ul class="bottom">
             <li class="grid-4">map</li>
             <li class="grid-4">filter</li>
             <li class="grid-4">saved</li>

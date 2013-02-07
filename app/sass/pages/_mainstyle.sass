@@ -1,8 +1,55 @@
 /* style.sass */
+$main-color: #2A2a2a
+
+@mixin backgrounds
+ background-color: transparent
+ border-style: none
+ min-height: 35px
+ background-repeat: no-repeat
+ background-size: 100% auto
+
+@mixin rounded
+ border-radius: 10px
+
+@mixin gradient
+ background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#a8a8a8))
+
+@mixin gradient-blue
+ background-image: -webkit-linear-gradient(top, #0088cc, #0044cc)
 
 body
  form
   h1
+
+header.grid-12
+ background-image: url(../images/headerbackground.png)
+ background-size: 100% auto
+
+header
+ h1 
+  margin: 0
+  padding: 0
+  text-align: center
+  color: white
+  text-shadow: 0px 1px 2px black
+  font-family: Dawning of a new day
+  min-height: 55px
+
+button
+ color: white
+ margin: 20px
+ @include gradient-blue
+
+button.back
+ background-image: url(../images/back_button.png)
+ @include backgrounds
+ background-size: auto
+
+
+button.settings
+ background-image: url(../images/profile.png)
+ @include backgrounds
+ background-size: auto
 
 ul
  padding: 0
@@ -12,28 +59,59 @@ ul li
  list-style-type: none
  display: inline-block
  vertical-align: top
- background-color: blue
  padding: 0
  margin: 0
 
 hgroup 
- line-height: 1em
+ line-height: .4em
+ font-family: Quaver Serif
 
 hgroup 
  h1 h2 h3 
- color: yellow
+ color: $main-color
+ &:hover 
+  color: green
+
+.fellowshipType.AA
+ color: white
+ text-align: center
+ margin: 2px
+ border-radius: 1em
+ box-shadow: 0px 1px 2px black
+ @include gradient-blue
+
+time
+ p
+ text-align: right
+ color: red
+
+ul.ratings
+ li
+  @include backgrounds
+ li.snacks
+  background-image: url(../images/feed_sideicon.png)
+ li.coffee
+  background-image: url(../images/medal-icon.png)
+ li.fellowship
+  background-image: url(../images/meetings_sideicon.png)
+ li.youngpeople
+  background-image: url(../images/feed_sideicon.png)
+
+nav 
+ .bottom 
+  text-align: center
+  @include gradient
 
 .grids
  display: inline-block
  vertical-align: top
+ overflow: hidden
 
 .grid-12
- background: red
- color: yellow
+ @include gradient
 
 .grid-1 
  width: 6.15%
- color: green
 
 .grid-2 
  width: 14.583%
@@ -42,7 +120,9 @@ hgroup
  width: 22.917%
 
 .grid-4
- width: 31.25%
+ width: 32.25%
+ margin: 0
+ padding: 0
 
 .grid-5 
  width: 39.583%
@@ -66,7 +146,7 @@ hgroup
  width: 89.583%
 
 .grid-12 
- width: 97.917%
+ width: 100%
   margin: 0
 
 
