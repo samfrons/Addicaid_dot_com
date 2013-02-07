@@ -1,54 +1,91 @@
 /* style.sass */
-/* line 7, ../sass/pages/_mainstyle.sass */
-ul { padding: 0; margin: 0; }
+/* line 24, ../sass/pages/_mainstyle.sass */
+header.grid-12 { background-image: url(../images/headerbackground.png); background-size: 100% auto; }
 
-/* line 11, ../sass/pages/_mainstyle.sass */
-ul li { list-style-type: none; display: inline-block; vertical-align: top; background-color: blue; padding: 0; margin: 0; }
-
-/* line 19, ../sass/pages/_mainstyle.sass */
-hgroup { line-height: 1em; }
-
-/* line 22, ../sass/pages/_mainstyle.sass */
-hgroup { color: yellow; }
-
-/* line 26, ../sass/pages/_mainstyle.sass */
-.grids { display: inline-block; vertical-align: top; }
-
-/* line 30, ../sass/pages/_mainstyle.sass */
-.grid-12 { background: red; color: yellow; }
-
-/* line 34, ../sass/pages/_mainstyle.sass */
-.grid-1 { width: 6.15%; color: green; }
+/* line 29, ../sass/pages/_mainstyle.sass */
+header h1 { margin: 0; padding: 0; text-align: center; color: white; text-shadow: 0px 1px 2px black; font-family: Dawning of a new day; min-height: 55px; }
 
 /* line 38, ../sass/pages/_mainstyle.sass */
-.grid-2 { width: 14.583%; }
+button { color: white; margin: 20px; background-image: -webkit-linear-gradient(top, #0088cc, #0044cc); }
 
-/* line 41, ../sass/pages/_mainstyle.sass */
-.grid-3 { width: 22.917%; }
+/* line 43, ../sass/pages/_mainstyle.sass */
+button.back { background-image: url(../images/back_button.png); background-color: transparent; border-style: none; min-height: 35px; background-repeat: no-repeat; background-size: 100% auto; background-size: auto; }
 
-/* line 44, ../sass/pages/_mainstyle.sass */
-.grid-4 { width: 31.25%; }
+/* line 49, ../sass/pages/_mainstyle.sass */
+button.settings { background-image: url(../images/profile.png); background-color: transparent; border-style: none; min-height: 35px; background-repeat: no-repeat; background-size: 100% auto; background-size: auto; }
 
-/* line 47, ../sass/pages/_mainstyle.sass */
-.grid-5 { width: 39.583%; }
+/* line 54, ../sass/pages/_mainstyle.sass */
+ul { padding: 0; margin: 0; }
 
-/* line 50, ../sass/pages/_mainstyle.sass */
-.grid-6 { width: 47.917%; }
-
-/* line 53, ../sass/pages/_mainstyle.sass */
-.grid-7 { width: 56.25%; }
-
-/* line 56, ../sass/pages/_mainstyle.sass */
-.grid-8 { width: 64.583%; }
-
-/* line 59, ../sass/pages/_mainstyle.sass */
-.grid-9 { width: 72.917%; }
-
-/* line 62, ../sass/pages/_mainstyle.sass */
-.grid-10 { width: 81.25%; }
+/* line 58, ../sass/pages/_mainstyle.sass */
+ul li { list-style-type: none; display: inline-block; vertical-align: top; padding: 0; margin: 0; }
 
 /* line 65, ../sass/pages/_mainstyle.sass */
+hgroup { line-height: 0.4em; font-family: Quaver Serif; }
+
+/* line 69, ../sass/pages/_mainstyle.sass */
+hgroup { color: #2a2a2a; }
+/* line 72, ../sass/pages/_mainstyle.sass */
+hgroup:hover { color: green; }
+
+/* line 75, ../sass/pages/_mainstyle.sass */
+.fellowshipType.AA { color: white; text-align: center; margin: 2px; border-radius: 1em; box-shadow: 0px 1px 2px black; background-image: -webkit-linear-gradient(top, #0088cc, #0044cc); }
+
+/* line 83, ../sass/pages/_mainstyle.sass */
+time { text-align: right; color: red; }
+
+/* line 89, ../sass/pages/_mainstyle.sass */
+ul.ratings li { background-color: transparent; border-style: none; min-height: 35px; background-repeat: no-repeat; background-size: 100% auto; }
+/* line 91, ../sass/pages/_mainstyle.sass */
+ul.ratings li.snacks { background-image: url(../images/feed_sideicon.png); }
+/* line 93, ../sass/pages/_mainstyle.sass */
+ul.ratings li.coffee { background-image: url(../images/medal-icon.png); }
+/* line 95, ../sass/pages/_mainstyle.sass */
+ul.ratings li.fellowship { background-image: url(../images/meetings_sideicon.png); }
+/* line 97, ../sass/pages/_mainstyle.sass */
+ul.ratings li.youngpeople { background-image: url(../images/feed_sideicon.png); }
+
+/* line 101, ../sass/pages/_mainstyle.sass */
+nav .bottom { text-align: center; background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#a8a8a8)); }
+
+/* line 105, ../sass/pages/_mainstyle.sass */
+.grids { display: inline-block; vertical-align: top; overflow: hidden; }
+
+/* line 110, ../sass/pages/_mainstyle.sass */
+.grid-12 { background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#a8a8a8)); }
+
+/* line 113, ../sass/pages/_mainstyle.sass */
+.grid-1 { width: 6.15%; }
+
+/* line 116, ../sass/pages/_mainstyle.sass */
+.grid-2 { width: 14.583%; }
+
+/* line 119, ../sass/pages/_mainstyle.sass */
+.grid-3 { width: 22.917%; }
+
+/* line 122, ../sass/pages/_mainstyle.sass */
+.grid-4 { width: 32.25%; margin: 0; padding: 0; }
+
+/* line 127, ../sass/pages/_mainstyle.sass */
+.grid-5 { width: 39.583%; }
+
+/* line 130, ../sass/pages/_mainstyle.sass */
+.grid-6 { width: 47.917%; }
+
+/* line 133, ../sass/pages/_mainstyle.sass */
+.grid-7 { width: 56.25%; }
+
+/* line 136, ../sass/pages/_mainstyle.sass */
+.grid-8 { width: 64.583%; }
+
+/* line 139, ../sass/pages/_mainstyle.sass */
+.grid-9 { width: 72.917%; }
+
+/* line 142, ../sass/pages/_mainstyle.sass */
+.grid-10 { width: 81.25%; }
+
+/* line 145, ../sass/pages/_mainstyle.sass */
 .grid-11 { width: 89.583%; }
 
-/* line 68, ../sass/pages/_mainstyle.sass */
-.grid-12 { width: 97.917%; width-margin: 0; }
+/* line 148, ../sass/pages/_mainstyle.sass */
+.grid-12 { width: 100%; width-margin: 0; }
