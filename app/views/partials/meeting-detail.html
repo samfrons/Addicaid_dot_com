@@ -1,22 +1,45 @@
 <article class="grids grid-12 meeting_entry">
-    <aside class="grids grid-1">{{meeting.fellowship.id}}</aside>
-    <hgroup class="grids grid-7">
+    <aside ng-class="grids grid-1 fellowshipType meeting.fellowship.cssClass">{{meeting.fellowship.id}}</aside>
+    <hgroup class="grids grid-8">
         <h1>{{meeting.title}}</h1>
         <h2>{{meeting.location.title}}</h2>
         <h3>{{meeting.location.address}}</h3>
+
+        <ul class="grids grid-11 ratings" ng-repeat="rating in meeting.ratings">
+            <li ng-class="grids grid-3 rating.categoryCssClass">{{rating.categoryName}}<p class="voteNumber">{{rating.votes}}</p></li>
+        </ul>
+        <!--<button>add rating</button>-->
+
     </hgroup>
 
     <aside class="grids grid-3">
-        <time>{{meeting.calendar.time}}</time>
+        <time class="time">{{meeting.calendar.time}}</time><br/>
         <time datetime="monday">{{meeting.calendar.dayShort}}</time>
-
-        <button>add rating</button>
-        <ul ng-repeat="rating in meeting.ratings" class="grids">
-            <li class="grids grid-2">{{rating.category}}<p class="voteNumber">{{rating.votes}}</p></li>
-        </ul>
+        <button class="grids grid-7" type="submit">directions</button>
+        <button class="grids grid-7"type="submit">go!</button>
     </aside>
-    <!--
-<button type="submit">directions</button>
-<button type="submit">go!</button>
--->
+</article>
+
+    <!--<aside class="grids grid-1 fellowshipType AA">AA</aside>-->
+
+
+        <!--<ul class="grids grid-11 ratings">-->
+
+            <!--<li class="grids grid-3 snacks">snacks<p class="voteNumber">12</p></li>-->
+            <!--<li class="grids grid-3 coffee">coffee<p class="voteNumber">2</p></li>-->
+            <!--<li class="grids grid-3 fellowship">fellowship<p class="voteNumber">40</p></li>-->
+            <!--<li class="grids grid-3 youngpeople">young<p class="voteNumber">20</p></li>-->
+            <!--<li class="grids grid-3 vote">vote</li>-->
+
+        <!--</ul>-->
+
+
+        <!--<time datetime="monday">MON</time>-->
+        <button class="grids grid-7" type="submit">directions</button>
+        <button class="grids grid-7"type="submit">go!</button>
+
+    </aside>
+
+
+
 </article>
