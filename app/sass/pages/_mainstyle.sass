@@ -1,4 +1,10 @@
 /* style.sass */
+$experimental-support-for-mozilla : true !default
+$experimental-support-for-webkit : true !default
+$support-for-original-webkit-gradients : true !default
+$experimental-support-for-opera : true !default
+$experimental-support-for-microsoft : true !default
+
 $main-color: #2A2a2a
 
 @mixin backgrounds
@@ -16,6 +22,9 @@ $main-color: #2A2a2a
 
 @mixin gradient-blue
  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc)
+
+html
+ font-size: 1em
 
 body
  font-family: Gotham
@@ -55,7 +64,6 @@ button.settings
 article.meeting_entry
  margin: 5px 0 5px 0
  box-shadow: 0px 1px 5px black
- background-image: url(http://subtlepatterns.com/patterns/concrete_wall_2.png)
 
 ul
  padding: 0
@@ -70,7 +78,7 @@ ul li
 
 hgroup 
  line-height: .4em
- font-family: alright sans
+ font-family: helvetica neue
 
 hgroup 
  h1 h2 h3 
@@ -128,7 +136,6 @@ nav
  overflow: hidden
 
 .grid-12
- @include gradient
 
 .grid-1 
  width: 6.15%
