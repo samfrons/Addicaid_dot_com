@@ -7,7 +7,9 @@
         },
         "location" : {
             "title" : "St. Andrew's Church",
-            "address1" : "20 Cardinal Hayes Place\nBrooklyn, NY 11206"
+            "address1" : "20 Cardinal Hayes Place",
+            "address2" : "Brooklyn, NY 11206"
+
         },
         "calendar" : {
             "dayShort" : "WED",
@@ -18,24 +20,99 @@
             {
                 "category" : "snacks",
                 "categoryCssClass" : "snacks",
-                "votes" : 12
+                "votes" : "12"
             },
             {
                 "category" : "coffee",
                 "categoryCssClass" : "coffee",
-                "votes" : 2
+                "votes" : "2"
             },
             {
                 "category" : "fellowship",
                 "categoryCssClass" : "fellowship",
-                "votes" : 40
+                "votes" : "40"
             },
             {
                 "category" : "young",
                 "categoryCssClass" : "youngpeople",
-                "votes" : 20
+                "votes" : "20"
             }
         ]
-
+    },
+    {
+        "title" : "Meeting Title 2",
+        "fellowship" : {
+            "id" : "NA",
+            "name" : "Narcotics Anonymous"
+        },
+        "location" : {
+            "title" : "Location Title 2",
+            "address1" : "180 Sterling Pl"
+        },
+        "calendar" : {
+            "dayShort" : "MON",
+            "dayLong" : "MONDAY",
+            "time" : "6 PM"
+        },
+        "ratings" : [
+            {
+                "category" : "snacks",
+                "categoryCssClass" : "snacks",
+                "votes" : "1"
+            },
+            {
+                "category" : "coffee",
+                "categoryCssClass" : "coffee",
+                "votes" : "0"
+            },
+            {
+                "category" : "fellowship",
+                "categoryCssClass" : "fellowship",
+                "votes" : "12"
+            },
+            {
+                "category" : "young",
+                "categoryCssClass" : "youngpeople",
+                "votes" : "0"
+            }
+        ]
+    },
+    {
+        "title" : "Meeting Title 3",
+        "fellowship" : {
+            "id" : "AA",
+            "name" : "Alcoholics Anonymous"
+        },
+        "location" : {
+            "title" : "Location Title 3",
+            "address1" : "Address1 3"
+        },
+        "calendar" : {
+            "dayShort" : "SUN",
+            "dayLong" : "SUNDAY",
+            "time" : "12:30 PM"
+        },
+        "ratings" : [
+            {
+                "category" : "snacks",
+                "categoryCssClass" : "snacks",
+                "votes" : "0"
+            },
+            {
+                "category" : "coffee",
+                "categoryCssClass" : "coffee",
+                "votes" : "0"
+            },
+            {
+                "category" : "fellowship",
+                "categoryCssClass" : "fellowship",
+                "votes" : "0"
+            },
+            {
+                "category" : "young",
+                "categoryCssClass" : "youngpeople",
+                "votes" : "0"
+            }
+        ]
     }
 ]

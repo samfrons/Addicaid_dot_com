@@ -1,27 +1,26 @@
 <article class="grids grid-12 meeting_entry">
-    <aside class="grids grid-1 fellowshipType" ng-class="meeting.fellowship.id">{{meeting.fellowship.name}}</aside>
+    <aside class="grids grid-1 fellowshipType" ng-class="meeting.fellowship.id">{{meeting.fellowship.id}}</aside>
     <hgroup class="grids grid-8">
         <h1>{{meeting.title}}</h1>
         <h2>{{meeting.location.title}}</h2>
-        <h3>{{meeting.location.address}}</h3>
+        <h3>{{meeting.location.address1}}</h3>
 
-        <ul class="grids grid-11 ratings" ng-repeat="rating in meeting.ratings">
-            <li ng-class="grids grid-3 rating.categoryCssClass">{{rating.categoryName}}<p class="voteNumber">{{rating.votes}}</p></li>
+        <ul class="grids grid-11 ratings">
+            <li ng-repeat="rating in meeting.ratings"
+                class="grids grid-3" ng-class="rating.categoryCssClass">{{rating.categoryName}}<p class="voteNumber">{{rating.votes}}</p></li>
+            <li class="grids grid-3 vote">vote</li>
         </ul>
-        <!--<button>add rating</button>-->
 
     </hgroup>
 
     <aside class="grids grid-3">
         <time class="time">{{meeting.calendar.time}}</time><br/>
         <time datetime="monday">{{meeting.calendar.dayShort}}</time>
-        <button class="grids grid-7" type="submit">directions</button>
-        <button class="grids grid-7" type="submit">go!</button>
+        <br/>
+        <button class="grids grid-5" type="submit">directions</button>
+        <button class="grids grid-5" type="submit">go!</button>
     </aside>
 </article>
-
-    <!--<aside class="grids grid-1 fellowshipType AA">AA</aside>-->
-
 
 
         <!--<time datetime="monday">MON</time>-->
