@@ -17,18 +17,22 @@
         "ratings" : [
             {
                 "category" : "snacks",
+                "categoryCssClass" : "snacks",
                 "votes" : 12
             },
             {
                 "category" : "coffee",
+                "categoryCssClass" : "coffee",
                 "votes" : 2
             },
             {
                 "category" : "fellowship",
+                "categoryCssClass" : "fellowship",
                 "votes" : 40
             },
             {
-                "category" : "young people",
+                "category" : "young",
+                "categoryCssClass" : "youngpeople",
                 "votes" : 20
             }
         ]
