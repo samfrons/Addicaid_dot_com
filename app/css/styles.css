@@ -1,99 +1,99 @@
 /* style.sass */
-/* line 20, ../sass/pages/_mainstyle.sass */
+/* line 26, ../sass/pages/_mainstyle.sass */
+html { font-size: 1em; }
+
+/* line 29, ../sass/pages/_mainstyle.sass */
 body { font-family: Gotham; }
 
-/* line 25, ../sass/pages/_mainstyle.sass */
+/* line 34, ../sass/pages/_mainstyle.sass */
 header.grid-12 { background-image: url(../images/headerbackground.png); background-size: 100% auto; }
 
-/* line 30, ../sass/pages/_mainstyle.sass */
+/* line 39, ../sass/pages/_mainstyle.sass */
 header h1 { margin: 0; padding: 0; text-align: center; color: white; text-shadow: 0px 1px 2px black; font-family: Dawning of a new day; min-height: 55px; }
 
-/* line 39, ../sass/pages/_mainstyle.sass */
+/* line 48, ../sass/pages/_mainstyle.sass */
 button { color: white; margin: 20px; background-image: -webkit-linear-gradient(top, #0088cc, #0044cc); }
 
-/* line 44, ../sass/pages/_mainstyle.sass */
+/* line 53, ../sass/pages/_mainstyle.sass */
 button.back { background-image: url(../images/back_button.png); background-color: transparent; border-style: none; min-height: 35px; background-repeat: no-repeat; background-size: 80% auto; background-size: auto; }
 
-/* line 50, ../sass/pages/_mainstyle.sass */
+/* line 59, ../sass/pages/_mainstyle.sass */
 button.settings { background-image: url(../images/profile.png); background-color: transparent; border-style: none; min-height: 35px; background-repeat: no-repeat; background-size: 80% auto; background-size: auto; }
 
-/* line 55, ../sass/pages/_mainstyle.sass */
-article.meeting_entry { margin: 5px 0 5px 0; box-shadow: 0px 1px 5px black; background-image: url(http://subtlepatterns.com/patterns/concrete_wall_2.png); }
+/* line 64, ../sass/pages/_mainstyle.sass */
+article.meeting_entry { margin: 5px 0 5px 0; box-shadow: 0px 1px 5px black; }
 
-/* line 60, ../sass/pages/_mainstyle.sass */
+/* line 68, ../sass/pages/_mainstyle.sass */
 ul { padding: 0; margin: 0; }
 
-/* line 64, ../sass/pages/_mainstyle.sass */
+/* line 72, ../sass/pages/_mainstyle.sass */
 ul li { list-style-type: none; display: inline-block; vertical-align: top; padding: 0; margin: 0; }
 
-/* line 71, ../sass/pages/_mainstyle.sass */
-hgroup { line-height: 0.4em; font-family: alright sans; }
+/* line 79, ../sass/pages/_mainstyle.sass */
+hgroup { line-height: 0.4em; font-family: helvetica neue; }
 
-/* line 75, ../sass/pages/_mainstyle.sass */
+/* line 83, ../sass/pages/_mainstyle.sass */
 hgroup { color: #2a2a2a; }
 
-/* line 80, ../sass/pages/_mainstyle.sass */
+/* line 88, ../sass/pages/_mainstyle.sass */
 .fellowshipType.AA { color: white; text-align: center; margin: 2px; border-radius: 1em; box-shadow: 0px 1px 2px black; letter-spacing: -0.4em; background-image: -webkit-linear-gradient(top, #0088cc, #0044cc); }
 
-/* line 89, ../sass/pages/_mainstyle.sass */
+/* line 97, ../sass/pages/_mainstyle.sass */
 time { text-align: right; font-weight: bold; }
 
-/* line 95, ../sass/pages/_mainstyle.sass */
-ul.ratings li { width: 15%; color: rgba(0, 0, 0, 0); background-color: transparent; border-style: none; min-height: 35px; background-repeat: no-repeat; background-size: 80% auto; }
-/* line 99, ../sass/pages/_mainstyle.sass */
-ul.ratings li.snacks { background-image: url(../images/feed_sideicon.png); }
-/* line 101, ../sass/pages/_mainstyle.sass */
-ul.ratings li.coffee { background-image: url(../images/medal-icon.png); }
 /* line 103, ../sass/pages/_mainstyle.sass */
-ul.ratings li.fellowship { background-image: url(../images/meetings_sideicon.png); }
-/* line 105, ../sass/pages/_mainstyle.sass */
-ul.ratings li.youngpeople { background-image: url(../images/feed_sideicon.png); }
+ul.ratings li { width: 15%; color: rgba(0, 0, 0, 0); background-color: transparent; border-style: none; min-height: 35px; background-repeat: no-repeat; background-size: 80% auto; }
 /* line 107, ../sass/pages/_mainstyle.sass */
+ul.ratings li.snacks { background-image: url(../images/feed_sideicon.png); }
+/* line 109, ../sass/pages/_mainstyle.sass */
+ul.ratings li.coffee { background-image: url(../images/medal-icon.png); }
+/* line 111, ../sass/pages/_mainstyle.sass */
+ul.ratings li.fellowship { background-image: url(../images/meetings_sideicon.png); }
+/* line 113, ../sass/pages/_mainstyle.sass */
+ul.ratings li.youngpeople { background-image: url(../images/feed_sideicon.png); }
+/* line 115, ../sass/pages/_mainstyle.sass */
 ul.ratings li.vote { background-image: url(../images/vote-icon.png); }
-/* line 110, ../sass/pages/_mainstyle.sass */
+/* line 118, ../sass/pages/_mainstyle.sass */
 ul.ratings p.voteNumber { color: white; background: rgba(0, 0, 0, 0.7); line-height: 1em; text-align: center; border-radius: 1.5em; height: 1em; width: 1.5em; padding: 0.5em 0 0 0; }
 
-/* line 121, ../sass/pages/_mainstyle.sass */
+/* line 129, ../sass/pages/_mainstyle.sass */
 nav .bottom { text-align: center; background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#a8a8a8)); }
 
-/* line 125, ../sass/pages/_mainstyle.sass */
+/* line 133, ../sass/pages/_mainstyle.sass */
 .grids { display: inline-block; vertical-align: top; overflow: hidden; }
 
-/* line 130, ../sass/pages/_mainstyle.sass */
-.grid-12 { background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#a8a8a8)); }
-
-/* line 133, ../sass/pages/_mainstyle.sass */
+/* line 140, ../sass/pages/_mainstyle.sass */
 .grid-1 { width: 6.15%; }
 
-/* line 136, ../sass/pages/_mainstyle.sass */
+/* line 143, ../sass/pages/_mainstyle.sass */
 .grid-2 { width: 14.583%; }
 
-/* line 139, ../sass/pages/_mainstyle.sass */
+/* line 146, ../sass/pages/_mainstyle.sass */
 .grid-3 { width: 22.917%; }
 
-/* line 142, ../sass/pages/_mainstyle.sass */
+/* line 149, ../sass/pages/_mainstyle.sass */
 .grid-4 { width: 32.25%; margin: 0; padding: 0; }
 
-/* line 147, ../sass/pages/_mainstyle.sass */
+/* line 154, ../sass/pages/_mainstyle.sass */
 .grid-5 { width: 39.583%; }
 
-/* line 150, ../sass/pages/_mainstyle.sass */
+/* line 157, ../sass/pages/_mainstyle.sass */
 .grid-6 { width: 47.917%; }
 
-/* line 153, ../sass/pages/_mainstyle.sass */
+/* line 160, ../sass/pages/_mainstyle.sass */
 .grid-7 { width: 56.25%; }
 
-/* line 156, ../sass/pages/_mainstyle.sass */
+/* line 163, ../sass/pages/_mainstyle.sass */
 .grid-8 { width: 64.583%; }
 
-/* line 159, ../sass/pages/_mainstyle.sass */
+/* line 166, ../sass/pages/_mainstyle.sass */
 .grid-9 { width: 72.917%; }
 
-/* line 162, ../sass/pages/_mainstyle.sass */
+/* line 169, ../sass/pages/_mainstyle.sass */
 .grid-10 { width: 81.25%; }
 
-/* line 165, ../sass/pages/_mainstyle.sass */
+/* line 172, ../sass/pages/_mainstyle.sass */
 .grid-11 { width: 89.583%; }
 
-/* line 168, ../sass/pages/_mainstyle.sass */
+/* line 175, ../sass/pages/_mainstyle.sass */
 .grid-12 { width: 100%; width-margin: 0; }
