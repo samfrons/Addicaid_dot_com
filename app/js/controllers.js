@@ -16,5 +16,15 @@ function MeetingListCtrl($scope, $http) {
     });
 }
 
+function FilterCtrl($scope, $http, $navigate) {
+    console.log($navigate);
+}
+
 function MapCtrl($scope, $http) {
+    angular.extend($scope, {
+        center: { lat: 40.65, lng: -73.8 },
+        marker: { lat: 40.65, lng: -73.9 },
+        message: "Drag me to your node position",
+        zoom: 11
+    });
 }
