@@ -22,9 +22,19 @@ function FilterCtrl($scope, $http, $navigate) {
 
 function MapCtrl($scope, $http) {
     angular.extend($scope, {
-        center: { lat: 40.65, lng: -73.8 },
-        marker: { lat: 40.65, lng: -73.9 },
-        message: "Drag me to your node position",
-        zoom: 11
+        mapCenter: { lat: 40.763562, lng: -73.971401 },
+//        marker: { lat: 40.763562, lng: -73.9 },
+//        message: "Drag me to your node position",
+        mapZoom: 11
     });
+console.log("ctrl");
+    $scope.mapOptions = {
+//        center: new L.LatLng(40.763562, -73.971401),
+        zoom: 14
+//        layers: null,
+//        minZoom: null,
+//        maxZoom: null,
+//        ,maxBounds: new L.LatLngBounds()
+    };
+
 }

@@ -31,13 +31,9 @@
                     center = new L.LatLng(scope.center.lat, scope.center.lng);
                     var zoom = scope.zoom || 8;
                     map.setView(center, zoom);
-                    if (attrs.markcenter) {
-                        var centerMarker = new L.marker(scope.center, { draggable: false });
-                        map.addLayer(centerMarker);
-                    }
 
-			        if (attrs.marker) {
-                        var marker = new L.marker(scope.marker, { draggable: attrs.draggable });
+                    var marker = new L.marker(scope.center, { draggable: attrs.markcenter ? false:true });
+                    if (attrs.markcenter || attrs.marker) {
                         map.addLayer(marker);
 
                         if (scope.message) {
@@ -48,7 +44,7 @@
                             scope.marker.lat = marker.getLatLng().lat;
                             scope.marker.lng = marker.getLatLng().lng;
                         }
-		            }
+                    }
 
                     // Listen for map drags
                     var dragging_map = false;
@@ -56,12 +52,12 @@
                         dragging_map = true;
                     });
 
-		            map.on("drag", function (e) {
-			            scope.$apply(function (s) {
-				            s.center.lat = map.getCenter().lat;
-				            s.center.lng = map.getCenter().lng;
-			            });
-		            });
+                    map.on("drag", function (e) {
+                        scope.$apply(function (s) {
+                            s.center.lat = map.getCenter().lat;
+                            s.center.lng = map.getCenter().lng;
+                        });
+                    });
 
                     map.on("dragend", function(e) {
                         dragging_map= false;
@@ -82,28 +78,28 @@
                         map.setZoom(newValue);
                     });
 
-		            map.on("zoomend", function (e) {
-			            scope.zoom = map.getZoom();
-			            scope.$apply();
-		            });
+                    map.on("zoomend", function (e) {
+                        scope.zoom = map.getZoom();
+                        scope.$apply();
+                    });
 
                     if (attrs.marker) {
 
                         var dragging_marker = false;
 
-		                // Listen for marker drags
-			            (function () {
+                        // Listen for marker drags
+                        (function () {
 
                             marker.on("dragstart", function(e) {
                                 dragging_marker = true;
                             });
 
-				            marker.on("drag", function (e) {
-					            scope.$apply(function (s) {
-						            s.marker.lat = marker.getLatLng().lat;
-						            s.marker.lng = marker.getLatLng().lng;
-					            });
-				            });
+                            marker.on("drag", function (e) {
+                                scope.$apply(function (s) {
+                                    s.marker.lat = marker.getLatLng().lat;
+                                    s.marker.lng = marker.getLatLng().lng;
+                                });
+                            });
 
                             marker.on("dragend", function(e) {
                                 marker.openPopup();
@@ -113,10 +109,10 @@
                             map.on("click", function(e) {
                                 marker.setLatLng(e.latlng);
                                 marker.openPopup();
-					            scope.$apply(function (s) {
-						            s.marker.lat = marker.getLatLng().lat;
-						            s.marker.lng = marker.getLatLng().lng;
-					            });
+                                scope.$apply(function (s) {
+                                    s.marker.lat = marker.getLatLng().lat;
+                                    s.marker.lng = marker.getLatLng().lng;
+                                });
                             });
 
                             scope.$watch("marker.lng", function (newValue, oldValue) {
@@ -129,14 +125,24 @@
                                 marker.setLatLng(new L.LatLng(newValue, marker.getLatLng().lng));
                             });
 
-			            }());
+                        }());
 
-		            }
+                    }
 
                 });
 
             }
-		};
-	});
+        };
+    });
 
 }());
+
+
+
+//
+//function anyCtrl($scope, $compile, $http, $element){
+//    $http('/get/template.html').success(function(r){
+//        $element.html(r);
+//        $compile($element)($scope);
+//    });
+//}

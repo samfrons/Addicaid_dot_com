@@ -5,8 +5,9 @@
 angular.module('addicaidApp',
         [
             'addicaidApp.filters', 'addicaidApp.services', 'addicaidApp.directives',
-            'mobile-navigate',
-            'leaflet-directive'
+            'leaflet-directive',
+            'addicaidApp.leaflet-directive',
+            'mobile-navigate'
 //            'ui'
         ])
 
@@ -15,7 +16,8 @@ angular.module('addicaidApp',
             .when('/map', { templateUrl: 'views/map.html', controller: MapCtrl })
             .when('/meetinglist', { templateUrl: 'views/meeting-list.html', controller: MeetingListCtrl })
             .when('/filter', { templateUrl: 'views/filter.html', controller: FilterCtrl })
-            .when("/", { templateUrl: 'views/meeting-list.html', controller: MeetingListCtrl })
+//            .when("/", { templateUrl: 'views/meeting-list.html', controller: MeetingListCtrl })
+            .when("/", { templateUrl: 'views/map.html', controller: MapCtrl })
             .otherwise({ redirectTo: "/" });
 //        $locationProvider.html5Mode(true);
     }])
@@ -25,6 +27,16 @@ angular.module('addicaidApp',
             "header" : "views/partials/header.html",
             "footer" : "views/partials/footer.html",
             "meetingDetail" : "views/partials/meeting-detail.html"
+        };
+        $rootScope.safeApply = function(fn) {
+            var phase = this.$root.$$phase;
+            if(phase == '$apply' || phase == '$digest') {
+                if(fn && (typeof(fn) === 'function')) {
+                    fn();
+                }
+            } else {
+                this.$apply(fn);
+            }
         };
     });
 
