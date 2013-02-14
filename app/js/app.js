@@ -16,6 +16,7 @@ angular.module('addicaidApp',
             .when('/map', { templateUrl: 'views/map.html', controller: MapCtrl })
             .when('/meetinglist', { templateUrl: 'views/meeting-list.html', controller: MeetingListCtrl })
             .when('/filter', { templateUrl: 'views/filter.html', controller: FilterCtrl })
+            .when('/meetingsaved', { templateUrl: 'views/meeting-saved.html', controller: MeetingListCtrl })
 //            .when("/", { templateUrl: 'views/meeting-list.html', controller: MeetingListCtrl })
             .when("/", { templateUrl: 'views/map.html', controller: MapCtrl })
             .otherwise({ redirectTo: "/" });

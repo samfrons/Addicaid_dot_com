@@ -4,6 +4,7 @@ App.config(['$routeProvider', function($routeProvider) {
         .when('/meetings_map', { templateUrl: 'partials/meetings-map.html', controller: MeetingsMapCtrl })
         .when('/meetings_list', { templateUrl: 'partials/meetings-list.html', controller: MeetingsListCtrl })
         .when('/meetings_filter', { templateUrl: 'partials/meetings-filter.html', controller: MeetingsFilterCtrl })
+        .when('/meetings_saved', { templateUrl: 'partials/meetings-saved.html', controller: MeetingsFilterCtrl })
         .when('/feed', { templateUrl: 'partials/feed.html', controller: FeedCtrl })
         .when('/dailydose', { templateUrl: 'partials/dailydose.html', controller: DailyDoseCtrl })
         .when('/content', { templateUrl: 'partials/content.html', controller: ContentCtrl })
