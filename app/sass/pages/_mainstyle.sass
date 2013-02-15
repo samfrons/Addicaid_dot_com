@@ -23,6 +23,7 @@ $main-color: #2A2a2a
 @mixin gradient-blue
  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc)
 
+
 html
  font-size: .5em 
 
@@ -54,6 +55,7 @@ button
  margin: 20px
  border-style: none
  @include gradient-blue
+ background-color: red
 
 button.back
  background-image: url(../images/back_button.png)
@@ -93,18 +95,21 @@ hgroup
 .fellowshipType.AA
  color: transparent
  background-image: url(../images/map_thumb.png)
- height: 40px
- width: 40px
+ height: 35px
+ width: 35px
+ margin: 5px 0 0 5px
  background-size: 100% auto
 
-
-time
- border-top: 5px solid black
- border-bottom: 1px solid black
+.timeandday
+ border-top: 10px solid black
  border-left: 1px solid black
  border-right: 1px solid black
+ border-bottom: 1px solid black
+ width: 50px
  height: 30px
- width: 30px 
+ margin: 5px 0 0 0
+
+time 
  p
   text-align: center
   font-weight: bold
@@ -113,43 +118,73 @@ time
 
 
 ul.ratings
+ background-color: rgba(0,120,255,0.2)
+
+ li:first-child
+  background: transparent
+  color: gray
  
  li
   background: url(../images/rating_icon_sprite.png) no-repeat top left
   color: rgba(0,0,0,0)
+
  li.snacks
-  background-position: -389px 0
-  width: 42px 
-  height: 34px
+  background-position: -870px 0
+  width: 75px 
+  height: 20px
 
  li.coffee
-  background-position: 0 20 
-  width: 34px 
-  height: 34px
+  background-position: 0 0 
+  width: 75px 
+  height: 27px
 
  li.fellowship
-  background-position: -252px 0
-  width: 48px
-  height: 34px
+  background-position: -581px 0
+  width: 75px
+  height: 29px
 
  li.youngpeople
-  background-position: -534px 0
-  width: 41px
-  height: 34px
+  background-position: -1172px 0
+  width: 75px
+  height: 29px
   
  li.vote
-  background-position: -39px 0
-  width: 24px
-  height: 34px
+  background-position: -95px 0
+  width: 14px
+  height: 13px
   
  p.voteNumber
   color: white
-  background: rgba(0,0,0,0.7)
+
+.leaflet-bottom
+ display: none
 
 nav 
  .bottom 
-  text-align: center
-  @include gradient
+  background-image: url(../images/navbottom.png)
+  height: 40px
+  li
+   background: url(../images/bottom_sprites.png) no-repeat top left
+   text-align: center
+   height: 40px
+   padding: 0 20px 0 20px
+  li.map
+   background-position: 20px -68px
+   width: 47px 
+   height: 38px
+   background-color: rgba(20,20,20,0.5)
+  li.filter
+   background-position: 0 -136px
+   width: 47px 
+   height: 38px
+  li.saved
+   background-position: 0 -204px
+   width: 47px 
+   height: 38px
+  li.list
+   background-position: 0 0
+   width: 47px 
+   height: 38px
 
 .grids
  display: inline-block

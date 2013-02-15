@@ -11,7 +11,7 @@
 
     <aside class="grids grid-4">
 
-        <div>
+        <div class="timeandday">
         <time class="time"><p>{{meeting.calendar.time}}</p></time>
         <time datetime="monday"><p>{{meeting.calendar.dayShort}}</p></time>
         </div>
@@ -21,6 +21,7 @@
     </aside>
 
     <ul class="grids grid-12 ratings">
+        <li><h3>meeting stats</h3></li>
             <li ng-repeat="rating in meeting.ratings"
                 class="grids grid-3" ng-class="rating.categoryCssClass">{{rating.categoryName}}<p class="voteNumber">{{rating.votes}}</p></li>
             <li class="grids grid-3 vote">vote</li>
