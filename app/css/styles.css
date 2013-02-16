@@ -6,45 +6,89 @@ body {
   padding: 0;
   font-family: Gotham;
   text-transform: uppercase;
-  font-weight: light; }
-
-header.grid-12 {
-  background-image: url(../images/headerbackground.png);
-  background-size: 100% auto; }
+  font-weight: light;
+  background-image: url(../images/10.jpg);
+  background-size: 480px 800px; }
 
 header h1 {
+  position: relative;
+  color: red;
+  top: 15px;
   margin: 0;
   padding: 0;
   text-align: center;
   color: white;
   text-shadow: 0px 1px 2px black;
-  font-family: Dawning of a new day;
-  min-height: 55px; }
+  min-height: 55px;
+  font-family: helvetica neue; }
+
+p {
+  font-family: helvetica; }
+
+a {
+  text-decoration: none;
+  color: black !important; }
+  a:hover {
+    color: inherit; }
+  a:visited {
+    color: inherit; }
+  a:active {
+    color: inherit; }
+
+header.grid-12 {
+  background-image: url(../images/headerbackground.png);
+  background-size: 100% auto;
+  box-shadow: 0px 1px 4px black; }
+
+header button {
+  min-height: 35px !important; }
 
 button {
   color: white;
   margin: 20px;
-  border-style: none;
-  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
-  background-color: red; }
+  border-style: none; }
 
 button.back {
   background-image: url(../images/back_button.png);
   background-color: transparent;
   border-style: none;
-  min-height: 35px;
+  min-height: 20px;
   background-repeat: no-repeat;
   background-size: 80% auto;
   background-size: auto; }
 
 button.settings {
   background-image: url(../images/profile.png);
+  margin: 5px 0 0 18.9px;
   background-color: transparent;
   border-style: none;
-  min-height: 35px;
+  min-height: 20px;
   background-repeat: no-repeat;
   background-size: 80% auto;
   background-size: auto; }
+
+aside button {
+  text-indent: 7px;
+  font-family: helvetica neue;
+  text-transform: uppercase;
+  margin: 5px 0 5px 10px;
+  background-color: transparent;
+  border-style: none;
+  min-height: 20px;
+  background-repeat: no-repeat;
+  background-size: 80% auto;
+  background-position: 0 2px;
+  background-repeat: no-repeat; }
+
+button.directions {
+  background-image: url(../images/directions_icon.png);
+  background-size: 35% auto;
+  height: 10px;
+  padding: 0px; }
+
+button.save {
+  background-image: url(../images/save_icon.png);
+  background-size: 35% auto; }
 
 article.meeting_entry {
   margin: 5px 0 5px 0;
@@ -66,7 +110,7 @@ hgroup {
   font-family: helvetica neue; }
 
 hgroup {
-  color: #2a2a2a; }
+  color: white; }
 
 .fellowshipType.AA {
   color: transparent;
@@ -83,7 +127,7 @@ hgroup {
   border-bottom: 1px solid black;
   width: 50px;
   height: 30px;
-  margin: 5px 0 0 0; }
+  margin: 5px 0 0 50px; }
 
 time p {
   text-align: center;
@@ -93,38 +137,46 @@ time p {
 ul.ratings {
   background-color: rgba(0, 120, 255, 0.2); }
   ul.ratings li:first-child {
+    font-size: 0.5em;
+    padding: 0;
+    margin: 0;
     background: transparent;
-    color: gray; }
+    color: white; }
   ul.ratings li {
     background: url(../images/rating_icon_sprite.png) no-repeat top left;
-    color: rgba(0, 0, 0, 0); }
-  ul.ratings li.snacks {
-    background-position: -870px 0;
-    width: 75px;
+    color: rgba(0, 0, 0, 0);
+    vertical-align: middle;
     height: 20px; }
+  ul.ratings li.snacks {
+    background-position: -714px 5px;
+    width: 63px; }
   ul.ratings li.coffee {
     background-position: 0 0;
-    width: 75px;
-    height: 27px; }
+    width: 63px; }
   ul.ratings li.fellowship {
-    background-position: -581px 0;
-    width: 75px;
-    height: 29px; }
+    background-position: -477px 0;
+    width: 63px; }
   ul.ratings li.youngpeople {
-    background-position: -1172px 0;
-    width: 75px;
-    height: 29px; }
+    background-position: -960px 0;
+    width: 63px; }
   ul.ratings li.vote {
-    background-position: -95px 0;
+    background-position: -78px 0;
     width: 14px;
     height: 13px; }
   ul.ratings p.voteNumber {
-    color: white; }
+    color: black;
+    margin: 0 0 0 40px; }
 
 .leaflet-bottom {
   display: none; }
 
+.mappo {
+  height: 70% !important; }
+
 nav .bottom {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
   background-image: url(../images/navbottom.png);
   height: 44px; }
   nav .bottom li {
@@ -161,7 +213,7 @@ nav .bottom {
   width: 14.583%; }
 
 .grid-3 {
-  width: 22.917%; }
+  width: 22.792%; }
 
 .grid-4 {
   width: 32.25%;

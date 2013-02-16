@@ -1,6 +1,6 @@
 <article class="grids grid-12 meeting_entry">
     <aside class="grids grid-1 fellowshipType" ng-class="meeting.fellowship.id">{{meeting.fellowship.id}}</aside>
-    <hgroup class="grids grid-7">
+    <hgroup class="grids grid-6">
         <h3>{{meeting.title}}</h3>
         <h4>{{meeting.location.title}}</h4>
         <h5>{{meeting.location.address1}}</h5>
@@ -16,14 +16,14 @@
         <time datetime="monday"><p>{{meeting.calendar.dayShort}}</p></time>
         </div>
         
-       <button class="grids grid-5" type="submit"><a href="https://maps.google.com/maps?q={{meeting.location.address1}}">directions</a></button>
-        <button class="grids grid-5" type="submit" ng-submit="addFavorite()">favorite</button>
+       <button class="grids grid-5 directions" type="submit"><a href="https://maps.google.com/maps?q={{meeting.location.address1}}">go</a></button>
+        <button class="grids grid-5 save" type="submit" ng-submit="addFavorite()"><a href="#">save</a></button>
     </aside>
 
     <ul class="grids grid-12 ratings">
-        <li><h3>meeting stats</h3></li>
+        <li><h3>meeting stats&nbsp;</h3></li>
             <li ng-repeat="rating in meeting.ratings"
-                class="grids grid-3" ng-class="rating.categoryCssClass">{{rating.categoryName}}<p class="voteNumber">{{rating.votes}}</p></li>
+                class="grids grid-2" ng-class="rating.categoryCssClass">{{rating.categoryName}}<p class="voteNumber">{{rating.votes}}</p></li>
             <li class="grids grid-3 vote">vote</li>
         </ul>
 </article>

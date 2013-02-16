@@ -6,11 +6,12 @@ $experimental-support-for-opera : true !default
 $experimental-support-for-microsoft : true !default
 
 $main-color: #2A2a2a
+$white: #FFFFFF
 
 @mixin backgrounds
  background-color: transparent
  border-style: none
- min-height: 35px
+ min-height: 20px
  background-repeat: no-repeat
  background-size: 80% auto
 
@@ -23,39 +24,63 @@ $main-color: #2A2a2a
 @mixin gradient-blue
  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc)
 
-
 html
  font-size: .5em 
+
+
 
 body
  padding: 0
  font-family: Gotham
  text-transform: uppercase
  font-weight: light
- 
- form
-  h1
-
-header.grid-12
- background-image: url(../images/headerbackground.png)
- background-size: 100% auto
+ background-image: url(../images/10.jpg)
+ background-size: 480px 800px
 
 header
  h1 
+  position: relative
+  color: red
+  top: 15px
   margin: 0
   padding: 0
   text-align: center
   color: white
   text-shadow: 0px 1px 2px black
-  font-family: Dawning of a new day
   min-height: 55px
+  font-family: helvetica neue
+ 
+form
+ h1
+
+p
+ font-family: helvetica
+
+a
+ text-decoration: none
+ color: black !important
+
+ &:hover
+  color: inherit
+ &:visited
+  color: inherit
+ &:active
+  color: inherit
+
+
+header.grid-12
+ background-image: url(../images/headerbackground.png)
+ background-size: 100% auto
+ box-shadow: 0px 1px 4px black
+
+header
+ button
+  min-height: 35px !important
 
 button
  color: white
  margin: 20px
  border-style: none
- @include gradient-blue
- background-color: red
 
 button.back
  background-image: url(../images/back_button.png)
@@ -64,8 +89,34 @@ button.back
 
 button.settings
  background-image: url(../images/profile.png)
+ margin: 5px 0 0 18.9px
  @include backgrounds
  background-size: auto
+
+aside
+ button
+  text-indent: 7px
+  font-family: helvetica neue
+  text-transform: uppercase
+  margin: 5px 0 5px 10px
+  @include backgrounds
+  
+  background-position: 0 2px
+  background-repeat: no-repeat
+
+button.directions
+
+ background-image: url(../images/directions_icon.png)
+ 
+ background-size: 35% auto
+ height: 10px
+ padding: 0px
+
+button.save
+ background-image: url(../images/save_icon.png)
+ background-size: 35% auto
+
+
 
 article.meeting_entry
  margin: 5px 0 5px 0
@@ -88,9 +139,9 @@ hgroup
 
 hgroup 
  h1 h2 h3 
- color: $main-color
+ color: $white
 
- &:hover 
+ &:hover
 
 .fellowshipType.AA
  color: transparent
@@ -107,7 +158,7 @@ hgroup
  border-bottom: 1px solid black
  width: 50px
  height: 30px
- margin: 5px 0 0 0
+ margin: 5px 0 0 50px
 
 time 
  p
@@ -115,52 +166,58 @@ time
   font-weight: bold
   line-height: 1px
 
-
-
 ul.ratings
  background-color: rgba(0,120,255,0.2)
 
  li:first-child
+  font-size: .5em
+  padding: 0
+  margin: 0
   background: transparent
-  color: gray
+  color: $white
  
  li
   background: url(../images/rating_icon_sprite.png) no-repeat top left
   color: rgba(0,0,0,0)
+  vertical-align: middle
+  height: 20px
 
  li.snacks
-  background-position: -870px 0
-  width: 75px 
-  height: 20px
+  background-position: -714px 5px
+  width: 63px 
 
  li.coffee
   background-position: 0 0 
-  width: 75px 
-  height: 27px
+  width: 63px 
 
  li.fellowship
-  background-position: -581px 0
-  width: 75px
-  height: 29px
+  background-position: -477px 0
+  width: 63px
 
  li.youngpeople
-  background-position: -1172px 0
-  width: 75px
-  height: 29px
+  background-position: -960px 0
+  width: 63px
   
  li.vote
-  background-position: -95px 0
+  background-position: -78px 0
   width: 14px
   height: 13px
   
  p.voteNumber
-  color: white
+  color: black
+  margin: 0 0 0 40px
 
 .leaflet-bottom
  display: none
 
+.mappo
+ height: 70% !important
+
 nav 
- .bottom 
+ .bottom
+  position: fixed
+  bottom: 0px
+  width: 100% 
   background-image: url(../images/navbottom.png)
   height: 44px
   li
@@ -199,7 +256,7 @@ nav
  width: 14.583%
 
 .grid-3 
- width: 22.917%
+ width: 22.792%
 
 .grid-4
  width: 32.25%
