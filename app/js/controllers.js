@@ -1,4 +1,3 @@
-'use strict';
 
 /* Controllers */
 
@@ -17,17 +16,18 @@ function MeetingListCtrl($scope, $http) {
 }
 
 function FilterCtrl($scope, $http, $navigate) {
-    console.log($navigate);
+    logvar("$navigate",$navigate);
 }
 
 function MapCtrl($scope, $http) {
     angular.extend($scope, {
-        mapCenter: { lat: 40.763562, lng: -73.971401 },
+        mapCenter: { lat: 40, lng: -4 },
+//        mapCenter: { lat: 40.763562, lng: -73.971401 },
 //        marker: { lat: 40.763562, lng: -73.9 },
 //        message: "Drag me to your node position",
         mapZoom: 11
     });
-console.log("ctrl");
+log();
     $scope.mapOptions = {
 //        center: new L.LatLng(40.763562, -73.971401),
         zoom: 14
@@ -37,4 +37,43 @@ console.log("ctrl");
 //        ,maxBounds: new L.LatLngBounds()
     };
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function TestAppCtrl($scope, $navigate) {
+    $scope.$navigate = $navigate;
+    $navigate.go('/','none');
+
+
+    angular.extend($scope, {
+        mapCenter: { lat: 40.763562, lng: -73.971401 },
+//        marker: { lat: 40.763562, lng: -73.9 },
+//        message: "Drag me to your node position",
+        mapZoom: 11
+    });
+    console.log("testAppctrl");
+    $scope.mapOptions = {
+//        center: new L.LatLng(40.763562, -73.971401),
+        zoom: 14
+//        layers: null,
+//        minZoom: null,
+//        maxZoom: null,
+//        ,maxBounds: new L.LatLngBounds()
+    };
 }

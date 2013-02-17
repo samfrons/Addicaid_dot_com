@@ -49,8 +49,42 @@
 
 </head>
 
-<body ng-controller="AppCtrl">
-<mobile-view></mobile-view>
+<body ng-controller="TestAppCtrl">
 
+<ng-include src="views.header"></ng-include>
+
+
+
+
+
+<!--<leaflet marker="marker" center="center" zoom="zoom" draggable="true" markcenter="true"></leaflet>-->
+
+<!--<div id="map_canvas" ui-map="myMap" class="map"-->
+<!--ui-event="{'map-click': 'addMarker($event)', 'map-zoom_changed': 'setZoomMessage(myMap.getZoom())' }"-->
+<!--ui-options="mapOptions">-->
+<!--</div>-->
+
+<!--<leafletMap leaflet-options="mapOptions"></leafletMap>-->
+<!--<div id="map" class="map" leaflet-map="myMap" map-options="mapOptions"></div>-->
+<!--<leafletMap id="map" class="map" map-options="mapOptions"></leafletMap>-->
+
+<!--<leafletMarker ></leafletMarker>-->
+
+
+<leaflet-map class="mappo" map-options="mapOptions"
+             center="mapCenter" zoom="mapZoom"></leaflet-map>
+
+
+<ng-include src="views.footer"></ng-include>
+
+
+
+
+<style>
+    .mappo {
+        /*width: 400px;*/
+        height: 300px;
+    }
+</style>
 </body>
 </html>

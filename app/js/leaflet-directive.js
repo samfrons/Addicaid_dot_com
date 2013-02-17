@@ -3,13 +3,13 @@ var app = angular.module('addicaidApp.leaflet-directive', []);
 // TODO: ui-event?
 //Setup map events from a leaflet map object to trigger on a given element too,
 //then we just use ui-event to catch events from an element
-var bindMapEvents = function(scope, eventsString, leafletObject, element) {
+var bindMapEvents = function bindMapEvents(scope, eventsString, leafletObject, element) {
     angular.forEach(eventsString.split(' '), function (eventName) {
         //Prefix all leaflet events with 'map-', so eg 'click'
         //for the leaflet map doesn't interfere with a normal 'click' event
         var $event = { type: 'map-' + eventName };
         leafletObject.addEventListener(eventName, function (evt) {
-console.log(eventName + ' triggered')
+//log(eventName + ' triggered')
             element.triggerHandler(angular.extend({}, $event, evt));
             // TODO: dont really understand this apply stuff
             //We create an $apply if it isn't happening. we need better support for this
@@ -20,7 +20,7 @@ console.log(eventName + ' triggered')
     });
 }
 
-app.directive('leafletMap', ['$parse', function ($parse) {
+app.directive('leafletMap', ['$parse', function leafletMapDirective($parse) {
 
     var mapEvents = 'click dblclick ' +
         'mousedown mouseup mouseover mouseout mousemove ' +
@@ -34,7 +34,7 @@ app.directive('leafletMap', ['$parse', function ($parse) {
         'locationfound locationerror ' +
         'popupopen popupclose';
     var mapOptions = {};
-console.log('leafletMap');
+log('leafletMap');
 
     return {
         restrict: 'E',
@@ -44,21 +44,22 @@ console.log('leafletMap');
             center: '=',
             zoom: '='
         },
-        link: function (scope, element, attrs) {
+        link: function link(scope, element, attrs) {
             var mapOptions = {};
-console.log('leafletMap link',scope);
+log(scope)
             var opts = angular.extend({}, mapOptions, scope.$eval(attrs.mapOptions));
             var map = new L.Map(element[0]);//, opts);
             map.addLayer(L.tileLayer('http://{s}.tiles.mapbox.com/v3/samfrons.map-dcwttqie/{z}/{x}/{y}.png', { maxZoom: 18 }));//.addTo(map);
-            map.setView(new L.LatLng(51.3, 0.7),9);
 
-            scope.$watch("center", function(center) {
-                console.log("center",center)
+            scope.$watch("center", function watchCenter(center) {
+  log(center)
+  if (scope.center!==center) log('ERROR scope.center !== center')
                 if (center === undefined) return;
 
+
                 // Center of the map
-                console.log(scope.center)
                 center = new L.LatLng(scope.center.lat, scope.center.lng);
+logvar("scope.zoom", scope.zoom)
                 var zoom = scope.zoom || 8;
                 map.setView(center, zoom);
             });

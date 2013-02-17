@@ -1,14 +1,13 @@
-'use strict';
 
 
 // Declare app level module which depends on filters, and services
 angular.module('addicaidApp',
         [
-            'addicaidApp.filters', 'addicaidApp.services', 'addicaidApp.directives',
-            'leaflet-directive',
-            'addicaidApp.leaflet-directive',
-            'mobile-navigate'
-//            'ui'
+            'addicaidApp.filters', 'addicaidApp.services', 'addicaidApp.directives'
+//            ,'leaflet-directive'
+            ,'addicaidApp.leaflet-directive'
+            ,'mobile-navigate'
+//            ,'ui'
         ])
 
     .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
