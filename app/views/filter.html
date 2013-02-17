@@ -1,32 +1,33 @@
 <ng-include src="views.header"></ng-include>
 
-
-
 <article class="grids grid-12 filter">
-    <h2>type</h2>
+ <div class="filter type">
+    <h3>type</h3>
     <ul class="grids grid-12">    
-        <li><button>Alcoholics Anonymous</button></li>
-        <li><button>Narcotics Anonymous</button></li>
+        <li class="aa"><button>Alcoholics Anonymous</button></li>
+        <li class="na"><button>Narcotics Anonymous</button></li>
     </ul>
+</div>
 
-    <h2>where</h2>
+<div class="filter where">
+    <h3>where</h3>
 
-    <div class="grids grid-12 where">
-    <div class="grids grid-6" id="slider">1 mile <input id="slide" type="range" min="5" max="200" step="5" value="100" onchange="updateSlider(this.value)" /> 25 miles <p id="chosen"></p></div>
+    <ul class="grids grid-12 filter where">
+    <div class="grids grid-5" id="slider">1<input id="slide" type="range" min="5" max="200" step="5" value="100" onchange="updateSlider(this.value)" />25<p id="chosen"></p>miles</div>
    
     <h4 class="grids grid-2">from</h4>
 
     <aside class="grids grid-4">
-    <button>current location</button>
+    <button>here</button>
     <h5>or</h5>
     <input type="field" placeholder="zip code">
     </aside>
-
+</ul>
 
 </div>
 
-
-<h2>day</h2>
+<div class="filter day">
+<h3>day</h3>
     <ul class="grids grid-12 day">
         <li>MON</li>
         <li>TUE</li>
@@ -36,16 +37,20 @@
         <li>SAT</li>
         <li>SUN</li>
     </ul>
-<h2>time</h2>
+</div>
+
+<div class="filter filter_time">
+<h3>time</h3>
     <ul class="grids grid-12 filter_time">
         <li><p>morning</p>6AM - 12PM</li>
         <li>afternoon 12PM - 5PM</li>
         <li>evening 5PM - 8PM</li>
         <li>night 8PM onward</li>
     </ul>
+</div>
 
-
-<h2>ratings</h2>
+<div class="filter filter_ratings">
+<h3>ratings</h3>
     <ul class="grids grid-12 filter_ratings">
         <li class="grids grid-2 snacks">snacks</li>
         <li class="grids grid-2 coffee">coffee</li>
@@ -60,8 +65,8 @@
         <li class="grids grid-2 young_people">young people</li>
         <li class="grids grid-2 wheelchair">wheelchair</li>
         <li class="grids grid-2 pets">pet allowed</li>
-
     </ul>
+</div>
     <button type="submit" ng-tap="$navigate.back()">submit</button>
 
 </article>

@@ -6,7 +6,11 @@ $experimental-support-for-opera : true !default
 $experimental-support-for-microsoft : true !default
 
 $main-color: #2A2a2a
-$white: #FFFFFF
+$main: #fff
+$bordercolor: rgba(15,32,36,1)
+$topcolor: rgba(175,202,206,0.2)
+$bottomcolor: rgba(101,142,146,0.5)
+$innercolor: rgba(91,62,86,0.7)
 
 @font-face
  font-family: "gotham"
@@ -28,28 +32,23 @@ $white: #FFFFFF
  width: 50px
  height: 30px
 
-@mixin minimal
+@mixin gradientdark
  background: #e3e3e3
- border: 1px solid #bbb
  border-radius: 3px
- -webkit-box-shadow: inset 0 0 1px 1px #f6f6f6
- box-shadow: inset 0 0 1px 1px #f6f6f6
- color: #333
- text-align: center
- text-shadow: 0 1px 0 #fff
+ background-color: transparent
+ background-image: -webkit-gradient(linear,left top,left bottom,color-stop($topcolor,0),color-stop($bottomcolor,1))
+ background-image: -webkit-linear-gradient(top, $topcolor 0%, $bottomcolor 100%)
+ box-shadow: inset 0px 0px 8px 4px $innercolor, 0px 2px 3px black
+ border: 1px solid rgba(20,20,20,0.4)
+ color: $main
 
-@mixin rounded
- border-radius: 10px
-
-@mixin gradient
- background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#a8a8a8))
-
-@mixin gradient-blue
- background-image: -webkit-linear-gradient(top, #0088cc, #0044cc)
+@mixin gradientlight
+ $bottomcolor: rgba(207,232,61,0.2)
+ $topcolor: rgba(187,202,21,0.0)
+ $innercolor: rgba(187,142,21,0.2)
+ background-image: -webkit-linear-gradient(top, $topcolor 0%, $bottomcolor 100%)
 
 =keyframes($name)
-
-
 /*=keyframes($wobble) 
   /*0%  -webkit-transform: translateX(0%) 
   /*15%  -webkit-transform: translateX(-25%) rotate(-5deg) 
@@ -127,19 +126,23 @@ aside
   text-transform: uppercase
   margin: 4px 0 4px 9px
   @include backgrounds
-  @include minimal 
+  @include gradientdark 
   background-position: 0 2px
   background-repeat: no-repeat
 
 .filter
+ color: $main
+ box-shadow: 0px 5px $bordercolor
+ h3
+  text-indent: 30px
+  text-shadow: 0px 1px 1px black
+ ul
+  text-align: center
  button
-  @include minimal
-
+  @include gradientdark
 
 button.directions
-
  background-image: url(../images/directions_icon.png)
-
  background-size: 35% auto
  height: 10px
  padding: 0px
@@ -151,8 +154,8 @@ button.save
 
 
 article.meeting_entry
- margin: 5px 0 5px 0
- box-shadow: 0px 1px 5px black
+ margin: 2px 0 2px 0
+ box-shadow: 0px 1px 5px $bordercolor
 
 ul
  padding: 0
@@ -166,25 +169,43 @@ ul li
  margin: 0
 
 hgroup 
- line-height: .4em
+ line-height: 0px
  font-family: gotham
+ color: $main
+ text-shadow: 0px 1px 1px black
 
-hgroup 
- h1 h2 h3 
- color: $white
- text-shadow: 0px 1px 2px black
+hgroup
+ h4, h5
+  line-height: 10px
 
 .fellowshipType
  color: transparent
  background-image: url(../images/AAicon.png)
  height: 25px
- width: 35px
+ width: 25px
  margin: 5px 0 0 5px
  background-size: 100% auto
+
+aside.right_side
+
+
+
+.type
+ ul
+  li
+   background-image: url(../images/AAicon.png)
+  li.AA
+
+  li.NA
+  button
+   height: 40px
+   text-indent: 0px
 
 .timeandday
  @include calendar
  margin: 5px 0 0 35px
+ color: $main
+ back
 
 .day li
  @include calendar
@@ -193,7 +214,6 @@ hgroup
  margin: 0 0 0 10px
 
 .filter_time
- margin: 0 0 0 20px
  li
   background-image: url(../images/clock.png)
   width: 70px
@@ -207,7 +227,10 @@ time
   line-height: 1px
 
 ul.ratings
- background-color: rgba(0,120,255,0.2)
+ background-color: rgba(10,250,85,0.0)
+ @include gradientlight
+ color: $main
+ text-shadow: 0px 1px 1px black
 
  li
   p
@@ -218,12 +241,12 @@ ul.ratings
   padding: 0
   margin: 0 0 0 5px
   background: transparent
-  color: $white
+  color: $main
  
  li
   background: url(../images/rating_icon_sprite.png) no-repeat top left
   vertical-align: middle
-  height: 30px
+  height: 35px
 
 
   &:active
@@ -246,9 +269,11 @@ ul.ratings
   
   
  li.vote
+  background-color: red
   background-position: -78px 0
-  width: 14px
-  height: 13px
+  width: 17px
+  height: 15px
+  margin: -10px 0 0 0
 
 ul.filter_ratings
  li 

@@ -88,25 +88,33 @@ aside button {
   background-repeat: no-repeat;
   background-size: 80% auto;
   background: #e3e3e3;
-  border: 1px solid #bbbbbb;
   border-radius: 3px;
-  -webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
-  box-shadow: inset 0 0 1px 1px #f6f6f6;
-  color: #333333;
-  text-align: center;
-  text-shadow: 0 1px 0 white;
+  background-color: transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(rgba(175, 202, 206, 0.2), 0), color-stop(rgba(101, 142, 146, 0.5), 1));
+  background-image: -webkit-linear-gradient(top, rgba(175, 202, 206, 0.2) 0%, rgba(101, 142, 146, 0.5) 100%);
+  box-shadow: inset 0px 0px 8px 4px rgba(91, 62, 86, 0.7), 0px 2px 3px black;
+  border: 1px solid rgba(20, 20, 20, 0.4);
+  color: white;
   background-position: 0 2px;
   background-repeat: no-repeat; }
 
-.filter button {
-  background: #e3e3e3;
-  border: 1px solid #bbbbbb;
-  border-radius: 3px;
-  -webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
-  box-shadow: inset 0 0 1px 1px #f6f6f6;
-  color: #333333;
-  text-align: center;
-  text-shadow: 0 1px 0 white; }
+.filter {
+  color: white;
+  box-shadow: 0px 5px #0f2024; }
+  .filter h3 {
+    text-indent: 30px;
+    text-shadow: 0px 1px 1px black; }
+  .filter ul {
+    text-align: center; }
+  .filter button {
+    background: #e3e3e3;
+    border-radius: 3px;
+    background-color: transparent;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(rgba(175, 202, 206, 0.2), 0), color-stop(rgba(101, 142, 146, 0.5), 1));
+    background-image: -webkit-linear-gradient(top, rgba(175, 202, 206, 0.2) 0%, rgba(101, 142, 146, 0.5) 100%);
+    box-shadow: inset 0px 0px 8px 4px rgba(91, 62, 86, 0.7), 0px 2px 3px black;
+    border: 1px solid rgba(20, 20, 20, 0.4);
+    color: white; }
 
 button.directions {
   background-image: url(../images/directions_icon.png);
@@ -119,8 +127,8 @@ button.save {
   background-size: 35% auto; }
 
 article.meeting_entry {
-  margin: 5px 0 5px 0;
-  box-shadow: 0px 1px 5px black; }
+  margin: 2px 0 2px 0;
+  box-shadow: 0px 1px 5px #0f2024; }
 
 ul {
   padding: 0;
@@ -134,20 +142,27 @@ ul li {
   margin: 0; }
 
 hgroup {
-  line-height: 0.4em;
-  font-family: gotham; }
-
-hgroup {
+  line-height: 0px;
+  font-family: gotham;
   color: white;
-  text-shadow: 0px 1px 2px black; }
+  text-shadow: 0px 1px 1px black; }
+
+hgroup h4, hgroup h5 {
+  line-height: 10px; }
 
 .fellowshipType {
   color: transparent;
   background-image: url(../images/AAicon.png);
   height: 25px;
-  width: 35px;
+  width: 25px;
   margin: 5px 0 0 5px;
   background-size: 100% auto; }
+
+.type ul li {
+  background-image: url(../images/AAicon.png); }
+.type ul button {
+  height: 40px;
+  text-indent: 0px; }
 
 .timeandday {
   border-top: 10px solid black;
@@ -157,7 +172,8 @@ hgroup {
   text-align: center;
   width: 50px;
   height: 30px;
-  margin: 5px 0 0 35px; }
+  margin: 5px 0 0 35px;
+  color: white; }
 
 .day li {
   border-top: 10px solid black;
@@ -171,21 +187,22 @@ hgroup {
   height: 20px;
   margin: 0 0 0 10px; }
 
-.filter_time {
-  margin: 0 0 0 20px; }
-  .filter_time li {
-    background-image: url(../images/clock.png);
-    width: 70px;
-    height: 60px;
-    background-size: 50px auto;
-    background-repeat: no-repeat; }
+.filter_time li {
+  background-image: url(../images/clock.png);
+  width: 70px;
+  height: 60px;
+  background-size: 50px auto;
+  background-repeat: no-repeat; }
 
 time p {
   font-weight: bold;
   line-height: 1px; }
 
 ul.ratings {
-  background-color: rgba(0, 120, 255, 0.2); }
+  background-color: rgba(10, 250, 85, 0);
+  background-image: -webkit-linear-gradient(top, rgba(187, 202, 21, 0) 0%, rgba(207, 232, 61, 0.2) 100%);
+  color: white;
+  text-shadow: 0px 1px 1px black; }
   ul.ratings li p {
     text-align: left; }
   ul.ratings li:first-child {
@@ -197,7 +214,7 @@ ul.ratings {
   ul.ratings li {
     background: url(../images/rating_icon_sprite.png) no-repeat top left;
     vertical-align: middle;
-    height: 30px; }
+    height: 35px; }
     ul.ratings li:active {
       background-color: red; }
   ul.ratings li.snacks {
@@ -209,9 +226,11 @@ ul.ratings {
   ul.ratings li.youngpeople {
     background-position: -960px 0; }
   ul.ratings li.vote {
+    background-color: red;
     background-position: -78px 0;
-    width: 14px;
-    height: 13px; }
+    width: 17px;
+    height: 15px;
+    margin: -10px 0 0 0; }
 
 ul.filter_ratings li {
   height: 40px;
