@@ -1,13 +1,24 @@
 /* style.sass */
+@font-face {
+  font-family: "gotham";
+  src: url("../../fonts/Gotham-Book.otf") format("opentype"); }
+
+/*=keyframes($wobble)
+ * /*0%  -webkit-transform: translateX(0%) 
+ * /*15%  -webkit-transform: translateX(-25%) rotate(-5deg) 
+ * /*30%  -webkit-transform: translateX(20%) rotate(3deg) 
+ * /*45%  -webkit-transform: translateX(-15%) rotate(-3deg) 
+ * /*60%  -webkit-transform: translateX(10%) rotate(2deg) 
+ * /*75%  -webkit-transform: translateX(-5%) rotate(-1deg) 
+ * /*100%  -webkit-transform: translateX(0%)  */
 html {
-  font-size: 0.5em; }
+  font-size: 0.7em; }
 
 body {
   padding: 0;
   font-family: Gotham;
   text-transform: uppercase;
-  font-weight: light;
-  background-image: url(../images/10.jpg);
+  background-image: url(../images/6.jpg);
   background-size: 480px 800px; }
 
 header h1 {
@@ -18,9 +29,8 @@ header h1 {
   padding: 0;
   text-align: center;
   color: white;
-  text-shadow: 0px 1px 2px black;
   min-height: 55px;
-  font-family: helvetica neue; }
+  font-family: gotham; }
 
 p {
   font-family: helvetica; }
@@ -59,7 +69,7 @@ button.back {
 
 button.settings {
   background-image: url(../images/profile.png);
-  margin: 5px 0 0 18.9px;
+  margin: 5px 0 0 5px;
   background-color: transparent;
   border-style: none;
   min-height: 20px;
@@ -69,16 +79,42 @@ button.settings {
 
 aside button {
   text-indent: 7px;
-  font-family: helvetica neue;
+  font-family: gotham;
   text-transform: uppercase;
-  margin: 5px 0 5px 10px;
+  margin: 4px 0 4px 9px;
   background-color: transparent;
   border-style: none;
   min-height: 20px;
   background-repeat: no-repeat;
   background-size: 80% auto;
+  background: #e3e3e3;
+  border-radius: 3px;
+  background-color: transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(rgba(175, 202, 206, 0.2), 0), color-stop(rgba(101, 142, 146, 0.5), 1));
+  background-image: -webkit-linear-gradient(top, rgba(175, 202, 206, 0.2) 0%, rgba(101, 142, 146, 0.5) 100%);
+  box-shadow: inset 0px 0px 8px 4px rgba(91, 62, 86, 0.7), 0px 2px 3px black;
+  border: 1px solid rgba(20, 20, 20, 0.4);
+  color: white;
   background-position: 0 2px;
   background-repeat: no-repeat; }
+
+.filter {
+  color: white;
+  box-shadow: 0px 5px #0f2024; }
+  .filter h3 {
+    text-indent: 30px;
+    text-shadow: 0px 1px 1px black; }
+  .filter ul {
+    text-align: center; }
+  .filter button {
+    background: #e3e3e3;
+    border-radius: 3px;
+    background-color: transparent;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(rgba(175, 202, 206, 0.2), 0), color-stop(rgba(101, 142, 146, 0.5), 1));
+    background-image: -webkit-linear-gradient(top, rgba(175, 202, 206, 0.2) 0%, rgba(101, 142, 146, 0.5) 100%);
+    box-shadow: inset 0px 0px 8px 4px rgba(91, 62, 86, 0.7), 0px 2px 3px black;
+    border: 1px solid rgba(20, 20, 20, 0.4);
+    color: white; }
 
 button.directions {
   background-image: url(../images/directions_icon.png);
@@ -91,8 +127,8 @@ button.save {
   background-size: 35% auto; }
 
 article.meeting_entry {
-  margin: 5px 0 5px 0;
-  box-shadow: 0px 1px 5px black; }
+  margin: 2px 0 2px 0;
+  box-shadow: 0px 1px 5px #0f2024; }
 
 ul {
   padding: 0;
@@ -106,66 +142,127 @@ ul li {
   margin: 0; }
 
 hgroup {
-  line-height: 0.4em;
-  font-family: helvetica neue; }
+  line-height: 0px;
+  font-family: gotham;
+  color: white;
+  text-shadow: 0px 1px 1px black; }
 
-hgroup {
-  color: white; }
+hgroup h4, hgroup h5 {
+  line-height: 10px; }
 
-.fellowshipType.AA {
+.fellowshipType {
   color: transparent;
-  background-image: url(../images/map_thumb.png);
-  height: 35px;
-  width: 35px;
+  background-image: url(../images/AAicon.png);
+  height: 25px;
+  width: 25px;
   margin: 5px 0 0 5px;
   background-size: 100% auto; }
+
+.type ul li {
+  background-image: url(../images/AAicon.png); }
+.type ul button {
+  height: 40px;
+  text-indent: 0px; }
 
 .timeandday {
   border-top: 10px solid black;
   border-left: 1px solid black;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
+  text-align: center;
   width: 50px;
   height: 30px;
-  margin: 5px 0 0 50px; }
+  margin: 5px 0 0 35px;
+  color: white; }
+
+.day li {
+  border-top: 10px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  text-align: center;
+  width: 50px;
+  height: 30px;
+  width: 30px;
+  height: 20px;
+  margin: 0 0 0 10px; }
+
+.filter_time li {
+  background-image: url(../images/clock.png);
+  width: 70px;
+  height: 60px;
+  background-size: 50px auto;
+  background-repeat: no-repeat; }
 
 time p {
-  text-align: center;
   font-weight: bold;
   line-height: 1px; }
 
 ul.ratings {
-  background-color: rgba(0, 120, 255, 0.2); }
+  background-color: rgba(10, 250, 85, 0);
+  background-image: -webkit-linear-gradient(top, rgba(187, 202, 21, 0) 0%, rgba(207, 232, 61, 0.2) 100%);
+  color: white;
+  text-shadow: 0px 1px 1px black; }
+  ul.ratings li p {
+    text-align: left; }
   ul.ratings li:first-child {
     font-size: 0.5em;
     padding: 0;
-    margin: 0;
+    margin: 0 0 0 5px;
     background: transparent;
     color: white; }
   ul.ratings li {
     background: url(../images/rating_icon_sprite.png) no-repeat top left;
-    color: rgba(0, 0, 0, 0);
     vertical-align: middle;
-    height: 20px; }
+    height: 35px; }
+    ul.ratings li:active {
+      background-color: red; }
   ul.ratings li.snacks {
-    background-position: -714px 5px;
-    width: 63px; }
+    background-position: -734px 5px; }
   ul.ratings li.coffee {
-    background-position: 0 0;
-    width: 63px; }
+    background-position: 0 0; }
   ul.ratings li.fellowship {
-    background-position: -477px 0;
-    width: 63px; }
+    background-position: -477px 0; }
   ul.ratings li.youngpeople {
-    background-position: -960px 0;
-    width: 63px; }
+    background-position: -960px 0; }
   ul.ratings li.vote {
+    background-color: red;
     background-position: -78px 0;
-    width: 14px;
-    height: 13px; }
-  ul.ratings p.voteNumber {
-    color: black;
-    margin: 0 0 0 40px; }
+    width: 17px;
+    height: 15px;
+    margin: -10px 0 0 0; }
+
+ul.filter_ratings li {
+  height: 40px;
+  background: url(../images/rating_icon_sprite.png) no-repeat top left; }
+ul.filter_ratings li.snacks {
+  background-position: -714px 5px; }
+ul.filter_ratings li.coffee {
+  background-position: 0 0; }
+ul.filter_ratings li.fellowship {
+  background-position: -477px 0; }
+ul.filter_ratings li.youngpeople {
+  background-position: -960px 0; }
+ul.filter_ratings li.large_group {
+  background-position: -152px 0; }
+ul.filter_ratings li.lgbt {
+  background-position: -236px 5px; }
+ul.filter_ratings li.meditation {
+  background-position: -321px 0; }
+ul.filter_ratings li.mens {
+  background-position: -401px 0; }
+ul.filter_ratings li.newcomer {
+  background-position: -477px 0; }
+ul.filter_ratings li.outsiders {
+  background-position: -558px 0; }
+ul.filter_ratings li.pets {
+  background-position: -634px 5px; }
+ul.filter_ratings li.wheelchair {
+  background-position: -796 0; }
+ul.filter_ratings li.womens {
+  background-position: -876px 0; }
+ul.filter_ratings li.newcomer {
+  background-position: -477px 0; }
 
 .leaflet-bottom {
   display: none; }

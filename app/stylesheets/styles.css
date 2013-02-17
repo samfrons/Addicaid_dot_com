@@ -1,20 +1,33 @@
+@import url(css/animations.css);
 /* style.sass */
-/* line 27, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
-html {
-  font-size: 0.5em;
+@font-face {
+  font-family: "gotham";
+  src: url("../../fonts/Gotham-Book.otf") format("opentype");
 }
 
-/* line 32, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/*=keyframes($wobble)
+ * /*0%  -webkit-transform: translateX(0%) 
+ * /*15%  -webkit-transform: translateX(-25%) rotate(-5deg) 
+ * /*30%  -webkit-transform: translateX(20%) rotate(3deg) 
+ * /*45%  -webkit-transform: translateX(-15%) rotate(-3deg) 
+ * /*60%  -webkit-transform: translateX(10%) rotate(2deg) 
+ * /*75%  -webkit-transform: translateX(-5%) rotate(-1deg) 
+ * /*100%  -webkit-transform: translateX(0%)  */
+/* line 61, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+html {
+  font-size: 0.7em;
+}
+
+/* line 64, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 body {
   padding: 0;
   font-family: Gotham;
   text-transform: uppercase;
-  font-weight: light;
-  background-image: url(../images/10.jpg);
+  background-image: url(../images/6.jpg);
   background-size: 480px 800px;
 }
 
-/* line 41, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 72, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 header h1 {
   position: relative;
   color: red;
@@ -23,54 +36,53 @@ header h1 {
   padding: 0;
   text-align: center;
   color: white;
-  text-shadow: 0px 1px 2px black;
   min-height: 55px;
-  font-family: helvetica neue;
+  font-family: gotham;
 }
 
-/* line 56, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 82, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 p {
   font-family: helvetica;
 }
 
-/* line 59, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 85, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 a {
   text-decoration: none;
   color: black !important;
 }
-/* line 63, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 89, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 a:hover {
   color: inherit;
 }
-/* line 65, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 91, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 a:visited {
   color: inherit;
 }
-/* line 67, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 93, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 a:active {
   color: inherit;
 }
 
-/* line 71, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 97, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 header.grid-12 {
   background-image: url(../images/headerbackground.png);
   background-size: 100% auto;
   box-shadow: 0px 1px 4px black;
 }
 
-/* line 77, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 103, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 header button {
   min-height: 35px !important;
 }
 
-/* line 80, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 106, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 button {
   color: white;
   margin: 20px;
   border-style: none;
 }
 
-/* line 85, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 111, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 button.back {
   background-image: url(../images/back_button.png);
   background-color: transparent;
@@ -81,10 +93,10 @@ button.back {
   background-size: auto;
 }
 
-/* line 90, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 116, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 button.settings {
   background-image: url(../images/profile.png);
-  margin: 5px 0 0 18.9px;
+  margin: 5px 0 0 5px;
   background-color: transparent;
   border-style: none;
   min-height: 20px;
@@ -93,22 +105,56 @@ button.settings {
   background-size: auto;
 }
 
-/* line 97, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 123, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 aside button {
   text-indent: 7px;
-  font-family: helvetica neue;
+  font-family: gotham;
   text-transform: uppercase;
-  margin: 5px 0 5px 10px;
+  margin: 4px 0 4px 9px;
   background-color: transparent;
   border-style: none;
   min-height: 20px;
   background-repeat: no-repeat;
   background-size: 80% auto;
+  background: #e3e3e3;
+  border-radius: 3px;
+  background-color: transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(rgba(175, 202, 206, 0.2), 0), color-stop(rgba(101, 142, 146, 0.5), 1));
+  background-image: -webkit-linear-gradient(top, rgba(175, 202, 206, 0.2) 0%, rgba(101, 142, 146, 0.5) 100%);
+  box-shadow: inset 0px 0px 8px 4px rgba(91, 62, 86, 0.7), 0px 2px 3px black;
+  border: 1px solid rgba(20, 20, 20, 0.4);
+  color: white;
   background-position: 0 2px;
   background-repeat: no-repeat;
 }
 
-/* line 107, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 133, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+.filter {
+  color: white;
+  box-shadow: 0px 5px #0f2024;
+}
+/* line 136, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+.filter h3 {
+  text-indent: 30px;
+  text-shadow: 0px 1px 1px black;
+}
+/* line 139, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+.filter ul {
+  text-align: center;
+}
+/* line 141, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+.filter button {
+  background: #e3e3e3;
+  border-radius: 3px;
+  background-color: transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(rgba(175, 202, 206, 0.2), 0), color-stop(rgba(101, 142, 146, 0.5), 1));
+  background-image: -webkit-linear-gradient(top, rgba(175, 202, 206, 0.2) 0%, rgba(101, 142, 146, 0.5) 100%);
+  box-shadow: inset 0px 0px 8px 4px rgba(91, 62, 86, 0.7), 0px 2px 3px black;
+  border: 1px solid rgba(20, 20, 20, 0.4);
+  color: white;
+}
+
+/* line 144, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 button.directions {
   background-image: url(../images/directions_icon.png);
   background-size: 35% auto;
@@ -116,25 +162,25 @@ button.directions {
   padding: 0px;
 }
 
-/* line 115, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 150, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 button.save {
   background-image: url(../images/save_icon.png);
   background-size: 35% auto;
 }
 
-/* line 121, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 156, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 article.meeting_entry {
-  margin: 5px 0 5px 0;
-  box-shadow: 0px 1px 5px black;
+  margin: 2px 0 2px 0;
+  box-shadow: 0px 1px 5px #0f2024;
 }
 
-/* line 125, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 160, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 ul {
   padding: 0;
   margin: 0;
 }
 
-/* line 129, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 164, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 ul li {
   list-style-type: none;
   display: inline-block;
@@ -143,107 +189,208 @@ ul li {
   margin: 0;
 }
 
-/* line 136, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 171, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 hgroup {
-  line-height: 0.4em;
-  font-family: helvetica neue;
-}
-
-/* line 140, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
-hgroup {
+  line-height: 0px;
+  font-family: gotham;
   color: white;
+  text-shadow: 0px 1px 1px black;
 }
 
-/* line 146, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
-.fellowshipType.AA {
+/* line 178, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+hgroup h4, hgroup h5 {
+  line-height: 10px;
+}
+
+/* line 181, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+.fellowshipType {
   color: transparent;
-  background-image: url(../images/map_thumb.png);
-  height: 35px;
-  width: 35px;
+  background-image: url(../images/AAicon.png);
+  height: 25px;
+  width: 25px;
   margin: 5px 0 0 5px;
   background-size: 100% auto;
 }
 
-/* line 154, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 195, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+.type ul li {
+  background-image: url(../images/AAicon.png);
+}
+/* line 200, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+.type ul button {
+  height: 40px;
+  text-indent: 0px;
+}
+
+/* line 204, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 .timeandday {
   border-top: 10px solid black;
   border-left: 1px solid black;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
+  text-align: center;
   width: 50px;
   height: 30px;
-  margin: 5px 0 0 50px;
+  margin: 5px 0 0 35px;
+  color: white;
 }
 
-/* line 164, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
-time p {
+/* line 210, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+.day li {
+  border-top: 10px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
   text-align: center;
+  width: 50px;
+  height: 30px;
+  width: 30px;
+  height: 20px;
+  margin: 0 0 0 10px;
+}
+
+/* line 217, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+.filter_time li {
+  background-image: url(../images/clock.png);
+  width: 70px;
+  height: 60px;
+  background-size: 50px auto;
+  background-repeat: no-repeat;
+}
+
+/* line 225, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+time p {
   font-weight: bold;
   line-height: 1px;
 }
 
-/* line 169, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 229, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 ul.ratings {
-  background-color: rgba(0, 120, 255, 0.2);
+  background-color: rgba(10, 250, 85, 0);
+  background-image: -webkit-linear-gradient(top, rgba(187, 202, 21, 0) 0%, rgba(207, 232, 61, 0.2) 100%);
+  color: white;
+  text-shadow: 0px 1px 1px black;
 }
-/* line 172, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 236, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+ul.ratings li p {
+  text-align: left;
+}
+/* line 239, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 ul.ratings li:first-child {
   font-size: 0.5em;
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 5px;
   background: transparent;
   color: white;
 }
-/* line 179, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 246, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 ul.ratings li {
   background: url(../images/rating_icon_sprite.png) no-repeat top left;
-  color: rgba(0, 0, 0, 0);
   vertical-align: middle;
-  height: 20px;
+  height: 35px;
 }
-/* line 185, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 252, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+ul.ratings li:active {
+  background-color: red;
+}
+/* line 255, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 ul.ratings li.snacks {
-  background-position: -714px 5px;
-  width: 63px;
+  background-position: -734px 5px;
 }
-/* line 189, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 259, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 ul.ratings li.coffee {
   background-position: 0 0;
-  width: 63px;
 }
-/* line 193, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 263, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 ul.ratings li.fellowship {
   background-position: -477px 0;
-  width: 63px;
 }
-/* line 197, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 267, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 ul.ratings li.youngpeople {
   background-position: -960px 0;
-  width: 63px;
 }
-/* line 201, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 271, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 ul.ratings li.vote {
+  background-color: red;
   background-position: -78px 0;
-  width: 14px;
-  height: 13px;
-}
-/* line 206, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
-ul.ratings p.voteNumber {
-  color: black;
-  margin: 0 0 0 40px;
+  width: 17px;
+  height: 15px;
+  margin: -10px 0 0 0;
 }
 
-/* line 210, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 279, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+ul.filter_ratings li {
+  height: 40px;
+  background: url(../images/rating_icon_sprite.png) no-repeat top left;
+}
+/* line 283, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+ul.filter_ratings li.snacks {
+  background-position: -714px 5px;
+}
+/* line 286, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+ul.filter_ratings li.coffee {
+  background-position: 0 0;
+}
+/* line 289, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+ul.filter_ratings li.fellowship {
+  background-position: -477px 0;
+}
+/* line 293, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+ul.filter_ratings li.youngpeople {
+  background-position: -960px 0;
+}
+/* line 297, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+ul.filter_ratings li.large_group {
+  background-position: -152px 0;
+}
+/* line 300, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+ul.filter_ratings li.lgbt {
+  background-position: -236px 5px;
+}
+/* line 304, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+ul.filter_ratings li.meditation {
+  background-position: -321px 0;
+}
+/* line 307, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+ul.filter_ratings li.mens {
+  background-position: -401px 0;
+}
+/* line 311, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+ul.filter_ratings li.newcomer {
+  background-position: -477px 0;
+}
+/* line 315, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+ul.filter_ratings li.outsiders {
+  background-position: -558px 0;
+}
+/* line 318, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+ul.filter_ratings li.pets {
+  background-position: -634px 5px;
+}
+/* line 322, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+ul.filter_ratings li.wheelchair {
+  background-position: -796 0;
+}
+/* line 326, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+ul.filter_ratings li.womens {
+  background-position: -876px 0;
+}
+/* line 330, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+ul.filter_ratings li.newcomer {
+  background-position: -477px 0;
+}
+
+/* line 334, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 .leaflet-bottom {
   display: none;
 }
 
-/* line 213, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 337, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 .mappo {
   height: 70% !important;
 }
 
-/* line 217, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 341, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 nav .bottom {
   position: fixed;
   bottom: 0px;
@@ -251,103 +398,103 @@ nav .bottom {
   background-image: url(../images/navbottom.png);
   height: 44px;
 }
-/* line 223, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 347, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 nav .bottom li {
   background: url(../images/bottom_sprites.png) no-repeat top left;
   text-align: center;
   height: 38px;
   padding: 3px;
 }
-/* line 228, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 352, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 nav .bottom li.map {
   background-position: 20px -66px;
   height: 38px;
   background-color: rgba(20, 20, 20, 0.5);
 }
-/* line 232, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 356, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 nav .bottom li.filter {
   background-position: 25px -134px;
   height: 38px;
   background-color: rgba(210, 120, 20, 0.5);
 }
-/* line 236, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 360, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 nav .bottom li.saved {
   background-position: 25px -202px;
   height: 38px;
   background-color: rgba(0, 120, 20, 0.5);
 }
-/* line 240, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 364, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 nav .bottom li.list {
   background-position: 25px 2px;
   height: 38px;
   background-color: rgba(220, 20, 20, 0.5);
 }
 
-/* line 245, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 369, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 .grids {
   display: inline-block;
   vertical-align: top;
   overflow: hidden;
 }
 
-/* line 252, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 376, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 .grid-1 {
   width: 6.15%;
 }
 
-/* line 255, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 379, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 .grid-2 {
   width: 14.583%;
 }
 
-/* line 258, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 382, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 .grid-3 {
   width: 22.792%;
 }
 
-/* line 261, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 385, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 .grid-4 {
   width: 32.25%;
   margin: 0;
   padding: 0;
 }
 
-/* line 266, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 390, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 .grid-5 {
   width: 39.583%;
 }
 
-/* line 269, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 393, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 .grid-6 {
   width: 47.917%;
 }
 
-/* line 272, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 396, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 .grid-7 {
   width: 56.25%;
 }
 
-/* line 275, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 399, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 .grid-8 {
   width: 64.583%;
 }
 
-/* line 278, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 402, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 .grid-9 {
   width: 72.917%;
 }
 
-/* line 281, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 405, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 .grid-10 {
   width: 81.25%;
 }
 
-/* line 284, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 408, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 .grid-11 {
   width: 89.583%;
 }
 
-/* line 287, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
+/* line 411, /Users/Sam/Addicaid_Meeting_MVP/app/sass/pages/_mainstyle.sass */
 .grid-12 {
   width: 100%;
   width-margin: 0;
