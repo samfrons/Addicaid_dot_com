@@ -8,12 +8,35 @@ $experimental-support-for-microsoft : true !default
 $main-color: #2A2a2a
 $white: #FFFFFF
 
+@font-face
+ font-family: "gotham"
+ src: url('../../fonts/Gotham-Book.otf') format('opentype')
+
 @mixin backgrounds
  background-color: transparent
  border-style: none
  min-height: 20px
  background-repeat: no-repeat
  background-size: 80% auto
+
+@mixin calendar
+ border-top: 10px solid black
+ border-left: 1px solid black
+ border-right: 1px solid black
+ border-bottom: 1px solid black
+ text-align: center
+ width: 50px
+ height: 30px
+
+@mixin minimal
+ background: #e3e3e3
+ border: 1px solid #bbb
+ border-radius: 3px
+ -webkit-box-shadow: inset 0 0 1px 1px #f6f6f6
+ box-shadow: inset 0 0 1px 1px #f6f6f6
+ color: #333
+ text-align: center
+ text-shadow: 0 1px 0 #fff
 
 @mixin rounded
  border-radius: 10px
@@ -24,17 +47,26 @@ $white: #FFFFFF
 @mixin gradient-blue
  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc)
 
+=keyframes($name)
+
+
+/*=keyframes($wobble) 
+  /*0%  -webkit-transform: translateX(0%) 
+  /*15%  -webkit-transform: translateX(-25%) rotate(-5deg) 
+  /*30%  -webkit-transform: translateX(20%) rotate(3deg) 
+  /*45%  -webkit-transform: translateX(-15%) rotate(-3deg) 
+  /*60%  -webkit-transform: translateX(10%) rotate(2deg) 
+  /*75%  -webkit-transform: translateX(-5%) rotate(-1deg) 
+  /*100%  -webkit-transform: translateX(0%) 
+
 html
- font-size: .5em 
-
-
+ font-size: .7em 
 
 body
  padding: 0
  font-family: Gotham
  text-transform: uppercase
- font-weight: light
- background-image: url(../images/10.jpg)
+ background-image: url(../images/6.jpg)
  background-size: 480px 800px
 
 header
@@ -46,13 +78,8 @@ header
   padding: 0
   text-align: center
   color: white
-  text-shadow: 0px 1px 2px black
   min-height: 55px
-  font-family: helvetica neue
- 
-form
- h1
-
+  font-family: gotham
 p
  font-family: helvetica
 
@@ -89,25 +116,30 @@ button.back
 
 button.settings
  background-image: url(../images/profile.png)
- margin: 5px 0 0 18.9px
+ margin: 5px 0 0 5px
  @include backgrounds
  background-size: auto
 
 aside
  button
   text-indent: 7px
-  font-family: helvetica neue
+  font-family: gotham
   text-transform: uppercase
-  margin: 5px 0 5px 10px
+  margin: 4px 0 4px 9px
   @include backgrounds
-  
+  @include minimal 
   background-position: 0 2px
   background-repeat: no-repeat
+
+.filter
+ button
+  @include minimal
+
 
 button.directions
 
  background-image: url(../images/directions_icon.png)
- 
+
  background-size: 35% auto
  height: 10px
  padding: 0px
@@ -135,78 +167,145 @@ ul li
 
 hgroup 
  line-height: .4em
- font-family: helvetica neue
+ font-family: gotham
 
 hgroup 
  h1 h2 h3 
  color: $white
+ text-shadow: 0px 1px 2px black
 
- &:hover
-
-.fellowshipType.AA
+.fellowshipType
  color: transparent
- background-image: url(../images/map_thumb.png)
- height: 35px
+ background-image: url(../images/AAicon.png)
+ height: 25px
  width: 35px
  margin: 5px 0 0 5px
  background-size: 100% auto
 
 .timeandday
- border-top: 10px solid black
- border-left: 1px solid black
- border-right: 1px solid black
- border-bottom: 1px solid black
- width: 50px
- height: 30px
- margin: 5px 0 0 50px
+ @include calendar
+ margin: 5px 0 0 35px
 
+.day li
+ @include calendar
+ width: 30px
+ height: 20px
+ margin: 0 0 0 10px
+
+.filter_time
+ margin: 0 0 0 20px
+ li
+  background-image: url(../images/clock.png)
+  width: 70px
+  height: 60px
+  background-size: 50px auto
+  background-repeat: no-repeat
+ 
 time 
  p
-  text-align: center
   font-weight: bold
   line-height: 1px
 
 ul.ratings
  background-color: rgba(0,120,255,0.2)
 
+ li
+  p
+   text-align: left
+
  li:first-child
   font-size: .5em
   padding: 0
-  margin: 0
+  margin: 0 0 0 5px
   background: transparent
   color: $white
  
  li
   background: url(../images/rating_icon_sprite.png) no-repeat top left
-  color: rgba(0,0,0,0)
   vertical-align: middle
-  height: 20px
+  height: 30px
+
+
+  &:active
+   background-color: red
 
  li.snacks
-  background-position: -714px 5px
-  width: 63px 
+  background-position: -734px 5px
+   
 
  li.coffee
   background-position: 0 0 
-  width: 63px 
+   
 
  li.fellowship
   background-position: -477px 0
-  width: 63px
+  
 
  li.youngpeople
   background-position: -960px 0
-  width: 63px
+  
   
  li.vote
   background-position: -78px 0
   width: 14px
   height: 13px
-  
- p.voteNumber
-  color: black
-  margin: 0 0 0 40px
 
+ul.filter_ratings
+ li 
+  height: 40px
+  background: url(../images/rating_icon_sprite.png) no-repeat top left
+
+ li.snacks
+  background-position: -714px 5px
+   
+ li.coffee
+  background-position: 0 0 
+
+ li.fellowship
+  background-position: -477px 0
+  
+
+ li.youngpeople
+  background-position: -960px 0
+  
+  
+ li.large_group
+  background-position: -152px 0
+
+ li.lgbt
+  background-position: -236px 5px
+   
+
+ li.meditation
+  background-position: -321px 0 
+   
+ li.mens
+  background-position: -401px 0
+  
+
+ li.newcomer
+  background-position: -477px 0
+  
+  
+ li.outsiders
+  background-position: -558px 0
+
+ li.pets
+  background-position: -634px 5px
+   
+
+ li.wheelchair
+  background-position: -796 0 
+   
+
+ li.womens
+  background-position: -876px 0
+  
+
+ li.newcomer
+  background-position: -477px 0
+  
+  
 .leaflet-bottom
  display: none
 

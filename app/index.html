@@ -15,6 +15,7 @@
     <!--<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.css" />-->
     <!--<script src="http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.js"></script>-->
     <link rel="stylesheet" href="js/lib/leaflet/0.5.1/leaflet.css" />
+    <link rel="stylesheet" href="css/animations.css" />
     <script src="js/lib/leaflet/0.5.1/leaflet-src.js"></script>
 
 
@@ -41,7 +42,20 @@
     <!--Why are the following needed?-->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+<script type="text/javascript">
+function updateSlider(slideAmount) {
+//get the element
+var display = document.getElementById("chosen");
+//show the amount
+display.innerHTML=slideAmount;
+//get the element
+var pic = document.getElementById("pic");
+//set the dimensions
+pic.style.width=slideAmount+"%";
+pic.style.height=slideAmount+"%";
 
+}
+</script>
 </head>
 
 <body ng-controller="AppCtrl">
