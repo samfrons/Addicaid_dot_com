@@ -1,26 +1,31 @@
 <article class="grids grid-12 meeting_entry">
     <aside class="grids grid-1 fellowshipType" ng-class="meeting.fellowship.id">{{meeting.fellowship.id}}</aside>
-    <hgroup class="grids grid-6">
+    <hgroup class="grids grid-7">
         <h3>{{meeting.title}}</h3>
         <h4>{{meeting.location.title}}</h4>
         <h5>{{meeting.location.address1}}</h5>
+        <h6>new york, NY 100025 </h6>
 
         
 
     </hgroup>
 
-    <aside class="grids grid-5 right_side">
+    <aside class="grids grid-4 right_side">
 
         <div class="timeandday">
         <time class="time"><p>{{meeting.calendar.time}}</p></time>
         <time datetime="monday"><p>{{meeting.calendar.dayShort}}</p></time>
+        <p class="distance">(0.2 mi)</p>
         </div>
-
-
         
-       <button class="grids grid-5 directions" type="submit"><a href="https://maps.google.com/maps?daddr={{meeting.location.address1}}">go</a></button>
-        <button class="grids grid-5 save" type="submit" ng-submit="addFavorite()"><a href="#">save</a></button>
-    </aside>
+</aside>
+
+        <aside class="grids grid-3 right2_side">
+            <button class="grids grid-5 save" type="submit" ng-submit="addFavorite()"><a href="#"><img src="../images/star_icon.png"></a></button>
+            <button class="grids directions" type="submit"><a href="https://maps.google.com/maps?daddr={{meeting.location.address1}}"><img src="../images/arrow.png"></a></button>
+        </aside>
+       
+    
 
     <ul class="grids grid-12 ratings">
         <li><h3>meeting stats&nbsp;</h3></li>
