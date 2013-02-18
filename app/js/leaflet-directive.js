@@ -1,3 +1,5 @@
+'use strict';
+
 var app = angular.module('addicaidApp.leaflet-directive', []);
 
 // TODO: ui-event?
@@ -9,7 +11,7 @@ var bindMapEvents = function bindMapEvents(scope, eventsString, leafletObject, e
         //for the leaflet map doesn't interfere with a normal 'click' event
         var $event = { type: 'map-' + eventName };
         leafletObject.addEventListener(eventName, function (evt) {
-//log(eventName + ' triggered')
+//log("bindMapEvents", eventName + ' triggered')
             element.triggerHandler(angular.extend({}, $event, evt));
             // TODO: dont really understand this apply stuff
             //We create an $apply if it isn't happening. we need better support for this
@@ -33,70 +35,98 @@ app.directive('leafletMap', ['$parse', function leafletMapDirective($parse) {
         'layeradd layerremove baselayerchange ' +
         'locationfound locationerror ' +
         'popupopen popupclose';
-    var mapOptions = {};
-log('leafletMap');
 
     return {
-        restrict: 'E',
-        replace: true,
-        template: '<div></div>',
-        scope: {
-            center: '=',
-            zoom: '='
-        },
+        restrict: 'A',
+//        replace: true,
+//        template: '<div></div>',
+//        scope: {
+//            mapOptions: '=' // required
+//            ,happy: '='
+//        },
         link: function link(scope, element, attrs) {
-            var mapOptions = {};
-log(scope)
-            var opts = angular.extend({}, mapOptions, scope.$eval(attrs.mapOptions));
-            var map = new L.Map(element[0]);//, opts);
-            map.addLayer(L.tileLayer('http://{s}.tiles.mapbox.com/v3/samfrons.map-dcwttqie/{z}/{x}/{y}.png', { maxZoom: 18 }));//.addTo(map);
+            var map = L.map(element[0]);
 
-            scope.$watch("center", function watchCenter(center) {
-  log(center)
-  if (scope.center!==center) log('ERROR scope.center !== center')
-                if (center === undefined) return;
+//            scope.leafletMap = map;
+            var model = $parse(attrs.leafletMap);
+//            log(attrs.leafletMap, scope.$eval(attrs.leafletMap), model(scope), model)
+            model.assign(scope, map); //Set scope variable for the map
+//            log(attrs.leafletMap, model(scope)===map, model(scope), model)
 
 
-                // Center of the map
-                center = new L.LatLng(scope.center.lat, scope.center.lng);
-logvar("scope.zoom", scope.zoom)
-                var zoom = scope.zoom || 8;
-                map.setView(center, zoom);
-            });
 
+//            log('map', angular.extend(scope, {leafletMap : map}))
+//            angular.extend(scope, {leafletMap : map});
+
+
+            // map tileLayer
+            map.addLayer(L.tileLayer('http://{s}.tiles.mapbox.com/v3/samfrons.map-dcwttqie/{z}/{x}/{y}.png', { maxZoom: 18 }));
+            log(attrs.leafletOptions,'b')
+
+            // mapOptions
+            if (attrs.leafletOptions !== undefined) {
+                scope.$watch(attrs.leafletOptions, function (mapOptions) {
+                    log("watch_mapOptions", mapOptions, model(scope))
+                    if (mapOptions === undefined) { // create mapOptions if doesn't exist
+                        mapOptions = {};
+                    }
+
+                    // Center of the map
+                    if (mapOptions.center === undefined) { // default center
+                        angular.extend(mapOptions, { center : L.latLng(38.8977, -77.0366) });
+                    }
+                    // zoom
+                    if (mapOptions.zoom === undefined) { // default zoom
+                        angular.extend(mapOptions, { zoom : 8 });
+                    }
+                    map.setView(mapOptions.center, mapOptions.zoom);
+                });
+            }
+log('end')
             bindMapEvents(scope.$root, mapEvents, map, element);
         }
     };
 }]);
 
-//app.directive('leafletMarker',
-//    ['$parse', function($parse) {
-//
-//        var markerEvents = 'click dblclick ' +
-//            'mousedown mouseover mouseout ' +
-//            'contextmenu ' +
-//            'dragstart drag dragend ' +
-//            'move remove';
-//        var markerOptions = {};
-//console.log('leafletMarker');
-//
-//        return {
-//            restrict: 'A', // TODO:
-//            link: function (scope, elm, attrs) {
-//                var latLng = L.latLng(attrs.lat, attrs.lng)
-//                var opts = angular.extend({}, markerOptions, scope.$eval(attrs.markerOptions));
-//                var marker = L.marker(latLng, opts);
-//console.log('leafletMarker link');
-//
-//                var model = $parse(attrs.leafletMap);
-//                //Set scope variable for the map
-//                model.assign(scope, map);
-//
-//                bindMapEvents(scope, markerEvents, marker, elm);
-//            }
-//        };
-//
-//    }]);
+app.directive('leafletMarker', ['$parse', function($parse) {
+
+    var markerEvents = 'click dblclick ' +
+        'mousedown mouseover mouseout ' +
+        'contextmenu ' +
+        'dragstart drag dragend ' +
+        'move remove';
+    log('leafletMarker', null);
+
+    return {
+        restrict: 'E', // TODO:
+//        scope: {
+//            markerOptions: '=', // required
+//            markerLatitude: '=',
+//            markerLongitude: '=',
+//            mapID: '='
+//        },
+        link: function (scope, element, attrs) {
+            // attributes:
+            //   leafletLat, leafletLng // required
+            //   markerOptions
+            //   leafletMap // required
+            var latLng = L.latLng(attrs.leafletLat, attrs.leafletLng);
+            var opts = angular.extend({}, scope.$eval(attrs.markerOptions));
+            var marker = L.marker(latLng, opts);
+
+
+            log('leafletMarker link',scope,element,attrs);
+
+            var model = $parse(attrs.leafletMap);
+            log(attrs.leafletMap)
+            //Set scope variable for the map
+//            model.assign(scope, scope.$eval(attrs.leafletMap));
+
+            bindMapEvents(scope, markerEvents, marker, element);
+        }
+    };
+
+}]);
 
 //    app.directive('uiMapInfoWindow',
 //        ['ui.config', '$parse', '$compile', function (uiConfig, $parse, $compile) {
@@ -142,11 +172,12 @@ logvar("scope.zoom", scope.zoom)
  * ui-event will be able to catch all of myMarker's events. Super simple.
  */
 //function mapOverlayDirective(directiveName, events) {
-//console.log('mapOverlayDirective');
+//log('mapOverlayDirective_'+directiveName,events);
 //    app.directive(directiveName, [function () {
 //        return {
 //            restrict: 'A',
 //            link: function (scope, elm, attrs) {
+////log(scope)
 //                scope.$watch(attrs[directiveName], function (newObject) {
 //                    bindMapEvents(scope, events, newObject, elm);
 //                });
@@ -154,13 +185,15 @@ logvar("scope.zoom", scope.zoom)
 //        };
 //    }]);
 //}
-
-//mapOverlayDirective('leafletMarker',
+//
+//mapOverlayDirective(
+//    'leafletMarker',
 //    'click dblclick ' +
-//        'mousedown mouseover mouseout ' +
-//        'contextmenu ' +
-//        'dragstart drag dragend ' +
-//        'move remove');
+//    'mousedown mouseover mouseout ' +
+//    'contextmenu ' +
+//    'dragstart drag dragend ' +
+//    'move remove'
+//);
 
 
 
@@ -210,3 +243,43 @@ logvar("scope.zoom", scope.zoom)
 //                }
 //            }
 //        },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//// mapOptions
+//scope.$watch(attrs.leafletMapOptions, function (mapOptions) {
+//    log("watch_mapOptions", mapOptions)
+//    if (scope.mapOptions!==mapOptions) log("watchCenter",'ERROR scope.mapOptions !== mapOptions')
+//    log("watch_mapOptions",scope.mapOptions, scope.happy)
+//    if (scope.mapOptions === undefined) { // create mapOptions if doesn't exist
+//        angular.extend(scope, { mapOptions : {} });
+//    }
+//    log("watch_mapOptions",3)
+//
+//    // Center of the map
+//    if (scope.mapOptions.center === undefined) { // default center
+//        angular.extend(scope.mapOptions, { center : L.latLng(38.8977, -77.0366) });
+//    }
+//    log("watch_mapOptions",4)
+//    // zoom
+//    if (scope.mapOptions.zoom === undefined) { // default zoom
+//        angular.extend(scope.mapOptions, { zoom : 8 });
+//    }
+//    log("watch_mapOptions",5)
+//    map.setView(scope.mapOptions.center, scope.mapOptions.zoom);
+//    log("watch_mapOptions",6)
+//});

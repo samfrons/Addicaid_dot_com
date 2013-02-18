@@ -18,8 +18,27 @@
 <!--<leafletMarker ></leafletMarker>-->
 
 
-<leaflet-map class="mappo" map-options="mapOptions"
-        center="mapCenter" zoom="mapZoom"></leaflet-map>
+<div leaflet-map="leafletMap"
+        leaflet-options="mapOptions"
+        class="mappo"
+        ></div>
+center="mapCenter" zoom="mapZoom"
+<!--ui-map="map1"-->
+
+
+<!-- this is the confusing part. we have to point the map marker directive
+  at an existing google.maps.Marker object, so it can hook up events -->
+<!--<leaflet-marker-->
+        <!--ng-repeat="marker in mapMarkers"-->
+     <!--leaflet-lat="mapMarkers[$index].latitude"-->
+     <!--leaflet-lng="mapMarkers[$index].longitude"-->
+     <!--leaflet-map="mapid"-->
+     <!-->-->
+<!--</leaflet-marker>-->
+<!--map-event="{'map-click': 'openMarkerInfo(marker)'}"-->
+
+
+
 
 
 <ng-include src="views.footer"></ng-include>

@@ -1,8 +1,6 @@
 
 
-// usage: log('inside coolFunc',this,arguments);
-// http://paulirish.com/2009/log-a-lightweight-wrapper-for-consolelog/
-window.log = function(){
+window.logCaller = function(){
     log.history = log.history || [];   // store logs to an array for reference
     log.history.push(arguments);
     if(this.console){
@@ -13,13 +11,41 @@ window.log = function(){
     }
 };
 
-window.logvar = function(name, obj) {
+window.logvarCaller = function(name, obj) {
     log.history = log.history || [];   // store logs to an array for reference
     log.history.push([name,obj]);
     if(this.console){
         console.log("~"+arguments.callee.caller.name+"~", name, obj );
     }
 }
+
+
+window.log = function(){
+    log.history = log.history || [];   // store logs to an array for reference
+    log.history.push(arguments);
+    if(this.console){
+        if (arguments.length == 2 && typeof(arguments[0]) === "string" && arguments[1] === null)
+            console.log("~"+arguments[0]+"~")
+        else if (arguments.length == 1)
+            console.log(arguments[0]);
+        else if (typeof(arguments[0]) === "string")
+            console.log("~"+arguments[0]+"~", Array.prototype.slice.call(arguments, 1) );
+        else
+            console.log(Array.prototype.slice.call(arguments) );
+    }
+};
+
+window.logvar = function(scope, name, obj) {
+    log.history = log.history || [];   // store logs to an array for reference
+    log.history.push([scope,name,obj]);
+    if(this.console){
+        console.log("~"+scope+"~", name, obj );
+    }
+}
+
+//window.log = function() {}
+//window.logvar = function(){}
+
 
 //window.prettyLog = function() {
 //    log.history = log.history || [];   // store logs to an array for reference
@@ -36,10 +62,4 @@ window.logvar = function(name, obj) {
 //        else
 //            console.log(arguments.callee.caller.name, Array.prototype.slice.call(arguments));
 //    }
-//}
-
-//// alog(this); == console.log(this,arguments);
-//window.alog = function(context){
-//    // grab the calling functions arguments
-//    log(arguments.callee.caller.name, context, arguments.callee.caller.arguments);
 //}
