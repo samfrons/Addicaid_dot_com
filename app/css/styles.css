@@ -16,21 +16,20 @@ html {
 
 body {
   padding: 0;
-  font-family: Gotham;
+  font-family: "Titillium Web", sans-serif;
   text-transform: uppercase;
-  background-image: url(../images/6.jpg);
-  background-size: 480px 800px; }
+  background-size: auto; }
 
 header h1 {
   position: relative;
-  color: red;
   top: 15px;
   margin: 0;
   padding: 0;
   text-align: center;
   color: white;
   min-height: 55px;
-  font-family: gotham; }
+  font-family: futura;
+  text-shadow: 0px 1px 1px black; }
 
 p {
   font-family: helvetica; }
@@ -47,14 +46,14 @@ a {
 
 header.grid-12 {
   background-image: url(../images/headerbackground.png);
-  background-size: 100% auto;
+  background-repeat: repeat-x;
+  background-size: auto 55px;
   box-shadow: 0px 1px 4px black; }
 
 header button {
-  min-height: 35px !important; }
+  min-height: 33px !important; }
 
 button {
-  color: white;
   margin: 20px;
   border-style: none; }
 
@@ -65,11 +64,12 @@ button.back {
   min-height: 20px;
   background-repeat: no-repeat;
   background-size: 80% auto;
-  background-size: auto; }
+  background-size: auto;
+  margin: 10px 0 0 0; }
 
 button.settings {
   background-image: url(../images/profile.png);
-  margin: 5px 0 0 5px;
+  margin: 10px 0 0 5px;
   background-color: transparent;
   border-style: none;
   min-height: 20px;
@@ -77,58 +77,49 @@ button.settings {
   background-size: 80% auto;
   background-size: auto; }
 
-aside button {
-  text-indent: 7px;
-  font-family: gotham;
-  text-transform: uppercase;
-  margin: 4px 0 4px 9px;
-  background-color: transparent;
-  border-style: none;
-  min-height: 20px;
-  background-repeat: no-repeat;
-  background-size: 80% auto;
-  background: #e3e3e3;
-  border-radius: 3px;
-  background-color: transparent;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(rgba(175, 202, 206, 0.2), 0), color-stop(rgba(101, 142, 146, 0.5), 1));
-  background-image: -webkit-linear-gradient(top, rgba(175, 202, 206, 0.2) 0%, rgba(101, 142, 146, 0.5) 100%);
-  box-shadow: inset 0px 0px 8px 4px rgba(91, 62, 86, 0.7), 0px 2px 3px black;
-  border: 1px solid rgba(20, 20, 20, 0.4);
-  color: white;
-  background-position: 0 2px;
-  background-repeat: no-repeat; }
-
 .filter {
-  color: white;
-  box-shadow: 0px 5px #0f2024; }
+  color: #2a2a2a;
+  box-shadow: 0px 5px #0f2024;
+  padding: 0 0 10px 0; }
   .filter h3 {
     text-indent: 30px;
     text-shadow: 0px 1px 1px black; }
   .filter ul {
     text-align: center; }
   .filter button {
-    background: #e3e3e3;
-    border-radius: 3px;
-    background-color: transparent;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(rgba(175, 202, 206, 0.2), 0), color-stop(rgba(101, 142, 146, 0.5), 1));
-    background-image: -webkit-linear-gradient(top, rgba(175, 202, 206, 0.2) 0%, rgba(101, 142, 146, 0.5) 100%);
-    box-shadow: inset 0px 0px 8px 4px rgba(91, 62, 86, 0.7), 0px 2px 3px black;
-    border: 1px solid rgba(20, 20, 20, 0.4);
-    color: white; }
-
-button.directions {
-  background-image: url(../images/directions_icon.png);
-  background-size: 35% auto;
-  height: 10px;
-  padding: 0px; }
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2ca0ca), color-stop(1, #3eb8e5));
+    box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px #684549;
+    border-radius: 5px;
+    color: white;
+    font-family: "Open Sans", sans-serif; }
+  .filter input {
+    width: 90px; }
+    .filter input:active {
+      background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #3eb8e5), color-stop(1, #2ca0ca));
+      box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px white; }
 
 button.save {
-  background-image: url(../images/save_icon.png);
-  background-size: 35% auto; }
+  background: #00c6d4;
+  width: auto; }
+  button.save img {
+    width: 20px; }
+
+button.directions {
+  padding: 0px;
+  position: relative;
+  background: transparent; }
+  button.directions img {
+    height: 50px; }
+
+aside button {
+  font-family: "open sans", sans-serif;
+  text-transform: uppercase;
+  background-repeat: no-repeat; }
 
 article.meeting_entry {
   margin: 2px 0 2px 0;
-  box-shadow: 0px 1px 5px #0f2024; }
+  box-shadow: 0px 1px 5px white;
+  background: -webkit-linear-gradient(top, white 0%, #f3f3f3 100%); }
 
 ul {
   padding: 0;
@@ -143,12 +134,13 @@ ul li {
 
 hgroup {
   line-height: 0px;
-  font-family: gotham;
-  color: white;
-  text-shadow: 0px 1px 1px black; }
+  font-family: "Titillium Web", sans-serif;
+  color: #2a2a2a; }
 
-hgroup h4, hgroup h5 {
-  line-height: 10px; }
+hgroup h4, hgroup h5, hgroup h6 {
+  line-height: 0px; }
+hgroup h6 {
+  line-height: 0px; }
 
 .fellowshipType {
   color: transparent;
@@ -156,7 +148,18 @@ hgroup h4, hgroup h5 {
   height: 25px;
   width: 25px;
   margin: 5px 0 0 5px;
-  background-size: 100% auto; }
+  background-size: 100% auto;
+  background-repeat: no-repeat; }
+
+aside.right_side {
+  height: 100%;
+  min-height: 60px;
+  width: 26.23%; }
+
+aside.right2_side {
+  background: -webkit-linear-gradient(right, white 0%, black 100%);
+  width: 8%;
+  height: 85px; }
 
 .type ul li {
   background-image: url(../images/AAicon.png); }
@@ -172,8 +175,10 @@ hgroup h4, hgroup h5 {
   text-align: center;
   width: 50px;
   height: 30px;
-  margin: 5px 0 0 35px;
-  color: white; }
+  margin: 5px 0 0 5px;
+  color: #2a2a2a;
+  background-color: rgba(75, 214, 246, 0.1);
+  height: 51px; }
 
 .day li {
   border-top: 10px solid black;
@@ -187,6 +192,10 @@ hgroup h4, hgroup h5 {
   height: 20px;
   margin: 0 0 0 10px; }
 
+.distance {
+  text-align: center;
+  background: gray; }
+
 .filter_time li {
   background-image: url(../images/clock.png);
   width: 70px;
@@ -199,10 +208,9 @@ time p {
   line-height: 1px; }
 
 ul.ratings {
-  background-color: rgba(10, 250, 85, 0);
-  background-image: -webkit-linear-gradient(top, rgba(187, 202, 21, 0) 0%, rgba(207, 232, 61, 0.2) 100%);
-  color: white;
-  text-shadow: 0px 1px 1px black; }
+  background-color: #0a0a0f;
+  background-image: -webkit-linear-gradient(top, rgba(237, 202, 221, 0) 0%, rgba(237, 232, 231, 0.2) 100%);
+  color: white; }
   ul.ratings li p {
     text-align: left; }
   ul.ratings li:first-child {
@@ -216,7 +224,7 @@ ul.ratings {
     vertical-align: middle;
     height: 35px; }
     ul.ratings li:active {
-      background-color: red; }
+      background-color: rgba(75, 214, 246, 0.7); }
   ul.ratings li.snacks {
     background-position: -734px 5px; }
   ul.ratings li.coffee {
@@ -226,11 +234,13 @@ ul.ratings {
   ul.ratings li.youngpeople {
     background-position: -960px 0; }
   ul.ratings li.vote {
-    background-color: red;
+    background-color: #00c6d4;
     background-position: -78px 0;
     width: 17px;
     height: 15px;
-    margin: -10px 0 0 0; }
+    margin: -17px 0 0 0;
+    position: relative;
+    left: 55px; }
 
 ul.filter_ratings li {
   height: 40px;
@@ -274,29 +284,19 @@ nav .bottom {
   position: fixed;
   bottom: 0px;
   width: 100%;
-  background-image: url(../images/navbottom.png);
+  background-color: black;
+  background-size: 80% auto;
   height: 44px; }
+  nav .bottom li:first-child {
+    border-left: none; }
   nav .bottom li {
-    background: url(../images/bottom_sprites.png) no-repeat top left;
+    background-image: -webkit-linear-gradient(top, rgba(237, 202, 221, 0) 0%, rgba(237, 232, 231, 0.2) 100%);
     text-align: center;
-    height: 38px;
-    padding: 3px; }
-  nav .bottom li.map {
-    background-position: 20px -66px;
-    height: 38px;
-    background-color: rgba(20, 20, 20, 0.5); }
-  nav .bottom li.filter {
-    background-position: 25px -134px;
-    height: 38px;
-    background-color: rgba(210, 120, 20, 0.5); }
-  nav .bottom li.saved {
-    background-position: 25px -202px;
-    height: 38px;
-    background-color: rgba(0, 120, 20, 0.5); }
-  nav .bottom li.list {
-    background-position: 25px 2px;
-    height: 38px;
-    background-color: rgba(220, 20, 20, 0.5); }
+    padding: 3px;
+    color: white;
+    height: 50px; }
+  nav .bottom li img {
+    height: 25px; }
 
 .grids {
   display: inline-block;
@@ -341,3 +341,6 @@ nav .bottom {
 .grid-12 {
   width: 100%;
     width-margin: 0; }
+
+.bottom .grid-3 {
+  width: 22.3%; }
