@@ -74,6 +74,7 @@ html
 body
  padding: 0
  font-family: 'Titillium Web', sans-serif
+
  text-transform: uppercase
  background-size: auto
 
@@ -135,7 +136,6 @@ button.settings
  padding: 0 0 10px 0
  h3
   text-indent: 30px
-  text-shadow: 0px 1px 1px black
  ul
   text-align: center
  button
@@ -153,24 +153,24 @@ button.settings
    box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px #fff
 
 button.save
- background: $teel
+ background: transparent
  width: auto
  img 
   width: 20px
 
 button.directions
- padding: 0px
  position: relative
  background: transparent
  a
  img
   height: 50px
 
-aside
+aside.right2_side
  button
   font-family: 'open sans', sans-serif
   text-transform: uppercase
-  background-repeat: no-repeat
+  margin: 0 0 0 -5px
+
 
 article.meeting_entry
  margin: 2px 0 2px 0
@@ -214,7 +214,7 @@ aside.right_side
  width: 26.23%
 
 aside.right2_side 
- background: -webkit-linear-gradient(right, white 0%, #000 100%)
+ background: -webkit-linear-gradient(right, white 0%, gray 100%)
  width: 8%
  height: 85px
 
@@ -244,15 +244,17 @@ aside.right2_side
 
 .distance
  text-align: center
- background: gray
+ color: gray
+ border-top: 1px solid gray
 
 .filter_time
  li
-  background-image: url(../images/clock.png)
-  width: 70px
-  height: 60px
+  width: 77px
+  height: 65px
   background-size: 50px auto
   background-repeat: no-repeat
+  font-weight: bold
+  font-family: 'Open Sans', sans-serif
  
 time 
  p
@@ -311,14 +313,22 @@ ul.ratings
 
 ul.filter_ratings
  li 
-  height: 40px
-  background: url(../images/rating_icon_sprite.png) no-repeat top left
+  height: 50px
+  background: url(../images/rating_icon_sprite_black.png) no-repeat top left
+
+ li
+  p
+   font-weight: bold
+   font-size: 7px
+   margin: 30px 0 0 0
+   width: 40px
+   text-align: center
 
  li.snacks
-  background-position: -714px 5px
+  background-position: -730px 5px
    
  li.coffee
-  background-position: 0 0 
+  background-position: 8px 0 
 
  li.fellowship
   background-position: -477px 0
@@ -332,7 +342,7 @@ ul.filter_ratings
   background-position: -152px 0
 
  li.lgbt
-  background-position: -236px 5px
+  background-position: -236px 0px
    
 
  li.meditation
@@ -354,11 +364,11 @@ ul.filter_ratings
    
 
  li.wheelchair
-  background-position: -796 0 
+  background-position: -809px 0 
    
 
  li.womens
-  background-position: -876px 0
+  background-position: -898px 0
   
 
  li.newcomer
@@ -390,13 +400,11 @@ nav
 
   li
    img
-    height: 25px 
-  li.map
-  li.filter
+    height: 25px
 
-  li.saved
+   &:hover
+    background-color: rgba(15,134, 171,1)
 
-  li.list
 
 
 .grids

@@ -82,8 +82,7 @@ button.settings {
   box-shadow: 0px 5px #0f2024;
   padding: 0 0 10px 0; }
   .filter h3 {
-    text-indent: 30px;
-    text-shadow: 0px 1px 1px black; }
+    text-indent: 30px; }
   .filter ul {
     text-align: center; }
   .filter button {
@@ -99,22 +98,21 @@ button.settings {
       box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px white; }
 
 button.save {
-  background: #00c6d4;
+  background: transparent;
   width: auto; }
   button.save img {
     width: 20px; }
 
 button.directions {
-  padding: 0px;
   position: relative;
   background: transparent; }
   button.directions img {
     height: 50px; }
 
-aside button {
+aside.right2_side button {
   font-family: "open sans", sans-serif;
   text-transform: uppercase;
-  background-repeat: no-repeat; }
+  margin: 0 0 0 -5px; }
 
 article.meeting_entry {
   margin: 2px 0 2px 0;
@@ -157,7 +155,7 @@ aside.right_side {
   width: 26.23%; }
 
 aside.right2_side {
-  background: -webkit-linear-gradient(right, white 0%, black 100%);
+  background: -webkit-linear-gradient(right, white 0%, gray 100%);
   width: 8%;
   height: 85px; }
 
@@ -194,14 +192,16 @@ aside.right2_side {
 
 .distance {
   text-align: center;
-  background: gray; }
+  color: gray;
+  border-top: 1px solid gray; }
 
 .filter_time li {
-  background-image: url(../images/clock.png);
-  width: 70px;
-  height: 60px;
+  width: 77px;
+  height: 65px;
   background-size: 50px auto;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif; }
 
 time p {
   font-weight: bold;
@@ -243,12 +243,18 @@ ul.ratings {
     left: 55px; }
 
 ul.filter_ratings li {
-  height: 40px;
-  background: url(../images/rating_icon_sprite.png) no-repeat top left; }
+  height: 50px;
+  background: url(../images/rating_icon_sprite_black.png) no-repeat top left; }
+ul.filter_ratings li p {
+  font-weight: bold;
+  font-size: 7px;
+  margin: 30px 0 0 0;
+  width: 40px;
+  text-align: center; }
 ul.filter_ratings li.snacks {
-  background-position: -714px 5px; }
+  background-position: -730px 5px; }
 ul.filter_ratings li.coffee {
-  background-position: 0 0; }
+  background-position: 8px 0; }
 ul.filter_ratings li.fellowship {
   background-position: -477px 0; }
 ul.filter_ratings li.youngpeople {
@@ -256,7 +262,7 @@ ul.filter_ratings li.youngpeople {
 ul.filter_ratings li.large_group {
   background-position: -152px 0; }
 ul.filter_ratings li.lgbt {
-  background-position: -236px 5px; }
+  background-position: -236px 0px; }
 ul.filter_ratings li.meditation {
   background-position: -321px 0; }
 ul.filter_ratings li.mens {
@@ -268,9 +274,9 @@ ul.filter_ratings li.outsiders {
 ul.filter_ratings li.pets {
   background-position: -634px 5px; }
 ul.filter_ratings li.wheelchair {
-  background-position: -796 0; }
+  background-position: -809px 0; }
 ul.filter_ratings li.womens {
-  background-position: -876px 0; }
+  background-position: -898px 0; }
 ul.filter_ratings li.newcomer {
   background-position: -477px 0; }
 
@@ -297,6 +303,8 @@ nav .bottom {
     height: 50px; }
   nav .bottom li img {
     height: 25px; }
+  nav .bottom li:hover {
+    background-color: #0f86ab; }
 
 .grids {
   display: inline-block;
