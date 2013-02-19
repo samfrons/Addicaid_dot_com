@@ -13,7 +13,7 @@
 				message: "=message",
 				zoom: "=zoom"
 			},
-			template: '<div class="map"></div>',
+			template: '<div></div>',
 			link: function (scope, element, attrs, ctrl) {
                 var $el = element[0],
 				    map = new L.Map($el);
@@ -64,7 +64,7 @@
                     });
 
                     scope.$watch("center.lng", function (newValue, oldValue) {
-                        if (dragging_map) return;
+                        if (dragging_map) return; log(map.getCenter().lat,newValue)
                         map.setView(new L.LatLng(map.getCenter().lat, newValue), map.getZoom());
                     });
 

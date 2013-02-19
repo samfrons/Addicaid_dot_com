@@ -4,7 +4,7 @@
 angular.module('addicaidApp',
         [
             'addicaidApp.filters', 'addicaidApp.services', 'addicaidApp.directives'
-//            ,'leaflet-directive'
+            ,'leaflet-directive'
             ,'addicaidApp.leaflet-directive'
             ,'mobile-navigate'
 //            ,'ui'
@@ -16,6 +16,7 @@ angular.module('addicaidApp',
             .when('/meetinglist', { templateUrl: 'views/meeting-list.html', controller: MeetingListCtrl })
             .when('/filter', { templateUrl: 'views/filter.html', controller: FilterCtrl })
             .when('/meetingsaved', { templateUrl: 'views/meeting-saved.html', controller: MeetingListCtrl })
+            .when('/signup', { templateUrl: 'views/signup.html', controller: SignupCtrl })
 //            .when("/", { templateUrl: 'views/meeting-list.html', controller: MeetingListCtrl })
             .when("/", { templateUrl: 'views/map.html', controller: MapCtrl })
             .otherwise({ redirectTo: "/" });

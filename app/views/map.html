@@ -4,7 +4,13 @@
 
 
 
-<!--<leaflet marker="marker" center="center" zoom="zoom" draggable="true" markcenter="true"></leaflet>-->
+<leaflet
+        class="mapclass"
+        marker="meetingList[0]"
+        center="mapOptions.center"
+        zoom="mapOptions.zoom"
+        draggable="true" markcenter="true">
+        </leaflet>
 
 <!--<div id="map_canvas" ui-map="myMap" class="map"-->
      <!--ui-event="{'map-click': 'addMarker($event)', 'map-zoom_changed': 'setZoomMessage(myMap.getZoom())' }"-->
@@ -16,14 +22,13 @@
 <!--<leafletMap id="map" class="map" map-options="mapOptions"></leafletMap>-->
 
 <!--<leafletMarker ></leafletMarker>-->
-
+<div style="height:10px"></div>
 
 <div leaflet-map="leafletMap"
         leaflet-options="mapOptions"
-        class="mappo"
-        ></div>
-center="mapCenter" zoom="mapZoom"
-<!--ui-map="map1"-->
+        class="mapclass">
+</div>
+
 
 
 <!-- this is the confusing part. we have to point the map marker directive
@@ -33,7 +38,7 @@ center="mapCenter" zoom="mapZoom"
      <!--leaflet-lat="mapMarkers[$index].latitude"-->
      <!--leaflet-lng="mapMarkers[$index].longitude"-->
      <!--leaflet-map="mapid"-->
-     <!-->-->
+     <!-->
 <!--</leaflet-marker>-->
 <!--map-event="{'map-click': 'openMarkerInfo(marker)'}"-->
 
@@ -47,8 +52,8 @@ center="mapCenter" zoom="mapZoom"
 
 
 <style>
-    .mappo {
+    .mapclass {
         /*width: ;*/
-        /*height: 100%;*/
+        height: 40%;
     }
 </style>

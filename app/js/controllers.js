@@ -37,16 +37,33 @@ function AppCtrl($scope, $navigate) {
 
 //MeetingListCtrl.$inject = [$scope];
 function MeetingListCtrl($scope, $http) {
+    $scope.pageTitle = "Meeting List";
     $http.get('testfiles/meetings.json').success(function(data) {
         $scope.meetings = data;
     });
 }
 
 function FilterCtrl($scope, $http, $navigate) {
+    $scope.pageTitle = "Meeting Search";
+
+    logvar("$navigate",$navigate);
+}
+
+function MeetingListFavoritesCtrl($scope, $http, $navigate) {
+    $scope.pageTitle = "Favorite Meetings";
+
+    logvar("$navigate",$navigate);
+}
+
+function SignupCtrl($scope, $http, $navigate) {
+    $scope.pageTitle = "Signup";
+
     logvar("$navigate",$navigate);
 }
 
 function MapCtrl($scope, $http) {
+    $scope.pageTitle = "Map";
+
 //    angular.extend($scope, {
 //        mapCenter: { lat: 40, lng: -4 },
 //        mapCenter: { lat: 40.763562, lng: -73.971401 },
@@ -71,7 +88,12 @@ function MapCtrl($scope, $http) {
 
 
     $scope.mapMarkers = [];
-    $scope.meetingList = [];
+    $scope.meetingList = [{
+        lat : 37.777,
+        lng : -122.41
+    } ];
+
+
 //    log('http://'+defaultCartodbAccount+'.cartodb.com/api/v2/sql/?q='+defaultCartodbSql+'&callback=JSON_CALLBACK');
     $http.jsonp('http://'+defaultCartodbAccount+'.cartodb.com/api/v2/sql/?q='+defaultCartodbSql+'&callback=JSON_CALLBACK')
         .success(function(data,status) {
