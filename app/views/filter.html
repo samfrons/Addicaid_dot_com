@@ -1,5 +1,5 @@
 <ng-include src="views.header"></ng-include>
-
+<section class="filterpage">
 <article class="grids grid-12 filter">
  <div class="filter type">
     <h3>type</h3>
@@ -20,7 +20,7 @@
     <aside class="grids grid-4">
     <button>here</button>
     <h5>or</h5>
-    <input type="field" placeholder="zip code">
+    <input type="field" class="zipcode" placeholder="zip code">
     </aside>
     </ul>
 
@@ -67,9 +67,10 @@
         <li class="grids grid-2 pets"><p>pet allowed</p></li>
     </ul>
 </div>
-    <button type="submit" ng-tap="$navigate.back()">submit</button>
+    <button type="submit" ng-tap="$navigate.back()" class="submit_button">submit</button>
 
 </article>
+</section>
 
 <ng-include src="views.footer"></ng-include>
 

@@ -44,6 +44,9 @@ a {
   a:active {
     color: inherit; }
 
+section {
+  overflow-x: hidden; }
+
 header.grid-12 {
   background-image: url(../images/headerbackground.png);
   background-repeat: repeat-x;
@@ -77,10 +80,54 @@ button.settings {
   background-size: 80% auto;
   background-size: auto; }
 
+section.signup {
+  background-image: url(../images/6.jpg);
+  margin: -15px 0 0 0;
+  padding: 10px;
+  height: 100%;
+  color: white;
+  text-transform: lowercase; }
+  section.signup input {
+    margin: 5px 0 0 10px;
+    font-size: 1.3em; }
+  section.signup h3 {
+    font-weight: normal;
+    color: white; }
+
+section.filterpage {
+  background-image: url(../images/blur.png); }
+
+section.meetinglist {
+  background-image: url(../images/7.png); }
+
+button.submit_button {
+  color: white !important;
+  width: 100px;
+  border-radius: 5px;
+  background: #e3e3e3;
+  border-radius: 3px;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(rgba(175, 202, 206, 0.2), 0), color-stop(rgba(101, 142, 146, 0.5), 1));
+  background-image: -webkit-linear-gradient(top, rgba(175, 202, 206, 0.2) 0%, rgba(101, 142, 146, 0.5) 100%);
+  box-shadow: inset 0px 0px 8px 4px rgba(91, 62, 86, 0.7), 0px 2px 3px black;
+  border: 1px solid rgba(20, 20, 20, 0.4);
+  color: #2a2a2a; }
+  button.submit_button span.submit_arrow {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-image: url(../images/arrow_right.png); }
+
+h1.filterh1 {
+  background-color: red; }
+
+.facebook {
+  background: transparent; }
+
 .filter {
   color: #2a2a2a;
-  box-shadow: 0px 5px #0f2024;
   padding: 0 0 10px 0; }
+  .filter li:hover {
+    background: red; }
   .filter h3 {
     text-indent: 30px; }
   .filter ul {
@@ -109,10 +156,24 @@ button.directions {
   button.directions img {
     height: 50px; }
 
-aside.right2_side button {
-  font-family: "open sans", sans-serif;
-  text-transform: uppercase;
-  margin: 0 0 0 -5px; }
+aside.right2_side {
+  background: #00c6d4;
+  width: 8%;
+  height: 85px; }
+  aside.right2_side button {
+    font-family: "open sans", sans-serif;
+    text-transform: uppercase;
+    margin: 0 0 0 -5px; }
+
+article.filter {
+  width: 95%;
+  margin: 10px; }
+  article.filter div.filter {
+    background: -webkit-linear-gradient(top, white 20%, rgba(255, 255, 255, 0.5) 100%);
+    border-radius: 5px; }
+
+input.zipcode {
+  width: 70px; }
 
 article.meeting_entry {
   margin: 2px 0 2px 0;
@@ -154,11 +215,6 @@ aside.right_side {
   min-height: 60px;
   width: 26.23%; }
 
-aside.right2_side {
-  background: -webkit-linear-gradient(right, white 0%, gray 100%);
-  width: 8%;
-  height: 85px; }
-
 .type ul li {
   background-image: url(../images/AAicon.png); }
 .type ul button {
@@ -186,17 +242,19 @@ aside.right2_side {
   text-align: center;
   width: 50px;
   height: 30px;
-  width: 30px;
+  width: 28px;
   height: 20px;
-  margin: 0 0 0 10px; }
+  margin: 0 0 0 10px;
+  font-weight: bold; }
 
 .distance {
   text-align: center;
+  font-weight: bold;
   color: gray;
   border-top: 1px solid gray; }
 
 .filter_time li {
-  width: 77px;
+  width: 70px;
   height: 65px;
   background-size: 50px auto;
   background-repeat: no-repeat;
@@ -208,7 +266,7 @@ time p {
   line-height: 1px; }
 
 ul.ratings {
-  background-color: #0a0a0f;
+  background-color: #d2d20f;
   background-image: -webkit-linear-gradient(top, rgba(237, 202, 221, 0) 0%, rgba(237, 232, 231, 0.2) 100%);
   color: white; }
   ul.ratings li p {
@@ -220,7 +278,7 @@ ul.ratings {
     background: transparent;
     color: white; }
   ul.ratings li {
-    background: url(../images/rating_icon_sprite.png) no-repeat top left;
+    background: url(../images/rating_icon_sprite_black.png) no-repeat top left;
     vertical-align: middle;
     height: 35px; }
     ul.ratings li:active {
@@ -351,4 +409,4 @@ nav .bottom {
     width-margin: 0; }
 
 .bottom .grid-3 {
-  width: 22.3%; }
+  width: 22.7%; }

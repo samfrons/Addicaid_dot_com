@@ -12,6 +12,7 @@ $topcolor: rgba(175,202,206,0.2)
 $bottomcolor: rgba(101,142,146,0.5)
 $innercolor: rgba(91,62,86,0.7)
 $teel: #00c6d4
+$teel_light: #00c6d4
 
 @font-face
  font-family: "gotham"
@@ -74,7 +75,6 @@ html
 body
  padding: 0
  font-family: 'Titillium Web', sans-serif
-
  text-transform: uppercase
  background-size: auto
 
@@ -103,6 +103,8 @@ a
  &:active
   color: inherit
 
+section
+ overflow-x: hidden
 
 header.grid-12
  background-image: url(../images/headerbackground.png)
@@ -130,10 +132,50 @@ button.settings
  @include backgrounds
  background-size: auto
 
+section.signup
+ background-image: url(../images/6.jpg)
+ margin: -15px 0 0 0
+ padding: 10px
+ height: 100%
+ color: white
+ text-transform: lowercase
+ input
+  margin: 5px 0 0 10px
+  font-size: 1.3em
+ h3
+  font-weight: normal
+  color: white
+
+section.filterpage
+ background-image: url(../images/blur.png)
+
+
+section.meetinglist
+ background-image: url(../images/7.png)
+
+button.submit_button 
+ color: white !important
+ width: 100px
+ border-radius: 5px
+ @include gradientdark
+ span.submit_arrow
+  display: inline-block
+  height: 20px
+  width: 20px
+  background-image: url(../images/arrow_right.png)
+
+h1.filterh1 
+ background-color: red
+
+.facebook
+ background: transparent
+
 .filter
  color: $main-color
- box-shadow: 0px 5px $bordercolor
  padding: 0 0 10px 0
+ li
+  &:hover
+   background: red
  h3
   text-indent: 30px
  ul
@@ -166,11 +208,23 @@ button.directions
   height: 50px
 
 aside.right2_side
+ background: $teel
+ width: 8%
+ height: 85px
  button
   font-family: 'open sans', sans-serif
   text-transform: uppercase
   margin: 0 0 0 -5px
 
+article.filter
+ width: 95%
+ margin: 10px
+ div.filter
+  background: -webkit-linear-gradient(top, white 20%, rgba(255,255,255,.5) 100%)
+  border-radius: 5px
+
+input.zipcode 
+ width: 70px
 
 article.meeting_entry
  margin: 2px 0 2px 0
@@ -211,12 +265,8 @@ hgroup
 aside.right_side
  height: 100%
  min-height: 60px
- width: 26.23%
-
-aside.right2_side 
- background: -webkit-linear-gradient(right, white 0%, gray 100%)
- width: 8%
- height: 85px
+ width: 26.23% 
+ 
 
 .type
  ul
@@ -238,18 +288,20 @@ aside.right2_side
 
 .day li
  @include calendar
- width: 30px
+ width: 28px
  height: 20px
  margin: 0 0 0 10px
+ font-weight: bold
 
 .distance
  text-align: center
+ font-weight: bold
  color: gray
  border-top: 1px solid gray
 
 .filter_time
  li
-  width: 77px
+  width: 70px
   height: 65px
   background-size: 50px auto
   background-repeat: no-repeat
@@ -262,7 +314,7 @@ time
   line-height: 1px
 
 ul.ratings
- background-color: rgba(10,10,15,1)
+ background-color: rgba(210,210,15,1)
  @include gradientlight
  color: $main
 
@@ -278,7 +330,7 @@ ul.ratings
   color: $main
  
  li
-  background: url(../images/rating_icon_sprite.png) no-repeat top left
+  background: url(../images/rating_icon_sprite_black.png) no-repeat top left
   vertical-align: middle
   height: 35px
 
@@ -456,7 +508,7 @@ nav
 nav
 .bottom
  .grid-3 
-  width: 22.3%
+  width: 22.7%
 
 
 
