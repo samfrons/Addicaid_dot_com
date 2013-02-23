@@ -422,7 +422,10 @@ ul.ratings {
     color: #2a2a2a; }
 
 ul.filter_ratings li {
-  height: 50px; }
+  height: 45px;
+  padding: 2px; }
+  ul.filter_ratings li img {
+    height: 20px; }
   ul.filter_ratings li:active {
     border-radius: 5px;
     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #a5a34b), color-stop(1, #e1f355));
@@ -433,7 +436,8 @@ ul.filter_ratings li p {
   font-weight: bold;
   font-size: 7px;
   width: 40px;
-  text-align: center; }
+  text-align: center;
+  padding: 0 0 0 10px; }
 ul.filter_ratings li.coffee {
   background-position: 8px 0; }
 ul.filter_ratings li.fellowship {
