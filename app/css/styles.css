@@ -438,32 +438,6 @@ ul.filter_ratings li p {
   width: 40px;
   text-align: center;
   padding: 0 0 0 10px; }
-ul.filter_ratings li.coffee {
-  background-position: 8px 0; }
-ul.filter_ratings li.fellowship {
-  background-position: -477px 0; }
-ul.filter_ratings li.youngpeople {
-  background-position: -960px 0; }
-ul.filter_ratings li.large_group {
-  background-position: -152px 0; }
-ul.filter_ratings li.lgbt {
-  background-position: -236px 0px; }
-ul.filter_ratings li.meditation {
-  background-position: -321px 0; }
-ul.filter_ratings li.mens {
-  background-position: -401px 0; }
-ul.filter_ratings li.newcomer {
-  background-position: -477px 0; }
-ul.filter_ratings li.outsiders {
-  background-position: -558px 0; }
-ul.filter_ratings li.pets {
-  background-position: -634px 5px; }
-ul.filter_ratings li.wheelchair {
-  background-position: -809px 0; }
-ul.filter_ratings li.womens {
-  background-position: -898px 0; }
-ul.filter_ratings li.newcomer {
-  background-position: -477px 0; }
 
 .leaflet-bottom {
   display: none; }
