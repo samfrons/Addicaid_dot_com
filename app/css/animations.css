@@ -8,26 +8,18 @@
   100% { -webkit-transform: translateX(0%); }
 }
 
-@keyframes myfirst
+@-webkit-keyframes myfirst
 {
-from {background-color: green !important;}
-to {background-color: yellow !important;}
+from {background-color: green;}
+to {background-color: yellow;}
 }
 
-ul.ratings li {
-	-webkit-animation-name: myfirst 5s !important;
-	-moz-animation-name: myfirst 5s !important;
-	-o-animation-name: myfirst 5s !important;
-	animation-name: myfirst 5s !important;
-	-webkit-transition: .5s all ease;
-	background-color:  !important;
-
+h2#test {
+	background-color: blue;
+ 
 }
 
 
-ul.ratings li:hover {
-	background-color: red !important;
-	-webkit-animation-name: myfirst 5s !important;
-}
+
 
 
