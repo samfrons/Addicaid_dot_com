@@ -19,24 +19,25 @@ angular.module('addicaidApp.directives', [])
                     scope.$apply(attrs.ngTap);
                 });
             }
-        };
+        }
     })
 
-//
-//
-//angular.directive('jq:slider', function() {
-//    return function(elm) {
-//        var currentScope = this;
-//        elm.slider({
-//            range: true,
-//            min: 1,
-//            max: 35,
-//            values: [ 1, 2, 3, 4, 5, 10, 15, 25, 35 ],
-//            slide: function( event, ui ) {
-//                $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-//                currentScope.years = ui.values[0];
-//                currentScope.$apply();
-//            }
-//        });
-//    };
-//});
+
+
+//    .directive('ngslider', function() {
+//        return function(elm) {
+//            var currentScope = this;
+//            elm.slider({
+//                range: true,
+//                min: 1,
+//                max: 35,
+//                values: [ 1, 2, 3, 4, 5, 10, 15, 25, 35 ],
+//                slide: function( event, ui ) {
+//                    $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+//                    currentScope.years = ui.values[0];
+//                    currentScope.$apply();
+//                }
+//            });
+//        };
+//    })
+
