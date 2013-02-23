@@ -2,10 +2,10 @@
 <section class="filterpage">
 <article class="grids grid-12 filter">
  <div class="filter type">
-    <h3>type</h3>
+    <h3>fellowship type</h3>
     <ul class="grids grid-12">    
-        <li class="aa"><button>Alcoholics Anonymous</button></li>
-        <li class="na"><button>Narcotics Anonymous</button></li>
+        <li class="AA"><button class="AAbutton">Alcoholics Anonymous</button></li>
+        <li class="NA"><button class="NAbutton">Narcotics Anonymous</button></li>
     </ul>
 </div>
 
@@ -13,15 +13,13 @@
     <h3>where</h3>
 
     <ul class="grids grid-12 where">
-    <div class="grids grid-5" id="slider">1<input id="slide" type="range" min="1" max="30" step="5" value="100" onchange="updateSlider(this.value)" />25<p id="chosen"></p>miles</div>
-   
-    <h4 class="grids grid-2">from</h4>
+    <div class="grids grid-11 where"><input type="field" class="miles" placeholder="5"><label>&nbsp;&nbsp;miles</label>&nbsp;from&nbsp;&nbsp;
 
-    <aside class="grids grid-4">
-    <button>here</button>
-    <h5>or</h5>
+        <!--<input id="slide" type="range" min="1" max="30" step="5" value="100" onchange="updateSlider(this.value)" />25<p id="chosen"></p>miles</div>-->
+
+ 
+    <button class="here" type="submit"><img src='images/here_icon.png'/>here&nbsp;&nbsp;</button>&nbsp;&nbsp;or&nbsp;&nbsp;
     <input type="field" class="zipcode" placeholder="zip code">
-    </aside>
     </ul>
 
 </div>
@@ -52,7 +50,7 @@
 <div class="filter filter_ratings">
 <h3>ratings</h3>
     <ul class="grids grid-12 filter_ratings">
-        <li class="grids grid-2 snacks"><p>snacks</p></li>
+        <li class="grids grid-2 snacks"><p class="snacks">snacks</p></li>
         <li class="grids grid-2 coffee"><p>coffee</p></li>
         <li class="grids grid-2 large_group"><p>large group</p></li>
         <li class="grids grid-2 lgbt"><p>lgbt</p></li>
@@ -67,7 +65,7 @@
         <li class="grids grid-2 pets"><p>pet allowed</p></li>
     </ul>
 </div>
-    <button type="submit" ng-tap="$navigate.back()" class="submit_button">submit</button>
+    <button type="submit" ng-tap="$navigate.back()" class="submit_button filter_submit"><span class="submit_text">submit</span><span class="submit_arrow"></span></button>
 
 </article>
 </section>

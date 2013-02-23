@@ -30,28 +30,68 @@ $teel_light: #00c6d4
  border-left: 1px solid black
  border-right: 1px solid black
  border-bottom: 1px solid black
+ border-radius: 5px
  text-align: center
  width: 50px
  height: 30px
 
-@mixin gradientdark
- background: #e3e3e3
- border-radius: 3px
- background-image: -webkit-gradient(linear,left top,left bottom,color-stop($topcolor,0),color-stop($bottomcolor,1))
- background-image: -webkit-linear-gradient(top, $topcolor 0%, $bottomcolor 100%)
- box-shadow: inset 0px 0px 8px 4px $innercolor, 0px 2px 3px black
- border: 1px solid rgba(20,20,20,0.4)
- color: $main-color
+$topcolor: rgba(249,47,5,1)
+$bottomcolor: rgba(219,87,5,1)
+$shadowtop: rgba(219,31,5,1)
+$shadowbottom: rgba(0,0,0,.7)
+$buttonbackground: rgba(219,87,5,1)
+
 
 @mixin gradientbutton
  background: #e3e3e3
  border-radius: 3px
- background-color: #52a8e8
- box-shadow: inset 0px 0px 8px 4px #377ad0, 0px 2px 3px black
- border: 1px solid rgba(20,20,20,0.4)
- $bottomcolor: rgba(37,22,231,0.9)
- $topcolor: rgba(37,22,221,0.5)
- $innercolor: #377ad0
+ -moz-box-shadow: 0px 5px 0px $shadowtop, 0px 9px 25px $shadowbottom
+ box-shadow: 0px 5px 0px $shadowtop, 0px 9px 25px $shadowbottom
+ background-color: $buttonbackground
+ background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, $topcolor), color-stop(1, $bottomcolor) )
+
+@mixin gradientaa
+ $bottomcolor: rgba(9,157,211,1)
+ $topcolor: rgba(9,107,131,1)
+ $shadowtop: rgba(9,71,101,1)
+ $shadowbottom: rgba(0,0,0,.7)
+ $buttonbackground: rgba(19,7,5,1)
+ border-radius: 3px
+ -moz-box-shadow: 0px 5px 0px $shadowtop, 0px 9px 25px $shadowbottom
+ box-shadow: 0px 5px 0px $shadowtop, 0px 9px 25px $shadowbottom
+ background-color: $buttonbackground
+ background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, $topcolor), color-stop(1, $bottomcolor) )
+
+@mixin gradientna
+ $bottomcolor: rgba(255,3,5,1)
+ $topcolor: rgba(180,3,5,1)
+ $shadowtop: rgba(129,1,5,1)
+ $shadowbottom: rgba(0,0,0,.7)
+ $buttonbackground: rgba(219,87,5,1)
+ border-radius: 3px
+ -moz-box-shadow: 0px 5px 0px $shadowtop, 0px 9px 25px $shadowbottom
+ box-shadow: 0px 5px 0px $shadowtop, 0px 9px 25px $shadowbottom
+ background-color: $buttonbackground
+ background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, $topcolor), color-stop(1, $bottomcolor) )
+
+@mixin gradientbutton_active
+ -webkit-box-shadow: 0px 3px 0px $shadowtop, 0px 3px 6px $shadowbottom
+ -moz-box-shadow: 0px 3px 0px $shadowtop, 0px 3px 6px $shadowbottom
+ box-shadow: 0px 3px 0px $shadowtop, 0px 3px 6px $shadowbottom
+ position: relative
+ top: 6px
+
+@mixin gradientbutton_lime
+ $bottomcolor: rgba(225,243,85,1)
+ $topcolor: rgba(165,163,75,1)
+ $shadowtop: rgba(125,123,45,1)
+ $shadowbottom: rgba(0,0,0,.7)
+ $buttonbackground: rgba(165,163,75,1)
+ border-radius: 5px
+ background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, $topcolor), color-stop(1, $bottomcolor) )
+ -webkit-box-shadow: 0px 3px 0px $shadowtop, 0px 3px 6px $shadowbottom
+ -moz-box-shadow: 0px 3px 0px $shadowtop, 0px 3px 6px $shadowbottom
+ box-shadow: 0px 3px 0px $shadowtop, 0px 3px 6px $shadowbottom
 
 @mixin gradientlight
  $bottomcolor: rgba(237,232,231,0.2)
@@ -120,6 +160,11 @@ button
  margin: 20px
  border-style: none
 
+button[type="submit"]
+ &:active
+  @include gradientbutton_active
+ 
+
 button.back
  background-image: url(../images/back_button.png)
  @include backgrounds
@@ -134,13 +179,14 @@ button.settings
 
 section.signup
  background-image: url(../images/6.jpg)
- margin: -15px 0 0 0
+ margin: 0 auto
+ text-align: center
  padding: 10px
  height: 100%
  color: white
  text-transform: lowercase
  input
-  margin: 5px 0 0 10px
+  margin: 2px 0 7px 0
   font-size: 1.3em
  h3
   font-weight: normal
@@ -148,44 +194,60 @@ section.signup
 
 section.filterpage
  background-image: url(../images/blur.png)
+section.meetinglist
+ background-image: url(../images/blur.png)
+ height: 100%
 
 
 section.meetinglist
- background-image: url(../images/7.png)
+ background-image: url(../images/blur.png)
 
 button.submit_button 
  color: white !important
- width: 100px
+ width: 58%
  border-radius: 5px
- @include gradientdark
+ @include gradientbutton
  span.submit_arrow
   display: inline-block
   height: 20px
   width: 20px
   background-image: url(../images/arrow_right.png)
+ 
 
 h1.filterh1 
  background-color: red
 
 .facebook
+ margin: 0 0 0 0px
  background: transparent
+ h3
+  position: relative
+  top: -40px
+  text-shadow: 0px 1px 1px black
 
 .filter
  color: $main-color
  padding: 0 0 10px 0
  li
   &:hover
-   background: red
  h3
   text-indent: 30px
  ul
   text-align: center
  button
-  background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(44,160,202)), color-stop(1, rgb(62,184,229)) )
-  box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px rgb(104,69,73)
   border-radius: 5px
   color: white
   font-family: 'Open Sans', sans-serif
+ .filter_submit
+  margin: 30px 0 50px 0%
+  width: 100%
+
+.submit_text
+ text-transform: uppercase
+ position: relative
+ top: -5px
+ left: -5px
+
 
  input
   width: 90px
@@ -209,27 +271,43 @@ button.directions
 
 aside.right2_side
  background: $teel
- width: 8%
+ width: 6%
  height: 85px
+ margin: 0 0 0 0px
  button
   font-family: 'open sans', sans-serif
   text-transform: uppercase
-  margin: 0 0 0 -5px
+  margin: 0 0 0 -7px
 
 article.filter
  width: 95%
  margin: 10px
+ button
+  &:active
+   @include gradientbutton_lime
  div.filter
   background: -webkit-linear-gradient(top, white 20%, rgba(255,255,255,.5) 100%)
   border-radius: 5px
+ div.where
+  font-weight: bold
+  vertical-align: middle
+  ul.where
+   vertical-align: middle
+ input.miles
+  width: 30px
+
+ button.here
+  @include gradientbutton
 
 input.zipcode 
  width: 70px
 
 article.meeting_entry
- margin: 2px 0 2px 0
+ width: 100%
+ margin: 7px 0 0 2%
  box-shadow: 0px 1px 5px white
- background: -webkit-linear-gradient(top, white 0%, #f3f3f3 100%)
+ background: -webkit-linear-gradient(top, white 20%, rgba(255,255,255,.5) 100%)
+ border-radius: 5px
 
 ul
  padding: 0
@@ -255,7 +333,7 @@ hgroup
 
 .fellowshipType
  color: transparent
- background-image: url(../images/AAicon.png)
+ background-image: url(../images/AAcircle.png)
  height: 25px
  width: 25px
  margin: 5px 0 0 5px
@@ -270,13 +348,23 @@ aside.right_side
 
 .type
  ul
+  height: 57px
   li
-   background-image: url(../images/AAicon.png)
-  li.AA
-
-  li.NA
+   margin: 0 10px 0 0
   button
-   height: 40px
+   text-shadow: 0px 1px 1px black
+   height: 35px
+   &:active
+    opacity: 1
+  .AAbutton
+   @include gradientaa
+   &:active
+    @include gradientbutton_lime
+
+  .NAbutton
+   @include gradientna
+   
+   
    text-indent: 0px
 
 .timeandday
@@ -292,9 +380,11 @@ aside.right_side
  height: 20px
  margin: 0 0 0 10px
  font-weight: bold
+ &:active
+  @include gradientbutton_lime
 
 .distance
- text-align: center
+ text-align: cent
  font-weight: bold
  color: gray
  border-top: 1px solid gray
@@ -303,11 +393,15 @@ aside.right_side
  li
   width: 70px
   height: 65px
-  background-size: 50px auto
+  padding: 5px 0 5px 0
+  background-size: 70px auto
   background-repeat: no-repeat
   font-weight: bold
   font-family: 'Open Sans', sans-serif
- 
+  &:active
+   @include gradientbutton_lime
+
+
 time 
  p
   font-weight: bold
@@ -318,21 +412,27 @@ ul.ratings
  @include gradientlight
  color: $main
 
- li
-  p
-   text-align: left
-
  li:first-child
-  font-size: .5em
+  font-size: .7em
+  width: 40px
   padding: 0
   margin: 0 0 0 5px
   background: transparent
-  color: $main
+  color: $main_color
  
  li
   background: url(../images/rating_icon_sprite_black.png) no-repeat top left
   vertical-align: middle
   height: 35px
+ 
+
+ p.voteNumber
+  color: $main_color
+  text-align: center
+  background-color: rgba(250,250,45,.7)
+  width: 30px
+  border-radius: 5px
+  -webkit-animation: wobble 2s linear 0s alternate
 
 
   &:active
@@ -355,18 +455,26 @@ ul.ratings
   
   
  li.vote
-  background-color: $teel
+  background-color: rgba(250,250,45,.7)
   background-position: -78px 0
-  width: 17px
+  width: 45px
   height: 15px
   margin: -17px 0 0 0
   position: relative
   left: 55px
+  text-align: right
+  color: $main_color
 
 ul.filter_ratings
  li 
   height: 50px
-  background: url(../images/rating_icon_sprite_black.png) no-repeat top left
+  background-image: url(../images/rating_icon_sprite_black.png)
+  background-repeat: no-repeat
+
+  &:active
+   @include gradientbutton_lime
+   background-image: url(../images/rating_icon_sprite_black.png)
+   background-color: rgba(225,243,85,1)
 
  li
   p
@@ -377,6 +485,11 @@ ul.filter_ratings
    text-align: center
 
  li.snacks
+  background-color: rgba(225,243,85,1)
+  p
+  color: blue
+  background-image: url(../images/rating_icon_sprite_black.png)
+  background-repeat: no-repeat
   background-position: -730px 5px
    
  li.coffee
@@ -508,15 +621,4 @@ nav
 nav
 .bottom
  .grid-3 
-  width: 22.7%
-
-
-
-
- 
- 
-
-
- 
-
-
+  width: 22.81%
