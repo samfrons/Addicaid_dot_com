@@ -15,8 +15,8 @@ $teel: #00c6d4
 $teel_light: #00c6d4
 
 @font-face
- font-family: "gotham"
- src: url('../../fonts/Gotham-Book.otf') format('opentype')
+ font-family: "open sans"
+ src: url('../../fonts/open sans-Book.otf') format('opentype')
 
 @mixin backgrounds
  background-color: transparent
@@ -94,9 +94,9 @@ $buttonbackground: rgba(219,87,5,1)
  box-shadow: 0px 3px 0px $shadowtop, 0px 3px 6px $shadowbottom
 
 @mixin gradientlight
- $bottomcolor: rgba(237,232,231,0.2)
- $topcolor: rgba(237,202,221,0.0)
- $innercolor: rgba(187,142,21,0.2)
+ background-color: black
+ $bottomcolor: rgba(237,232,231,0.4)
+ $topcolor: rgba(237,202,221,0.1)
  background-image: -webkit-linear-gradient(top, $topcolor 0%, $bottomcolor 100%)
 
 =keyframes($name)
@@ -110,24 +110,27 @@ $buttonbackground: rgba(219,87,5,1)
   /*100%  -webkit-transform: translateX(0%) 
 
 html
- font-size: .7em 
+ font-size: .7em
+ -webkit-font-smoothing: antialiased
 
 body
  padding: 0
- font-family: 'Titillium Web', sans-serif
+ font-family: 'open sans', sans-serif
+ -webkit-font-smoothing: antialiased
  text-transform: uppercase
  background-size: auto
 
 header
  h1 
   position: relative
+  text-transform: capitalize
+  font-family: Ironick NF
   top: 15px
   margin: 0
   padding: 0
   text-align: center
   color: white
   min-height: 55px
-  font-family: futura
   text-shadow: 0px 1px 1px black
 p
  font-family: helvetica
@@ -188,6 +191,7 @@ section.signup
  input
   margin: 2px 0 7px 0
   font-size: 1.3em
+  width: 90%
  h3
   font-weight: normal
   color: white
@@ -237,9 +241,9 @@ h1.filterh1
  button
   border-radius: 5px
   color: white
-  font-family: 'Open Sans', sans-serif
+  font-family: 'open sans', sans-serif
  .filter_submit
-  margin: 30px 0 50px 0%
+  margin: 10px 0 50px 0%
   width: 100%
 
 .submit_text
@@ -270,10 +274,9 @@ button.directions
   height: 50px
 
 aside.right2_side
- background: $teel
- width: 6%
+ width: 8.5%
  height: 85px
- margin: 0 0 0 0px
+ margin: 0 0 0 -5px
  button
   font-family: 'open sans', sans-serif
   text-transform: uppercase
@@ -282,6 +285,8 @@ aside.right2_side
 article.filter
  width: 95%
  margin: 10px
+ h3
+  margin: 10px 0 0 0
  button
   &:active
    @include gradientbutton_lime
@@ -293,11 +298,28 @@ article.filter
   vertical-align: middle
   ul.where
    vertical-align: middle
+   span.or
+    vertical-align: top
  input.miles
   width: 30px
 
  button.here
-  @include gradientbutton
+  @include gradientlight
+  width: 52px
+  height: 20px
+  background-size: 60px auto
+  text-align: left
+  padding: 0
+  span.hereicon
+   height: 15px
+   padding: 0 2px 0 0
+   display: inline-block
+   width: 20px
+   background-image: url(../images/here_icon.png)
+   background-size: 20px auto
+   background-repeat: no-repeat
+  &:active
+   @include gradientbutton_lime
 
 input.zipcode 
  width: 70px
@@ -322,7 +344,8 @@ ul li
 
 hgroup 
  line-height: 0px
- font-family: 'Titillium Web', sans-serif
+ text-transform: capitalize
+ font-family: 'open sans', sans-serif
  color: $main-color
 
 hgroup
@@ -334,28 +357,32 @@ hgroup
 .fellowshipType
  color: transparent
  background-image: url(../images/AAcircle.png)
- height: 25px
- width: 25px
+ height: 28px
+ min-width: 28px
  margin: 5px 0 0 5px
- background-size: 100% auto
+ background-size: 31px auto
  background-repeat: no-repeat
 
 aside.right_side
  height: 100%
  min-height: 60px
- width: 26.23% 
+ width: 23.7%
  
 
 .type
+ height: 70px
  ul
-  height: 57px
+  height: 70px
   li
+   height: 50px
+   width: 45%
    margin: 0 10px 0 0
   button
    text-shadow: 0px 1px 1px black
-   height: 35px
+   font-weight: bold
+   text-transform: uppercase
+   height: 30px
    &:active
-    opacity: 1
   .AAbutton
    @include gradientaa
    &:active
@@ -368,49 +395,63 @@ aside.right_side
    text-indent: 0px
 
 .timeandday
- @include calendar
- margin: 5px 0 0 5px
+ margin: -5px 0 0 0px
  color: $main-color
- background-color: rgba(75,214,246,0.1)
- height: 51px
+ height: 79px
+ background-repeat: no-repeat
+ background-image: url(../images/calendar.png)
+ text-align: left
 
 .day li
- @include calendar
- width: 28px
- height: 20px
- margin: 0 0 0 10px
+ background-image: url(../images/calendar_sprite.png)
+ width: 30px
+ height: 24px
+ text-align: center
+ padding: 7px 0 0 0
+ margin: 0 0 0 7px
  font-weight: bold
  &:active
-  @include gradientbutton_lime
+  background-position: 0px 30px
 
-.distance
- text-align: cent
+p.distance
  font-weight: bold
- color: gray
- border-top: 1px solid gray
+ text-align: center
+ width: 80px
+ position: relative
+ top: 20px 
 
-.filter_time
+div.filter_time
+ height: 75px
+ h3
+  margin: 10px 0 0 0
+ul.filter_time
  li
   width: 70px
-  height: 65px
+  height: 60px
   padding: 5px 0 5px 0
+  font-size: .7em
   background-size: 70px auto
   background-repeat: no-repeat
   font-weight: bold
-  font-family: 'Open Sans', sans-serif
+  font-family: 'open sans', sans-serif
   &:active
    @include gradientbutton_lime
+   height: 45px
 
 
 time 
  p
   font-weight: bold
   line-height: 1px
+  text-align: center
+  width: 60px
+  position: relative
+  top: 20px
 
 ul.ratings
- background-color: rgba(210,210,15,1)
- @include gradientlight
+ border-top: 1px solid gray
  color: $main
+ vertical-align: top
 
  li:first-child
   font-size: .7em
@@ -419,6 +460,8 @@ ul.ratings
   margin: 0 0 0 5px
   background: transparent
   color: $main_color
+  h3
+   margin: 5px 0 0 0
  
  li
   background: url(../images/rating_icon_sprite_black.png) no-repeat top left
@@ -429,9 +472,13 @@ ul.ratings
  p.voteNumber
   color: $main_color
   text-align: center
-  background-color: rgba(250,250,45,.7)
+  font-weight: bold
+  background-color: rgba(250,250,245,.7)
+  box-shadow: inset 0px 0px 1px 2px rgba(150,136,155,.2), inset 0px 1px 4px 4px rgba(150,130,185,.5), 0px 1px 2px 2px rgba(202,170,235,.5), 0px 1px 4px 4px rgba(222,229,223,.4) 
   width: 30px
-  border-radius: 5px
+  position: relative
+  top: -11px
+  left: 30px
   -webkit-animation: wobble 2s linear 0s alternate
 
 
@@ -455,42 +502,35 @@ ul.ratings
   
   
  li.vote
-  background-color: rgba(250,250,45,.7)
+  background-color: rgba(250,250,245,.7)
+  box-shadow: inset 0px 0px 1px 2px rgba(150,136,155,.2), inset 0px 1px 4px 4px rgba(150,130,185,.5), 0px 1px 2px 2px rgba(202,170,235,.5), 0px 1px 4px 4px rgba(222,229,223,.4) 
   background-position: -78px 0
   width: 45px
   height: 15px
-  margin: -17px 0 0 0
   position: relative
-  left: 55px
+  top: -10px
+  font-weight: bold
   text-align: right
   color: $main_color
 
 ul.filter_ratings
  li 
   height: 50px
-  background-image: url(../images/rating_icon_sprite_black.png)
-  background-repeat: no-repeat
+  // background-image: url(../images/rating_icon_sprite_black.png)
+  // background-repeat: no-repeat
 
   &:active
    @include gradientbutton_lime
-   background-image: url(../images/rating_icon_sprite_black.png)
-   background-color: rgba(225,243,85,1)
 
  li
   p
    font-weight: bold
    font-size: 7px
-   margin: 30px 0 0 0
    width: 40px
    text-align: center
 
  li.snacks
-  background-color: rgba(225,243,85,1)
-  p
-  color: blue
-  background-image: url(../images/rating_icon_sprite_black.png)
-  background-repeat: no-repeat
-  background-position: -730px 5px
+ 
    
  li.coffee
   background-position: 8px 0 
@@ -620,5 +660,7 @@ nav
 
 nav
 .bottom
- .grid-3 
-  width: 22.81%
+ .grid-3
+  font-size: .7em
+  width: 22.2%
+  margin: 0
