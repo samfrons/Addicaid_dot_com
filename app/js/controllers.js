@@ -43,12 +43,6 @@ function MeetingListCtrl($scope, $http) {
     });
 }
 
-function FilterCtrl($scope, $http, $navigate) {
-    $scope.pageTitle = "Meeting Search";
-
-    logvar("$navigate",$navigate);
-}
-
 function MeetingListFavoritesCtrl($scope, $http, $navigate) {
     $scope.pageTitle = "Favorite Meetings";
 

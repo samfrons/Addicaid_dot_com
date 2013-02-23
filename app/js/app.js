@@ -7,7 +7,7 @@ angular.module('addicaidApp',
             ,'leaflet-directive'
             ,'addicaidApp.leaflet-directive'
             ,'mobile-navigate'
-//            ,'ui'
+            ,'ui'
         ])
 
     .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
@@ -18,10 +18,24 @@ angular.module('addicaidApp',
             .when('/meetingsaved', { templateUrl: 'views/meeting-saved.html', controller: MeetingListCtrl })
             .when('/signup', { templateUrl: 'views/signup.html', controller: SignupCtrl })
 //            .when("/", { templateUrl: 'views/meeting-list.html', controller: MeetingListCtrl })
-            .when("/", { templateUrl: 'views/map.html', controller: MapCtrl })
+//            .when("/", { templateUrl: 'views/map.html', controller: MapCtrl })
+            .when("/", { templateUrl: 'views/filter.html', controller: FilterCtrl })
             .otherwise({ redirectTo: "/" });
 //        $locationProvider.html5Mode(true);
     }])
+
+    .value('ui.config', {
+        jq: {
+            slider: {
+                min: 1,
+                max: 25,
+                value: 5,
+                slide: function(event, ui){
+                    log(ui.value)
+                }
+            }
+        }
+    })
 
     .run(function($rootScope) {
         $rootScope.views = {
