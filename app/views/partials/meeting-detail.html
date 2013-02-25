@@ -10,28 +10,26 @@
     <aside class="grids grid-4 right_side">
 
         <div class="timeandday">
-        <time class="time"><p>{{meeting.calendar.time}}</p></time>
-        <time datetime="monday"><p>{{meeting.calendar.dayShort}}</p></time>
-        <p class="distance">({{meeting.location.distance}})</p>
+            <p>{{meeting.calendar.time}}</p>
+            <p>{{meeting.calendar.dayShort}}</p>
+            <p>({{meeting.location.distance}})</p>
         </div>
-        
-</aside>
 
-        <aside class="grids grid-3 right2_side">
-            <button class="grids grid-5 save" type="submit" ng-submit="addFavorite()"><a href="#"><img src="../images/star_icon.png"></a></button>
-            <button class="grids directions" type="submit"><a href="https://maps.google.com/maps?daddr={{meeting.location.address1}}"><img src="../images/arrow.png"></a></button>
-        </aside>
-       
-    
+    </aside>
+
+    <aside class="grids grid-3 right2_side">
+        <button class="grids grid-5 save" type="submit" ng-submit="addFavorite()"><a href="#"><img src="../images/star_icon.png"></a></button>
+        <button class="grids directions" type="submit"><a href="https://maps.google.com/maps?daddr={{meeting.location.address1}}"><img src="../images/arrow.png"></a></button>
+    </aside>
+
 
     <ul class="grids grid-12 ratings">
         <li><h3>meeting stats&nbsp;</h3></li>
-            <li ng-repeat="rating in meeting.ratings"
-                class="grids grid-2" ng-class="rating.categoryCssClass">
-                {{rating.categoryName}}
-                <p class="voteNumber">{{rating.votes}}</p>
-            </li>
-            <li class="grids grid-3 vote" ng-tap="openDialog()">vote</li>
-        </ul>
-
+        <li ng-repeat="rating in meeting.ratings"
+            class="grids grid-2 {{getCssClass(rating)}}">
+            {{rating.text}}
+            <p class="voteNumber">{{rating.votes}}</p>
+        </li>
+        <li class="grids grid-3 vote">vote</li>
+    </ul>
 </article>

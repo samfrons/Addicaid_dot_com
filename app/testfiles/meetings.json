@@ -19,23 +19,23 @@
         },
         "ratings" : [
             {
-                "category" : "snacks",
-                "categoryCssClass" : "snacks",
+                "text" : "snacks",
                 "votes" : "12"
             },
             {
-                "category" : "coffee",
-                "categoryCssClass" : "coffee",
+                "text" : "coffee",
                 "votes" : "2"
             },
             {
-                "category" : "fellowship",
-                "categoryCssClass" : "fellowship",
-                "votes" : "40"
+                "text" : "outsiders",
+                "cssClass" : "outsiders",
+                "imgFilename" : "outsiders",
+                "votes" : "49"
             },
             {
-                "category" : "young",
-                "categoryCssClass" : "youngpeople",
+                "text" : "young",
+                "cssClass" : "youngpeople",
+                "imgFilename" : "young_people",
                 "votes" : "20"
             }
         ]
@@ -60,24 +60,24 @@
         },
         "ratings" : [
             {
-                "category" : "snacks",
-                "categoryCssClass" : "snacks",
-                "votes" : "1"
-            },
-            {
-                "category" : "coffee",
-                "categoryCssClass" : "coffee",
-                "votes" : "0"
-            },
-            {
-                "category" : "fellowship",
-                "categoryCssClass" : "fellowship",
+                "text" : "snacks",
                 "votes" : "12"
             },
             {
-                "category" : "young",
-                "categoryCssClass" : "youngpeople",
-                "votes" : "0"
+                "text" : "coffee",
+                "votes" : "2"
+            },
+            {
+                "text" : "outsiders",
+                "cssClass" : "outsiders",
+                "imgFilename" : "outsiders",
+                "votes" : "49"
+            },
+            {
+                "text" : "young",
+                "cssClass" : "young_people",
+                "imgFilename" : "young_people",
+                "votes" : "20"
             }
         ]
     },
@@ -101,24 +101,24 @@
         },
         "ratings" : [
             {
-                "category" : "snacks",
-                "categoryCssClass" : "snacks",
-                "votes" : "0"
+                "text" : "snacks",
+                "votes" : "12"
             },
             {
-                "category" : "coffee",
-                "categoryCssClass" : "coffee",
-                "votes" : "0"
+                "text" : "coffee",
+                "votes" : "2"
             },
             {
-                "category" : "fellowship",
-                "categoryCssClass" : "fellowship",
-                "votes" : "0"
+                "text" : "outsiders",
+                "cssClass" : "outsiders",
+                "imgFilename" : "outsiders",
+                "votes" : "49"
             },
             {
-                "category" : "young",
-                "categoryCssClass" : "youngpeople",
-                "votes" : "0"
+                "text" : "young",
+                "cssClass" : "young_people",
+                "imgFilename" : "young_people",
+                "votes" : "20"
             }
         ]
     }

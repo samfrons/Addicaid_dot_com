@@ -188,6 +188,18 @@ function RatingsCtrl($scope, $http, $navigate, $dialog) {
 };
 
 function MeetingDetailCtrl($scope, $dialog) {
+
+    $scope.getImgSrc = getImgSrc;
+    $scope.getCssClass = getCssClass;
+
+    $scope.getImgStyle = function(filterObj) {
+        var o = {
+            "background-image" : "url("+getImgSrc(filterObj)+")"
+        }
+        log(o)
+        return o;
+    }
+
     $scope.dialogOpts = {
 //        backdrop: true,
 //        keyboard: true,

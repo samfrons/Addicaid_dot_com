@@ -244,17 +244,14 @@ h1.filterh1
 .filter
  color: $main-color
  padding: 0 0 10px 0
- li
-  &:hover
  h3
   text-indent: 30px
  ul
   text-align: center
- button
+ button.filter_submit
   border-radius: 5px
   color: white
   font-family: 'open sans', sans-serif
- .filter_submit
   margin: 10px 0 50px 0%
   width: 100%
 
@@ -305,10 +302,10 @@ article.filter
  div.filter
   background: -webkit-linear-gradient(top, white 20%, rgba(255,255,255,.5) 100%)
   border-radius: 5px
- div.where
+ div.filter_where
   font-weight: bold
   vertical-align: middle
-  ul.where
+  ul.filter_where
    vertical-align: middle
    span.or
     vertical-align: top
@@ -378,7 +375,7 @@ aside.right_side
  min-height: 60px
  width: 23.7%
 
-.type
+div.filter_fellowship
  height: 70px
  ul
   height: 70px
@@ -409,9 +406,17 @@ aside.right_side
  background-repeat: no-repeat
  background-image: url(../images/calendar.png)
  text-align: left
+ p
+  font-weight: bold
+  line-height: 1px
+  text-align: center
+  width: 60px
+  position: relative
+  top: 20px
 
-.day li
- //display: inline-block
+
+
+ul.filter_day li
  background-image: url(../images/calendar_sprite.png)
  width: 30px
  height: 24px
@@ -421,13 +426,6 @@ aside.right_side
  font-weight: bold
  &.ui-show
   background-position: 0px 30px
-
-p.distance
- font-weight: bold
- text-align: center
- width: 80px
- position: relative
- top: 20px 
 
 div.filter_time
  height: 75px
@@ -446,15 +444,6 @@ ul.filter_time
   &.ui-show
    height: 45px
 
-
-time 
- p
-  font-weight: bold
-  line-height: 1px
-  text-align: center
-  width: 60px
-  position: relative
-  top: 20px
 
 ul.ratings
  border-top: 1px solid gray
@@ -476,6 +465,15 @@ ul.ratings
   vertical-align: middle
   height: 35px
 
+ li.snacks
+  background-position: -734px 5px
+ li.coffee
+  background-position: 0 0
+ li.fellowship
+  background-position: -477px 0
+ li.youngpeople
+  background-position: -990px 0
+
 
  p.voteNumber
   color: $main_color
@@ -491,20 +489,6 @@ ul.ratings
   &:active
    background-color: rgba(75,214,246,0.7)
 
- li.snacks
-  background-position: -734px 5px
-   
-
- li.coffee
-  background-position: 0 0 
-   
-
- li.fellowship
-  background-position: -477px 0
-  
-
- li.youngpeople
-  background-position: -960px 0
 
 
  li.vote
@@ -525,9 +509,6 @@ ul.filter_ratings
   padding: 2px
   img
    height: 20px
-
-
- li
   p
    font-weight: bold
    font-size: 7px
@@ -538,10 +519,7 @@ ul.filter_ratings
 .leaflet-bottom
  display: none
 
-.mappo
- height: 70% !important
-
-nav 
+nav
  .bottom
   position: fixed
   bottom: 0px
