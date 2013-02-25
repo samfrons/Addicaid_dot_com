@@ -8,6 +8,7 @@ angular.module('addicaidApp',
             ,'addicaidApp.leaflet-directive'
             ,'mobile-navigate'
             ,'ui'
+            ,'ui.bootstrap'
         ])
 
     .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
@@ -17,31 +18,32 @@ angular.module('addicaidApp',
             .when('/filter', { templateUrl: 'views/filter.html', controller: FilterCtrl })
             .when('/meetingsaved', { templateUrl: 'views/meeting-saved.html', controller: MeetingListCtrl })
             .when('/signup', { templateUrl: 'views/signup.html', controller: SignupCtrl })
-//            .when("/", { templateUrl: 'views/meeting-list.html', controller: MeetingListCtrl })
+            .when("/", { templateUrl: 'views/meeting-list.html', controller: MeetingListCtrl })
 //            .when("/", { templateUrl: 'views/map.html', controller: MapCtrl })
-            .when("/", { templateUrl: 'views/filter.html', controller: FilterCtrl })
+//            .when("/", { templateUrl: 'views/filter.html', controller: FilterCtrl })
             .otherwise({ redirectTo: "/" });
 //        $locationProvider.html5Mode(true);
     }])
 
-    .value('ui.config', {
-        jq: {
-            slider: {
-                min: 1,
-                max: 25,
-                value: 5,
-                slide: function(event, ui){
-                    log(ui.value)
-                }
-            }
-        }
-    })
+//    .value('ui.config', {
+//        jq: {
+//            slider: {
+//                min: 1,
+//                max: 25,
+//                value: 5,
+//                slide: function(event, ui){
+//                    log(ui.value)
+//                }
+//            }
+//        }
+//    })
 
     .run(function($rootScope) {
         $rootScope.views = {
             "header" : "views/partials/header.html",
             "footer" : "views/partials/footer.html",
-            "meetingDetail" : "views/partials/meeting-detail.html"
+            "meetingDetail" : "views/partials/meeting-detail.html",
+            "ratingsDialog" : "views/partials/ratings-dialog.html"
         };
         $rootScope.safeApply = function(fn) {
             var phase = this.$root.$$phase;

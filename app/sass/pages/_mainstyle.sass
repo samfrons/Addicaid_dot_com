@@ -87,11 +87,23 @@ $buttonbackground: rgba(219,87,5,1)
  $shadowtop: rgba(125,123,45,1)
  $shadowbottom: rgba(0,0,0,.7)
  $buttonbackground: rgba(165,163,75,1)
- border-radius: 5px
+ border-radius: 5px !important
  background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, $topcolor), color-stop(1, $bottomcolor) )
  -webkit-box-shadow: 0px 3px 0px $shadowtop, 0px 3px 6px $shadowbottom
  -moz-box-shadow: 0px 3px 0px $shadowtop, 0px 3px 6px $shadowbottom
  box-shadow: 0px 3px 0px $shadowtop, 0px 3px 6px $shadowbottom
+
+@mixin gradientbutton_lime__important
+ $bottomcolor: rgba(225,243,85,1)
+ $topcolor: rgba(165,163,75,1)
+ $shadowtop: rgba(125,123,45,1)
+ $shadowbottom: rgba(0,0,0,.7)
+ $buttonbackground: rgba(165,163,75,1)
+ border-radius: 5px !important
+ background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, $topcolor), color-stop(1, $bottomcolor) ) !important
+ -webkit-box-shadow: 0px 3px 0px $shadowtop, 0px 3px 6px $shadowbottom !important
+ -moz-box-shadow: 0px 3px 0px $shadowtop, 0px 3px 6px $shadowbottom !important
+ box-shadow: 0px 3px 0px $shadowtop, 0px 3px 6px $shadowbottom !important
 
 @mixin gradientlight
  background-color: black
@@ -318,8 +330,6 @@ article.filter
    background-image: url(../images/here_icon.png)
    background-size: 20px auto
    background-repeat: no-repeat
-  &:active
-   @include gradientbutton_lime
 
 input.zipcode 
  width: 70px
@@ -367,7 +377,6 @@ aside.right_side
  height: 100%
  min-height: 60px
  width: 23.7%
- 
 
 .type
  height: 70px
@@ -377,22 +386,21 @@ aside.right_side
    height: 50px
    width: 45%
    margin: 0 10px 0 0
-  button
    text-shadow: 0px 1px 1px black
    font-weight: bold
    text-transform: uppercase
    height: 30px
-   &:active
-  .AAbutton
-   @include gradientaa
-   &:active
-    @include gradientbutton_lime
-
-  .NAbutton
-   @include gradientna
-   
-   
    text-indent: 0px
+   &.AA
+    @include gradientaa
+   &.NA
+    @include gradientna
+
+
+
+.FilterToggle.ui-show
+ @include gradientbutton_lime__important
+
 
 .timeandday
  margin: -5px 0 0 0px
@@ -403,6 +411,7 @@ aside.right_side
  text-align: left
 
 .day li
+ //display: inline-block
  background-image: url(../images/calendar_sprite.png)
  width: 30px
  height: 24px
@@ -410,7 +419,7 @@ aside.right_side
  padding: 7px 0 0 0
  margin: 0 0 0 7px
  font-weight: bold
- &:active
+ &.ui-show
   background-position: 0px 30px
 
 p.distance
@@ -434,8 +443,7 @@ ul.filter_time
   background-repeat: no-repeat
   font-weight: bold
   font-family: 'open sans', sans-serif
-  &:active
-   @include gradientbutton_lime
+  &.ui-show
    height: 45px
 
 
@@ -467,7 +475,7 @@ ul.ratings
   background: url(../images/rating_icon_sprite_black.png) no-repeat top left
   vertical-align: middle
   height: 35px
- 
+
 
  p.voteNumber
   color: $main_color
@@ -480,8 +488,6 @@ ul.ratings
   top: -11px
   left: 30px
   -webkit-animation: wobble 2s linear 0s alternate
-
-
   &:active
    background-color: rgba(75,214,246,0.7)
 
@@ -499,11 +505,11 @@ ul.ratings
 
  li.youngpeople
   background-position: -960px 0
-  
-  
+
+
  li.vote
   background-color: rgba(250,250,245,.7)
-  box-shadow: inset 0px 0px 1px 2px rgba(150,136,155,.2), inset 0px 1px 4px 4px rgba(150,130,185,.5), 0px 1px 2px 2px rgba(202,170,235,.5), 0px 1px 4px 4px rgba(222,229,223,.4) 
+  box-shadow: inset 0px 0px 1px 2px rgba(150,136,155,.2), inset 0px 1px 4px 4px rgba(150,130,185,.5), 0px 1px 2px 2px rgba(202,170,235,.5), 0px 1px 4px 4px rgba(222,229,223,.4)
   background-position: -78px 0
   width: 45px
   height: 15px
@@ -520,8 +526,6 @@ ul.filter_ratings
   img
    height: 20px
 
-  &:active
-   @include gradientbutton_lime
 
  li
   p

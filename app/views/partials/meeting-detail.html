@@ -4,10 +4,7 @@
         <h3>{{meeting.title}}</h3>
         <h4>{{meeting.location.title}}</h4>
         <h4>{{meeting.location.address1}}</h4>
-        <h4>new york, NY 100025 </h4>
-
-        
-
+        <h4>{{meeting.location.address2}}</h4>
     </hgroup>
 
     <aside class="grids grid-4 right_side">
@@ -15,7 +12,7 @@
         <div class="timeandday">
         <time class="time"><p>{{meeting.calendar.time}}</p></time>
         <time datetime="monday"><p>{{meeting.calendar.dayShort}}</p></time>
-        <p class="distance">(0.2 mi)</p>
+        <p class="distance">({{meeting.location.distance}})</p>
         </div>
         
 </aside>
@@ -30,9 +27,11 @@
     <ul class="grids grid-12 ratings">
         <li><h3>meeting stats&nbsp;</h3></li>
             <li ng-repeat="rating in meeting.ratings"
-                class="grids grid-2" ng-class="rating.categoryCssClass">{{rating.categoryName}}<p class="voteNumber">{{rating.votes}}</p></li>
-            <li class="grids grid-3 vote">vote</li>
+                class="grids grid-2" ng-class="rating.categoryCssClass">
+                {{rating.categoryName}}
+                <p class="voteNumber">{{rating.votes}}</p>
+            </li>
+            <li class="grids grid-3 vote" ng-tap="openDialog()">vote</li>
         </ul>
 
 </article>
-        <!--<time datetime="monday">MON</time>-->
