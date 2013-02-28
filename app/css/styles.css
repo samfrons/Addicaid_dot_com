@@ -263,12 +263,15 @@ hgroup h6 {
 
 .fellowshipType {
   color: transparent;
-  background-image: url(../images/AAcircle.png);
   height: 28px;
   min-width: 28px;
   margin: 5px 0 0 5px;
   background-size: 31px auto;
   background-repeat: no-repeat; }
+  .fellowshipType.AA {
+    background-image: url(../images/AAcircle.png); }
+  .fellowshipType.NA {
+    background-image: url(../images/NAcircle.png); }
 
 aside.right_side {
   height: 100%;

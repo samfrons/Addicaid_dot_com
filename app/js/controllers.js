@@ -38,9 +38,76 @@ function AppCtrl($scope, $navigate) {
 //MeetingListCtrl.$inject = [$scope];
 function MeetingListCtrl($scope, $http) {
     $scope.pageTitle = "Meeting List";
-    $http.get('testfiles/meetings.json').success(function(data) {
+    $http.get('testfiles/meetings-big.json').success(function(data) {
         $scope.meetings = data;
     });
+
+    $scope.getFellowshipID = function(fellowship) {
+        var id;
+        switch (fellowship) {
+            case "AlcoholicsAnonymous":
+                id = "AA";
+                break;
+            case "NarcoticsAnonymous":
+                id = "NA";
+                break;
+        }
+        return id;
+    }
+    $scope.parseAddress = function(address, part) {
+        return address.split('\n')[part-1];
+    };
+    $scope.formatTime = function(time) {
+        return time;
+    };
+    $scope.formatDay = function(day) {
+        return day.substr(0,3);
+    };
+    $scope.formatDistance= function(distance) {
+        var result=parseFloat(distance);
+        if (isFinite(result)) {
+            result = "(" + result + ")";
+        } else {
+            result = null;
+        }
+        return result;
+    };
+
+
+
+
+    var url;
+    url = 'http://jsonpwrapper.com/?urls[]=http://addicaid.appspot.com/meetings?daylist=Mo&callback=JSON_CALLBACK';
+    url = 'http%3A%2F%2Fjsonpwrapper.com%2F%3Furl%3Dhttp%3A%2F%2Faddicaid.appspot.com%2Fmeetings%3Fdaylist%3DMo%26callback%3DJSON_CALLBACK';
+//    $http.jsonp(url)
+//        .success(function(data){
+//            console.log(data[0].body);
+//        });
+
+    url = 'http://addicaid.appspot.com/meetings?daylist=Mo';
+//    url = 'http://status-back.appspot.com/?status=200&content=OK';
+    log(url);
+//    $http({
+//        method: 'GET',
+//        url: url,
+//        transformResponse: function(data) {
+//            log('transformResponse');
+//            log(data);
+//            var json = data ;
+//            return json;
+//        },
+//        cache: false
+//    })
+//
+//        .success(function(data, status, headers,config){
+//            log('success');
+//            log(data);
+//            log(status, headers,config);
+//        })
+//        .error(function(data,status, headers,config){
+//            console.log('error', data, status, headers,config);
+//        });
+
 }
 
 function MeetingListFavoritesCtrl($scope, $http, $navigate) {

@@ -1,0 +1,591 @@
+[
+    {
+        "id": 30003,
+        "title": "ST. NICK'S",
+        "address": "150-75 Goethals Avenue, School Cafeteria \nNew York, NY ",
+        "time": "19:15",
+        "day": "WEDNESDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -74.005973,
+            "latitude": 40.714269,
+            "locationName": "St. Nicholas of Tolentine"
+        }
+    },
+    {
+        "id": 31003,
+        "title": "ST. JOSEPH'S",
+        "address": "5 Ridgeview Road \nNew York, NY ",
+        "time": "15:00",
+        "day": "SUNDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -74.005973,
+            "latitude": 40.714269,
+            "locationName": "Veritas Villa"
+        }
+    },
+    {
+        "id": 31004,
+        "title": "STAMFORD STEPS TO RECOVERY",
+        "address": "358 Glenbrook Road @ Catacombs - Under the apartment in the back. \nNew York, NY ",
+        "time": "19:30",
+        "day": "THURSDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -74.005973,
+            "latitude": 40.714269,
+            "locationName": "Saint Maurice Church"
+        }
+    },
+    {
+        "id": 31005,
+        "title": "STARTING OVER IN ASTORIA",
+        "address": "30-14 Crescent Street, Basement \nNew York, NY ",
+        "time": "18:00",
+        "day": "TUESDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -74.005973,
+            "latitude": 40.714269,
+            "locationName": "Episcopal Church of the Redeemer"
+        }
+    },
+    {
+        "id": 31006,
+        "title": "STATEN ISLAND DISCUSSION",
+        "address": "225 St. Paul's Avenue, Lower Guild Hall \nNew York, NY ",
+        "time": "20:30",
+        "day": "FRIDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -74.005973,
+            "latitude": 40.714269,
+            "locationName": "St. Paul's Church"
+        }
+    },
+    {
+        "id": 32004,
+        "title": "ST. MEL'S",
+        "address": "154-24 26th Avenue, Basement \nNew York, NY ",
+        "time": "20:00",
+        "day": "THURSDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -74.005973,
+            "latitude": 40.714269,
+            "locationName": "St. Mel's School"
+        }
+    },
+    {
+        "id": 33006,
+        "title": "ST. JOSEPH'S",
+        "address": "5 Ridgeview Road \nNew York, NY ",
+        "time": "20:00",
+        "day": "THURSDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -74.005973,
+            "latitude": 40.714269,
+            "locationName": "Veritas Villa"
+        }
+    },
+    {
+        "id": 33007,
+        "title": "ST. NICHOLAS",
+        "address": "204 West 134th Street, Basement \nNew York, NY ",
+        "time": "16:00",
+        "day": "SUNDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -74.005973,
+            "latitude": 40.714269,
+            "locationName": "St. Phillip's Church"
+        }
+    },
+    {
+        "id": 34004,
+        "title": "ST. ALBANS",
+        "address": "114-58 170th Street, Basement \nNew York, NY ",
+        "time": "19:30",
+        "day": "MONDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -74.005973,
+            "latitude": 40.714269,
+            "locationName": "St. Bonaventure Church"
+        }
+    },
+    {
+        "id": 35003,
+        "title": "SPRING VALLEY RESCUE",
+        "address": "Pomona Health Complex \nNew York, NY ",
+        "time": "20:00",
+        "day": "WEDNESDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -74.005973,
+            "latitude": 40.714269,
+            "locationName": "Rockland County Alcohol Clinic"
+        }
+    },
+    {
+        "id": 35004,
+        "title": "ST. NICHOLAS",
+        "address": "204 West 134th Street, Basement \nNew York, NY ",
+        "time": "19:00",
+        "day": "THURSDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -74.005973,
+            "latitude": 40.714269,
+            "locationName": "St. Phillip's Church"
+        }
+    },
+    {
+        "id": 35005,
+        "title": "STAMFORD STEPS TO RECOVERY",
+        "address": "358 Glenbrook Road @ Catacombs - Under the apartment in the back. \nNew York, NY ",
+        "time": "18:30",
+        "day": "TUESDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -74.005973,
+            "latitude": 40.714269,
+            "locationName": "Saint Maurice Church"
+        }
+    },
+    {
+        "id": 36004,
+        "title": "ST. ALBANS",
+        "address": "114-58 170th Street, Basement \nNew York, NY ",
+        "time": "19:00",
+        "day": "THURSDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -74.005973,
+            "latitude": 40.714269,
+            "locationName": "St. Bonaventure Church"
+        }
+    },
+    {
+        "id": 36005,
+        "title": "ST. MARK'S STEP",
+        "address": "6144 Amboy Road, Basement \nNew York, NY ",
+        "time": "20:30",
+        "day": "TUESDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -74.005973,
+            "latitude": 40.714269,
+            "locationName": "St. Mark's Methodist Church"
+        }
+    },
+    {
+        "id": 36006,
+        "title": "STARTING POINT",
+        "address": "612 Greenwood Avenue, Basement \nNew York, NY ",
+        "time": "18:45",
+        "day": "MONDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -74.005973,
+            "latitude": 40.714269,
+            "locationName": "Church of The Holy Apostles"
+        }
+    },
+    {
+        "id": 39002,
+        "title": "STARTING POINT",
+        "address": "612 Greenwood Avenue, Basement \nNew York, NY ",
+        "time": "18:45",
+        "day": "THURSDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -74.005973,
+            "latitude": 40.714269,
+            "locationName": "Church of The Holy Apostles"
+        }
+    },
+    {
+        "id": 41002,
+        "title": "ST. MEL'S",
+        "address": "154-24 26th Avenue, Basement \nNew York, NY ",
+        "time": "19:30",
+        "day": "MONDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -74.005973,
+            "latitude": 40.714269,
+            "locationName": "St. Mel's School"
+        }
+    },
+    {
+        "id": 43002,
+        "title": "STAMFORD STEPS TO RECOVERY",
+        "address": "358 Glenbrook Road @ Catacombs - Under the apartment in the back. \nNew York, NY ",
+        "time": "18:30",
+        "day": "SATURDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -74.005973,
+            "latitude": 40.714269,
+            "locationName": "Saint Maurice Church"
+        }
+    },
+    {
+        "id": 44001,
+        "title": "ST. NICK'S",
+        "address": "150-75 Goethals Avenue, School Cafeteria \nNew York, NY ",
+        "time": "19:15",
+        "day": "SATURDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -74.005973,
+            "latitude": 40.714269,
+            "locationName": "St. Nicholas of Tolentine"
+        }
+    }
+]
