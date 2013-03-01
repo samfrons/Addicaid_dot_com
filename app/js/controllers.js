@@ -22,7 +22,6 @@ function AppCtrl($scope, $navigate) {
 function SignupCtrl($scope, $http, $navigate) {
     $scope.pageTitle = "Signup";
 
-    logvar("$navigate",$navigate);
 }
 
 

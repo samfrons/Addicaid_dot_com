@@ -29,16 +29,11 @@
 
 
 
-<!--<leaflet-marker-->
-     <!--leaflet-lat="meetingList[0].latitude"-->
-     <!--leaflet-lng="meetingList[0].longitude"-->
-     <!--leaflet-map="mapid">-->
-<!--</leaflet-marker>-->
-
 <leaflet-marker
      ng-repeat="meeting in meetings"
      leaflet-lat="meetings[$index].latLon.latitude"
      leaflet-lng="meetings[$index].latLon.longitude"
+     marker-options="meetings[$index].markerOptions"
      leaflet-map="mapid">
 </leaflet-marker>
 

@@ -4,17 +4,17 @@
 //    longitude : -73.97140100000001
 //};
 var defaultCoordinates = { // San Fran
-    latitude : 37.777182,
-    longitude : -122.416728
+    latitude : 37.770919,
+    longitude : -122.405037
 };
 var defaultST_Point = function() {
     return "ST_Point(" + defaultCoordinates.longitude.toString() + ", " + defaultCoordinates.latitude.toString() + ")";
 }
 var defaultCartodbAccount = "bigmickey";
 var defaultCartodbTable = "intherooms";
-var defaultCartodbSql = "SELECT rooms.*, ST_Distance(ST_AsText(rooms.the_geom), ST_AsText("+defaultST_Point()+")) as dst from "+defaultCartodbTable+" rooms join (SELECT max(cartodb_id) as id,  ST_Distance(ST_AsText(the_geom), ST_AsText("+defaultST_Point()+")) as dst FROM "+defaultCartodbTable+" where fellowship in ('Alcoholics Anonymous', 'Narcotics Anonymous', 'Gamblers Anonymous', 'Overeaters Anonymous') group by dst) x on rooms.cartodb_id = x.id order by dst asc limit 100";
-// select rooms.*, x.dst as dst from intherooms rooms join (SELECT max(cartodb_id) as id,  ST_Distance(ST_AsText(the_geom), ST_AsText(ST_Point(-73.97140100000001, 40.763562))) as dst FROM intherooms where fellowship in ('Alcoholics Anonymous', 'Narcotics Anonymous', 'Gamblers Anonymous', 'Overeaters Anonymous') group by dst) x on rooms.cartodb_id = x.id order by dst asc limit 40
-// select rooms.*, x.dst as dst from intherooms rooms join (SELECT max(cartodb_id) as id,  ST_Distance(ST_AsText(the_geom), ST_AsText(ST_Point(-122.416728, 37.777182))) as dst FROM intherooms where fellowship in ('Alcoholics Anonymous', 'Narcotics Anonymous', 'Gamblers Anonymous', 'Overeaters Anonymous') group by dst) x on rooms.cartodb_id = x.id order by dst asc limit 40
+var defaultCartodbSql = "SELECT rooms.*, ST_Distance(ST_AsText(rooms.the_geom), ST_AsText("+defaultST_Point()+")) as dst from "+defaultCartodbTable+" rooms join (SELECT max(cartodb_id) as id,  ST_Distance(ST_AsText(the_geom), ST_AsText("+defaultST_Point()+")) as dst FROM "+defaultCartodbTable+" where fellowship in ('Alcoholics Anonymous', 'Narcotics Anonymous') group by dst) x on rooms.cartodb_id = x.id order by dst asc limit 100";
+// select rooms.*, x.dst as dst from intherooms rooms join (SELECT max(cartodb_id) as id,  ST_Distance(ST_AsText(the_geom), ST_AsText(ST_Point(-73.97140100000001, 40.763562))) as dst FROM intherooms where fellowship in ('Alcoholics Anonymous', 'Narcotics Anonymous') group by dst) x on rooms.cartodb_id = x.id order by dst asc limit 40
+// select rooms.*, x.dst as dst from intherooms rooms join (SELECT max(cartodb_id) as id,  ST_Distance(ST_AsText(the_geom), ST_AsText(ST_Point(-122.416728, 37.777182))) as dst FROM intherooms where fellowship in ('Alcoholics Anonymous', 'Narcotics Anonymous') group by dst) x on rooms.cartodb_id = x.id order by dst asc limit 40
 
 
 
@@ -62,32 +62,32 @@ angular.module('addicaidApp')
                     {
                         text: "TUE",
                         queryString: "Tu",
-                        selected: false
+                        selected: true
                     },
                     {
                         text: "WED",
                         queryString: "We",
-                        selected: false
+                        selected: true
                     },
                     {
                         text: "THU",
                         queryString: "Th",
-                        selected: false
+                        selected: true
                     },
                     {
                         text: "FRI",
                         queryString: "Fr",
-                        selected: false
+                        selected: true
                     },
                     {
                         text: "SAT",
                         queryString: "Sa",
-                        selected: false
+                        selected: true
                     },
                     {
                         text: "SUN",
                         queryString: "Su",
-                        selected: false
+                        selected: true
                     }
                 ],
                 times: [
@@ -212,23 +212,27 @@ angular.module('addicaidApp')
                     .success(function(data, status) {
                         meetingsService.meetingsCache = data.value;
 
-                        // TODO: fake data
-                        $http.jsonp('http://'+defaultCartodbAccount+'.cartodb.com/api/v2/sql/?q='+defaultCartodbSql+'&callback=JSON_CALLBACK')
-                            .success(function(data,status) {
+                        // TODO: fake data-carto
+//                        $http.jsonp('http://'+defaultCartodbAccount+'.cartodb.com/api/v2/sql/?q='+defaultCartodbSql+'&callback=JSON_CALLBACK')
+//                            .success(function(data,status) {
 //                                log('http://'+defaultCartodbAccount+'.cartodb.com/api/v2/sql/?q='+defaultCartodbSql+'&callback=JSON_CALLBACK');
-                                for (var i=0; i < meetingsService.meetingsCache.length; i++) {
-                                    meetingsService.meetingsCache[i].latLon.latitude = data.rows[i].latitude;
-                                    meetingsService.meetingsCache[i].latLon.longitude = data.rows[i].longitude;
-                                    meetingsService.meetingsCache[i].isFavorite = Math.random()<.2 ? true : false;
-                                }
+//                                for (var i=0; i < meetingsService.meetingsCache.length; i++) {
+//                                    meetingsService.meetingsCache[i].latLon.latitude = data.rows[i].latitude;
+//                                    meetingsService.meetingsCache[i].latLon.longitude = data.rows[i].longitude;
+//                                }
+//
+//
+//                                meetingsService.isFilterDirty = false;
+//                                $rootScope.$broadcast(meetingsService.meetingsChangedEvent, [/* meetingsChangedArgs */]);
+//                            })
 
+                        // TODO: fake data-favorites
+                        for (var i=0; i < meetingsService.meetingsCache.length; i++) {
+                            meetingsService.meetingsCache[i].isFavorite = Math.random()<.2 ? true : false;
+                        }
 
-                                meetingsService.isFilterDirty = false;
-                                $rootScope.$broadcast(meetingsService.meetingsChangedEvent, [/* meetingsChangedArgs */]);
-                            })
-
-//                        meetingsService.isFilterDirty = false;
-//                        $rootScope.$broadcast(meetingsService.meetingsChangedEvent, [/* meetingsChangedArgs */]);
+                        meetingsService.isFilterDirty = false;
+                        $rootScope.$broadcast(meetingsService.meetingsChangedEvent, [/* meetingsChangedArgs */]);
                     })
                     .error(function(data,status) {
                         // TODO: error handling

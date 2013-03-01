@@ -23,18 +23,39 @@ function MapCtrl($scope, $http, meetingsService) {
     };
 
 
-    $scope.mapMarkers = [];
+//    $scope.mapMarkers = [];
 //    $scope.meetings = [{
 //        latitude : 37.777,
 //        longitude : -122.41
 //    } ];
 
 
+    var addMarkerOptions = function(meetings) {
+        for (var i=0; i<meetings.length; i++) {
+            var icon = L.Icon.Default;
+            switch (meetings[i].fellowship.name) {
+                case "AlcoholicsAnonymous":
+                    icon = L.icon( { iconUrl: "images/AAmap.png"} );
+                    break;
+                case "NarcoticsAnonymous":
+                    icon = L.icon( { iconUrl: "images/NAmap.png"} );
+                    break;
+            }
+
+            var markerOptions = {
+                icon: icon
+            };
+            angular.extend(meetings[i], { markerOptions: markerOptions });
+        }
+
+        return meetings;
+    };
+
     $scope.$on(meetingsService.meetingsChangedEvent, function(event, args) {
         log("MapCtrl#on#meetings changed", event, args)
-        $scope.meetings = meetingsService.getMeetings("map-on");
+        $scope.meetings = addMarkerOptions(meetingsService.getMeetings("map-on"));
     });
 
-    $scope.meetings = meetingsService.getMeetings("map");
+    $scope.meetings = addMarkerOptions(meetingsService.getMeetings("map"));
 
 }

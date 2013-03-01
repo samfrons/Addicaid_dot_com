@@ -85,12 +85,9 @@ app.directive('leafletMarker', ['$parse', 'mapService', function($parse, mapServ
 
     return {
         restrict: 'E', // TODO:
-//        scope: {
-//            markerOptions: '=', // required
-//            markerLatitude: '=',
-//            markerLongitude: '=',
-//            mapID: '='
-//        },
+        replace: true,
+        template: '<div></div>',
+
         link: function (scope, element, attrs) {
             // attributes:
             //   leafletLat, leafletLng // required

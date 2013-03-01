@@ -18,9 +18,10 @@ angular.module('addicaidApp',
             .when('/meetingfavorites', { templateUrl: 'views/meeting-list.html', controller: MeetingListFavoritesCtrl })
             .when('/filter', { templateUrl: 'views/filter.html', controller: FilterCtrl })
             .when('/signup', { templateUrl: 'views/signup.html', controller: SignupCtrl })
-            .when("/", { templateUrl: 'views/meeting-list.html', controller: MeetingListCtrl })
+//            .when("/", { templateUrl: 'views/meeting-list.html', controller: MeetingListCtrl })
 //            .when("/", { templateUrl: 'views/map.html', controller: MapCtrl })
 //            .when("/", { templateUrl: 'views/filter.html', controller: FilterCtrl })
+            .when("/", { templateUrl: 'views/signup.html', controller: SignupCtrl })
             .otherwise({ redirectTo: "/" });
 //        $locationProvider.html5Mode(true);
     }])

@@ -88,9 +88,9 @@ function MeetingDetailCtrl($scope, $dialog, meetingsService) {
     }
 
 
-    $scope.getFellowshipID = function(fellowship) {
+    $scope.getFellowshipID = function(fellowshipName) {
         var id;
-        switch (fellowship) {
+        switch (fellowshipName) {
             case "AlcoholicsAnonymous":
                 id = "AA";
                 break;
