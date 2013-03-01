@@ -27,6 +27,7 @@ header h1 {
   text-transform: capitalize;
   top: 15px;
   margin: 0;
+  font-family: "open sans", sans-serif;
   padding: 0;
   text-align: center;
   color: white;
@@ -263,7 +264,7 @@ hgroup h6 {
 
 .fellowshipType {
   color: transparent;
-  height: 28px;
+  height: 40px;
   min-width: 28px;
   margin: 5px 0 0 5px;
   background-size: 31px auto;
@@ -442,6 +443,12 @@ nav .bottom {
 
 section.profile {
   background-image: url(../images/profile.jpg);
+  color: red;
+  height: 100%;
+  background-size: 100% auto; }
+
+section.dailydose {
+  background-image: url(../images/dailychallenge.jpg);
   color: red;
   height: 100%;
   background-size: 100% auto; }
