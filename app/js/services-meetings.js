@@ -188,7 +188,7 @@ angular.module('addicaidApp')
             return result;
         }
         meetingsService.getImgSrc = function(filterObj) {
-            return "../images/" + namify(filterObj, "imgFilename") + ".png";
+            return "images/" + namify(filterObj, "imgFilename") + ".png";
         }
         meetingsService.getCssClass = function(filterObj) {
             return namify(filterObj, "cssClass");
