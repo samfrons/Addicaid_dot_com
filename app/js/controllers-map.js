@@ -51,6 +51,17 @@ function MapCtrl($scope, $http, meetingsService) {
         return meetings;
     };
 
+
+    $scope.openMarkerInfo = function(marker) {
+        $scope.currentMarker = marker;
+        log('openMarkerInfo')
+        var popupContent = "<p>hi</p>";
+        marker.bindPopup(popupContent).openPopup();
+//        if (marker.meeting) {
+//            $scope.myInfoWindow.open($scope.myMap, marker);
+//        }
+    };
+
     $scope.$on(meetingsService.meetingsChangedEvent, function(event, args) {
         log("MapCtrl#on#meetings changed", event, args)
         $scope.meetings = addMarkerOptions(meetingsService.getMeetings("map-on"));

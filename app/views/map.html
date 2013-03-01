@@ -34,7 +34,9 @@
      leaflet-lat="meetings[$index].latLon.latitude"
      leaflet-lng="meetings[$index].latLon.longitude"
      marker-options="meetings[$index].markerOptions"
-     leaflet-map="mapid">
+     leaflet-map="mapid"
+     map-event="{'map-click': 'openMarkerInfo(marker)'}"
+        >
 </leaflet-marker>
 
 
