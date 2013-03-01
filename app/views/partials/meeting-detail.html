@@ -3,7 +3,7 @@
     <aside class="grids grid-1 fellowshipType {{getFellowshipID(meeting.fellowship.name)}}">{{getFellowshipID(meeting.fellowship.name)}}</aside>
     <hgroup class="grids grid-7">
         <h3>{{meeting.title}}</h3>
-        <h4>{{meeting.latLon.locationName}}</h4>
+        <h4 class="locationname">{{meeting.latLon.locationName}}</h4>
         <h4>{{parseAddress(meeting.address,1)}}</h4>
         <h4>{{parseAddress(meeting.address,2)}}</h4>
     </hgroup>

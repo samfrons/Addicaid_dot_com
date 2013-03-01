@@ -42,14 +42,14 @@ h2#test {
     -ms-transition: all 2s ease-in-out;
     transition: all 2s ease-in-out;
   }
-  #outerspace div.rocket {
-    -webkit-transform: translate(300px,-200px);
-    -moz-transform: translate(300px,-200px);
-    -o-transform: translate(300px,-200px);
-    -ms-transform: translate(300px,-200px);
+  #outerspace:hover div.rocket {
+    -webkit-transform: translate(540px,-200px);
+    -moz-transform: translate(540px,-200px);
+    -o-transform: translate(540px,-200px);
+    -ms-transform: translate(540px,-200px);
     transition: all 2s ease-in-out;
   }
-  #outerspace div.rocket img {
+  #outerspace:hover div.rocket img {
     -webkit-transform: rotate(70deg);
     -moz-transform: rotate(70deg);
     -o-transform: rotate(70deg);

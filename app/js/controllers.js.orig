@@ -1,0 +1,77 @@
+
+/* Controllers */
+
+
+
+
+
+
+
+
+
+
+
+//MainCtrl.$inject = [$scope, $navigate];
+function AppCtrl($scope, $navigate) {
+    $scope.$navigate = $navigate;
+    $navigate.go('/','none');
+}
+
+
+
+function SignupCtrl($scope, $http, $navigate) {
+    $scope.pageTitle = "Signup";
+}
+
+
+function ProfileCtrl($scope, $http, $navigate) {
+    $scope.pageTitle = "Profile";
+}
+
+<<<<<<< HEAD
+=======
+function DailyDoseCtrl($scope, $http, $navigate) {
+    $scope.pageTitle = "Daily Dose";
+>>>>>>> a20bce088d481e88694d5cb1204090ee9705e2d3
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function TestAppCtrl($scope, $navigate) {
+    $scope.$navigate = $navigate;
+    $navigate.go('/','none');
+
+
+    angular.extend($scope, {
+        mapCenter: { lat: 40.763562, lng: -73.971401 },
+//        marker: { lat: 40.763562, lng: -73.9 },
+//        message: "Drag me to your node position",
+        mapZoom: 11
+    });
+    console.log("testAppctrl");
+    $scope.mapOptions = {
+//        center: new L.LatLng(40.763562, -73.971401),
+        zoom: 14
+//        layers: null,
+//        minZoom: null,
+//        maxZoom: null,
+//        ,maxBounds: new L.LatLngBounds()
+    };
+}
