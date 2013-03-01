@@ -181,7 +181,7 @@ button
 
 button[type="submit"]
  &:active
-  @include gradientbutton_active
+  // @include gradientbutton_active
 
 a.profilebutton 
  background-color: rgba(200,200,20,0.4)
@@ -309,6 +309,9 @@ aside.right2_side
   font-family: 'open sans', sans-serif
   text-transform: uppercase
   margin: 0 0 0 -7px
+  &:active
+   position: relative !important
+   top: 0 !important
 
 article.filter
  width: 95%
