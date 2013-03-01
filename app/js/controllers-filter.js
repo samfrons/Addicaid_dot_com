@@ -119,7 +119,7 @@ function MeetingDetailCtrl($scope, $dialog, meetingsService) {
         return result;
     };
     $scope.getStarImgSrc = function(isFavorite) {
-        return isFavorite ? "../images/star_icon_on.png" : "../images/star_icon.png";
+        return isFavorite ? "images/star_icon_on.png" : "images/star_icon.png";
     };
 
 
