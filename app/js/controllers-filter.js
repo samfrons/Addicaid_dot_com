@@ -1,134 +1,21 @@
-var namify = function namify(filterObj, param) {
-    var result = "";
-    if (filterObj[param] !== undefined) {
-        result = filterObj[param];
-    } else {
-        result = filterObj.text.replace(" ", "_");
-    }
-    return result;
-}
-
-var getImgSrc = function(filterObj) {
-    return "../images/" + namify(filterObj, "imgFilename") + ".png";
-}
-
-var getCssClass = function(filterObj) {
-    return namify(filterObj, "cssClass");
-}
 
 
 
 
-function FilterCtrl($scope, $http, $navigate) {
+
+function FilterCtrl($scope, $http, $navigate, meetingsService) {
     $scope.pageTitle = "Meeting Search";
 
-    $scope.filters = {
-        location: {
-            useCurrentLocation: "true"
-        },
-        fellowships: [
-            {
-                text: "Alcoholics Anonymous",
-                cssClass: "AA"
-            },
-            {
-                text: "Narcotics Anonymous",
-                cssClass: "NA"
-            }
-        ],
-        days: [
-            {
-                text: "MON",
-                selected: true
-            },
-            {
-                text: "TUE"
-            },
-            {
-                text: "WED"
-            },
-            {
-                text: "THU"
-            },
-            {
-                text: "FRI"
-            },
-            {
-                text: "SAT"
-            },
-            {
-                text: "SUN"
-            }
-        ],
-        times: [
-            {
-                text1: "morning",
-                text2: "6AM - 12PM",
-                imgFilename: "clock"
-            },
-            {
-                text1: "afternoon",
-                text2: "12PM - 5PM",
-                imgFilename: "clock"
-            },
-            {
-                text1: "evening",
-                text2: "5PM - 8PM",
-                imgFilename: "clock"
-            },
-            {
-                text1: "night",
-                text2: "8PM AND ON",
-                imgFilename: "clock"
-            }
-        ],
-        ratings: [
-            {
-                text: "snacks"
-            },
-            {
-                text: "young people"
-            },
-            {
-                text: "large group"
-            },
-            {
-                text: "lgbt"
-            },
-            {
-                text: "meditation"
-            },
-            {
-                text: "mens"
-            },
-            {
-                text: "newcomer"
-            },
-            {
-                text: "outsiders welcome",
-                cssClass: "outsiders",
-                imgFilename: "outsiders"
-            },
-            {
-                text: "womens"
-            },
-            {
-                text: "young people"
-            },
-            {
-                text: "wheelchair"
-            },
-            {
-                text: "pets allowed",
-                cssClass: "pets",
-                imgFilename: "pets"
-            }
-        ]
+    $scope.filters = meetingsService.getFilters();
 
-    };
+    $scope.getImgSrc = meetingsService.getImgSrc;
+    $scope.getCssClass = meetingsService.getCssClass;
 
-    $scope.getImgSrc = getImgSrc;
-    $scope.getCssClass = getCssClass;
+    $scope.submitFilter = function() {
+        log('submit')
+        meetingsService.setFilters($scope.filters)
+        $navigate.back();
+    }
 };
 
 
@@ -187,10 +74,10 @@ function RatingsCtrl($scope, $http, $navigate, $dialog) {
 
 };
 
-function MeetingDetailCtrl($scope, $dialog) {
+function MeetingDetailCtrl($scope, $dialog, meetingsService) {
 
-    $scope.getImgSrc = getImgSrc;
-    $scope.getCssClass = getCssClass;
+    $scope.getImgSrc = meetingsService.getImgSrc;
+    $scope.getCssClass = meetingsService.getCssClass;
 
     $scope.getImgStyle = function(filterObj) {
         var o = {
@@ -199,6 +86,52 @@ function MeetingDetailCtrl($scope, $dialog) {
         log(o)
         return o;
     }
+
+
+    $scope.getFellowshipID = function(fellowship) {
+        var id;
+        switch (fellowship) {
+            case "AlcoholicsAnonymous":
+                id = "AA";
+                break;
+            case "NarcoticsAnonymous":
+                id = "NA";
+                break;
+        }
+        return id;
+    }
+    $scope.parseAddress = function(address, part) {
+        return address.split('\n')[part-1];
+    };
+    $scope.formatTime = function(time) {
+        return time;
+    };
+    $scope.formatDay = function(day) {
+        return day.substr(0,3);
+    };
+    $scope.formatDistance= function(distance) {
+        var result=parseFloat(distance);
+        if (isFinite(result)) {
+            result = "(" + result + ")";
+        } else {
+            result = null;
+        }
+        return result;
+    };
+    $scope.getStarImgSrc = function(isFavorite) {
+        return isFavorite ? "../images/star_icon_on.png" : "../images/star_icon.png";
+    };
+
+
+
+
+
+
+
+
+
+
+
 
     $scope.dialogOpts = {
 //        backdrop: true,
