@@ -18,6 +18,8 @@ angular.module('addicaidApp',
             .when('/meetingfavorites', { templateUrl: 'views/meeting-list.html', controller: MeetingListFavoritesCtrl })
             .when('/filter', { templateUrl: 'views/filter.html', controller: FilterCtrl })
             .when('/signup', { templateUrl: 'views/signup.html', controller: SignupCtrl })
+            .when('/profile', { templateUrl: 'views/profile.html', controller: ProfileCtrl })
+            .when('/dailydose', { templateUrl: 'views/dailydose.html', controller: DailyDoseCtrl })
             .when("/", { templateUrl: 'views/meeting-list.html', controller: MeetingListCtrl })
 //            .when("/", { templateUrl: 'views/map.html', controller: MapCtrl })
 //            .when("/", { templateUrl: 'views/filter.html', controller: FilterCtrl })

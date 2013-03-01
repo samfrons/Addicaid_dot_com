@@ -21,8 +21,15 @@ function AppCtrl($scope, $navigate) {
 
 function SignupCtrl($scope, $http, $navigate) {
     $scope.pageTitle = "Signup";
+}
 
-    logvar("$navigate",$navigate);
+
+function ProfileCtrl($scope, $http, $navigate) {
+    $scope.pageTitle = "Profile";
+}
+
+function DailyDoseCtrl($scope, $http, $navigate) {
+    $scope.pageTitle = "Daily Dose";
 }
 
 

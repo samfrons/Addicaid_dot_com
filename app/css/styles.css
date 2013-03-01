@@ -25,7 +25,6 @@ body {
 header h1 {
   position: relative;
   text-transform: capitalize;
-  font-family: Ironick NF;
   top: 15px;
   margin: 0;
   padding: 0;
@@ -88,7 +87,8 @@ button.settings {
   min-height: 20px;
   background-repeat: no-repeat;
   background-size: 80% auto;
-  background-size: auto; }
+  background-size: auto;
+  width: 12%; }
 
 section.signup {
   background-image: url(../images/6.jpg);
@@ -439,6 +439,12 @@ nav .bottom {
     height: 25px; }
   nav .bottom li:hover {
     background-color: #0f86ab; }
+
+section.profile {
+  background-image: url(../images/profile.jpg);
+  color: red;
+  height: 100%;
+  background-size: 100% auto; }
 
 .grids {
   display: inline-block;
