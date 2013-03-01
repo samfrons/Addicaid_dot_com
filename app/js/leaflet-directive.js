@@ -101,6 +101,10 @@ app.directive('leafletMarker', ['$parse', 'mapService', function($parse, mapServ
             marker.addTo(map);
 
             bindMapEvents(scope, markerEvents, marker, element);
+
+            element.bind("$destroy", function() {
+                map.removeLayer(marker);
+            });
         }
     };
 

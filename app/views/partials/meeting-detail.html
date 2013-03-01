@@ -19,8 +19,14 @@
     </aside>
 
     <aside class="grids grid-3 right2_side">
-        <button class="grids grid-5 save" type="submit" ng-tap="addFavorite()"><img ng-src="{{getStarImgSrc(meeting.isFavorite)}}"></button>
-        <button class="grids directions" type="submit"><a href="https://maps.google.com/maps?daddr={{meeting.address}}"><img src="images/arrow.png"></a></button>
+        <button class="grids grid-5 save" type="submit" ng-tap="toggleFavorite(meeting)">
+            <img ng-src="{{getStarImgSrc(meeting.isFavorite)}}">
+        </button>
+        <button class="grids directions" type="submit">
+            <a href="https://maps.google.com/maps?daddr={{meeting.address}}">
+                <img src="images/arrow.png">
+            </a>
+        </button>
     </aside>
 
 

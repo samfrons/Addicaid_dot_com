@@ -212,7 +212,7 @@ angular.module('addicaidApp')
                     .success(function(data, status) {
                         meetingsService.meetingsCache = data.value;
 
-                        // TODO: fake data-carto
+//                        // TODO: fake data-carto
 //                        $http.jsonp('http://'+defaultCartodbAccount+'.cartodb.com/api/v2/sql/?q='+defaultCartodbSql+'&callback=JSON_CALLBACK')
 //                            .success(function(data,status) {
 //                                log('http://'+defaultCartodbAccount+'.cartodb.com/api/v2/sql/?q='+defaultCartodbSql+'&callback=JSON_CALLBACK');
@@ -226,10 +226,10 @@ angular.module('addicaidApp')
 //                                $rootScope.$broadcast(meetingsService.meetingsChangedEvent, [/* meetingsChangedArgs */]);
 //                            })
 
-                        // TODO: fake data-favorites
-                        for (var i=0; i < meetingsService.meetingsCache.length; i++) {
-                            meetingsService.meetingsCache[i].isFavorite = Math.random()<.2 ? true : false;
-                        }
+//                        // TODO: fake data-favorites
+//                        for (var i=0; i < meetingsService.meetingsCache.length; i++) {
+//                            meetingsService.meetingsCache[i].isFavorite = Math.random()<.2 ? true : false;
+//                        }
 
                         meetingsService.isFilterDirty = false;
                         $rootScope.$broadcast(meetingsService.meetingsChangedEvent, [/* meetingsChangedArgs */]);
