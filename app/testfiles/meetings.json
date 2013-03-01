@@ -8,8 +8,9 @@
         "location" : {
             "title" : "St. Andrew's Church",
             "address1" : "20 Cardinal Hayes Place",
-            "address2" : "Brooklyn, NY 11206"
+            "address2" : "Brooklyn, NY 11206",
 
+            "distance" : "0.5 MI"
         },
         "calendar" : {
             "dayShort" : "WED",
@@ -18,23 +19,23 @@
         },
         "ratings" : [
             {
-                "category" : "snacks",
-                "categoryCssClass" : "snacks",
+                "text" : "snacks",
                 "votes" : "12"
             },
             {
-                "category" : "coffee",
-                "categoryCssClass" : "coffee",
+                "text" : "coffee",
                 "votes" : "2"
             },
             {
-                "category" : "fellowship",
-                "categoryCssClass" : "fellowship",
-                "votes" : "40"
+                "text" : "outsiders",
+                "cssClass" : "outsiders",
+                "imgFilename" : "outsiders",
+                "votes" : "49"
             },
             {
-                "category" : "young",
-                "categoryCssClass" : "youngpeople",
+                "text" : "young",
+                "cssClass" : "youngpeople",
+                "imgFilename" : "young_people",
                 "votes" : "20"
             }
         ]
@@ -47,7 +48,10 @@
         },
         "location" : {
             "title" : "Location Title 2",
-            "address1" : "180 Sterling Pl"
+            "address1" : "180 Sterling Pl",
+            "address2" : "Brooklyn, NY 11217",
+
+            "distance" : "1.5 MI"
         },
         "calendar" : {
             "dayShort" : "MON",
@@ -56,24 +60,24 @@
         },
         "ratings" : [
             {
-                "category" : "snacks",
-                "categoryCssClass" : "snacks",
-                "votes" : "1"
-            },
-            {
-                "category" : "coffee",
-                "categoryCssClass" : "coffee",
-                "votes" : "0"
-            },
-            {
-                "category" : "fellowship",
-                "categoryCssClass" : "fellowship",
+                "text" : "snacks",
                 "votes" : "12"
             },
             {
-                "category" : "young",
-                "categoryCssClass" : "youngpeople",
-                "votes" : "0"
+                "text" : "coffee",
+                "votes" : "2"
+            },
+            {
+                "text" : "outsiders",
+                "cssClass" : "outsiders",
+                "imgFilename" : "outsiders",
+                "votes" : "49"
+            },
+            {
+                "text" : "young",
+                "cssClass" : "young_people",
+                "imgFilename" : "young_people",
+                "votes" : "20"
             }
         ]
     },
@@ -85,7 +89,10 @@
         },
         "location" : {
             "title" : "Location Title 3",
-            "address1" : "Address1 3"
+            "address1" : "Address1 3",
+            "address2" : "Address2 3",
+
+            "distance" : "000 MI"
         },
         "calendar" : {
             "dayShort" : "SUN",
@@ -94,24 +101,24 @@
         },
         "ratings" : [
             {
-                "category" : "snacks",
-                "categoryCssClass" : "snacks",
-                "votes" : "0"
+                "text" : "snacks",
+                "votes" : "12"
             },
             {
-                "category" : "coffee",
-                "categoryCssClass" : "coffee",
-                "votes" : "0"
+                "text" : "coffee",
+                "votes" : "2"
             },
             {
-                "category" : "fellowship",
-                "categoryCssClass" : "fellowship",
-                "votes" : "0"
+                "text" : "outsiders",
+                "cssClass" : "outsiders",
+                "imgFilename" : "outsiders",
+                "votes" : "49"
             },
             {
-                "category" : "young",
-                "categoryCssClass" : "youngpeople",
-                "votes" : "0"
+                "text" : "young",
+                "cssClass" : "young_people",
+                "imgFilename" : "young_people",
+                "votes" : "20"
             }
         ]
     }
