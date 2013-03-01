@@ -66,13 +66,6 @@ button {
   margin: 20px;
   border-style: none; }
 
-button[type="submit"]:active {
-  -webkit-box-shadow: 0px 3px 0px #db1f05, 0px 3px 6px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 0px 3px 0px #db1f05, 0px 3px 6px rgba(0, 0, 0, 0.7);
-  box-shadow: 0px 3px 0px #db1f05, 0px 3px 6px rgba(0, 0, 0, 0.7);
-  position: relative;
-  top: 6px; }
-
 a.profilebutton {
   background-color: rgba(200, 200, 20, 0.4);
   border-radius: 10px;
@@ -207,6 +200,9 @@ aside.right2_side {
     font-family: "open sans", sans-serif;
     text-transform: uppercase;
     margin: 0 0 0 -7px; }
+    aside.right2_side button:active {
+      position: relative !important;
+      top: 0 !important; }
 
 article.filter {
   width: 95%;
