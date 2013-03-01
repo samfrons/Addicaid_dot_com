@@ -25,8 +25,9 @@ body {
 header h1 {
   position: relative;
   text-transform: capitalize;
-  font-family: Ironick NF;
-  top: 15px;
+  font-family: "open sans", sans-serif;
+  top: 0;
+  font-size: 3em;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -177,18 +178,23 @@ button.save {
 
 button.directions {
   position: relative;
-  background: transparent; }
+  background: transparent;
+  left: 5px; }
   button.directions img {
     height: 50px; }
 
 aside.right2_side {
   width: 8.5%;
   height: 85px;
-  margin: 0 0 0 -5px; }
+  margin: 0 0 0 -10px; }
   aside.right2_side button {
     font-family: "open sans", sans-serif;
     text-transform: uppercase;
     margin: 0 0 0 -7px; }
+    aside.right2_side button:active {
+      box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+      top: 0px; }
 
 article.filter {
   width: 95%;
@@ -223,12 +229,13 @@ article.filter {
     padding: 0; }
     article.filter button.here span.hereicon {
       height: 15px;
-      padding: 0 2px 0 0;
+      padding: 0px 1px 0 2px;
       display: inline-block;
       width: 20px;
       background-image: url(../images/here_icon.png);
-      background-size: 20px auto;
-      background-repeat: no-repeat; }
+      background-size: 18px auto;
+      background-repeat: no-repeat;
+      background-position: 2px 0px; }
     article.filter button.here:active {
       border-radius: 5px;
       background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #a5a34b), color-stop(1, #e1f355));
@@ -242,9 +249,9 @@ input.zipcode {
 article.meeting_entry {
   width: 100%;
   margin: 7px 0 0 2%;
-  box-shadow: 0px 1px 5px white;
+  box-shadow: 0px 1px 2px white;
   background: -webkit-linear-gradient(top, white 20%, rgba(255, 255, 255, 0.5) 100%);
-  border-radius: 5px; }
+  border-radius: 3px; }
 
 ul {
   padding: 0;
@@ -259,7 +266,7 @@ ul li {
 
 hgroup {
   line-height: 0px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-family: "open sans", sans-serif;
   color: #2a2a2a; }
 
@@ -421,23 +428,25 @@ ul.ratings {
     text-align: right;
     color: #2a2a2a; }
 
-ul.filter_ratings li {
-  height: 45px;
-  padding: 2px; }
-  ul.filter_ratings li img {
-    height: 20px; }
-  ul.filter_ratings li:active {
-    border-radius: 5px;
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #a5a34b), color-stop(1, #e1f355));
-    -webkit-box-shadow: 0px 3px 0px #7d7b2d, 0px 3px 6px rgba(0, 0, 0, 0.7);
-    -moz-box-shadow: 0px 3px 0px #7d7b2d, 0px 3px 6px rgba(0, 0, 0, 0.7);
-    box-shadow: 0px 3px 0px #7d7b2d, 0px 3px 6px rgba(0, 0, 0, 0.7); }
-ul.filter_ratings li p {
-  font-weight: bold;
-  font-size: 7px;
-  width: 40px;
-  text-align: center;
-  padding: 0 0 0 10px; }
+ul.filter_ratings {
+  overflow: visible; }
+  ul.filter_ratings li {
+    height: 45px;
+    padding: 2px; }
+    ul.filter_ratings li img {
+      height: 20px; }
+    ul.filter_ratings li:active {
+      border-radius: 5px;
+      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #a5a34b), color-stop(1, #e1f355));
+      -webkit-box-shadow: 0px 3px 0px #7d7b2d, 0px 3px 6px rgba(0, 0, 0, 0.7);
+      -moz-box-shadow: 0px 3px 0px #7d7b2d, 0px 3px 6px rgba(0, 0, 0, 0.7);
+      box-shadow: 0px 3px 0px #7d7b2d, 0px 3px 6px rgba(0, 0, 0, 0.7); }
+  ul.filter_ratings li p {
+    font-weight: bold;
+    font-size: 7px;
+    width: 40px;
+    text-align: center;
+    padding: 0 0 0 10px; }
 
 .leaflet-bottom {
   display: none; }

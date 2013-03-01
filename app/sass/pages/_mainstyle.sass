@@ -124,8 +124,9 @@ header
  h1 
   position: relative
   text-transform: capitalize
-  font-family: Ironick NF
-  top: 15px
+  font-family: "open sans", sans-serif
+  top: 0
+  font-size: 3em
   margin: 0
   padding: 0
   text-align: center
@@ -269,6 +270,7 @@ button.save
 button.directions
  position: relative
  background: transparent
+ left: 5px
  a
  img
   height: 50px
@@ -276,11 +278,15 @@ button.directions
 aside.right2_side
  width: 8.5%
  height: 85px
- margin: 0 0 0 -5px
+ margin: 0 0 0 -10px
  button
   font-family: 'open sans', sans-serif
   text-transform: uppercase
   margin: 0 0 0 -7px
+  &:active
+   box-shadow: none !important
+   -webkit-box-shadow: none !important
+   top: 0px
 
 article.filter
  width: 95%
@@ -312,12 +318,13 @@ article.filter
   padding: 0
   span.hereicon
    height: 15px
-   padding: 0 2px 0 0
+   padding: 0px 1px 0 2px
    display: inline-block
    width: 20px
    background-image: url(../images/here_icon.png)
-   background-size: 20px auto
+   background-size: 18px auto
    background-repeat: no-repeat
+   background-position: 2px 0px
   &:active
    @include gradientbutton_lime
 
@@ -327,9 +334,9 @@ input.zipcode
 article.meeting_entry
  width: 100%
  margin: 7px 0 0 2%
- box-shadow: 0px 1px 5px white
+ box-shadow: 0px 1px 2px white
  background: -webkit-linear-gradient(top, white 20%, rgba(255,255,255,.5) 100%)
- border-radius: 5px
+ border-radius: 3px
 
 ul
  padding: 0
@@ -344,9 +351,10 @@ ul li
 
 hgroup 
  line-height: 0px
- text-transform: capitalize
+ text-transform: uppercase
  font-family: 'open sans', sans-serif
  color: $main-color
+
 
 hgroup
  h4, h5, h6
@@ -514,6 +522,7 @@ ul.ratings
   color: $main_color
 
 ul.filter_ratings
+ overflow: visible
  li 
   height: 45px
   padding: 2px
@@ -530,7 +539,7 @@ ul.filter_ratings
    width: 40px
    text-align: center
    padding: 0 0 0 10px
-   
+
 .leaflet-bottom
  display: none
 
