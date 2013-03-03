@@ -1,7 +1,7 @@
 /* style.sass */
 @font-face {
   font-family: "Gotham", sans-serif;
-  src: url("http://addicaid.org/fonts/Gotham-Book.otf") format("opentype"); }
+  src: url("fonts/Gotham-Book.otf") format("opentype"); }
 
 /*=keyframes($wobble)
  * /*0%  -webkit-transform: translateX(0%) 
@@ -51,7 +51,8 @@ a {
     color: inherit; }
 
 section {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  margin: 58px 0 0 0; }
 
 header.grid-12 {
   background-image: url(../images/headerbackground.png);
@@ -59,8 +60,10 @@ header.grid-12 {
   background-size: auto 55px;
   box-shadow: 0px 1px 4px black; }
 
-header button {
-  min-height: 33px !important; }
+header {
+  position: fixed; }
+  header button {
+    min-height: 33px !important; }
 
 button {
   margin: 20px;
@@ -502,9 +505,10 @@ a.user {
   color: #006bc9 !important; }
 
 div.comment {
-  margin: 0 0 0 10px; }
+  margin: 3px 0 3px 10px; }
   div.comment img {
     height: 25px;
+    width: 25px;
     position: relative;
     top: 2px; }
   div.comment blockquote {
@@ -515,10 +519,25 @@ div.comment {
     div.comment blockquote h4 {
       margin: 0; }
     div.comment blockquote p {
+      font-family: "Gotham", sans-serif !important;
       margin: 0; }
     div.comment blockquote span.postdate {
       color: gray;
       font-size: 0.5em; }
+
+input.commentbox {
+  width: 70%;
+  margin: 5px 0 0 10px !important;
+  vertical-align: middle; }
+
+button.submit_comment {
+  color: red;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0px 1px 1px black;
+  margin: 4px 0 0 0; }
 
 .grids {
   display: inline-block;
