@@ -243,10 +243,6 @@ button.submit_button
   height: 20px
   width: 20px
   background-image: url(../images/arrow_right.png)
- 
-
-h1.filterh1 
- background-color: red
 
 .facebook
  margin: 0 0 0 0px
@@ -354,8 +350,8 @@ input.zipcode
 article.meeting_entry
  width: 100%
  margin: 2px 0 0 0%
- box-shadow: 0px 1px 5px gray
- background: rgba(255,255,255,0.9)
+ box-shadow: 0px 1px 5px rgba(20,50,60,0.8)
+ background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgba(255,255,255,0.9)), color-stop(1, rgba(255,255,255,0)) ) !important
 
 ul
  padding: 0
@@ -400,7 +396,13 @@ hgroup
 aside.right_side
  height: 100%
  min-height: 60px
- width: 23.7%
+ width: 28.123%
+ margin: 0 0 0 5%
+
+ &.AA
+  background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgba(39,102,146,0.9)), color-stop(1, rgba(48,147,199,0.9)) ) 
+ &.NA
+  background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgba(255,0,18,1)), color-stop(1, rgba(255,0,50,.9)) ) 
 
 div.filter_fellowship
  height: 70px
@@ -427,30 +429,34 @@ div.filter_fellowship
 
 
 .timeandday
- margin: -5px 0 0 0px
+ margin: -5px 0 0 25%
  color: $main-color
- height: 75px
+ height: 77px
  background-repeat: no-repeat
  background-image: url(../images/calendar.png)
  text-align: left
 
  p
   font-weight: bold
-  line-height: 20px
+  line-height: 17px
   text-align: center
   width: 60px
   position: relative
   top: 5px
+  font-size: 1.2em
+ p.day
+  padding: 2px 0 0 0
 
  span.distance
   font-weight: bold
+  color: white
 
 
 
 ul.filter_day li
  background-image: url(../images/calendar_sprite.png)
  width: 35px
- height: 28px
+ height: 19px
  background-size: 35px auto
  text-align: center
  padding: 11px 0 0 0
@@ -480,32 +486,64 @@ ul.filter_time
 
 ul.ratings
  border-top: 1px solid gray
- color: $main
+ color: rgba(0,0,0,0)
  vertical-align: top
+ padding: 5px
 
  li:first-child
-  font-size: .7em
-  width: 40px
-  padding: 0
-  margin: 0 0 0 5px
-  background: transparent
-  color: $main_color
-  h3
-   margin: 5px 0 0 0
+  border-left: 0px solid white !important
  
  li
   background: url(../images/rating_icon_sprite_black.png) no-repeat top left
   vertical-align: middle
-  height: 35px
+  height: 20px
+  padding: 5px 5px 0 5px
+  width: 60px
+  overflow: hidden
+  font-size: 8px
 
  li.snacks
-  background-position: -734px 5px
+  background-position: -512px 0
+  width: 46px
  li.coffee
-  background-position: 0 0
+  background-position: 0px 0px
+  width: 44px
  li.fellowship
-  background-position: -477px 0
+  background-position: -59px 0
+  width: 47px
  li.youngpeople
-  background-position: -990px 0
+  background-position: -724px 0
+  width: 47px
+ li.large_group
+  background-position: -59px 0
+  width: 47px
+ li.lgbt
+  background-position: -121px 0
+  width: 45px
+ li.meditation
+  background-position: -181px 0
+  width: 63px
+ li.mens
+  background-position: -259px 0
+  width: 39px
+ li.newcomer
+  background-position: -313px 0
+  width: 61px
+ li.outsiders
+  background-position: -391px 0
+  width: 54px
+ li.pets
+  background-position: -451px 0
+  width: 36px
+ li.wheelchair
+  background-position: -573px 0
+  width: 63px
+ li.womens
+  background-position: -651px 0
+  width: 58px
+ li.young_people
+  background-position: -724px 0
+  width: 47px
 
 
  p.voteNumber
@@ -580,13 +618,11 @@ nav
 
 section.profile
  background-image: url(../images/profile.jpg)
- color: red
  height: 100%
  background-size: 100% auto
 
 section.dailydose
  background-image: url(../images/dailychallenge.jpg)
- color: red
  height: 100%
  background-size: 100% auto
 
