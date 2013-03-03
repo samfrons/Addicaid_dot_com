@@ -12,7 +12,7 @@
         <h4>{{parseAddress(meeting.address,1)}}</h4>
         <h4>{{parseAddress(meeting.address,2)}}</h4>
     </hgroup>
-    <aside class="grids grid-4 right_side {{getFellowshipID(meeting.fellowship.name)}}" ng-tap="$navigate.go('/meetingpage', 'slide')">
+    <aside class="grids grid-4 right_side {{getFellowshipID(meeting.fellowship.name)}}" ng-tap="$navigate.go('/meetinglist/{{meeting.id}}', 'slide')">
 
         <div class="timeandday">
             <p class="time">{{formatTime(meeting.time)}}</p>
