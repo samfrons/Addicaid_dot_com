@@ -23,24 +23,22 @@
 
 
 <div leaflet-map="mapid"
-        leaflet-options="mapOptions"
-        class="mapclass">
+     leaflet-options="mapOptions"
+     class="mapclass">
 </div>
 
 
 
 <leaflet-marker
-     ng-repeat="meeting in meetings"
-     leaflet-lat="meetings[$index].latLon.latitude"
-     leaflet-lng="meetings[$index].latLon.longitude"
-     marker-options="meetings[$index].markerOptions"
-     leaflet-map="mapid"
-     map-event="{'map-click': 'openMarkerInfo(marker)'}"
-        >
+        ng-repeat="meeting in meetings"
+        leaflet-lat="meetings[$index].latLon.latitude"
+        leaflet-lng="meetings[$index].latLon.longitude"
+        marker-options="meetings[$index].markerOptions"
+        leaflet-map="mapid"
+        popup-content-function="markerPopupContentFn"
+        model="meetings[$index]">
 </leaflet-marker>
-
-
-<!--map-event="{'map-click': 'openMarkerInfo(marker)'}"-->
+<!--ui-event="{'map-click': 'openMarkerInfo(marker)'}"-->
 
 
 

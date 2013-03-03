@@ -52,15 +52,25 @@ function MapCtrl($scope, $http, meetingsService) {
     };
 
 
-    $scope.openMarkerInfo = function(marker) {
-        $scope.currentMarker = marker;
-        log('openMarkerInfo')
-        var popupContent = "<p>hi</p>";
-        marker.bindPopup(popupContent).openPopup();
-//        if (marker.meeting) {
-//            $scope.myInfoWindow.open($scope.myMap, marker);
-//        }
+    $scope.markerPopupContentFn = function(meeting) {
+        log('popupContentFn', meeting)
+        var popupContent = '' +
+            '<hgroup class="grids grid-7">' +
+            '   <h3>{{meeting.title}}</h3>' +
+            '   <h4 class="locationname">{{meeting.latLon.locationName}}</h4>' +
+            '   <h4>{{parseAddress(meeting.address,1)}}</h4>' +
+            '   <h4>{{parseAddress(meeting.address,2)}}</h4>' +
+            '</hgroup>' +
+            '<aside class="grids grid-4 right_side">' +
+            '<div class="timeandday">' +
+            '    <p>{{formatTime(meeting.time)}}</p>' +
+            '    <p>{{formatDay(meeting.day)}}</p>' +
+            '    <p>{{formatDistance(meeting.distance)}}</p>' +
+            '</div>' +
+            '</aside>';
+        return popupContent;
     };
+
 
     $scope.$on(meetingsService.meetingsChangedEvent, function(event, args) {
         log("MapCtrl#on#meetings changed", event, args)

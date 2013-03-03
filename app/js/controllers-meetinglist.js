@@ -81,6 +81,139 @@ function MeetingDetailCtrl($scope, meetingsService) {
         meeting.isFavorite = !meeting.isFavorite;
     }
 
+
+    $scope.getRatingViewObject = function(rating) {
+        // params(rating) is one of twelve ratings
+        // params(isActive) is boolean, whether rating is visible
+        var cssClass = "";
+        var imgFilename = ""; // without the .png
+        var displayText = "";
+
+        switch (rating) {
+            case "forYoungPeople":
+                cssClass = "young_people";
+                imgFilename = "young_people";
+                displayText = "young people";
+                break;
+            case "isLgbt":
+                cssClass = "lgbt";
+                imgFilename = "lgbt";
+                displayText = "lgbt";
+                break;
+            case "forWomen":
+                cssClass = "womens";
+                imgFilename = "womens";
+                displayText = "womens";
+                break;
+            case "forNewcomer":
+                cssClass = "newcomer";
+                imgFilename = "newcomer";
+                displayText = "newcomer";
+                break;
+            case "outsidersWelcome":
+                cssClass = "outsiders";
+                imgFilename = "outsiders";
+                displayText = "outsiders welcome";
+                break;
+            case "hasWheelchairAccess":
+                cssClass = "wheelchair";
+                imgFilename = "wheelchair";
+                displayText = "wheelchair";
+                break;
+            case "petsAllowed":
+                cssClass = "pets";
+                imgFilename = "pets";
+                displayText = "pets allowed";
+                break;
+            case "isHasSnacks":
+                cssClass = "snacks";
+                imgFilename = "snacks";
+                displayText = "snacks";
+                break;
+            case "isLargeGroup":
+                cssClass = "large_group";
+                imgFilename = "large_group";
+                displayText = "large group";
+                break;
+            case "isHasMeditation":
+                cssClass = "meditation";
+                imgFilename = "meditation";
+                displayText = "meditation";
+                break;
+            case "isForMen":
+                cssClass = "mens";
+                imgFilename = "mens";
+                displayText = "mens";
+                break;
+            case "isHasCoffee":
+                cssClass = "coffee";
+                imgFilename = "coffee";
+                displayText = "coffee";
+                break;
+            default:
+                log("ERROR: unknown rating (" + rating + ") in getRatingViewObject" );
+        }
+
+//        if (!isActive) {
+//            cssClass = "rating-hide";
+//        }
+
+        return {
+            cssClass: cssClass,
+            imgSrc: imgFilename == "" ? "" : "images/"+imgFilename+".png",
+            displayText: displayText
+        }
+    }
+
+//    $scope.getCssClassRating = function(rating, isActive) {
+//        // params(rating) is one of twelve ratings
+//        // params(isActive) is boolean, whether rating is visible
+//        var cssClass;
+//        if (!isActive) {
+//            cssClass = "rating-hide";
+//        } else {
+//            switch (rating) {
+//                case "forYoungPeople":
+//                    cssClass = ""; break;
+//                case "isLgbt":
+//                    cssClass = ""; break;
+//                case "forWomen":
+//                    cssClass = ""; break;
+//                case "forNewcomer":
+//                    cssClass = ""; break;
+//                case "outsidersWelcome":
+//                    cssClass = ""; break;
+//                case "hasWheelchairAccess":
+//                    cssClass = ""; break;
+//                case "petsAllowed":
+//                    cssClass = ""; break;
+//                case "isHasSnacks":
+//                    cssClass = ""; break;
+//                case "isLargeGroup":
+//                    cssClass = ""; break;
+//                case "isHasMeditation":
+//                    cssClass = ""; break;
+//                case "isForMen":
+//                    cssClass = ""; break;
+//                default:
+//                    log("ERROR: unknown rating (" + rating + ") in getCssClassRating" );
+//                    cssClass = "";
+//            }
+//        }
+//    }
+
+//    {
+//                    },
+
+
+
+
+
+
+
+
+
+
     //
 //    $scope.dialogOpts = {
 ////        backdrop: true,
@@ -96,4 +229,4 @@ function MeetingDetailCtrl($scope, meetingsService) {
 //            alert('dialog closed with result: ' + result.result+' '+result.name+' '+result.Employer_Name);
 //        });
 //    };
-}
+};

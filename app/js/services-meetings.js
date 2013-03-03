@@ -57,22 +57,22 @@ angular.module('addicaidApp')
                     {
                         text: "MON",
                         queryString: "Mo",
-                        selected: true
+                        selected: false
                     },
                     {
                         text: "TUE",
                         queryString: "Tu",
-                        selected: true
+                        selected: false
                     },
                     {
                         text: "WED",
                         queryString: "We",
-                        selected: true
+                        selected: false
                     },
                     {
                         text: "THU",
                         queryString: "Th",
-                        selected: true
+                        selected: false
                     },
                     {
                         text: "FRI",
@@ -82,12 +82,12 @@ angular.module('addicaidApp')
                     {
                         text: "SAT",
                         queryString: "Sa",
-                        selected: true
+                        selected: false
                     },
                     {
                         text: "SUN",
                         queryString: "Su",
-                        selected: true
+                        selected: false
                     }
                 ],
                 times: [
@@ -231,6 +231,16 @@ angular.module('addicaidApp')
 //                            meetingsService.meetingsCache[i].isFavorite = Math.random()<.2 ? true : false;
 //                        }
 
+                        // TODO: fake data-ratings
+                        for (var i=0; i < meetingsService.meetingsCache.length; i++) {
+                            meetingsService.meetingsCache[i].rating = getFakeRating(meetingsService.meetingsCache[i]);
+                        }
+
+                        // TODO: single meeting
+                        meetingsService.meetingsCache = [ meetingsService.meetingsCache[0] ];
+                        // PROCESS MEETINGS CACHE
+
+
                         meetingsService.isFilterDirty = false;
                         $rootScope.$broadcast(meetingsService.meetingsChangedEvent, [/* meetingsChangedArgs */]);
                     })
@@ -298,7 +308,43 @@ angular.module('addicaidApp')
 
 
 
+        var getFakeRating = function(meeting) {
+            var fakeRatings =
+                [
+                    {
+                        forYoungPeople: true,
+                        isLgbt: true,
+                        forWomen: true,
+                        forNewcomer: true,
+                        outsidersWelcome: true,
+                        hasWheelchairAccess: true,
+                        petsAllowed: true,
+                        isHasSnacks: true,
+                        isLargeGroup: true,
+                        isHasMeditation: true,
+                        isForMen: true,
+                        isHasCoffee: true
+                    },
+                    {forYoungPeople: true, isLgbt: true},
+                    {isLgbt: true, hasWheelchairAccess: true, isHasSnacks: true},
+                    {isHasSnacks: true},
+                    {isHasSnacks: true, hasWheelchairAccess: true, isLargeGroup: true},
+                    {forWomen: true, isHasCoffee: true}
+                ];
 
+            var newRating = angular.copy(meeting.rating);
+            var rando = fakeRatings[Math.floor(Math.random()*fakeRatings.length)];
+
+            angular.forEach(meeting.rating, function(value, key) {
+                if (rando.hasOwnProperty(key)) {
+                    newRating[key] = rando[key];
+                }
+            }, meeting.rating);
+//            );
+
+            return newRating;
+//        return ratings[0];
+        }
 
 
 

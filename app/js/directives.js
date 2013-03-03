@@ -22,7 +22,30 @@ angular.module('addicaidApp.directives', [])
         }
     })
 
+    .directive('myEvent', ['$parse',
+    function ($parse) {
+        return function (scope, elm, attrs) {
+            log("myEvent", "link start", elm, attrs)
+            var events = scope.$eval(attrs.myEvent);
+            angular.forEach(events, function (myEvent, eventName) {
+                log("myEvent", "foreach", myEvent, eventName)
+                var fn = $parse(myEvent);
+                log("myEvent", "fn", fn)
 
+                elm.bind(eventName, function (evt) {
+                    var params = Array.prototype.slice.call(arguments);
+                    log("myEvent", "bind", params)
+
+                    //Take out first paramater (event object);
+                    params = params.splice(1);
+                    scope.$apply(function () {
+                        log("myEvent", "apply", evt, params)
+                        fn(scope, {$event: evt, $params: params});
+                    });
+                });
+            });
+        };
+    }]);
 
 //    .directive('ngslider', function() {
 //        return function(elm) {

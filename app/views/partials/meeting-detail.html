@@ -32,10 +32,10 @@
 
     <ul class="grids grid-12 ratings">
         <li><h3>meeting stats&nbsp;</h3></li>
-        <li ng-repeat="rating in meeting.ratings"
-            class="grids grid-2 {{getCssClass(rating)}}">
-            {{rating.text}}
-            <p class="voteNumber">{{rating.votes}}</p>
+        <li ng-repeat="(rating, isActive) in meeting.rating"
+            class="grids grid-2 {{getRatingViewObject(rating).cssClass}}"
+                ng-hide="!isActive">
+            {{getRatingViewObject(rating).displayText}}
         </li>
         <li class="grids grid-3 vote">vote</li>
     </ul>
