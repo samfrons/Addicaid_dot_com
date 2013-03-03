@@ -15,7 +15,7 @@ $teel: #00c6d4
 $teel_light: #00c6d4
 
 @font-face
- font-family: "Gotham"
+ font-family: 'Gotham' , sans-serif
  src: url('http://addicaid.org/fonts/Gotham-Book.otf') format('opentype')
 
 @mixin backgrounds
@@ -280,6 +280,9 @@ button.submit_button
    background: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(62,184,229)), color-stop(1, rgb(44,160,202)) )
    box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px #fff
 
+aside.saveaside
+ width: 7.3%
+
 button.save
  background: transparent
  width: auto
@@ -375,9 +378,9 @@ hgroup
   text-transform: capitalize
 
 hgroup
- h4, h5, h6
-  line-height: 0px
- h6
+ h4
+  line-height: 10px
+ h5, h6
   line-height: 0px
 
 .fellowshipType
@@ -396,7 +399,7 @@ hgroup
 aside.right_side
  height: 100%
  min-height: 60px
- width: 28.123%
+ width: 28.91%
  margin: 0 0 0 5%
 
  &.AA

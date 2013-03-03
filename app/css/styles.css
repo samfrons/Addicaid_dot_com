@@ -1,6 +1,6 @@
 /* style.sass */
 @font-face {
-  font-family: "Gotham";
+  font-family: "Gotham", sans-serif;
   src: url("http://addicaid.org/fonts/Gotham-Book.otf") format("opentype"); }
 
 /*=keyframes($wobble)
@@ -175,6 +175,9 @@ button.submit_button {
       background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #3eb8e5), color-stop(1, #2ca0ca));
       box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px white; }
 
+aside.saveaside {
+  width: 7.3%; }
+
 button.save {
   background: transparent;
   width: auto;
@@ -266,9 +269,9 @@ hgroup {
     opacity: 0.8;
     text-transform: capitalize; }
 
-hgroup h4, hgroup h5, hgroup h6 {
-  line-height: 0px; }
-hgroup h6 {
+hgroup h4 {
+  line-height: 10px; }
+hgroup h5, hgroup h6 {
   line-height: 0px; }
 
 .fellowshipType {
@@ -287,7 +290,7 @@ hgroup h6 {
 aside.right_side {
   height: 100%;
   min-height: 60px;
-  width: 28.123%;
+  width: 28.91%;
   margin: 0 0 0 5%; }
   aside.right_side.AA {
     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(39, 102, 146, 0.9)), color-stop(1, rgba(48, 147, 199, 0.9))); }
