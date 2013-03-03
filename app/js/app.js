@@ -22,9 +22,9 @@ angular.module('addicaidApp',
             .when('/dailydose', { templateUrl: 'views/dailydose.html', controller: DailyDoseCtrl })
             .when('/meetinglist/:meetingID', { templateUrl: 'views/meetingpage.html', controller: MeetingPageCtrl })
 //            .when("/", { templateUrl: 'views/meeting-list.html', controller: MeetingListCtrl })
-            .when("/", { templateUrl: 'views/map.html', controller: MapCtrl })
+//            .when("/", { templateUrl: 'views/map.html', controller: MapCtrl })
 //            .when("/", { templateUrl: 'views/filter.html', controller: FilterCtrl })
-//            .when("/", { templateUrl: 'views/signup.html', controller: SignupCtrl })
+            .when("/", { templateUrl: 'views/signup.html', controller: SignupCtrl })
             .otherwise({ redirectTo: "/" });
 //        $locationProvider.html5Mode(true);
     }])
