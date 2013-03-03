@@ -1,37 +1,75 @@
 <ng-include src="views.header"></ng-include>
 
-
-
-
 <section class="meetinglist">
-    <article class="grids grid-12 meeting_entry">
-        <!--TODO: fellowship id-->
-        <aside class="grids grid-1 fellowshipType {{getFellowshipID(meeting.fellowship.name)}}">
-            <button class="grids grid-5 save" type="submit" ng-tap="toggleFavorite(meeting)">
-                <img ng-src="{{getStarImgSrc(meeting.isFavorite)}}">
-            </button>
-        </aside>
-        <hgroup class="grids grid-7">
-            <h3>{{meeting.title}},<span class="meetinglocation">({{meeting.latLon.locationName}})</span></h3>
-            <h4>{{parseAddress(meeting.address,1)}}</h4>
-            <h4>{{parseAddress(meeting.address,2)}}</h4>
-        </hgroup>
-        <aside class="grids grid-4 right_side">
-            <div class="timeandday">
-                <p>{{formatTime(meeting.time)}}</p>
-                <p>{{formatDay(meeting.day)}}</p>
-                <span class="distance">0.2 miles{{formatDistance(meeting.distance)}}</span>
-            </div>
-        </aside>
 
-        <ul class="grids grid-12 ratings">
-            <li><h3>meeting stats&nbsp;</h3></li>
-            <li ng-repeat="(rating, isActive) in meeting.rating"
-                class="grids grid-2 {{getRatingViewObject(rating).cssClass}}">
-                {{getRatingViewObject(rating).displayText}}
-            </li>
-        </ul>
-    </article>
+<article class="grids grid-12 meeting_entry">
+    <!--TODO: fellowship id-->
+    <aside class="grids grid-1 saveaside">
+    
+        <button class="grids grid-5 save" type="submit" ng-tap="toggleFavorite(meeting)">
+            <img ng-src="{{getStarImgSrc(meeting.isFavorite)}}">
+        </button>
+    </aside>
+    <hgroup class="grids grid-7">
+        <h3>{{meeting.title}},<span class="meetinglocation">({{meeting.latLon.locationName}})</span></h3>
+        <h4>{{parseAddress(meeting.address,1)}}</h4>
+        <h4>{{parseAddress(meeting.address,2)}}</h4>
+    </hgroup>
+    <aside class="grids grid-4 right_side {{getFellowshipID(meeting.fellowship.name)}}" ng-tap="$navigate.go('/meetinglist/{{meeting.id}}', 'slide')">
+
+        <div class="timeandday">
+            <p class="time">{{formatTime(meeting.time)}}</p>
+            <p class="day">{{formatDay(meeting.day)}}</p>
+            <span class="distance">0.2 miles{{formatDistance(meeting.distance)}}</span>
+        </div>
+    </aside>
+<!--
+    <aside class="grids grid-3 right2_side">
+    </aside>
+-->
+
+    <ul class="grids grid-12 ratings">
+        <li ng-repeat="(rating, isActive) in meeting.rating"
+            class="grids grid-2 {{getRatingViewObject(rating).cssClass}}">
+            {{getRatingViewObject(rating).displayText}}
+        </li>
+    </ul>
+
+    
+    <div class="grids grid12 comment">
+    <img class="grids grid1 commentpic" src="images/bigmickey.png">
+    <blockquote class="grids grid8 commentblock">
+        <h4>Matt K.<span class="postdate">&nbsp;March 1, 2013</span></h4>
+        <p>I come here whenever I visit SF. Brought <a href="" class="user" g-tap="$navigate.go('/profile', 'slide')">@SamF</a> last week and we made a lot of friends.</p></blockquote>
+    </div>
+
+
+    <div class="grids grid12 comment">
+    <img class="grids grid1 commentpic" src="images/samf.png">
+    <blockquote class="grids grid8 commentblock">
+        <h4>Sam F.<span class="postdate">&nbsp;Feb 20, 2013</span></h4>
+        <p>I love this meeting and I love <a href="" class="user">@RobertDJ</a></p></blockquote>
+    </div>
+
+    <div class="grids grid12 comment">
+    <img class="grids grid1 commentpic" src="images/robertdj.jpeg">
+    <blockquote class="grids grid8 commentblock">
+        <h4>Robert D Jr.<span class="postdate">&nbsp;Feb 15, 2013</span></h4>
+        <p>Whenever I am having downtime from living the lavih life in LA, I come up north to kick it soberly with these awesome people</p></blockquote>
+    </div>
+
+      <input class="commentbox" type="text" placeholder="leave a comment"></input>
+        <button type="submit">submit</button>
+    
+
+
+    <h3>map</h3>
+    <img src="images/meetingmap.png">
+
+
+
+</article>
+
 </section>
 
 

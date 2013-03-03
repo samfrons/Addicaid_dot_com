@@ -260,6 +260,7 @@ ul li {
   margin: 0; }
 
 hgroup {
+  max-height: 85px;
   line-height: 10px;
   text-transform: capitalize;
   font-family: "gotham", sans-serif;
@@ -488,12 +489,36 @@ nav .bottom {
 section.profile {
   background-image: url(../images/profile.jpg);
   height: 100%;
+  background-repeat: no-repeat;
   background-size: 100% auto; }
 
 section.dailydose {
   background-image: url(../images/dailychallenge.jpg);
   height: 100%;
+  background-repeat: no-repeat;
   background-size: 100% auto; }
+
+a.user {
+  color: #006bc9 !important; }
+
+div.comment {
+  margin: 0 0 0 10px; }
+  div.comment img {
+    height: 25px;
+    position: relative;
+    top: 2px; }
+  div.comment blockquote {
+    margin: 0;
+    display: inline-block;
+    width: 80%;
+    text-transform: none; }
+    div.comment blockquote h4 {
+      margin: 0; }
+    div.comment blockquote p {
+      margin: 0; }
+    div.comment blockquote span.postdate {
+      color: gray;
+      font-size: 0.5em; }
 
 .grids {
   display: inline-block;

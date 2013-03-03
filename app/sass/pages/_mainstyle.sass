@@ -367,7 +367,8 @@ ul li
  padding: 0
  margin: 0
 
-hgroup 
+hgroup
+ max-height: 85px
  line-height: 10px
  text-transform: capitalize
  font-family: 'gotham', sans-serif
@@ -622,12 +623,37 @@ nav
 section.profile
  background-image: url(../images/profile.jpg)
  height: 100%
+ background-repeat: no-repeat
  background-size: 100% auto
 
 section.dailydose
  background-image: url(../images/dailychallenge.jpg)
  height: 100%
+ background-repeat: no-repeat
  background-size: 100% auto
+
+a.user
+ color: rgba(0,107,201,1) !important
+
+
+div.comment
+ margin: 0 0 0 10px
+ img
+  height: 25px
+  position: relative
+  top: 2px
+ blockquote
+  margin: 0
+  display: inline-block
+  width: 80%
+  text-transform: none
+  h4
+   margin: 0
+  p 
+   margin: 0
+  span.postdate
+   color: gray
+   font-size: .5em
 
 .grids
  display: inline-block
