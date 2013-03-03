@@ -1,5 +1,10 @@
+<ng-include src="views.header"></ng-include>
 
-<article class="grids grid-12 meeting_entry">
+
+
+
+<section class="meetinglist">
+	<article class="grids grid-12 meeting_entry">
     <!--TODO: fellowship id-->
     <aside class="grids grid-1 fellowshipType {{getFellowshipID(meeting.fellowship.name)}}">
     
@@ -39,11 +44,19 @@
 
     <ul class="grids grid-12 ratings">
         <li><h3>meeting stats&nbsp;</h3></li>
-        <li ng-repeat="(rating, isActive) in meeting.rating"
-            class="grids grid-2 {{getRatingViewObject(rating).cssClass}}"
-                ng-hide="!isActive">
-            {{getRatingViewObject(rating).displayText}}
+        <li ng-repeat="rating in meeting.ratings"
+            class="grids grid-2 {{getCssClass(rating)}}">
+            {{rating.text}}
+            <p class="voteNumber">{{rating.votes}}</p>
         </li>
     
     </ul>
 </article>
+</section>
+
+
+
+
+
+<ng-include src="views.footer"></ng-include>
+

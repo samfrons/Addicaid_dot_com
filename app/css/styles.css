@@ -1,7 +1,7 @@
 /* style.sass */
 @font-face {
-  font-family: "open sans";
-  src: url("../../fonts/open sans-Book.otf") format("opentype"); }
+  font-family: "Gotham";
+  src: url("http://addicaid.org/fonts/Gotham-Book.otf") format("opentype"); }
 
 /*=keyframes($wobble)
  * /*0%  -webkit-transform: translateX(0%) 
@@ -17,7 +17,7 @@ html {
 
 body {
   padding: 0;
-  font-family: "open sans", sans-serif;
+  font-family: "gotham", sans-serif;
   -webkit-font-smoothing: antialiased;
   text-transform: uppercase;
   background-size: auto; }
@@ -30,7 +30,7 @@ header h1 {
   text-transform: capitalize;
   top: 15px;
   margin: 0;
-  font-family: "open sans", sans-serif;
+  font-family: "gotham", sans-serif;
   padding: 0;
   text-align: center;
   color: white;
@@ -119,14 +119,12 @@ section.signup {
     color: white; }
 
 section.filterpage {
-  background-image: url(../images/blur.png); }
+  background-image: url(../images/blurlight.png);
+  background-repeat: repeat; }
 
 section.meetinglist {
-  background-image: url(../images/blur.png);
+  background-image: url(../images/blurlight.png);
   height: 100%; }
-
-section.meetinglist {
-  background-image: url(../images/blur.png); }
 
 button.submit_button {
   color: white !important;
@@ -165,7 +163,7 @@ h1.filterh1 {
   .filter button.filter_submit {
     border-radius: 5px;
     color: white;
-    font-family: "open sans", sans-serif;
+    font-family: "gotham", sans-serif;
     margin: 10px 0 50px 0%;
     width: 100%; }
 
@@ -182,7 +180,8 @@ h1.filterh1 {
 
 button.save {
   background: transparent;
-  width: auto; }
+  width: auto;
+  padding: 0 0 0 4px; }
   button.save img {
     width: 20px; }
 
@@ -190,69 +189,64 @@ button.directions {
   position: relative;
   background: transparent; }
   button.directions img {
-    height: 50px; }
+    height: 85px; }
 
 aside.right2_side {
   width: 8.5%;
-  height: 85px;
+  height: 81px;
   margin: 0 0 0 -5px; }
   aside.right2_side button {
-    font-family: "open sans", sans-serif;
+    font-family: "gotham", sans-serif;
     text-transform: uppercase;
     margin: 0 0 0 -7px; }
     aside.right2_side button:active {
       position: relative !important;
       top: 0 !important; }
 
-article.filter {
-  width: 95%;
-  margin: 10px; }
-  article.filter h3 {
-    margin: 10px 0 0 0; }
-  article.filter button:active {
-    border-radius: 5px !important;
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #a5a34b), color-stop(1, #e1f355));
-    -webkit-box-shadow: 0px 3px 0px #7d7b2d, 0px 3px 6px rgba(0, 0, 0, 0.7);
-    -moz-box-shadow: 0px 3px 0px #7d7b2d, 0px 3px 6px rgba(0, 0, 0, 0.7);
-    box-shadow: 0px 3px 0px #7d7b2d, 0px 3px 6px rgba(0, 0, 0, 0.7); }
-  article.filter div.filter {
-    background: -webkit-linear-gradient(top, white 20%, rgba(255, 255, 255, 0.5) 100%);
-    border-radius: 5px; }
-  article.filter div.filter_where {
-    font-weight: bold;
+article.filter h3 {
+  margin: 10px 0 0 0; }
+article.filter button:active {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #a5a34b), color-stop(1, #e1f355));
+  -webkit-box-shadow: 0px 3px 0px #7d7b2d, 0px 3px 6px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 3px 0px #7d7b2d, 0px 3px 6px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 3px 0px #7d7b2d, 0px 3px 6px rgba(0, 0, 0, 0.7); }
+article.filter div.filter {
+  background-color: rgba(255, 255, 255, 0.9); }
+article.filter div.filter_where {
+  font-weight: bold;
+  vertical-align: middle; }
+  article.filter div.filter_where ul.filter_where {
     vertical-align: middle; }
-    article.filter div.filter_where ul.filter_where {
-      vertical-align: middle; }
-      article.filter div.filter_where ul.filter_where span.or {
-        vertical-align: top; }
-  article.filter input.miles {
-    width: 30px; }
-  article.filter button.here {
-    background-color: black;
-    background-image: -webkit-linear-gradient(top, rgba(237, 202, 221, 0.1) 0%, rgba(237, 232, 231, 0.4) 100%);
-    width: 52px;
-    height: 20px;
-    background-size: 60px auto;
-    text-align: left;
-    padding: 0; }
-    article.filter button.here span.hereicon {
-      height: 15px;
-      padding: 0 2px 0 0;
-      display: inline-block;
-      width: 20px;
-      background-image: url(../images/here_icon.png);
-      background-size: 20px auto;
-      background-repeat: no-repeat; }
+    article.filter div.filter_where ul.filter_where span.or {
+      vertical-align: top; }
+article.filter input.miles {
+  width: 30px; }
+article.filter button.here {
+  background-color: white;
+  width: 61px;
+  height: 20px;
+  background-size: 60px auto;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0; }
+  article.filter button.here span.hereicon {
+    height: 15px;
+    padding: 0 2px 0 0;
+    display: inline-block;
+    width: 22px;
+    background-image: url(../images/here_icon.png);
+    background-size: 20px auto;
+    background-repeat: no-repeat; }
 
 input.zipcode {
   width: 70px; }
 
 article.meeting_entry {
   width: 100%;
-  margin: 7px 0 0 2%;
-  box-shadow: 0px 1px 5px white;
-  background: -webkit-linear-gradient(top, white 20%, rgba(255, 255, 255, 0.5) 100%);
-  border-radius: 5px; }
+  margin: 2px 0 0 0%;
+  box-shadow: 0px 1px 5px gray;
+  background: rgba(255, 255, 255, 0.9); }
 
 ul {
   padding: 0;
@@ -266,25 +260,28 @@ ul li {
   margin: 0; }
 
 hgroup {
-  line-height: 0px;
+  line-height: 10px;
   text-transform: capitalize;
-  font-family: "open sans", sans-serif;
+  font-family: "gotham", sans-serif;
   color: #2a2a2a; }
+  hgroup span.meetinglocation {
+    font-style: italic;
+    opacity: 0.8;
+    text-transform: capitalize; }
 
 hgroup h4, hgroup h5, hgroup h6 {
   line-height: 0px; }
 hgroup h6 {
   line-height: 0px; }
-hgroup h4.locationname {
-  line-height: 10px; }
 
 .fellowshipType {
   color: transparent;
-  height: 40px;
+  height: 65px;
   min-width: 28px;
-  margin: 5px 0 0 5px;
-  background-size: 31px auto;
-  background-repeat: no-repeat; }
+  margin: 0 0 0 0px;
+  background-size: 25px auto;
+  background-repeat: no-repeat;
+  background-position: 2px 40px; }
   .fellowshipType.AA {
     background-image: url(../images/AAcircle.png); }
   .fellowshipType.NA {
@@ -300,55 +297,42 @@ div.filter_fellowship {
   div.filter_fellowship ul {
     height: 70px; }
     div.filter_fellowship ul li {
-      height: 50px;
       width: 45%;
       margin: 0 10px 0 0;
       text-shadow: 0px 1px 1px black;
       font-weight: bold;
       text-transform: uppercase;
-      height: 30px;
-      text-indent: 0px; }
-      div.filter_fellowship ul li.AA {
-        border-radius: 3px;
-        -moz-box-shadow: 0px 5px 0px #094765, 0px 9px 25px rgba(0, 0, 0, 0.7);
-        box-shadow: 0px 5px 0px #094765, 0px 9px 25px rgba(0, 0, 0, 0.7);
-        background-color: #130705;
-        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #096b83), color-stop(1, #099dd3)); }
-      div.filter_fellowship ul li.NA {
-        border-radius: 3px;
-        -moz-box-shadow: 0px 5px 0px #810105, 0px 9px 25px rgba(0, 0, 0, 0.7);
-        box-shadow: 0px 5px 0px #810105, 0px 9px 25px rgba(0, 0, 0, 0.7);
-        background-color: #db5705;
-        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #b40305), color-stop(1, #ff0305)); }
+      height: 25px;
+      text-indent: 0px;
+      padding: 8px 0 0 0; }
 
 .FilterToggle.ui-show {
-  border-radius: 5px !important;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #a5a34b), color-stop(1, #e1f355)) !important;
-  -webkit-box-shadow: 0px 3px 0px #7d7b2d, 0px 3px 6px rgba(0, 0, 0, 0.7) !important;
-  -moz-box-shadow: 0px 3px 0px #7d7b2d, 0px 3px 6px rgba(0, 0, 0, 0.7) !important;
-  box-shadow: 0px 3px 0px #7d7b2d, 0px 3px 6px rgba(0, 0, 0, 0.7) !important; }
+  box-shadow: inset 0px 1px 20px gray; }
 
 .timeandday {
   margin: -5px 0 0 0px;
   color: #2a2a2a;
-  height: 79px;
+  height: 75px;
   background-repeat: no-repeat;
   background-image: url(../images/calendar.png);
   text-align: left; }
   .timeandday p {
     font-weight: bold;
-    line-height: 1px;
+    line-height: 20px;
     text-align: center;
     width: 60px;
     position: relative;
-    top: 20px; }
+    top: 5px; }
+  .timeandday span.distance {
+    font-weight: bold; }
 
 ul.filter_day li {
   background-image: url(../images/calendar_sprite.png);
-  width: 30px;
-  height: 24px;
+  width: 35px;
+  height: 28px;
+  background-size: 35px auto;
   text-align: center;
-  padding: 7px 0 0 0;
+  padding: 11px 0 0 0;
   margin: 0 0 0 7px;
   font-weight: bold; }
   ul.filter_day li.ui-show {
@@ -368,7 +352,7 @@ ul.filter_time li {
   background-size: 70px auto;
   background-repeat: no-repeat;
   font-weight: bold;
-  font-family: "open sans", sans-serif; }
+  font-family: "gotham", sans-serif; }
   ul.filter_time li.ui-show {
     height: 45px; }
 

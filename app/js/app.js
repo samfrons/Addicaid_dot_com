@@ -8,6 +8,7 @@ angular.module('addicaidApp',
             ,'addicaidApp.leaflet-directive'
             ,'mobile-navigate'
             ,'ui'
+            // ,'ui.bootstrap'
         ])
 
     .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
@@ -19,6 +20,7 @@ angular.module('addicaidApp',
             .when('/signup', { templateUrl: 'views/signup.html', controller: SignupCtrl })
             .when('/profile', { templateUrl: 'views/profile.html', controller: ProfileCtrl })
             .when('/dailydose', { templateUrl: 'views/dailydose.html', controller: DailyDoseCtrl })
+            .when('/meetingpage', { templateUrl: 'views/meetingpage.html', controller: MeetingPageCtrl })
 //            .when("/", { templateUrl: 'views/meeting-list.html', controller: MeetingListCtrl })
             .when("/", { templateUrl: 'views/map.html', controller: MapCtrl })
 //            .when("/", { templateUrl: 'views/filter.html', controller: FilterCtrl })

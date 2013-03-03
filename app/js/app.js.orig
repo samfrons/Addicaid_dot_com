@@ -8,7 +8,10 @@ angular.module('addicaidApp',
             ,'addicaidApp.leaflet-directive'
             ,'mobile-navigate'
             ,'ui'
-            ,'ui.bootstrap'
+<<<<<<< HEAD
+=======
+            // ,'ui.bootstrap'
+>>>>>>> 5f529d73f7b4b71a28cca038dd37fc3520888141
         ])
 
     .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
@@ -18,16 +21,13 @@ angular.module('addicaidApp',
             .when('/meetingfavorites', { templateUrl: 'views/meeting-list.html', controller: MeetingListFavoritesCtrl })
             .when('/filter', { templateUrl: 'views/filter.html', controller: FilterCtrl })
             .when('/signup', { templateUrl: 'views/signup.html', controller: SignupCtrl })
-<<<<<<< HEAD
-//            .when("/", { templateUrl: 'views/meeting-list.html', controller: MeetingListCtrl })
-=======
             .when('/profile', { templateUrl: 'views/profile.html', controller: ProfileCtrl })
             .when('/dailydose', { templateUrl: 'views/dailydose.html', controller: DailyDoseCtrl })
-            .when("/", { templateUrl: 'views/meeting-list.html', controller: MeetingListCtrl })
->>>>>>> a20bce088d481e88694d5cb1204090ee9705e2d3
-//            .when("/", { templateUrl: 'views/map.html', controller: MapCtrl })
+            .when('/meetingpage', { templateUrl: 'views/meetingpage.html', controller: MeetingPageCtrl })
+//            .when("/", { templateUrl: 'views/meeting-list.html', controller: MeetingListCtrl })
+            .when("/", { templateUrl: 'views/map.html', controller: MapCtrl })
 //            .when("/", { templateUrl: 'views/filter.html', controller: FilterCtrl })
-            .when("/", { templateUrl: 'views/signup.html', controller: SignupCtrl })
+//            .when("/", { templateUrl: 'views/signup.html', controller: SignupCtrl })
             .otherwise({ redirectTo: "/" });
 //        $locationProvider.html5Mode(true);
     }])
