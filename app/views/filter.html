@@ -2,11 +2,11 @@
 <section class="filterpage">
     <article class="grids grid-12 filter">
         <div class="filter filter_fellowship">
-            <h3>fellowship type</h3>
+            <h3>fellowship type <span>all</all></h3>
             <ul class="grids grid-12">
                 <li ng-repeat="fellowship in filters.fellowships"
                     ng-tap="fellowship.selected=!fellowship.selected"
-                    class="grids grid-5 FilterToggle" ng-class="fellowship.cssClass"
+                    class="grids grid-5 FilterToggle fellowshipkind" ng-class="fellowship.cssClass"
                     ui-show="fellowship.selected">
                     {{fellowship.text}}
                 </li>

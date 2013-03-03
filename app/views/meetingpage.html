@@ -1,5 +1,10 @@
+<ng-include src="views.header"></ng-include>
 
-<article class="grids grid-12 meeting_entry">
+
+
+
+<section class="meetinglist">
+	<article class="grids grid-12 meeting_entry">
     <!--TODO: fellowship id-->
     <aside class="grids grid-1 fellowshipType {{getFellowshipID(meeting.fellowship.name)}}">
     
@@ -47,3 +52,11 @@
     
     </ul>
 </article>
+</section>
+
+
+
+
+
+<ng-include src="views.footer"></ng-include>
+

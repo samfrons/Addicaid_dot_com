@@ -57,22 +57,22 @@ angular.module('addicaidApp')
                     {
                         text: "MON",
                         queryString: "Mo",
-                        selected: true
+                        selected: false
                     },
                     {
                         text: "TUE",
                         queryString: "Tu",
-                        selected: true
+                        selected: false
                     },
                     {
                         text: "WED",
                         queryString: "We",
-                        selected: true
+                        selected: false
                     },
                     {
                         text: "THU",
                         queryString: "Th",
-                        selected: true
+                        selected: false
                     },
                     {
                         text: "FRI",
@@ -82,7 +82,7 @@ angular.module('addicaidApp')
                     {
                         text: "SAT",
                         queryString: "Sa",
-                        selected: true
+                        selected: false
                     },
                     {
                         text: "SUN",

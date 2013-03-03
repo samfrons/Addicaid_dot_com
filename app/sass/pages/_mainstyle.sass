@@ -15,8 +15,8 @@ $teel: #00c6d4
 $teel_light: #00c6d4
 
 @font-face
- font-family: "open sans"
- src: url('../../fonts/open sans-Book.otf') format('opentype')
+ font-family: "Gotham"
+ src: url('http://addicaid.org/fonts/Gotham-Book.otf') format('opentype')
 
 @mixin backgrounds
  background-color: transparent
@@ -24,6 +24,16 @@ $teel_light: #00c6d4
  min-height: 20px
  background-repeat: no-repeat
  background-size: 80% auto
+
+@mixin gradient
+ $bottomcolor: rgba(225,243,85,1)
+ $topcolor: rgba(165,163,75,1)
+ $shadowtop: rgba(125,123,45,1)
+ $shadowbottom: rgba(0,0,0,.7)
+ $buttonbackground: rgba(165,163,75,1)
+ background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, $topcolor), color-stop(1, $bottomcolor) ) !important
+ -webkit-box-shadow: 0px 1px 0px $shadowtop, 0px 1px 2px $shadowbottom !important
+ -moz-box-shadow: 0px 1px 0px $shadowtop, 0px 1px 2px $shadowbottom !important
 
 @mixin calendar
  border-top: 10px solid black
@@ -56,7 +66,6 @@ $buttonbackground: rgba(219,87,5,1)
  $shadowtop: rgba(9,71,101,1)
  $shadowbottom: rgba(0,0,0,.7)
  $buttonbackground: rgba(19,7,5,1)
- border-radius: 3px
  -moz-box-shadow: 0px 5px 0px $shadowtop, 0px 9px 25px $shadowbottom
  box-shadow: 0px 5px 0px $shadowtop, 0px 9px 25px $shadowbottom
  background-color: $buttonbackground
@@ -68,7 +77,6 @@ $buttonbackground: rgba(219,87,5,1)
  $shadowtop: rgba(129,1,5,1)
  $shadowbottom: rgba(0,0,0,.7)
  $buttonbackground: rgba(219,87,5,1)
- border-radius: 3px
  -moz-box-shadow: 0px 5px 0px $shadowtop, 0px 9px 25px $shadowbottom
  box-shadow: 0px 5px 0px $shadowtop, 0px 9px 25px $shadowbottom
  background-color: $buttonbackground
@@ -87,23 +95,14 @@ $buttonbackground: rgba(219,87,5,1)
  $shadowtop: rgba(125,123,45,1)
  $shadowbottom: rgba(0,0,0,.7)
  $buttonbackground: rgba(165,163,75,1)
- border-radius: 5px !important
  background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, $topcolor), color-stop(1, $bottomcolor) )
  -webkit-box-shadow: 0px 3px 0px $shadowtop, 0px 3px 6px $shadowbottom
  -moz-box-shadow: 0px 3px 0px $shadowtop, 0px 3px 6px $shadowbottom
  box-shadow: 0px 3px 0px $shadowtop, 0px 3px 6px $shadowbottom
 
 @mixin gradientbutton_lime__important
- $bottomcolor: rgba(225,243,85,1)
- $topcolor: rgba(165,163,75,1)
- $shadowtop: rgba(125,123,45,1)
- $shadowbottom: rgba(0,0,0,.7)
- $buttonbackground: rgba(165,163,75,1)
- border-radius: 5px !important
- background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, $topcolor), color-stop(1, $bottomcolor) ) !important
- -webkit-box-shadow: 0px 3px 0px $shadowtop, 0px 3px 6px $shadowbottom !important
- -moz-box-shadow: 0px 3px 0px $shadowtop, 0px 3px 6px $shadowbottom !important
- box-shadow: 0px 3px 0px $shadowtop, 0px 3px 6px $shadowbottom !important
+ box-shadow: inset 0px 1px 20px gray
+
 
 @mixin gradientlight
  background-color: black
@@ -127,7 +126,7 @@ html
 
 body
  padding: 0
- font-family: 'open sans', sans-serif
+ font-family: 'gotham', sans-serif
  -webkit-font-smoothing: antialiased
  text-transform: uppercase
  background-size: auto
@@ -142,7 +141,7 @@ header
   text-transform: capitalize
   top: 15px
   margin: 0
-  font-family: 'open sans', sans-serif
+  font-family: 'gotham', sans-serif
   padding: 0
   text-align: center
   color: white
@@ -228,14 +227,11 @@ section.signup
   color: white
 
 section.filterpage
- background-image: url(../images/blur.png)
+ background-image: url(../images/blurlight.png)
+ background-repeat: repeat
 section.meetinglist
- background-image: url(../images/blur.png)
+ background-image: url(../images/blurlight.png)
  height: 100%
-
-
-section.meetinglist
- background-image: url(../images/blur.png)
 
 button.submit_button 
  color: white !important
@@ -270,7 +266,7 @@ h1.filterh1
  button.filter_submit
   border-radius: 5px
   color: white
-  font-family: 'open sans', sans-serif
+  font-family: 'gotham', sans-serif
   margin: 10px 0 50px 0%
   width: 100%
 
@@ -291,6 +287,7 @@ h1.filterh1
 button.save
  background: transparent
  width: auto
+ padding: 0 0 0 4px
  img 
   width: 20px
 
@@ -299,14 +296,14 @@ button.directions
  background: transparent
  a
  img
-  height: 50px
+  height: 85px
 
 aside.right2_side
  width: 8.5%
- height: 85px
+ height: 81px
  margin: 0 0 0 -5px
  button
-  font-family: 'open sans', sans-serif
+  font-family: 'gotham', sans-serif
   text-transform: uppercase
   margin: 0 0 0 -7px
   &:active
@@ -314,16 +311,14 @@ aside.right2_side
    top: 0 !important
 
 article.filter
- width: 95%
- margin: 10px
  h3
   margin: 10px 0 0 0
  button
   &:active
    @include gradientbutton_lime
+
  div.filter
-  background: -webkit-linear-gradient(top, white 20%, rgba(255,255,255,.5) 100%)
-  border-radius: 5px
+  background-color: rgba(255,255,255,0.9)
  div.filter_where
   font-weight: bold
   vertical-align: middle
@@ -335,17 +330,20 @@ article.filter
   width: 30px
 
  button.here
-  @include gradientlight
-  width: 52px
+  background-color: white
+  width: 61px
   height: 20px
   background-size: 60px auto
   text-align: left
+  text-transform: uppercase
+  font-weight: bold
+
   padding: 0
   span.hereicon
    height: 15px
    padding: 0 2px 0 0
    display: inline-block
-   width: 20px
+   width: 22px
    background-image: url(../images/here_icon.png)
    background-size: 20px auto
    background-repeat: no-repeat
@@ -355,10 +353,9 @@ input.zipcode
 
 article.meeting_entry
  width: 100%
- margin: 7px 0 0 2%
- box-shadow: 0px 1px 5px white
- background: -webkit-linear-gradient(top, white 20%, rgba(255,255,255,.5) 100%)
- border-radius: 5px
+ margin: 2px 0 0 0%
+ box-shadow: 0px 1px 5px gray
+ background: rgba(255,255,255,0.9)
 
 ul
  padding: 0
@@ -372,26 +369,29 @@ ul li
  margin: 0
 
 hgroup 
- line-height: 0px
+ line-height: 10px
  text-transform: capitalize
- font-family: 'open sans', sans-serif
+ font-family: 'gotham', sans-serif
  color: $main-color
+ span.meetinglocation
+  font-style: italic
+  opacity: 0.8
+  text-transform: capitalize
 
 hgroup
  h4, h5, h6
   line-height: 0px
  h6
   line-height: 0px
- h4.locationname
-  line-height: 10px
 
 .fellowshipType
  color: transparent
- height: 40px
+ height: 65px
  min-width: 28px
- margin: 5px 0 0 5px
- background-size: 31px auto
+ margin: 0 0 0 0px
+ background-size: 25px auto
  background-repeat: no-repeat
+ background-position: 2px 40px
  &.AA
   background-image: url(../images/AAcircle.png)
  &.NA
@@ -407,18 +407,18 @@ div.filter_fellowship
  ul
   height: 70px
   li
-   height: 50px
    width: 45%
    margin: 0 10px 0 0
    text-shadow: 0px 1px 1px black
    font-weight: bold
    text-transform: uppercase
-   height: 30px
+   height: 25px
    text-indent: 0px
+   padding: 8px 0 0 0
    &.AA
-    @include gradientaa
+    
    &.NA
-    @include gradientna
+    
 
 
 
@@ -429,26 +429,31 @@ div.filter_fellowship
 .timeandday
  margin: -5px 0 0 0px
  color: $main-color
- height: 79px
+ height: 75px
  background-repeat: no-repeat
  background-image: url(../images/calendar.png)
  text-align: left
+
  p
   font-weight: bold
-  line-height: 1px
+  line-height: 20px
   text-align: center
   width: 60px
   position: relative
-  top: 20px
+  top: 5px
+
+ span.distance
+  font-weight: bold
 
 
 
 ul.filter_day li
  background-image: url(../images/calendar_sprite.png)
- width: 30px
- height: 24px
+ width: 35px
+ height: 28px
+ background-size: 35px auto
  text-align: center
- padding: 7px 0 0 0
+ padding: 11px 0 0 0
  margin: 0 0 0 7px
  font-weight: bold
  &.ui-show
@@ -468,7 +473,7 @@ ul.filter_time
   background-size: 70px auto
   background-repeat: no-repeat
   font-weight: bold
-  font-family: 'open sans', sans-serif
+  font-family: 'gotham', sans-serif
   &.ui-show
    height: 45px
 
