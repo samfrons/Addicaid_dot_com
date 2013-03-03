@@ -8,7 +8,9 @@
                     ng-tap="fellowship.selected=!fellowship.selected"
                     class="grids grid-5 FilterToggle fellowshipkind" ng-class="fellowship.cssClass"
                     ui-show="fellowship.selected">
-                    {{fellowship.text}}
+                    <span class="fellowshipType {{fellowship.cssClass}}">{{fellowship.text}}</span>
+                    <!--<img src="{{fellowship.imgSrc}}" />-->
+                    <!--{{fellowship.text}}-->
                 </li>
             </ul>
         </div>

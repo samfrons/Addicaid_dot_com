@@ -11,9 +11,7 @@ var bindMapEvents = function bindMapEvents(scope, eventsString, leafletObject, e
         //for the leaflet map doesn't interfere with a normal 'click' event
         var $event = { type: 'map-' + eventName };
         leafletObject.addEventListener(eventName, function (evt) {
-            if (eventName == 'click'){
-                log("bindMapEvents", eventName + ' triggered', $event, evt, element)
-            }
+//            log("bindMapEvents", eventName + ' triggered', $event, evt, element)
             element.triggerHandler(angular.extend({}, $event, evt));
             // TODO: dont really understand this apply stuff
             //We create an $apply if it isn't happening. we need better support for this
@@ -103,8 +101,10 @@ app.directive('leafletMarker', ['$parse', 'mapService', function($parse, mapServ
             marker.addTo(map);
 
             // bind the popup using an input function and the model object
-            if (attrs.popupContentFunction && attrs.model)
-                marker.bindPopup(scope.$eval(attrs.popupContentFunction)(scope.$eval(attrs.model)));
+            if (attrs.popupContentFunction && attrs.model) {
+                var popupContent = scope.$eval(attrs.popupContentFunction)(scope.$eval(attrs.model));
+                marker.bindPopup(popupContent, { });
+            }
 
             bindMapEvents(scope, markerEvents, marker, element);
 

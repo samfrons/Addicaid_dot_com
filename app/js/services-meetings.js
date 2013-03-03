@@ -43,10 +43,12 @@ angular.module('addicaidApp')
                     {
                         text: "Alcoholics Anonymous",
                         cssClass: "AA",
+                        imgSrc: "images/AAcircle.png",
                         selected: true
                     },
                     {
                         text: "Narcotics Anonymous",
+                        imgSrc: "images/NAcircle.png",
                         cssClass: "NA",
                         selected: true
                     }
@@ -238,7 +240,18 @@ angular.module('addicaidApp')
 
                         // TODO: single meeting
 //                        meetingsService.meetingsCache = [ meetingsService.meetingsCache[0] ];
+
                         // PROCESS MEETINGS CACHE
+                        // remove inactive ratings
+//                        for (var i=0; i < meetingsService.meetingsCache.length; i++) {
+//                            var ratings = {};
+//                            angular.forEach(meetingsService.meetingsCache[i].rating, function(isActive, rating) {
+//                                if (isActive) {
+//                                    ratings[rating] = isActive;
+//                                }
+//                            });
+//                            meetingsService.meetingsCache[i].rating = ratings;
+//                        }
 
 
                         meetingsService.isFilterDirty = false;
@@ -303,6 +316,14 @@ angular.module('addicaidApp')
             return favorites;
         }
 
+        meetingsService.getMeetingByID = function(meetingID) {
+            for (var i=0; i < meetingsService.getMeetings().length; i++) {
+                if (meetingsService.getMeetings()[i].id == meetingID) {
+                    return meetingsService.getMeetings()[i];
+                }
+            }
+            return null;
+        }
 
 
 
@@ -311,39 +332,40 @@ angular.module('addicaidApp')
         var getFakeRating = function(meeting) {
             var fakeRatings =
                 [
-                    {
-                        forYoungPeople: true,
-                        isLgbt: true,
-                        forWomen: true,
-                        forNewcomer: true,
-                        outsidersWelcome: true,
-                        hasWheelchairAccess: true,
-                        petsAllowed: true,
-                        isHasSnacks: true,
-                        isLargeGroup: true,
-                        isHasMeditation: true,
-                        isForMen: true,
-                        isHasCoffee: true
-                    },
+//                    {
+//                        forYoungPeople: true,
+//                        isLgbt: true,
+//                        forWomen: true,
+//                        forNewcomer: true,
+//                        outsidersWelcome: true,
+//                        hasWheelchairAccess: true,
+//                        petsAllowed: true,
+//                        isHasSnacks: true,
+//                        isLargeGroup: true,
+//                        isHasMeditation: true,
+//                        isForMen: true,
+//                        isHasCoffee: true
+//                    },
                     {forYoungPeople: true, isLgbt: true},
                     {isLgbt: true, hasWheelchairAccess: true, isHasSnacks: true},
-                    {isHasSnacks: true},
+                    {isHasSnacks: true, petsAllowed: true},
+                    {outsidersWelcome: true, petsAllowed: true, isHasCoffee: true},
                     {isHasSnacks: true, hasWheelchairAccess: true, isLargeGroup: true},
-                    {forWomen: true, isHasCoffee: true}
+                    {isForMen: true, hasWheelchairAccess: true, isLargeGroup: true},
+                    {forWomen: true, isHasCoffee: true},
+                    {isHasMeditation: true}
                 ];
 
             var newRating = angular.copy(meeting.rating);
             var rando = fakeRatings[Math.floor(Math.random()*fakeRatings.length)];
+            return angular.copy(rando);
 
-            angular.forEach(meeting.rating, function(value, key) {
-                if (rando.hasOwnProperty(key)) {
-                    newRating[key] = rando[key];
-                }
-            }, meeting.rating);
-//            );
-
-            return newRating;
-//        return ratings[0];
+//            angular.forEach(meeting.rating, function(value, key) {
+//                if (rando.hasOwnProperty(key)) {
+//                    newRating[key] = rando[key];
+//                }
+//            }, meeting.rating);
+//            return newRating;
         }
 
 

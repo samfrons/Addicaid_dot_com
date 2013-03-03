@@ -32,9 +32,6 @@ function DailyDoseCtrl($scope, $http, $navigate) {
     $scope.pageTitle = "Daily Dose";
 }
 
-function MeetingPageCtrl($scope, $http, $navigate) {
-    $scope.pageTitle = "Meeting Title";
-}
 
 
 

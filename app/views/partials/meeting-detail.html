@@ -2,48 +2,34 @@
 <article class="grids grid-12 meeting_entry">
     <!--TODO: fellowship id-->
     <aside class="grids grid-1 fellowshipType {{getFellowshipID(meeting.fellowship.name)}}">
-    
         <button class="grids grid-5 save" type="submit" ng-tap="toggleFavorite(meeting)">
             <img ng-src="{{getStarImgSrc(meeting.isFavorite)}}">
         </button>
-
-
     </aside>
-
-
     <hgroup class="grids grid-7">
         <h3>{{meeting.title}},<span class="meetinglocation">({{meeting.latLon.locationName}})</span></h3>
         <h4>{{parseAddress(meeting.address,1)}}</h4>
         <h4>{{parseAddress(meeting.address,2)}}</h4>
     </hgroup>
-
     <aside class="grids grid-4 right_side">
-
         <div class="timeandday">
             <p>{{formatTime(meeting.time)}}</p>
             <p>{{formatDay(meeting.day)}}</p>
             <span class="distance">0.2 miles{{formatDistance(meeting.distance)}}</span>
         </div>
-
     </aside>
 
     <aside class="grids grid-3 right2_side">
-        
-        <button class="grids directions" type="submit" ng-tap="$navigate.go('/meetingpage', 'slide')">
-            
-                <img src="images/arrow.png">
-         
+        <button class="grids directions" type="submit" ng-tap="$navigate.go('/meetinglist/{{meeting.id}}', 'slide')">
+            <img src="images/arrow.png">
         </button>
     </aside>
-
 
     <ul class="grids grid-12 ratings">
         <li><h3>meeting stats&nbsp;</h3></li>
         <li ng-repeat="(rating, isActive) in meeting.rating"
-            class="grids grid-2 {{getRatingViewObject(rating).cssClass}}"
-                ng-hide="!isActive">
+            class="grids grid-2 {{getRatingViewObject(rating).cssClass}}">
             {{getRatingViewObject(rating).displayText}}
         </li>
-    
     </ul>
 </article>

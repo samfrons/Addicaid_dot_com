@@ -20,7 +20,7 @@ angular.module('addicaidApp',
             .when('/signup', { templateUrl: 'views/signup.html', controller: SignupCtrl })
             .when('/profile', { templateUrl: 'views/profile.html', controller: ProfileCtrl })
             .when('/dailydose', { templateUrl: 'views/dailydose.html', controller: DailyDoseCtrl })
-            .when('/meetingpage', { templateUrl: 'views/meetingpage.html', controller: MeetingPageCtrl })
+            .when('/meetinglist/:meetingID', { templateUrl: 'views/meetingpage.html', controller: MeetingPageCtrl })
 //            .when("/", { templateUrl: 'views/meeting-list.html', controller: MeetingListCtrl })
             .when("/", { templateUrl: 'views/map.html', controller: MapCtrl })
 //            .when("/", { templateUrl: 'views/filter.html', controller: FilterCtrl })
@@ -46,6 +46,123 @@ angular.module('addicaidApp',
                 this.$apply(fn);
             }
         };
+
+        $rootScope.getFellowshipID = function(fellowshipName) {
+            var id;
+            switch (fellowshipName) {
+                case "AlcoholicsAnonymous":
+                    id = "AA";
+                    break;
+                case "NarcoticsAnonymous":
+                    id = "NA";
+                    break;
+            }
+            return id;
+        }
+        $rootScope.parseAddress = function(address, part) {
+            return address.split('\n')[part-1];
+        };
+        $rootScope.formatTime = function(time) {
+            return time;
+        };
+        $rootScope.formatDay = function(day) {
+            return day.substr(0,3);
+        };
+        $rootScope.formatDistance= function(distance) {
+            var result=parseFloat(distance);
+            if (isFinite(result)) {
+                result = "(" + result + ")";
+            } else {
+                result = null;
+            }
+            return result;
+        };
+        $rootScope.getStarImgSrc = function(isFavorite) {
+            return isFavorite ? "images/star_icon_on.png" : "images/star_icon.png";
+        };
+        $rootScope.toggleFavorite = function(meeting) {
+            meeting.isFavorite = !meeting.isFavorite;
+        }
+
+
+        $rootScope.getRatingViewObject = function(rating) {
+            // params(rating) is one of twelve ratings
+            // params(isActive) is boolean, whether rating is visible
+            var cssClass = "";
+            var imgFilename = ""; // without the .png
+            var displayText = "";
+
+            switch (rating) {
+                case "forYoungPeople":
+                    cssClass = "young_people";
+                    imgFilename = "young_people";
+                    displayText = "young people";
+                    break;
+                case "isLgbt":
+                    cssClass = "lgbt";
+                    imgFilename = "lgbt";
+                    displayText = "lgbt";
+                    break;
+                case "forWomen":
+                    cssClass = "womens";
+                    imgFilename = "womens";
+                    displayText = "womens";
+                    break;
+                case "forNewcomer":
+                    cssClass = "newcomer";
+                    imgFilename = "newcomer";
+                    displayText = "newcomer";
+                    break;
+                case "outsidersWelcome":
+                    cssClass = "outsiders";
+                    imgFilename = "outsiders";
+                    displayText = "outsiders welcome";
+                    break;
+                case "hasWheelchairAccess":
+                    cssClass = "wheelchair";
+                    imgFilename = "wheelchair";
+                    displayText = "wheelchair";
+                    break;
+                case "petsAllowed":
+                    cssClass = "pets";
+                    imgFilename = "pets";
+                    displayText = "pets allowed";
+                    break;
+                case "isHasSnacks":
+                    cssClass = "snacks";
+                    imgFilename = "snacks";
+                    displayText = "snacks";
+                    break;
+                case "isLargeGroup":
+                    cssClass = "large_group";
+                    imgFilename = "large_group";
+                    displayText = "large group";
+                    break;
+                case "isHasMeditation":
+                    cssClass = "meditation";
+                    imgFilename = "meditation";
+                    displayText = "meditation";
+                    break;
+                case "isForMen":
+                    cssClass = "mens";
+                    imgFilename = "mens";
+                    displayText = "mens";
+                    break;
+                case "isHasCoffee":
+                    cssClass = "coffee";
+                    imgFilename = "coffee";
+                    displayText = "coffee";
+                    break;
+                default:
+                    log("ERROR: unknown rating (" + rating + ") in getRatingViewObject" );
+            }
+
+            return {
+                cssClass: cssClass,
+                imgSrc: imgFilename == "" ? "" : "images/"+imgFilename+".png",
+                displayText: displayText
+            }
+        }
     });
 
 
