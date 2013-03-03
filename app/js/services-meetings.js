@@ -77,7 +77,7 @@ angular.module('addicaidApp')
                     {
                         text: "FRI",
                         queryString: "Fr",
-                        selected: true
+                        selected: false
                     },
                     {
                         text: "SAT",
@@ -87,7 +87,7 @@ angular.module('addicaidApp')
                     {
                         text: "SUN",
                         queryString: "Su",
-                        selected: false
+                        selected: true
                     }
                 ],
                 times: [
@@ -237,7 +237,7 @@ angular.module('addicaidApp')
                         }
 
                         // TODO: single meeting
-                        meetingsService.meetingsCache = [ meetingsService.meetingsCache[0] ];
+//                        meetingsService.meetingsCache = [ meetingsService.meetingsCache[0] ];
                         // PROCESS MEETINGS CACHE
 
 
