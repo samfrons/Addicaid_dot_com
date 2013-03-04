@@ -26,154 +26,14 @@ var defaultCartodbSql = "SELECT rooms.*, ST_Distance(ST_AsText(rooms.the_geom), 
 
 
 angular.module('addicaidApp')
-    .factory('meetingSvc', function($http, $rootScope) {
+    .factory('meetingSvc', function($http, $rootScope, filterSvc) {
 //    $http.get('testfiles/meetings-big.json').success(function(data) {
 //        $scope.meetings = data;
 //    });
         var meetingSvc = {
             baseUrl: "http://addicaid.appspot.com/meetings/jsonp",
             testUrl: "http://addicaid.appspot.com/meetings/jsonp?daylist=MoTu&callback=JSON_CALLBACK",
-            filters: {
-                location: {
-                    useCurrentLocation: "true"
-                    // radius
-                    // inputLocation
-                },
-                fellowships: [
-                    {
-                        text: "Alcoholics Anonymous",
-                        cssClass: "AA",
-                        imgSrc: "images/AAcircle.png",
-                        selected: true
-                    },
-                    {
-                        text: "Narcotics Anonymous",
-                        imgSrc: "images/NAcircle.png",
-                        cssClass: "NA",
-                        selected: true
-                    }
-                ],
-                days: [
-                    // days - array of 7 days, 0..6 = Mon..Sun
-                    // each day has display "text" and "selected" boolean
-                    {
-                        text: "MON",
-                        queryString: "Mo",
-                        selected: true
-                    },
-                    {
-                        text: "TUE",
-                        queryString: "Tu",
-                        selected: true
-                    },
-                    {
-                        text: "WED",
-                        queryString: "We",
-                        selected: true
-                    },
-                    {
-                        text: "THU",
-                        queryString: "Th",
-                        selected: true
-                    },
-                    {
-                        text: "FRI",
-                        queryString: "Fr",
-                        selected: true
-                    },
-                    {
-                        text: "SAT",
-                        queryString: "Sa",
-                        selected: true
-                    },
-                    {
-                        text: "SUN",
-                        queryString: "Su",
-                        selected: true
-                    }
-                ],
-                times: [
-                    {
-                        text1: "morning",
-                        text2: "6AM - 12PM",
-                        imgFilename: "clock",
-                        selected: true
-                    },
-                    {
-                        text1: "afternoon",
-                        text2: "12PM - 5PM",
-                        imgFilename: "clock",
-                        selected: true
-                    },
-                    {
-                        text1: "evening",
-                        text2: "5PM - 8PM",
-                        imgFilename: "clock",
-                        selected: true
-                    },
-                    {
-                        text1: "night",
-                        text2: "8PM AND ON",
-                        imgFilename: "clock",
-                        selected: true
-                    }
-                ],
-                ratings: [
-                    {
-                        text: "snacks",
-                        selected: true
-                    },
-                    {
-                        text: "young people",
-                        selected: true
-                    },
-                    {
-                        text: "large group",
-                        selected: true
-                    },
-                    {
-                        text: "lgbt",
-                        selected: true
-                    },
-                    {
-                        text: "meditation",
-                        selected: true
-                    },
-                    {
-                        text: "mens",
-                        selected: true
-                    },
-                    {
-                        text: "newcomer",
-                        selected: true
-                    },
-                    {
-                        text: "outsiders welcome",
-                        cssClass: "outsiders",
-                        imgFilename: "outsiders",
-                        selected: true
-                    },
-                    {
-                        text: "womens",
-                        selected: true
-                    },
-                    {
-                        text: "young people",
-                        selected: true
-                    },
-                    {
-                        text: "wheelchair",
-                        selected: true
-                    },
-                    {
-                        text: "pets allowed",
-                        cssClass: "pets",
-                        imgFilename: "pets",
-                        selected: true
-                    }
-                ]
 
-            },
             isFilterDirty: true, // flag used to determine whether server needs to be called for new data
 
             meetingsCache: [], // latest list of meetings retrieved from server
@@ -235,17 +95,6 @@ angular.module('addicaidApp')
 
                         // PROCESS MEETINGS CACHE
 
-                        // remove inactive ratings
-//                        for (var i=0; i < meetingSvc.meetingsCache.length; i++) {
-//                            var ratings = {};
-//                            angular.forEach(meetingSvc.meetingsCache[i].rating, function(isActive, rating) {
-//                                if (isActive) {
-//                                    ratings[rating] = isActive;
-//                                }
-//                            });
-//                            meetingSvc.meetingsCache[i].rating = ratings;
-//                        }
-
 
                         meetingSvc.isFilterDirty = false;
                         log("******** got "+meetingSvc.meetingsCache.length+" meetings **********")
@@ -261,10 +110,10 @@ angular.module('addicaidApp')
         // converts an array of day filter objects to a daylist query string parameter
         meetingSvc.getQueryString_Days = function() {
             var queryString = "";
-            for (var i=0; i < meetingSvc.filters.days.length; i++) {
-                if (meetingSvc.filters.days[i].selected) {
-                    queryString += meetingSvc.filters.days[i].queryString;
-                }
+            for (var i=0; i < filterSvc.filters.days.length; i++) {
+//                if (filterSvc.filters.days[i].selected) {
+                    queryString += filterSvc.filters.days[i].queryString;
+//                }
             }
             if (queryString != "") {
                 queryString = "daylist=" + queryString;
@@ -281,8 +130,7 @@ angular.module('addicaidApp')
             url += "?";
             url += meetingSvc.getQueryString_Days();
             url += "&callback=JSON_CALLBACK"; // needed for angular $http.jsonp() to work
-//            url = meetingSvc.testUrl;
-            log("url",url)
+            log("meetingSvc url",url)
             return url;
         };
 

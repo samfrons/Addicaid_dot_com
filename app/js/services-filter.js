@@ -33,13 +33,13 @@ var defaultFiltersObject = {
             text: "Alcoholics Anonymous",
             cssClass: "AA",
             imgSrc: "images/AAcircle.png",
-            selected: true
+            selected: false
         },
         {
             text: "Narcotics Anonymous",
             imgSrc: "images/NAcircle.png",
             cssClass: "NA",
-            selected: true
+            selected: false
         }
     ],
     days: [
@@ -48,37 +48,37 @@ var defaultFiltersObject = {
         {
             text: "MON",
             queryString: "Mo",
-            selected: true
+            selected: false
         },
         {
             text: "TUE",
             queryString: "Tu",
-            selected: true
+            selected: false
         },
         {
             text: "WED",
             queryString: "We",
-            selected: true
+            selected: false
         },
         {
             text: "THU",
             queryString: "Th",
-            selected: true
+            selected: false
         },
         {
             text: "FRI",
             queryString: "Fr",
-            selected: true
+            selected: false
         },
         {
             text: "SAT",
             queryString: "Sa",
-            selected: true
+            selected: false
         },
         {
             text: "SUN",
             queryString: "Su",
-            selected: true
+            selected: false
         }
     ],
     times: [
@@ -86,79 +86,79 @@ var defaultFiltersObject = {
             text1: "morning",
             text2: "6AM - 12PM",
             imgFilename: "clock",
-            selected: true
+            selected: false
         },
         {
             text1: "afternoon",
             text2: "12PM - 5PM",
             imgFilename: "clock",
-            selected: true
+            selected: false
         },
         {
             text1: "evening",
             text2: "5PM - 8PM",
             imgFilename: "clock",
-            selected: true
+            selected: false
         },
         {
             text1: "night",
             text2: "8PM AND ON",
             imgFilename: "clock",
-            selected: true
+            selected: false
         }
     ],
     ratings: [
         {
             text: "snacks",
-            selected: true
+            selected: false
         },
         {
             text: "young people",
-            selected: true
+            selected: false
         },
         {
             text: "large group",
-            selected: true
+            selected: false
         },
         {
             text: "lgbt",
-            selected: true
+            selected: false
         },
         {
             text: "meditation",
-            selected: true
+            selected: false
         },
         {
             text: "mens",
-            selected: true
+            selected: false
         },
         {
             text: "newcomer",
-            selected: true
+            selected: false
         },
         {
             text: "outsiders welcome",
             cssClass: "outsiders",
             imgFilename: "outsiders",
-            selected: true
+            selected: false
         },
         {
             text: "womens",
-            selected: true
+            selected: false
         },
         {
             text: "young people",
-            selected: true
+            selected: false
         },
         {
             text: "wheelchair",
-            selected: true
+            selected: false
         },
         {
             text: "pets allowed",
             cssClass: "pets",
             imgFilename: "pets",
-            selected: true
+            selected: false
         }
     ]
 };

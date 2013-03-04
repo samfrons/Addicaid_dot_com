@@ -1,7 +1,3 @@
-// reset button filter
-// map current location
-// comma in details address
-
 
 
 function FilterCtrl($scope, $http, $navigate, meetingSvc, filterSvc) {
