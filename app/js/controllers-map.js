@@ -3,7 +3,7 @@
 
 
 
-function MapCtrl($scope, $http, meetingsService) {
+function MapCtrl($scope, $http, meetingSvc) {
     $scope.pageTitle = "Map";
 
 //    angular.extend($scope, {
@@ -33,15 +33,19 @@ function MapCtrl($scope, $http, meetingsService) {
     var addMarkerOptions = function(meetings) {
         for (var i=0; i<meetings.length; i++) {
             var icon = L.Icon.Default;
-            switch (meetings[i].fellowship.name) {
-                case "AlcoholicsAnonymous":
-                    icon = L.icon( { iconUrl: "images/AAmap.png"} );
-                    break;
-                case "NarcoticsAnonymous":
-                    icon = L.icon( { iconUrl: "images/NAmap.png"} );
-                    break;
-            }
 
+            var fellowshipID = $scope.getFellowshipID(meetings[i].fellowship.name);
+            var suffix;
+            if (meetingSvc.isMeetingStartingSoon(meetings[i])) {
+                suffix = "soon";
+            } else {
+                suffix = "map";
+            }
+            var iconUrl = "images/" + fellowshipID + suffix + ".png";
+
+            if (fellowshipID != "") {
+                icon = L.icon({ iconUrl: iconUrl });
+            }
             var markerOptions = {
                 icon: icon
             };
@@ -70,12 +74,11 @@ function MapCtrl($scope, $http, meetingsService) {
         return popupContent;
     };
 
-
-    $scope.$on(meetingsService.meetingsChangedEvent, function(event, args) {
+    $scope.$on(meetingSvc.meetingsChangedEvent, function(event, args) {
         log("MapCtrl#on#meetings changed", event, args)
-        $scope.meetings = addMarkerOptions(meetingsService.getMeetings("map-on"));
+        $scope.meetings = addMarkerOptions(meetingSvc.getMeetings("map-on"));
     });
 
-    $scope.meetings = addMarkerOptions(meetingsService.getMeetings("map"));
+    $scope.meetings = addMarkerOptions(meetingSvc.getMeetings("map"));
 
 }

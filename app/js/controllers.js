@@ -19,7 +19,7 @@ function AppCtrl($scope, $navigate) {
 
 
 
-function SignupCtrl($scope, $http, $navigate) {
+function SignupCtrl($scope, $http, $navigate, meetingSvc) {
     $scope.pageTitle = "Signup";
 }
 

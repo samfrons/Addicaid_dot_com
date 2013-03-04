@@ -26,11 +26,11 @@ var defaultCartodbSql = "SELECT rooms.*, ST_Distance(ST_AsText(rooms.the_geom), 
 
 
 angular.module('addicaidApp')
-    .factory('meetingsService', function($http, $rootScope) {
+    .factory('meetingSvc', function($http, $rootScope) {
 //    $http.get('testfiles/meetings-big.json').success(function(data) {
 //        $scope.meetings = data;
 //    });
-        var meetingsService = {
+        var meetingSvc = {
             baseUrl: "http://addicaid.appspot.com/meetings/jsonp",
             testUrl: "http://addicaid.appspot.com/meetings/jsonp?daylist=MoTu&callback=JSON_CALLBACK",
             filters: {
@@ -59,32 +59,32 @@ angular.module('addicaidApp')
                     {
                         text: "MON",
                         queryString: "Mo",
-                        selected: false
+                        selected: true
                     },
                     {
                         text: "TUE",
                         queryString: "Tu",
-                        selected: false
+                        selected: true
                     },
                     {
                         text: "WED",
                         queryString: "We",
-                        selected: false
+                        selected: true
                     },
                     {
                         text: "THU",
                         queryString: "Th",
-                        selected: false
+                        selected: true
                     },
                     {
                         text: "FRI",
                         queryString: "Fr",
-                        selected: false
+                        selected: true
                     },
                     {
                         text: "SAT",
                         queryString: "Sa",
-                        selected: false
+                        selected: true
                     },
                     {
                         text: "SUN",
@@ -189,73 +189,67 @@ angular.module('addicaidApp')
             }
             return result;
         }
-        meetingsService.getImgSrc = function(filterObj) {
+        meetingSvc.getImgSrc = function(filterObj) {
             return "images/" + namify(filterObj, "imgFilename") + ".png";
         }
-        meetingsService.getCssClass = function(filterObj) {
+        meetingSvc.getCssClass = function(filterObj) {
             return namify(filterObj, "cssClass");
         }
 
-        meetingsService.getFilters = function() {
-            return angular.copy(meetingsService.filters);
-        }
-        meetingsService.setFilters = function(filters) {
-            meetingsService.filters = angular.copy(filters);
-            meetingsService.isFilterDirty = true;
-            meetingsService.getMeetingsFromServer();
-        };
 
-        meetingsService.getMeetingsFromServer = function() {
+        meetingSvc.getMeetingsFromServer = function() {
             log ("getMeetingsFromServer")
             // Retrieves meeting objects from server based on current filters
-            if (meetingsService.isFilterDirty) {
+            if (meetingSvc.isFilterDirty) {
                 // populate meetings from server
-                $http.jsonp(meetingsService.getUrl())
+                $http.jsonp(meetingSvc.getUrl())
                     .success(function(data, status) {
-                        meetingsService.meetingsCache = data.value;
+                        meetingSvc.meetingsCache = data.value;
 
 //                        // TODO: fake data-carto
 //                        $http.jsonp('http://'+defaultCartodbAccount+'.cartodb.com/api/v2/sql/?q='+defaultCartodbSql+'&callback=JSON_CALLBACK')
 //                            .success(function(data,status) {
 //                                log('http://'+defaultCartodbAccount+'.cartodb.com/api/v2/sql/?q='+defaultCartodbSql+'&callback=JSON_CALLBACK');
-//                                for (var i=0; i < meetingsService.meetingsCache.length; i++) {
-//                                    meetingsService.meetingsCache[i].latLon.latitude = data.rows[i].latitude;
-//                                    meetingsService.meetingsCache[i].latLon.longitude = data.rows[i].longitude;
+//                                for (var i=0; i < meetingSvc.meetingsCache.length; i++) {
+//                                    meetingSvc.meetingsCache[i].latLon.latitude = data.rows[i].latitude;
+//                                    meetingSvc.meetingsCache[i].latLon.longitude = data.rows[i].longitude;
 //                                }
 //
 //
-//                                meetingsService.isFilterDirty = false;
-//                                $rootScope.$broadcast(meetingsService.meetingsChangedEvent, [/* meetingsChangedArgs */]);
+//                                meetingSvc.isFilterDirty = false;
+//                                $rootScope.$broadcast(meetingSvc.meetingsChangedEvent, [/* meetingsChangedArgs */]);
 //                            })
 
 //                        // TODO: fake data-favorites
-//                        for (var i=0; i < meetingsService.meetingsCache.length; i++) {
-//                            meetingsService.meetingsCache[i].isFavorite = Math.random()<.2 ? true : false;
+//                        for (var i=0; i < meetingSvc.meetingsCache.length; i++) {
+//                            meetingSvc.meetingsCache[i].isFavorite = Math.random()<.2 ? true : false;
 //                        }
 
                         // TODO: fake data-ratings
-                        for (var i=0; i < meetingsService.meetingsCache.length; i++) {
-                            meetingsService.meetingsCache[i].rating = getFakeRating(meetingsService.meetingsCache[i]);
+                        for (var i=0; i < meetingSvc.meetingsCache.length; i++) {
+                            meetingSvc.meetingsCache[i].rating = getFakeRating(meetingSvc.meetingsCache[i]);
                         }
 
                         // TODO: single meeting
-//                        meetingsService.meetingsCache = [ meetingsService.meetingsCache[0] ];
+//                        meetingSvc.meetingsCache = [ meetingSvc.meetingsCache[0] ];
 
                         // PROCESS MEETINGS CACHE
+
                         // remove inactive ratings
-//                        for (var i=0; i < meetingsService.meetingsCache.length; i++) {
+//                        for (var i=0; i < meetingSvc.meetingsCache.length; i++) {
 //                            var ratings = {};
-//                            angular.forEach(meetingsService.meetingsCache[i].rating, function(isActive, rating) {
+//                            angular.forEach(meetingSvc.meetingsCache[i].rating, function(isActive, rating) {
 //                                if (isActive) {
 //                                    ratings[rating] = isActive;
 //                                }
 //                            });
-//                            meetingsService.meetingsCache[i].rating = ratings;
+//                            meetingSvc.meetingsCache[i].rating = ratings;
 //                        }
 
 
-                        meetingsService.isFilterDirty = false;
-                        $rootScope.$broadcast(meetingsService.meetingsChangedEvent, [/* meetingsChangedArgs */]);
+                        meetingSvc.isFilterDirty = false;
+                        log("******** got "+meetingSvc.meetingsCache.length+" meetings **********")
+                        $rootScope.$broadcast(meetingSvc.meetingsChangedEvent, [/* meetingsChangedArgs */]);
                     })
                     .error(function(data,status) {
                         // TODO: error handling
@@ -265,11 +259,11 @@ angular.module('addicaidApp')
         };
 
         // converts an array of day filter objects to a daylist query string parameter
-        meetingsService.getQueryString_Days = function() {
+        meetingSvc.getQueryString_Days = function() {
             var queryString = "";
-            for (var i=0; i < meetingsService.filters.days.length; i++) {
-                if (meetingsService.filters.days[i].selected) {
-                    queryString += meetingsService.filters.days[i].queryString;
+            for (var i=0; i < meetingSvc.filters.days.length; i++) {
+                if (meetingSvc.filters.days[i].selected) {
+                    queryString += meetingSvc.filters.days[i].queryString;
                 }
             }
             if (queryString != "") {
@@ -278,34 +272,34 @@ angular.module('addicaidApp')
             return queryString;
         };
 
-        meetingsService.getUrl = function() { // returns url for jsonp call
-            var url = meetingsService.baseUrl;
+        meetingSvc.getUrl = function() { // returns url for jsonp call
+            var url = meetingSvc.baseUrl;
             // TODO: complete function
 //            testUrl: "http://addicaid.appspot.com/meetings/jsonp?daylist=MoTu&callback=JSON_CALLBACK",
 
             // add daylist filter
             url += "?";
-            url += meetingsService.getQueryString_Days();
+            url += meetingSvc.getQueryString_Days();
             url += "&callback=JSON_CALLBACK"; // needed for angular $http.jsonp() to work
-//            url = meetingsService.testUrl;
+//            url = meetingSvc.testUrl;
             log("url",url)
             return url;
         };
 
-        meetingsService.getMeetings = function() {
+        meetingSvc.getMeetings = function() {
             log ("getMeetings - "+arguments[0])
-            if (meetingsService.isFilterDirty) {
-                meetingsService.getMeetingsFromServer();
+            if (meetingSvc.isFilterDirty) {
+                meetingSvc.getMeetingsFromServer();
             }
 
             // TODO: need promises here.  for now, returns the old meetingsCache and use broadcast to make change
-            return meetingsService.meetingsCache;
+            return meetingSvc.meetingsCache;
             // return: array of meeting objects from server
         }
 
-        meetingsService.getMeetingsFavoritesOnly = function() {
+        meetingSvc.getMeetingsFavoritesOnly = function() {
             log ("getMeetingsFavoritesOnly")
-            var allMeetings = meetingsService.getMeetings("getMeetingsFavoritesOnly");
+            var allMeetings = meetingSvc.getMeetings("getMeetingsFavoritesOnly");
             var favorites = [];
             for (var i=0; i<allMeetings.length; i++) {
                 if (allMeetings[i].isFavorite) {
@@ -316,16 +310,34 @@ angular.module('addicaidApp')
             return favorites;
         }
 
-        meetingsService.getMeetingByID = function(meetingID) {
-            for (var i=0; i < meetingsService.getMeetings().length; i++) {
-                if (meetingsService.getMeetings()[i].id == meetingID) {
-                    return meetingsService.getMeetings()[i];
+        meetingSvc.getMeetingByID = function(meetingID) {
+            for (var i=0; i < meetingSvc.getMeetings().length; i++) {
+                if (meetingSvc.getMeetings()[i].id == meetingID) {
+                    return meetingSvc.getMeetings()[i];
                 }
             }
             return null;
         }
 
+        // isMeetingStartingSoon(meeting)
+        // returns true if meeting is starting soon
+        meetingSvc.isMeetingStartingSoon= function(meeting) {
+            var threshold = 4; // max hours from now that a meetin is considered "soon"
+            var now = new Date();
 
+            var timeMatch = meeting.time.match(/(\d+)(:)(\d\d)/);
+            var hours = parseInt(timeMatch[1]);
+            var min = parseInt(timeMatch[2]);
+
+            var days = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"];
+
+            var isSoon = now.getDay() == days.indexOf(meeting.day) // same day
+                && hours >= now.getHours()
+                && hours <= now.getHours()+threshold; // meeting starting within next threshold hours
+            if (isSoon)
+                log('meeting coming up !')
+            return isSoon;
+        }
 
 
 
@@ -371,13 +383,13 @@ angular.module('addicaidApp')
 
 
         // FAKE DATA METHODS
-        meetingsService.injectFakeLatLng = function() {
+        meetingSvc.injectFakeLatLng = function() {
 
         };
 
 
         // get initial meeting list from database
-//        meetingsService.getMeetingsFromServer();
+        meetingSvc.getMeetingsFromServer();
 
-        return meetingsService;
+        return meetingSvc;
     });

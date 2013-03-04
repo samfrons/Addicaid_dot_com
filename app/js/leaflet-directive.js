@@ -22,7 +22,7 @@ var bindMapEvents = function bindMapEvents(scope, eventsString, leafletObject, e
     });
 }
 
-app.directive('leafletMap', ['$parse', 'mapService', function ($parse, mapService) {
+app.directive('leafletMap', ['$parse', function ($parse) {
 
     var mapEvents = 'click dblclick ' +
         'mousedown mouseup mouseover mouseout mousemove ' +
@@ -75,7 +75,7 @@ app.directive('leafletMap', ['$parse', 'mapService', function ($parse, mapServic
     };
 }]);
 
-app.directive('leafletMarker', ['$parse', 'mapService', function($parse, mapService) {
+app.directive('leafletMarker', ['$parse', function($parse) {
 
     var markerEvents = 'click dblclick ' +
         'mousedown mouseover mouseout ' +

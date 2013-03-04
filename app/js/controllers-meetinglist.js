@@ -1,26 +1,26 @@
 //MeetingListCtrl.$inject = [$scope];
-function MeetingListCtrl($scope, $http, meetingsService) {
+function MeetingListCtrl($scope, $http, meetingSvc) {
     $scope.pageTitle = "Meeting List";
 
-    $scope.$on(meetingsService.meetingsChangedEvent, function(event, args) {
+    $scope.$on(meetingSvc.meetingsChangedEvent, function(event, args) {
         log("MeetingListCtrl#on#meetings changed", event, args)
-        $scope.meetings = meetingsService.getMeetings("list-on");
+        $scope.meetings = meetingSvc.getMeetings("list-on");
     });
-    $scope.meetings = meetingsService.getMeetings("list");
+    $scope.meetings = meetingSvc.getMeetings("list");
 }
 
 
 
 
 
-function MeetingListFavoritesCtrl($scope, $http, meetingsService) {
+function MeetingListFavoritesCtrl($scope, $http, meetingSvc) {
     $scope.pageTitle = "Favorite Meetings";
 
-    $scope.$on(meetingsService.meetingsChangedEvent, function(event, args) {
+    $scope.$on(meetingSvc.meetingsChangedEvent, function(event, args) {
         log("MeetingListFavoritesCtrl#on#meetings changed", event, args)
-        $scope.meetings = meetingsService.getMeetingsFavoritesOnly();
+        $scope.meetings = meetingSvc.getMeetingsFavoritesOnly();
     });
-    $scope.meetings = meetingsService.getMeetingsFavoritesOnly();
+    $scope.meetings = meetingSvc.getMeetingsFavoritesOnly();
 }
 
 
@@ -28,10 +28,10 @@ function MeetingListFavoritesCtrl($scope, $http, meetingsService) {
 
 
 
-function MeetingDetailCtrl($scope, meetingsService) {
+function MeetingDetailCtrl($scope, meetingSvc) {
 
-    $scope.getImgSrc = meetingsService.getImgSrc;
-    $scope.getCssClass = meetingsService.getCssClass;
+    $scope.getImgSrc = meetingSvc.getImgSrc;
+    $scope.getCssClass = meetingSvc.getCssClass;
 
     $scope.getImgStyle = function(filterObj) {
         var o = {
@@ -44,9 +44,9 @@ function MeetingDetailCtrl($scope, meetingsService) {
 
 
 
-function MeetingPageCtrl($scope, $http, $navigate, $routeParams, meetingsService) {
+function MeetingPageCtrl($scope, $http, $navigate, $routeParams, meetingSvc) {
     $scope.pageTitle = "Meeting Title";
-    $scope.meeting = meetingsService.getMeetingByID($routeParams.meetingID);
+    $scope.meeting = meetingSvc.getMeetingByID($routeParams.meetingID);
     log("MeetingPageCtrl", $routeParams.meetingID, $scope.meeting)
 
 }

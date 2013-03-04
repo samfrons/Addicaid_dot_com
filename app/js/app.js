@@ -4,7 +4,7 @@
 angular.module('addicaidApp',
         [
             'addicaidApp.filters', 'addicaidApp.directives'
-            ,'leaflet-directive'
+//            ,'leaflet-directive'
             ,'addicaidApp.leaflet-directive'
             ,'mobile-navigate'
             ,'ui'
@@ -48,7 +48,7 @@ angular.module('addicaidApp',
         };
 
         $rootScope.getFellowshipID = function(fellowshipName) {
-            var id;
+            var id = "";
             switch (fellowshipName) {
                 case "AlcoholicsAnonymous":
                     id = "AA";
