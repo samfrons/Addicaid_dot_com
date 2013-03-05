@@ -66,7 +66,7 @@ function MapCtrl($scope, $http, meetingsService) {
             '    <p>' + $scope.formatDay(meeting.day) + '</p>' +
             '    <p>' + $scope.formatDistance(meeting.distance) + '</p>' +
             '</div>' +
-            '</aside>';
+            '</aside>';2
         return popupContent;
     };
 

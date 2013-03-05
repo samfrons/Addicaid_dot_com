@@ -33,6 +33,7 @@
             class="grids grid-2 {{getRatingViewObject(rating).cssClass}}">
             {{getRatingViewObject(rating).displayText}}
         </li>
+        <li><button class="vote subtle_style">vote</button></li>
     </ul>
 
     
@@ -60,17 +61,15 @@
     </div>
 
       <input class="grids grid11 commentbox" type="text" placeholder="how was your experience at this meeting?"></input>
-        <button type="submit" class="submit_comment">submit</button>
+        <button type="submit" class="subtle_style">submit</button>
     
 
 
-    <h3>map</h3>
+    <h3>map <button type="submit" class="subtle_style"><a href="https://maps.google.com/maps?daddr={{meeting.address}}">
+get directions</a></button></h3>
     <img src="images/meetingmap.png">
 
-
-
 </article>
-
 </section>
 
 
