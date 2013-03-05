@@ -7,6 +7,7 @@ angular.module('addicaidApp.filters', [])
         // meetings - array of meeting objects to filter
         // orFilters - array of array of filters to apply using OR
         return function(meetings, orFilters) {
+            console.log("meetingFilter", orFilters)
             var filteredResults = [];
             angular.forEach(meetings, function(meeting) {
                 var isValid = false;

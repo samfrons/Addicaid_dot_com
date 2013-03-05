@@ -14,7 +14,7 @@ function MapCtrl($scope, $http, meetingSvc) {
         center: $scope.currentLatLng,
         zoom: 12,
         markers: [
-            L.marker($scope.currentLatLng, { icon: L.icon({iconUrl: "images/here_icon.png"})})
+            L.marker($scope.currentLatLng, { icon: L.icon({iconUrl: "images/heremap.png"})})
         ]
     };
 
