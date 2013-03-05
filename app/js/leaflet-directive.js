@@ -112,7 +112,6 @@ app.directive('leafletMarker', ['$parse', function($parse) {
             if (attrs.popupContentFunction && attrs.model) {
                 var popupContent = scope.$eval(attrs.popupContentFunction)(scope.$eval(attrs.model));
                 var popupOptions = angular.extend({}, scope.$eval(attrs.popupContentOptions));
-console.log('popupOptions', attrs.popupContentOptions, popupOptions)
                 marker.bindPopup(popupContent, popupOptions);
             }
 

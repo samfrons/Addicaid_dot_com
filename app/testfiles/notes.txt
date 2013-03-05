@@ -3,6 +3,6 @@
 --map current location
 --    get image icon
 --comma in details address
-map in meetingpage
+--map in meetingpage
 low: filter by time
 
