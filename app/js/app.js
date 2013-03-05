@@ -69,9 +69,10 @@ angular.module('addicaidApp',
             return day.substr(0,3);
         };
         $rootScope.formatDistance= function(distance) {
-            var result=parseFloat(distance);
+            var result = parseFloat(distance);
+            var units = (result == "1") ? "MILE" : "MILES";
             if (isFinite(result)) {
-                result = "(" + result + ")";
+                result = result + " " + units;
             } else {
                 result = null;
             }

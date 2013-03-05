@@ -1,19 +1,25 @@
 //MeetingListCtrl.$inject = [$scope];
-function MeetingListCtrl($scope, $http, meetingSvc) {
+function MeetingListCtrl($scope, $http, meetingSvc, filterSvc, $filter) {
     $scope.pageTitle = "Meeting List";
 
+    // meetings
     $scope.$on(meetingSvc.meetingsChangedEvent, function(event, args) {
         log("MeetingListCtrl#on#meetings changed", event, args)
-        $scope.meetings = meetingSvc.getMeetings("list-on");
+        $scope.meetings = $filter("meetingFilter")(meetingSvc.getMeetings("list-on"), filterSvc.filtersToApply());
+
     });
-    $scope.meetings = meetingSvc.getMeetings("list");
+    $scope.meetings = $filter("meetingFilter")(meetingSvc.getMeetings("list"), filterSvc.filtersToApply());
+
+
+
+
 }
 
 
 
 
 
-function MeetingListFavoritesCtrl($scope, $http, meetingSvc) {
+function MeetingListFavoritesCtrl($scope, $http, meetingSvc, filterSvc) {
     $scope.pageTitle = "Favorite Meetings";
 
     $scope.$on(meetingSvc.meetingsChangedEvent, function(event, args) {

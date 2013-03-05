@@ -468,6 +468,9 @@ ul.filter_ratings li {
 .leaflet-bottom {
   display: none; }
 
+.invisible {
+  display: none; }
+
 nav .bottom {
   position: fixed;
   bottom: 0px;

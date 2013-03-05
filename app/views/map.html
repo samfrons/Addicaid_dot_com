@@ -28,6 +28,12 @@
 </div>
 
 
+<!--<leaflet-marker-->
+        <!--leaflet-lat="currentLocation.latitude"-->
+        <!--leaflet-lng="currentLocation.longitude"-->
+        <!--leaflet-map="mapid"-->
+        <!--class="invisible">-->
+<!--</leaflet-marker>-->
 
 <leaflet-marker
         ng-repeat="meeting in meetings"
@@ -36,7 +42,8 @@
         marker-options="meetings[$index].markerOptions"
         leaflet-map="mapid"
         popup-content-function="markerPopupContentFn"
-        model="meetings[$index]">
+        model="meetings[$index]"
+        class="invisible">
 </leaflet-marker>
 <!--ui-event="{'map-click': 'openMarkerInfo(marker)'}"-->
 

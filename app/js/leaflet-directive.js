@@ -41,7 +41,7 @@ app.directive('leafletMap', ['$parse', function ($parse) {
 //        replace: true,
 //        template: '<div></div>',
 //        scope: {
-//            mapOptions: '=' // required
+//            leafletOptions: '=' // required
 //        },
         link: function link(scope, element, attrs) {
             var map = L.map(element[0]);
@@ -68,6 +68,14 @@ app.directive('leafletMap', ['$parse', function ($parse) {
                         angular.extend(mapOptions, { zoom : 8 });
                     }
                     map.setView(mapOptions.center, mapOptions.zoom);
+
+                    // markers
+                    if (mapOptions.markers) {
+                        angular.forEach(mapOptions.markers, function(marker) {
+                            marker.addTo(map);
+                        })
+                    }
+
                 });
             }
             bindMapEvents(scope.$root, mapEvents, map, element);

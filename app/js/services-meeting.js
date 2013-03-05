@@ -4,8 +4,8 @@
 //    longitude : -73.97140100000001
 //};
 var defaultCoordinates = { // San Fran
-    latitude : 37.770919,
-    longitude : -122.405037
+    latitude : 37.771139,
+    longitude : -122.403424
 };
 var defaultST_Point = function() {
     return "ST_Point(" + defaultCoordinates.longitude.toString() + ", " + defaultCoordinates.latitude.toString() + ")";
@@ -35,11 +35,22 @@ angular.module('addicaidApp')
             testUrl: "http://addicaid.appspot.com/meetings/jsonp?daylist=MoTu&callback=JSON_CALLBACK",
 
             isFilterDirty: true, // flag used to determine whether server needs to be called for new data
+            waitingForServerResults: false, // flag to make sure only one server request at a time
 
             meetingsCache: [], // latest list of meetings retrieved from server
             meetingsChangedEvent: "meetingsChanged"
         };
 
+        // current location
+        meetingSvc.getCurrentLocation = function() {
+            return {
+                latitude: defaultCoordinates.latitude,
+                longitude: defaultCoordinates.longitude
+            };
+        };
+
+
+        // helper css string functions
         var namify = function namify(filterObj, param) {
             var result = "";
             if (filterObj[param] !== undefined) {
@@ -60,8 +71,9 @@ angular.module('addicaidApp')
         meetingSvc.getMeetingsFromServer = function() {
             log ("getMeetingsFromServer")
             // Retrieves meeting objects from server based on current filters
-            if (meetingSvc.isFilterDirty) {
+            if (meetingSvc.isFilterDirty && !meetingSvc.waitingForServerResults) {
                 // populate meetings from server
+                meetingSvc.waitingForServerResults = true;
                 $http.jsonp(meetingSvc.getUrl())
                     .success(function(data, status) {
                         meetingSvc.meetingsCache = data.value;
@@ -97,6 +109,7 @@ angular.module('addicaidApp')
 
 
                         meetingSvc.isFilterDirty = false;
+                        meetingSvc.waitingForServerResults = false;
                         log("******** got "+meetingSvc.meetingsCache.length+" meetings **********")
                         $rootScope.$broadcast(meetingSvc.meetingsChangedEvent, [/* meetingsChangedArgs */]);
                     })
@@ -129,7 +142,18 @@ angular.module('addicaidApp')
             // add daylist filter
             url += "?";
             url += meetingSvc.getQueryString_Days();
+
+            // add location
+            if (filterSvc.filters.location.useCurrentLocation) {
+                url += "&lat=" + meetingSvc.getCurrentLocation().latitude;
+                url += "&long=" + meetingSvc.getCurrentLocation().longitude;
+            } else if (filterSvc.filters.location.zip) {
+                url += "&address=" + encodeURI(filterSvc.filters.location.zip)
+            }
+
+            // add jsonp callback
             url += "&callback=JSON_CALLBACK"; // needed for angular $http.jsonp() to work
+
             log("meetingSvc url",url)
             return url;
         };

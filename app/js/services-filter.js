@@ -2,21 +2,30 @@
 
 
 angular.module('addicaidApp')
-    .factory('filterSvc', function($http, $rootScope) {
+    .factory('filterSvc', function($http, $rootScope, $filter) {
 
-        var filterSvc = {
-            filters: angular.copy(defaultFiltersObject)
+        var filterSvc = {};
+
+        filterSvc.resetFilters = function() {
+            filterSvc.filters = angular.copy(defaultFiltersObject);
+            log("reset")
+        }
+        filterSvc.resetFilters();
+
+        filterSvc.filtersToApply = function() {
+            var filters = [];
+            var fellowshipFilters = $filter('selectedFilters')(filterSvc.filters.fellowships);
+            if (fellowshipFilters.length > 0) filters.push(fellowshipFilters);
+            var dayFilters = $filter('selectedFilters')(filterSvc.filters.days);
+            if (dayFilters.length > 0) filters.push(dayFilters);
+//            var timeFilters = $filter('selectedFilters')(filterSvc.filters.times);
+//            if (timeFilters.length > 0) filters.push(timeFilters);
+            var ratingFilters = $filter('selectedFilters')(filterSvc.filters.ratings);
+            if (ratingFilters.length > 0) filters.push(ratingFilters);
+
+            return filters;
         };
 
-
-//        meetingSvc.getFilters = function() {
-//            return angular.copy(meetingSvc.filters);
-//        }
-//        meetingSvc.setFilters = function(filters) {
-//            meetingSvc.filters = angular.copy(filters);
-//            meetingSvc.isFilterDirty = true;
-//            meetingSvc.getMeetingsFromServer();
-//        };
 
         return filterSvc;
     });
@@ -24,21 +33,23 @@ angular.module('addicaidApp')
 
 var defaultFiltersObject = {
     location: {
-        useCurrentLocation: "true"
-        // radius
-        // inputLocation
+        useCurrentLocation: "true",
+        radius: null,
+        zip: null
     },
     fellowships: [
         {
             text: "Alcoholics Anonymous",
             cssClass: "AA",
             imgSrc: "images/AAcircle.png",
+            filters: [ { "fellowship.name" : "AlcoholicsAnonymous" } ],
             selected: false
         },
         {
             text: "Narcotics Anonymous",
             imgSrc: "images/NAcircle.png",
             cssClass: "NA",
+            filters: [ { "fellowship.name" : "NarcoticsAnonymous" } ],
             selected: false
         }
     ],
@@ -48,36 +59,43 @@ var defaultFiltersObject = {
         {
             text: "MON",
             queryString: "Mo",
+            filters: [ { "day" : "MONDAY" } ],
             selected: false
         },
         {
             text: "TUE",
             queryString: "Tu",
+            filters: [ { "day" : "TUESDAY" } ],
             selected: false
         },
         {
             text: "WED",
             queryString: "We",
+            filters: [ { "day" : "WEDNESDAY" } ],
             selected: false
         },
         {
             text: "THU",
             queryString: "Th",
+            filters: [ { "day" : "THURSDAY" } ],
             selected: false
         },
         {
             text: "FRI",
             queryString: "Fr",
+            filters: [ { "day" : "FRIDAY" } ],
             selected: false
         },
         {
             text: "SAT",
             queryString: "Sa",
+            filters: [ { "day" : "SATURDAY" } ],
             selected: false
         },
         {
             text: "SUN",
             queryString: "Su",
+            filters: [ { "day" : "SUNDAY" } ],
             selected: false
         }
     ],
@@ -86,78 +104,97 @@ var defaultFiltersObject = {
             text1: "morning",
             text2: "6AM - 12PM",
             imgFilename: "clock",
+            filters: [ { name: "between", key: "timeAsNumber", start: 6, end: 12 } ],
             selected: false
         },
         {
             text1: "afternoon",
             text2: "12PM - 5PM",
             imgFilename: "clock",
+            filters: [ { name: "between", key: "timeAsNumber", start: 12, end: 17 } ],
             selected: false
         },
         {
             text1: "evening",
             text2: "5PM - 8PM",
             imgFilename: "clock",
+            filters: [ { name: "between", key: "timeAsNumber", start: 17, end: 20 } ],
             selected: false
         },
         {
             text1: "night",
             text2: "8PM AND ON",
             imgFilename: "clock",
+            filters: [
+                { name: "between", key: "timeAsNumber", start: 20, end: 24 },
+                { name: "between", key: "timeAsNumber", start: 0, end: 6 }
+            ],
             selected: false
         }
     ],
     ratings: [
         {
             text: "snacks",
+            filters: [ { "rating.isHasSnacks" : "true" } ],
             selected: false
         },
         {
             text: "young people",
+            filters: [ { "rating.forYoungPeople" : "true" } ],
             selected: false
         },
         {
             text: "large group",
+            filters: [ { "rating.isLargeGroup" : "true" } ],
             selected: false
         },
         {
             text: "lgbt",
+            filters: [ { "rating.isLgbt" : "true" } ],
             selected: false
         },
         {
             text: "meditation",
+            filters: [ { "rating.isHasMeditation" : "true" } ],
             selected: false
         },
         {
             text: "mens",
+            filters: [ { "rating.isForMen" : "true" } ],
             selected: false
         },
         {
             text: "newcomer",
+            filters: [ { "rating.forNewcomer" : "true" } ],
             selected: false
         },
         {
             text: "outsiders welcome",
             cssClass: "outsiders",
             imgFilename: "outsiders",
+            filters: [ { "rating.outsidersWelcome" : "true" } ],
             selected: false
         },
         {
             text: "womens",
+            filters: [ { "rating.forWomen" : "true" } ],
             selected: false
         },
         {
             text: "young people",
+            filters: [ { "rating.forYoungPeople" : "true" } ],
             selected: false
         },
         {
             text: "wheelchair",
+            filters: [ { "rating.hasWheelchairAccess" : "true" } ],
             selected: false
         },
         {
             text: "pets allowed",
             cssClass: "pets",
             imgFilename: "pets",
+            filters: [ { "rating.petsAllowed" : "true" } ],
             selected: false
         }
     ]
