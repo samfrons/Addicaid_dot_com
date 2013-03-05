@@ -12,7 +12,7 @@ function MapCtrl($scope, $http, meetingSvc) {
     // map options
     $scope.mapOptions = {
         center: $scope.currentLatLng,
-        zoom: 12,
+        zoom: 13,
         markers: [
             L.marker($scope.currentLatLng, { icon: L.icon({iconUrl: "images/heremap.png"})})
         ]
@@ -44,29 +44,27 @@ function MapCtrl($scope, $http, meetingSvc) {
         return meetings;
     };
 
-
+    $scope.markerPopupContentOpts = {
+//        maxWidth: 400,
+        maxHeight: 1000
+    };
     $scope.markerPopupContentFn = function(meeting) {
         var popupContent = '' +
-            '<aside class="grids grid-1 saveaside">' +
-            '<button class="grids grid-5 save" type="submit" ng-tap="toggleFavorite(meeting)">' +
-            '<img src="' + getStarImgSrc(meeting.isFavorite) + '">' +
-            '</button>' +
-            '</aside>' +
-
-
             '<hgroup class="grids grid-7">' +
-            '   <h3>' + meeting.title + '</h3>' +
-            '   <h4 class="locationname">' + meeting.latLon.locationName + '</h4>' +
-            '   <h4>' + $scope.parseAddress(meeting.address,1) + '</h4>' +
-            '   <h4>' + $scope.parseAddress(meeting.address,2) + '</h4>' +
+            '    <h3>' + meeting.title + ' <span class="meetinglocation">(' + meeting.latLon.locationName + ')</span></h3>' +
+//            '    <h3>' + meeting.title + '</h3>' +
+//            '    <span class="meetinglocation">(' + meeting.latLon.locationName + ')</span>' +
+            '    <h4>' + $scope.parseAddress(meeting.address,1) + '</h4>' +
+            '    <h4>' + $scope.parseAddress(meeting.address,2) + '</h4>' +
             '</hgroup>' +
-            '<aside class="grids grid-4 right_side">' +
-            '<div class="timeandday">' +
-            '    <p>' + $scope.formatTime(meeting.time) + '</p>' +
-            '    <p>' + $scope.formatDay(meeting.day) + '</p>' +
-            '    <p>' + $scope.formatDistance(meeting.distance) + '</p>' +
-            '</div>' +
-            '</aside>';2
+            '<aside class="grids grid-4 right_side map-popup ' + $scope.getFellowshipID(meeting.fellowship.name) + '">' +
+            '    <div class="timeandday map-popup">' +
+            '        <p class="time">' + $scope.formatTime(meeting.time) + '</p>' +
+            '        <p class="day">' + $scope.formatDay(meeting.day) + '</p>' +
+            '        <span class="distance">' + $scope.formatDistance(meeting.distance) + '</span>' +
+            '    </div>' +
+            '</aside>'
+
         return popupContent;
     };
 

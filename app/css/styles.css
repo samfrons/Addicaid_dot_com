@@ -298,6 +298,8 @@ aside.right_side {
   min-height: 60px;
   width: 28.91%;
   margin: 0 0 0 5%; }
+  aside.right_side.map-popup {
+    width: 100px; }
   aside.right_side.AA {
     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(39, 102, 146, 0.9)), color-stop(1, rgba(48, 147, 199, 0.9))); }
   aside.right_side.NA {
@@ -327,6 +329,9 @@ div.filter_fellowship {
   background-repeat: no-repeat;
   background-image: url(../images/calendar.png);
   text-align: left; }
+  .timeandday.map-popup {
+    height: auto;
+    margin: 0 20% 0 20%; }
   .timeandday p {
     font-weight: bold;
     line-height: 17px;
