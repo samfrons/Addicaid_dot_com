@@ -1,10 +1,10 @@
 /* style.sass */
+
 $experimental-support-for-mozilla : true !default
 $experimental-support-for-webkit : true !default
 $support-for-original-webkit-gradients : true !default
 $experimental-support-for-opera : true !default
 $experimental-support-for-microsoft : true !default
-
 
 $main-color: #2A2a2a
 $main: #fff
@@ -14,10 +14,6 @@ $bottomcolor: rgba(101,142,146,0.5)
 $innercolor: rgba(91,62,86,0.7)
 $teel: #00c6d4
 $teel_light: #00c6d4
-
-@font-face
- font-family: 'Gotham' , sans-serif
- src: url('fonts/Gotham-Book.otf') format('opentype')
 
 @mixin backgrounds
  background-color: transparent
@@ -127,7 +123,7 @@ html
 
 body
  padding: 0
- font-family: 'gotham', sans-serif
+ font-family: 'Gotham', sans-serif
  -webkit-font-smoothing: antialiased
  text-transform: uppercase
  background-size: auto
@@ -142,7 +138,6 @@ header
   text-transform: capitalize
   top: 15px
   margin: 0
-  font-family: 'gotham', sans-serif
   padding: 0
   text-align: center
   color: white
@@ -164,16 +159,21 @@ a
 
 section
  overflow-x: hidden
- margin: 58px 0 0 0
+ margin: 55px 0 0 0
 
 header.grid-12
  background-image: url(../images/headerbackground.png)
  background-repeat: repeat-x
  background-size: auto 55px
  box-shadow: 0px 1px 4px black
+ position: fixed
+ top: 0px
+
+.mapclass
+ height: 90%
+ top: 50px
 
 header
- position: fixed
  button
   min-height: 33px !important
 
@@ -216,6 +216,7 @@ button.settings
 section.signup
  background-image: url(../images/6.jpg)
  margin: 0 auto
+ margin-top: 50px
  text-align: center
  padding: 10px
  height: 100%
@@ -265,7 +266,7 @@ button.submit_button
  button.filter_submit
   border-radius: 5px
   color: white
-  font-family: 'gotham', sans-serif
+  font-family: 'Gotham', sans-serif
   margin: 10px 0 50px 0%
   width: 100%
 
@@ -305,7 +306,7 @@ aside.right2_side
  height: 81px
  margin: 0 0 0 -5px
  button
-  font-family: 'gotham', sans-serif
+  font-family: 'Gotham', sans-serif
   text-transform: uppercase
   margin: 0 0 0 -7px
   &:active
@@ -374,7 +375,7 @@ hgroup
  max-height: 85px
  line-height: 10px
  text-transform: capitalize
- font-family: 'gotham', sans-serif
+ font-family: 'Gotham', sans-serif
  color: $main-color
  span.meetinglocation
   font-style: italic
@@ -382,13 +383,15 @@ hgroup
   text-transform: capitalize
 
 hgroup
+ h3
+  margin: 10px 0 0 0
  h4
   line-height: 10px
+  margin: 5px 0 5px 0
  h5, h6
   line-height: 0px
 
 .fellowshipType
- color: transparent
  height: 65px
  min-width: 28px
  margin: 0 0 0 0px
@@ -463,14 +466,14 @@ div.filter_fellowship
 ul.filter_day li
  background-image: url(../images/calendar_sprite.png)
  width: 35px
- height: 19px
+ height: 18px
  background-size: 35px auto
  text-align: center
  padding: 11px 0 0 0
  margin: 0 0 0 7px
  font-weight: bold
  &.ui-show
-  background-position: 0px 30px
+  background-position: 0px 29px
 
 div.filter_time
  height: 75px
@@ -486,13 +489,14 @@ ul.filter_time
   background-size: 70px auto
   background-repeat: no-repeat
   font-weight: bold
-  font-family: 'gotham', sans-serif
+  font-family: 'Gotham', sans-serif
   &.ui-show
    height: 45px
 
 
 ul.ratings
  border-top: 1px solid gray
+ border-bottom: 1px solid gray
  color: rgba(0,0,0,0)
  vertical-align: top
  padding: 5px
@@ -506,7 +510,6 @@ ul.ratings
   height: 20px
   padding: 5px 5px 0 5px
   width: 60px
-  overflow: hidden
   font-size: 8px
 
  li.snacks
@@ -667,16 +670,22 @@ input.commentbox
  margin: 5px 0 0 10px !important
  vertical-align: middle
 
-button.submit_comment
- color: red
+
+li
+button.vote
+ float: right
+ position: relative
+ left: 200px
+
+button.subtle_style
  vertical-align: middle
  text-transform: uppercase
  font-weight: bold
- color: white
+ color: white !important
  text-shadow: 0px 1px 1px black
  margin: 4px 0 0 0
-
-
+ a
+  color: white !important
 
 .grids
  display: inline-block

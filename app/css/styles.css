@@ -1,8 +1,4 @@
 /* style.sass */
-@font-face {
-  font-family: "Gotham", sans-serif;
-  src: url("fonts/Gotham-Book.otf") format("opentype"); }
-
 /*=keyframes($wobble)
  * /*0%  -webkit-transform: translateX(0%) 
  * /*15%  -webkit-transform: translateX(-25%) rotate(-5deg) 
@@ -17,7 +13,7 @@ html {
 
 body {
   padding: 0;
-  font-family: "gotham", sans-serif;
+  font-family: "Gotham", sans-serif;
   -webkit-font-smoothing: antialiased;
   text-transform: uppercase;
   background-size: auto; }
@@ -30,7 +26,6 @@ header h1 {
   text-transform: capitalize;
   top: 15px;
   margin: 0;
-  font-family: "gotham", sans-serif;
   padding: 0;
   text-align: center;
   color: white;
@@ -52,18 +47,22 @@ a {
 
 section {
   overflow-x: hidden;
-  margin: 58px 0 0 0; }
+  margin: 55px 0 0 0; }
 
 header.grid-12 {
   background-image: url(../images/headerbackground.png);
   background-repeat: repeat-x;
   background-size: auto 55px;
-  box-shadow: 0px 1px 4px black; }
+  box-shadow: 0px 1px 4px black;
+  position: fixed;
+  top: 0px; }
 
-header {
-  position: fixed; }
-  header button {
-    min-height: 33px !important; }
+.mapclass {
+  height: 90%;
+  top: 50px; }
+
+header button {
+  min-height: 33px !important; }
 
 button {
   margin: 20px;
@@ -108,6 +107,7 @@ button.settings {
 section.signup {
   background-image: url(../images/6.jpg);
   margin: 0 auto;
+  margin-top: 50px;
   text-align: center;
   padding: 10px;
   height: 100%;
@@ -163,7 +163,7 @@ button.submit_button {
   .filter button.filter_submit {
     border-radius: 5px;
     color: white;
-    font-family: "gotham", sans-serif;
+    font-family: "Gotham", sans-serif;
     margin: 10px 0 50px 0%;
     width: 100%; }
 
@@ -199,7 +199,7 @@ aside.right2_side {
   height: 81px;
   margin: 0 0 0 -5px; }
   aside.right2_side button {
-    font-family: "gotham", sans-serif;
+    font-family: "Gotham", sans-serif;
     text-transform: uppercase;
     margin: 0 0 0 -7px; }
     aside.right2_side button:active {
@@ -266,20 +266,22 @@ hgroup {
   max-height: 85px;
   line-height: 10px;
   text-transform: capitalize;
-  font-family: "gotham", sans-serif;
+  font-family: "Gotham", sans-serif;
   color: #2a2a2a; }
   hgroup span.meetinglocation {
     font-style: italic;
     opacity: 0.8;
     text-transform: capitalize; }
 
+hgroup h3 {
+  margin: 10px 0 0 0; }
 hgroup h4 {
-  line-height: 10px; }
+  line-height: 10px;
+  margin: 5px 0 5px 0; }
 hgroup h5, hgroup h6 {
   line-height: 0px; }
 
 .fellowshipType {
-  color: transparent;
   height: 65px;
   min-width: 28px;
   margin: 0 0 0 0px;
@@ -342,14 +344,14 @@ div.filter_fellowship {
 ul.filter_day li {
   background-image: url(../images/calendar_sprite.png);
   width: 35px;
-  height: 19px;
+  height: 18px;
   background-size: 35px auto;
   text-align: center;
   padding: 11px 0 0 0;
   margin: 0 0 0 7px;
   font-weight: bold; }
   ul.filter_day li.ui-show {
-    background-position: 0px 30px; }
+    background-position: 0px 29px; }
 
 div.filter_time {
   height: 75px; }
@@ -365,12 +367,13 @@ ul.filter_time li {
   background-size: 70px auto;
   background-repeat: no-repeat;
   font-weight: bold;
-  font-family: "gotham", sans-serif; }
+  font-family: "Gotham", sans-serif; }
   ul.filter_time li.ui-show {
     height: 45px; }
 
 ul.ratings {
   border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
   color: rgba(0, 0, 0, 0);
   vertical-align: top;
   padding: 5px; }
@@ -382,7 +385,6 @@ ul.ratings {
     height: 20px;
     padding: 5px 5px 0 5px;
     width: 60px;
-    overflow: hidden;
     font-size: 8px; }
   ul.ratings li.snacks {
     background-position: -512px 0;
@@ -533,14 +535,20 @@ input.commentbox {
   margin: 5px 0 0 10px !important;
   vertical-align: middle; }
 
-button.submit_comment {
-  color: red;
+button.vote {
+  float: right;
+  position: relative;
+  left: 200px; }
+
+button.subtle_style {
   vertical-align: middle;
   text-transform: uppercase;
   font-weight: bold;
-  color: white;
+  color: white !important;
   text-shadow: 0px 1px 1px black;
   margin: 4px 0 0 0; }
+  button.subtle_style a {
+    color: white !important; }
 
 .grids {
   display: inline-block;
