@@ -9,15 +9,7 @@ function MeetingListCtrl($scope, $http, meetingSvc, filterSvc, $filter) {
 
     });
     $scope.meetings = $filter("meetingFilter")(meetingSvc.getMeetings("list"), filterSvc.filtersToApply());
-
-
-
-
 }
-
-
-
-
 
 function MeetingListFavoritesCtrl($scope, $http, meetingSvc, filterSvc) {
     $scope.pageTitle = "Favorite Meetings";

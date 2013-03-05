@@ -3,7 +3,7 @@
 
 
 
-function MapCtrl($scope, $http, meetingSvc) {
+function MapCtrl($scope, $http, meetingSvc, filterSvc, $filter) {
     $scope.pageTitle = "Map";
 
     // Current location
@@ -68,11 +68,11 @@ function MapCtrl($scope, $http, meetingSvc) {
         return popupContent;
     };
 
+    // meetings
     $scope.$on(meetingSvc.meetingsChangedEvent, function(event, args) {
         log("MapCtrl#on#meetings changed", event, args)
-        $scope.meetings = addMarkerOptions(meetingSvc.getMeetings("map-on"));
+        $scope.meetings = addMarkerOptions($filter("meetingFilter")(meetingSvc.getMeetings("map-on"), filterSvc.filtersToApply()));
+
     });
-
-    $scope.meetings = addMarkerOptions(meetingSvc.getMeetings("map"));
-
+    $scope.meetings = addMarkerOptions($filter("meetingFilter")(meetingSvc.getMeetings("map"), filterSvc.filtersToApply()));
 }
