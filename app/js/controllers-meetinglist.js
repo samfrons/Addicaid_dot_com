@@ -12,7 +12,7 @@ function MeetingListCtrl($scope, $http, meetingSvc, filterSvc, $filter) {
 }
 
 function MeetingListFavoritesCtrl($scope, $http, meetingSvc, filterSvc) {
-    $scope.pageTitle = "Favorite Meetings";
+    $scope.pageTitle = "Favorites";
 
     $scope.$on(meetingSvc.meetingsChangedEvent, function(event, args) {
         log("MeetingListFavoritesCtrl#on#meetings changed", event, args)
