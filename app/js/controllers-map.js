@@ -47,13 +47,9 @@ function MapCtrl($scope, $http, meetingSvc) {
 
     $scope.markerPopupContentFn = function(meeting) {
         var popupContent = '' +
-            '<aside class="grids grid-1 saveaside">' +
-            '<button class="grids grid-5 save" type="submit" ng-tap="toggleFavorite(meeting)">' +
-            '<img src="' + getStarImgSrc(meeting.isFavorite) + '">' +
-            '</button>' +
-            '</aside>' +
 
 
+        
             '<hgroup class="grids grid-7">' +
             '   <h3>' + meeting.title + '</h3>' +
             '   <h4 class="locationname">' + meeting.latLon.locationName + '</h4>' +
