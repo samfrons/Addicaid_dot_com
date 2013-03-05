@@ -404,6 +404,8 @@ hgroup
   background-image: url(../images/NAcircle.png)
 
 aside.right_side
+ &.map-popup
+  width: 100px
  height: 100%
  min-height: 60px
  width: 28.91%
@@ -439,13 +441,15 @@ div.filter_fellowship
 
 
 .timeandday
+ &.map-popup
+  height: auto
+  margin: 0 20% 0 20%
  margin: -5px 0 0 25%
  color: $main-color
  height: 77px
  background-repeat: no-repeat
  background-image: url(../images/calendar.png)
  text-align: left
-
  p
   font-weight: bold
   line-height: 17px
@@ -456,11 +460,9 @@ div.filter_fellowship
   font-size: 1.2em
  p.day
   padding: 2px 0 0 0
-
  span.distance
   font-weight: bold
   color: white
-
 
 
 ul.filter_day li

@@ -20,7 +20,7 @@ angular.module('addicaidApp',
             .when('/signup', { templateUrl: 'views/signup.html', controller: SignupCtrl })
             .when('/profile', { templateUrl: 'views/profile.html', controller: ProfileCtrl })
             .when('/dailydose', { templateUrl: 'views/dailydose.html', controller: DailyDoseCtrl })
-            .when('/meetinglist/:meetingID', { templateUrl: 'views/meetingpage.html', controller: MeetingPageCtrl })
+            .when('/meetinglist/:meetingID/:showComments', { templateUrl: 'views/meetingpage.html', controller: MeetingPageCtrl })
 //            .when("/", { templateUrl: 'views/meeting-list.html', controller: MeetingListCtrl })
 //            .when("/", { templateUrl: 'views/map.html', controller: MapCtrl })
 //            .when("/", { templateUrl: 'views/filter.html', controller: FilterCtrl })
@@ -60,10 +60,12 @@ angular.module('addicaidApp',
             return id;
         }
         $rootScope.parseAddress = function(address, part) {
-            return address.split('\n')[part-1];
+            var result = address.split('\n')[part-1];
+            if (angular.isUndefined(result)) result = "";
+            return result;
         };
         $rootScope.formatTime = function(time) {
-            return time;
+            return angular.isUndefined(time) ? "" : time;
         };
         $rootScope.formatDay = function(day) {
             return day.substr(0,3);
