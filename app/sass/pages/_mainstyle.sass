@@ -130,7 +130,8 @@ body
 
 form
  h1 
-  font-size: 1.5em
+  font-size: 1.3em
+  color: red
 
 header
  h1 
@@ -167,6 +168,7 @@ header.grid-12
  background-size: auto 55px
  box-shadow: 0px 1px 4px black
  position: fixed
+ z-index: 1000
  top: 0px
 
 .mapclass
@@ -334,7 +336,7 @@ article.filter
 
  button.here
   background-color: white
-  width: 61px
+  width: 30px
   height: 20px
   background-size: 60px auto
   text-align: left
@@ -343,8 +345,9 @@ article.filter
 
   padding: 0
   span.hereicon
-   height: 15px
+   height: 20px
    padding: 0 2px 0 0
+   background-position: 5px 1px
    display: inline-block
    width: 22px
    background-image: url(../images/here_icon.png)
@@ -352,7 +355,7 @@ article.filter
    background-repeat: no-repeat
 
 input.zipcode 
- width: 70px
+ width: 60px
 
 article.meeting_entry
  width: 100%
@@ -377,6 +380,7 @@ hgroup
  text-transform: capitalize
  font-family: 'Gotham', sans-serif
  color: $main-color
+ z-index: -1
  span.meetinglocation
   font-style: italic
   opacity: 0.8
@@ -426,7 +430,7 @@ div.filter_fellowship
    text-shadow: 0px 1px 1px black
    font-weight: bold
    text-transform: uppercase
-   height: 25px
+   height: 35px
    text-indent: 0px
    padding: 8px 0 0 0
    &.AA
@@ -587,6 +591,7 @@ ul.ratings
   color: $main_color
 
 ul.filter_ratings
+ margin: 0 0 50px 0
  li 
   height: 40px
   width: 50px
@@ -615,6 +620,7 @@ nav
   background-color: black
   background-size: 80% auto
   height: 44px
+  z-index: 1000
   li:first-child
    border-left: none
   li
