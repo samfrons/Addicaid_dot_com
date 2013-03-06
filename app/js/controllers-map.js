@@ -71,8 +71,8 @@ function MapCtrl($scope, $http, meetingSvc, filterSvc, $filter) {
     // meetings
     $scope.$on(meetingSvc.meetingsChangedEvent, function(event, args) {
         log("MapCtrl#on#meetings changed", event, args)
-        $scope.meetings = addMarkerOptions($filter("meetingFilter")(meetingSvc.getMeetings("map-on"), filterSvc.filtersToApply()));
+        $scope.meetings = addMarkerOptions($filter("andOrFilter")(meetingSvc.getMeetings("map-on"), filterSvc.filtersToApply()));
 
     });
-    $scope.meetings = addMarkerOptions($filter("meetingFilter")(meetingSvc.getMeetings("map"), filterSvc.filtersToApply()));
+    $scope.meetings = addMarkerOptions($filter("andOrFilter")(meetingSvc.getMeetings("map"), filterSvc.filtersToApply()));
 }

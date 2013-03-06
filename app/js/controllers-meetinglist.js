@@ -5,10 +5,10 @@ function MeetingListCtrl($scope, $http, meetingSvc, filterSvc, $filter) {
     // meetings
     $scope.$on(meetingSvc.meetingsChangedEvent, function(event, args) {
         log("MeetingListCtrl#on#meetings changed", event, args)
-        $scope.meetings = $filter("meetingFilter")(meetingSvc.getMeetings("list-on"), filterSvc.filtersToApply());
+        $scope.meetings = $filter("andOrFilter")(meetingSvc.getMeetings("list-on"), filterSvc.filtersToApply());
 
     });
-    $scope.meetings = $filter("meetingFilter")(meetingSvc.getMeetings("list"), filterSvc.filtersToApply());
+    $scope.meetings = $filter("andOrFilter")(meetingSvc.getMeetings("list"), filterSvc.filtersToApply());
 }
 
 function MeetingListFavoritesCtrl($scope, $http, meetingSvc, filterSvc) {

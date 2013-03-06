@@ -14,14 +14,17 @@ angular.module('addicaidApp')
 
         filterSvc.filtersToApply = function() {
             var filters = [];
-            var fellowshipFilters = $filter('selectedFilters')(filterSvc.filters.fellowships);
-            if (fellowshipFilters.length > 0) filters.push(fellowshipFilters);
-            var dayFilters = $filter('selectedFilters')(filterSvc.filters.days);
-            if (dayFilters.length > 0) filters.push(dayFilters);
+            var fellowshipFilters = $filter('selectedFiltersOr')(filterSvc.filters.fellowships);
+            if (angular.isDefined(fellowshipFilters)) filters.push(fellowshipFilters);
+
+            var dayFilters = $filter('selectedFiltersOr')(filterSvc.filters.days);
+            if (angular.isDefined(dayFilters)) filters.push(dayFilters);
+
 //            var timeFilters = $filter('selectedFilters')(filterSvc.filters.times);
 //            if (timeFilters.length > 0) filters.push(timeFilters);
-            var ratingFilters = $filter('selectedFilters')(filterSvc.filters.ratings);
-            if (ratingFilters.length > 0) filters.push(ratingFilters);
+
+            var ratingFilters = $filter('selectedFiltersAnd')(filterSvc.filters.ratings);
+            if (angular.isDefined(ratingFilters)) filters.push(ratingFilters);
 
             return filters;
         };
@@ -134,18 +137,8 @@ var defaultFiltersObject = {
     ],
     ratings: [
         {
-            text: "snacks",
-            filters: [ { "rating.isHasSnacks" : "true" } ],
-            selected: false
-        },
-        {
             text: "young people",
             filters: [ { "rating.forYoungPeople" : "true" } ],
-            selected: false
-        },
-        {
-            text: "large group",
-            filters: [ { "rating.isLargeGroup" : "true" } ],
             selected: false
         },
         {
@@ -154,13 +147,8 @@ var defaultFiltersObject = {
             selected: false
         },
         {
-            text: "meditation",
-            filters: [ { "rating.isHasMeditation" : "true" } ],
-            selected: false
-        },
-        {
-            text: "mens",
-            filters: [ { "rating.isForMen" : "true" } ],
+            text: "womens",
+            filters: [ { "rating.forWomen" : "true" } ],
             selected: false
         },
         {
@@ -176,16 +164,6 @@ var defaultFiltersObject = {
             selected: false
         },
         {
-            text: "womens",
-            filters: [ { "rating.forWomen" : "true" } ],
-            selected: false
-        },
-        {
-            text: "young people",
-            filters: [ { "rating.forYoungPeople" : "true" } ],
-            selected: false
-        },
-        {
             text: "wheelchair",
             filters: [ { "rating.hasWheelchairAccess" : "true" } ],
             selected: false
@@ -195,6 +173,31 @@ var defaultFiltersObject = {
             cssClass: "pets",
             imgFilename: "pets",
             filters: [ { "rating.petsAllowed" : "true" } ],
+            selected: false
+        },
+        {
+            text: "snacks",
+            filters: [ { "rating.isHasSnacks" : "true" } ],
+            selected: false
+        },
+        {
+            text: "large group",
+            filters: [ { "rating.isLargeGroup" : "true" } ],
+            selected: false
+        },
+        {
+            text: "meditation",
+            filters: [ { "rating.isHasMeditation" : "true" } ],
+            selected: false
+        },
+        {
+            text: "mens",
+            filters: [ { "rating.isForMen" : "true" } ],
+            selected: false
+        },
+        {
+            text: "coffee",
+            filters: [ { "rating.isHasCoffee" : "true" } ],
             selected: false
         }
     ]
