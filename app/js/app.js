@@ -151,7 +151,7 @@ angular.module('addicaidApp',
                     imgFilename = "mens";
                     displayText = "mens";
                     break;
-                case "isHasCoffee":
+                case "hasCoffee":
                     cssClass = "coffee";
                     imgFilename = "coffee";
                     displayText = "coffee";

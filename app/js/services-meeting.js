@@ -98,15 +98,33 @@ angular.module('addicaidApp')
 //                        }
 
                         // TODO: fake data-ratings
-                        for (var i=0; i < meetingSvc.meetingsCache.length; i++) {
-                            meetingSvc.meetingsCache[i].rating = getFakeRating(meetingSvc.meetingsCache[i]);
-                        }
+//                        for (var i=0; i < meetingSvc.meetingsCache.length; i++) {
+//                            meetingSvc.meetingsCache[i].rating = getFakeRating(meetingSvc.meetingsCache[i]);
+//                        }
 
                         // TODO: single meeting
 //                        meetingSvc.meetingsCache = [ meetingSvc.meetingsCache[0] ];
 
                         // PROCESS MEETINGS CACHE
+                        angular.forEach(meetingSvc.meetingsCache, function(meeting) {
+                            // clean up ratings object
+                            var newRatings = {};
+                            angular.forEach(meeting.rating, function(value, key) {
+                                if (value) newRatings[key] = value;
+                            });
+                            meeting.rating = newRatings;
 
+
+                            // clean up time
+                            meeting.time = meeting.time.split(":")[0] + ":" + meeting.time.split(":")[1];
+
+                            // flip lat long
+//                            var swap = meeting.latLon.longitude;
+//                            meeting.latLon.longitude = meeting.latLon.latitude;
+//                            meeting.latLon.latitude = swap;
+
+//                            log(meeting)
+                        });
 
                         meetingSvc.isFilterDirty = false;
                         meetingSvc.waitingForServerResults = false;
@@ -147,6 +165,9 @@ angular.module('addicaidApp')
             if (filterSvc.filters.location.useCurrentLocation) {
                 url += "&lat=" + meetingSvc.getCurrentLocation().latitude;
                 url += "&long=" + meetingSvc.getCurrentLocation().longitude;
+//                // TODO: HACK swap lat lng
+//                url += "&lat=" + meetingSvc.getCurrentLocation().longitude;
+//                url += "&long=" + meetingSvc.getCurrentLocation().latitude;
             } else if (filterSvc.filters.location.zip) {
                 url += "&address=" + encodeURI(filterSvc.filters.location.zip)
             }
@@ -228,29 +249,23 @@ angular.module('addicaidApp')
 //                        isLargeGroup: true,
 //                        isHasMeditation: true,
 //                        isForMen: true,
-//                        isHasCoffee: true
+//                        hasCoffee: true
 //                    },
                     {forYoungPeople: true, isLgbt: true},
                     {isLgbt: true, hasWheelchairAccess: true, isHasSnacks: true},
                     {isHasSnacks: true, petsAllowed: true},
-                    {outsidersWelcome: true, petsAllowed: true, isHasCoffee: true},
+                    {outsidersWelcome: true, petsAllowed: true, hasCoffee: true},
                     {isHasSnacks: true, hasWheelchairAccess: true, isLargeGroup: true},
                     {isForMen: true, hasWheelchairAccess: true, isLargeGroup: true},
-                    {forWomen: true, isHasCoffee: true},
+                    {forWomen: true, hasCoffee: true},
                     {isHasMeditation: true}
                 ];
 
             var newRating = angular.copy(meeting.rating);
             var rando = fakeRatings[Math.floor(Math.random()*fakeRatings.length)];
             return angular.copy(rando);
-
-//            angular.forEach(meeting.rating, function(value, key) {
-//                if (rando.hasOwnProperty(key)) {
-//                    newRating[key] = rando[key];
-//                }
-//            }, meeting.rating);
-//            return newRating;
         }
+
 
 
 

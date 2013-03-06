@@ -197,7 +197,7 @@ var defaultFiltersObject = {
         },
         {
             text: "coffee",
-            filters: [ { "rating.isHasCoffee" : "true" } ],
+            filters: [ { "rating.hasCoffee" : "true" } ],
             selected: false
         }
     ]
