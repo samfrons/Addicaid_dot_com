@@ -142,13 +142,23 @@ var defaultFiltersObject = {
             selected: false
         },
         {
-            text: "lgbt",
-            filters: [ { "rating.isLgbt" : "true" } ],
+            text: "meditation",
+            filters: [ { "rating.isHasMeditation" : "true" } ],
             selected: false
         },
         {
             text: "womens",
             filters: [ { "rating.forWomen" : "true" } ],
+            selected: false
+        },
+        {
+            text: "mens",
+            filters: [ { "rating.isForMen" : "true" } ],
+            selected: false
+        },
+        {
+            text: "lgbt",
+            filters: [ { "rating.isLgbt" : "true" } ],
             selected: false
         },
         {
@@ -183,16 +193,6 @@ var defaultFiltersObject = {
         {
             text: "large group",
             filters: [ { "rating.isLargeGroup" : "true" } ],
-            selected: false
-        },
-        {
-            text: "meditation",
-            filters: [ { "rating.isHasMeditation" : "true" } ],
-            selected: false
-        },
-        {
-            text: "mens",
-            filters: [ { "rating.isForMen" : "true" } ],
             selected: false
         },
         {
