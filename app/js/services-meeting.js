@@ -118,11 +118,11 @@ angular.module('addicaidApp')
                             // clean up time
                             meeting.time = meeting.time.split(":")[0] + ":" + meeting.time.split(":")[1];
 
-                            // flip lat long
-//                            var swap = meeting.latLon.longitude;
-//                            meeting.latLon.longitude = meeting.latLon.latitude;
-//                            meeting.latLon.latitude = swap;
-
+                            // TODO: HACK change time on wed womens meeting
+                            if (meeting.id == 73021) {
+                                meeting.time = "19:00";
+                                meeting.timeAsNumber = 19;
+                            }
 //                            log(meeting)
                         });
 
