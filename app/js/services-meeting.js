@@ -74,7 +74,8 @@ angular.module('addicaidApp')
             if (meetingSvc.isFilterDirty && !meetingSvc.waitingForServerResults) {
                 // populate meetings from server
                 meetingSvc.waitingForServerResults = true;
-                $http.jsonp(meetingSvc.getUrl())
+//                $http.jsonp(meetingSvc.getUrl())
+                $http.get("testfiles/meetings-demo.json")// TODO: HACK using local json file
                     .success(function(data, status) {
                         meetingSvc.meetingsCache = data.value;
 
