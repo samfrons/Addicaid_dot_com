@@ -1,6 +1,6 @@
 3.2.5 (Media Mark)
-ef7ffe8a05780177b68f69f4e2635b0b11cefe2a
-o:Sass::Tree::RootNode	:@has_childrenT:@template",;/* style.sass */
+831d2c9590dd458ce7f6fe7bfd3dad47e2ef0c79
+o:Sass::Tree::RootNode	:@has_childrenT:@template"8;/* style.sass */
 
 $experimental-support-for-mozilla : true !default
 $experimental-support-for-webkit : true !default
@@ -690,12 +690,12 @@ button.subtle_style
  vertical-align: middle
  text-transform: uppercase
  font-weight: bold
- color: white !important
+ color: $main-color !important
  text-shadow: 0px 1px 1px black
  margin: 4px 0 0 0
  background-color: rgba(200,192,192,0.8) !important
  a
-  color: white !important
+  color: $main-color !important
 
 .grids
  display: inline-block
@@ -1329,11 +1329,11 @@ right;i«;@;@;i«;';(;)i ;[ ;@o;$;["position;o;%	;
 ;&;"middle;i°;@;@;i°;';(;)i ;[ ;@o;$;["text-transform;o;%	;
 ;&;"uppercase;i±;@;@;i±;';(;)i ;[ ;@o;$;["font-weight;o;%	;
 ;&;"	bold;i²;@;@;i²;';(;)i ;[ ;@o;$;["
-color;o;*	;[o;	;0;{	;iÿ;iÿ;i;iÿ;i³;@o;%	;
+color;o;*	;[o;-	;"main-color;."main_color;i³;@o;%	;
 ;&;"!important;i³;@;i³;+;,;@;@;i³;';(;)i ;[ ;@o;$;["text-shadow;o;*	;[	o;; ["px;i ;!"0px;i´;@;"[ o;; ["px;i;!"1px;i´;@;"[ o;; ["px;i;!"1px;i´;@;"[ o;	;0;{	;i ;i ;i;i ;i´;@;i´;+;,;@;@;i´;';(;)i ;[ ;@o;$;["margin;o;*	;[	o;; ["px;i	;!"4px;iµ;@;"[ o;; [ ;i ;!"0;iµ;@;"@9o;; [ ;i ;!"0;iµ;@;"@9o;; [ ;i ;!"0;iµ;@;"@9;iµ;+;,;@;@;iµ;';(;)i ;[ ;@o;$;["background-color;o;*	;[o;;{ ;"	rgba;i¶;0;@;[	o;; [ ;iÈ;!"200;i¶;@;"@9o;; [ ;iÀ;!"192;i¶;@;"@9o;; [ ;iÀ;!"192;i¶;@;"@9o;; [ ;f0.80000000000000004 ™š;!"0.8;i¶;@;"@9o;%	;
 ;&;"!important;i¶;@;i¶;+;,;@;@;i¶;';(;)i ;[ ;@o;0;1["a;2o;3;4[o;5;4[o;6
 ;4[o;7	;80;["a;@;i·;@;9o;:;;{ ;i·;<0;@;i·;@;T;i·;)i ;[o;$;["
-color;o;*	;[o;	;0;{	;iÿ;iÿ;i;iÿ;i¸;@o;%	;
+color;o;*	;[o;-	;"main-color;."main_color;i¸;@o;%	;
 ;&;"!important;i¸;@;i¸;+;,;@;@;i¸;';(;)i ;[ ;@;@;@o;0;1[".grids;2o;3;4[o;5;4[o;6
 ;4[o;B;["
 grids;@;iº;@;9o;:;;{ ;iº;<0;@;iº;@;T;iº;)i ;[o;$;["display;o;%	;
