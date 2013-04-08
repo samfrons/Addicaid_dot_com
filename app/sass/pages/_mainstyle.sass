@@ -46,7 +46,7 @@ $topcolor: rgba(249,47,5,1)
 $bottomcolor: rgba(219,87,5,1)
 $shadowtop: rgba(219,31,5,1)
 $shadowbottom: rgba(0,0,0,.7)
-$buttonbackground: rgba(219,87,5,1)
+$buttonbackground: rgba(252,62,66,1)
 
 
 @mixin gradientbutton
@@ -128,6 +128,12 @@ body
  text-transform: uppercase
  background-size: auto
 
+
+button
+ background-color: $buttonbackground
+ color: white !important
+ text-transform: uppercase !important
+
 form
  h1 
   font-size: 1.3em
@@ -162,10 +168,10 @@ section
  margin: 55px 0 0 0
 
 header.grid-12
- background-image: url(../images/headerbackground.png)
+ background-color: rgba(197,206,35,1)
  background-repeat: repeat-x
  background-size: auto 55px
- box-shadow: 0px 1px 4px black
+ box-shadow: 0px 1px 4px rgba(137,146,5,1)
  position: fixed
  z-index: 1000
  top: 0px
@@ -231,9 +237,16 @@ section.signup
   font-weight: normal
   color: white
 
+button.signup_skip
+ position: fixed
+ bottom: 45px
+ left: 73%
+
 section.filterpage
- background-image: url(../images/blurlight.png)
+ /*background-image: url(../images/blurlight.png)*/
  background-repeat: repeat
+
+
 section.meetinglist
  background-image: url(../images/blurlight.png)
  height: 100%
@@ -259,11 +272,16 @@ button.submit_button
 
 .filter
  color: $main-color
- padding: 0 0 10px 0
+ 
  h3
-  text-indent: 30px
+  text-indent: 10px
  ul
-  text-align: center
+  padding: 0 0 0 10px
+  li
+   background-color: rgba(242,242,236,1)
+   -webkit-box-shadow: inset 0px 0px 1px 1px rgba(222,222,216,1)
+   border-radius: 5px
+
  button.filter_submit
   border-radius: 5px
   color: white
@@ -317,6 +335,9 @@ aside.right2_side
 article.filter
  h3
   margin: 10px 0 0 0
+  padding: 5px
+  background-color: rgba(113,203,201,1)
+  color: white
  button
   &:active
    @include gradientbutton_lime
@@ -328,6 +349,7 @@ article.filter
   vertical-align: middle
   ul.filter_where
    vertical-align: middle
+   margin: 10px 0 0 5px
    span.or
     vertical-align: top
  input.miles
@@ -356,11 +378,23 @@ article.filter
 input.zipcode 
  width: 60px
 
+
+
+section.ratepage
+ font-size: .7em
+ h1, h2
+  text-align: center
+ 
+article.meeting_entry
+ 
+
+
 article.meeting_entry
  width: 100%
  margin: 2px 0 0 0%
- box-shadow: 0px 1px 5px rgba(20,50,60,0.8)
  background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgba(255,255,255,0.9)), color-stop(1, rgba(255,255,255,0)) ) !important
+ background-color: rgba(242,242,237,1)
+ text-align: left
 
 ul
  padding: 0
@@ -414,33 +448,40 @@ aside.right_side
  width: 28.91%
  margin: 0 0 0 5%
 
+
+ /* background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgba(20, 136, 203, 1)), color-stop(1, rgba(20, 136, 203, .5)) )*/
  &.AA
-  background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgba(39,102,146,0.9)), color-stop(1, rgba(48,147,199,0.9)) ) 
+  background-color: rgba(10, 72,119, .5)
+
+  /*background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgba(255,0,18,1)), color-stop(1, rgba(255,0,50,.9)) )*/
  &.NA
-  background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgba(255,0,18,1)), color-stop(1, rgba(255,0,50,.9)) ) 
+  background-color: rgba(202, 22,26, .5)
+
+  
 
 div.filter_fellowship
  height: 70px
  ul
   height: 70px
   li
-   width: 45%
-   margin: 0 10px 0 0
-   text-shadow: 0px 1px 1px black
+   background-color: rgba(242,242,236,1)
+   -webkit-box-shadow: inset 0px 0px 1px 1px rgba(222,222,216,1)
+   border-radius: 5px
+   width: 25%
+   margin: 5px
    font-weight: bold
    text-transform: uppercase
    height: 35px
-   text-indent: 0px
+   text-align: center
    padding: 8px 0 0 0
    &.AA
     
    &.NA
-    
-
-
 
 .FilterToggle.ui-show
- @include gradientbutton_lime__important
+ background-color: rgba(222,222,216,1)
+ -webkit-box-shadow: inset 0px 0px 1px 1px rgba(202,202,206,1)
+ 
 
 
 .timeandday
@@ -467,7 +508,8 @@ div.filter_fellowship
   font-weight: bold
   color: white
 
-
+ul.filter_day
+ margin: 10px 0 0 0
 ul.filter_day li
  background-image: url(../images/calendar_sprite.png)
  width: 35px
@@ -481,27 +523,28 @@ ul.filter_day li
   background-position: 0px 29px
 
 div.filter_time
- height: 75px
+
  h3
   margin: 10px 0 0 0
 ul.filter_time
+ margin: 10px 0 0 0
  li
   width: 60px
-  height: 60px
   margin: 0 10px 0 0 
   padding: 5px 0 5px 0
   font-size: .7em
+  text-align: center
   background-size: 70px auto
   background-repeat: no-repeat
   font-weight: bold
   font-family: 'Gotham', sans-serif
+  img
   &.ui-show
    height: 45px
 
 
 ul.ratings
- border-top: 1px solid gray
- border-bottom: 1px solid gray
+ background-color: rgba(232,232,226,1)
  color: rgba(0,0,0,0)
  vertical-align: top
  padding: 5px
@@ -590,7 +633,6 @@ ul.ratings
   color: $main_color
 
 ul.filter_ratings
- margin: 0 0 50px 0
  li 
   height: 40px
   width: 50px
@@ -623,7 +665,7 @@ nav
   li:first-child
    border-left: none
   li
-   @include gradientlight
+   background-color: rgba(62,62,66,1)
    text-align: center
    padding: 3px
    color: white
@@ -684,16 +726,24 @@ button.vote
  position: relative
  left: 200px
 
-button.subtle_style
- vertical-align: middle
- text-transform: uppercase
- font-weight: bold
- color: $main-color !important
- text-shadow: 0px 1px 1px black
- margin: 4px 0 0 0
- background-color: rgba(200,192,192,0.8) !important
- a
-  color: $main-color !important
+ul.options
+ margin: 55px 0 0 0
+ li
+  button
+   height: 30px
+  input
+   height: 24px
+   margin: 0 0 0 -3px
+
+ul.options.filter
+ margin: 0 0 0 0
+ li
+  button
+   height: 30px
+  input
+   height: 24px
+   margin: 0 0 0 -3px
+
 
 .grids
  display: inline-block

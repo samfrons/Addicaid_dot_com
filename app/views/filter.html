@@ -1,7 +1,12 @@
 <ng-include src="views.header" xmlns="http://www.w3.org/1999/html"></ng-include>
 <section class="filterpage">
     <article class="grids grid-12 filter">
-        <button ng-tap="resetFilters()">RESET</button>
+
+        <ul class="options filter">
+        <li class="grid-3"><button class="grid-10"ng-tap="resetFilters()">RESET</button></li>
+        <li class="grid-8"><input class="grid-10" type="text" placeholder="search"></li>
+        </ul>
+
         <div class="filter filter_fellowship">
             <h3>fellowship type</h3>
             <ul class="grids grid-12">
@@ -80,6 +85,8 @@
         <!--</a>-->
 
     </article>
+
+    <button type="submit">submit</button>
 </section>
 
 <ng-include src="views.footer"></ng-include>

@@ -7,6 +7,15 @@ function RatingsCtrl($scope, $http, $navigate, $dialog) {
         {
             text: "snacks"
         },
+
+        {
+            text: "fellowship"
+        },
+
+        {
+            text: "cool venue"
+        },
+
         {
             text: "young people"
         },

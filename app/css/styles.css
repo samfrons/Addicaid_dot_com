@@ -18,6 +18,11 @@ body {
   text-transform: uppercase;
   background-size: auto; }
 
+button {
+  background-color: #fc3e42;
+  color: white !important;
+  text-transform: uppercase !important; }
+
 form h1 {
   font-size: 1.3em; }
 
@@ -50,10 +55,10 @@ section {
   margin: 55px 0 0 0; }
 
 header.grid-12 {
-  background-image: url(../images/headerbackground.png);
+  background-color: #c5ce23;
   background-repeat: repeat-x;
   background-size: auto 55px;
-  box-shadow: 0px 1px 4px black;
+  box-shadow: 0px 1px 4px #899205;
   position: fixed;
   z-index: 1000;
   top: 0px; }
@@ -122,8 +127,13 @@ section.signup {
     font-weight: normal;
     color: white; }
 
+button.signup_skip {
+  position: fixed;
+  bottom: 45px;
+  left: 73%; }
+
 section.filterpage {
-  background-image: url(../images/blurlight.png);
+  /*background-image: url(../images/blurlight.png) */
   background-repeat: repeat; }
 
 section.meetinglist {
@@ -138,7 +148,7 @@ button.submit_button {
   border-radius: 3px;
   -moz-box-shadow: 0px 5px 0px #db1f05, 0px 9px 25px rgba(0, 0, 0, 0.7);
   box-shadow: 0px 5px 0px #db1f05, 0px 9px 25px rgba(0, 0, 0, 0.7);
-  background-color: #db5705;
+  background-color: #fc3e42;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f92f05), color-stop(1, #db5705)); }
   button.submit_button span.submit_arrow {
     display: inline-block;
@@ -155,12 +165,15 @@ button.submit_button {
     text-shadow: 0px 1px 1px black; }
 
 .filter {
-  color: #2a2a2a;
-  padding: 0 0 10px 0; }
+  color: #2a2a2a; }
   .filter h3 {
-    text-indent: 30px; }
+    text-indent: 10px; }
   .filter ul {
-    text-align: center; }
+    padding: 0 0 0 10px; }
+    .filter ul li {
+      background-color: #f2f2ec;
+      -webkit-box-shadow: inset 0px 0px 1px 1px #deded8;
+      border-radius: 5px; }
   .filter button.filter_submit {
     border-radius: 5px;
     color: white;
@@ -208,7 +221,10 @@ aside.right2_side {
       top: 0 !important; }
 
 article.filter h3 {
-  margin: 10px 0 0 0; }
+  margin: 10px 0 0 0;
+  padding: 5px;
+  background-color: #71cbc9;
+  color: white; }
 article.filter button:active {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #a5a34b), color-stop(1, #e1f355));
   -webkit-box-shadow: 0px 3px 0px #7d7b2d, 0px 3px 6px rgba(0, 0, 0, 0.7);
@@ -220,7 +236,8 @@ article.filter div.filter_where {
   font-weight: bold;
   vertical-align: middle; }
   article.filter div.filter_where ul.filter_where {
-    vertical-align: middle; }
+    vertical-align: middle;
+    margin: 10px 0 0 5px; }
     article.filter div.filter_where ul.filter_where span.or {
       vertical-align: top; }
 article.filter input.miles {
@@ -247,11 +264,17 @@ article.filter button.here {
 input.zipcode {
   width: 60px; }
 
+section.ratepage {
+  font-size: 0.7em; }
+  section.ratepage h1, section.ratepage h2 {
+    text-align: center; }
+
 article.meeting_entry {
   width: 100%;
   margin: 2px 0 0 0%;
-  box-shadow: 0px 1px 5px rgba(20, 50, 60, 0.8);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(255, 255, 255, 0.9)), color-stop(1, rgba(255, 255, 255, 0))) !important; }
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(255, 255, 255, 0.9)), color-stop(1, rgba(255, 255, 255, 0))) !important;
+  background-color: #f2f2ed;
+  text-align: left; }
 
 ul {
   padding: 0;
@@ -300,30 +323,35 @@ aside.right_side {
   height: 100%;
   min-height: 60px;
   width: 28.91%;
-  margin: 0 0 0 5%; }
+  margin: 0 0 0 5%;
+  /* background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgba(20, 136, 203, 1)), color-stop(1, rgba(20, 136, 203, .5)) ) */ }
   aside.right_side.map-popup {
     width: 100px; }
   aside.right_side.AA {
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(39, 102, 146, 0.9)), color-stop(1, rgba(48, 147, 199, 0.9))); }
+    background-color: rgba(10, 72, 119, 0.5);
+    /*background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgba(255,0,18,1)), color-stop(1, rgba(255,0,50,.9)) ) */ }
   aside.right_side.NA {
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ff0012), color-stop(1, rgba(255, 0, 50, 0.9))); }
+    background-color: rgba(202, 22, 26, 0.5); }
 
 div.filter_fellowship {
   height: 70px; }
   div.filter_fellowship ul {
     height: 70px; }
     div.filter_fellowship ul li {
-      width: 45%;
-      margin: 0 10px 0 0;
-      text-shadow: 0px 1px 1px black;
+      background-color: #f2f2ec;
+      -webkit-box-shadow: inset 0px 0px 1px 1px #deded8;
+      border-radius: 5px;
+      width: 25%;
+      margin: 5px;
       font-weight: bold;
       text-transform: uppercase;
       height: 35px;
-      text-indent: 0px;
+      text-align: center;
       padding: 8px 0 0 0; }
 
 .FilterToggle.ui-show {
-  box-shadow: inset 0px 1px 20px gray; }
+  background-color: #deded8;
+  -webkit-box-shadow: inset 0px 0px 1px 1px #cacace; }
 
 .timeandday {
   margin: -5px 0 0 25%;
@@ -349,6 +377,9 @@ div.filter_fellowship {
     font-weight: bold;
     color: white; }
 
+ul.filter_day {
+  margin: 10px 0 0 0; }
+
 ul.filter_day li {
   background-image: url(../images/calendar_sprite.png);
   width: 35px;
@@ -361,27 +392,26 @@ ul.filter_day li {
   ul.filter_day li.ui-show {
     background-position: 0px 29px; }
 
-div.filter_time {
-  height: 75px; }
-  div.filter_time h3 {
-    margin: 10px 0 0 0; }
+div.filter_time h3 {
+  margin: 10px 0 0 0; }
 
-ul.filter_time li {
-  width: 60px;
-  height: 60px;
-  margin: 0 10px 0 0;
-  padding: 5px 0 5px 0;
-  font-size: 0.7em;
-  background-size: 70px auto;
-  background-repeat: no-repeat;
-  font-weight: bold;
-  font-family: "Gotham", sans-serif; }
-  ul.filter_time li.ui-show {
-    height: 45px; }
+ul.filter_time {
+  margin: 10px 0 0 0; }
+  ul.filter_time li {
+    width: 60px;
+    margin: 0 10px 0 0;
+    padding: 5px 0 5px 0;
+    font-size: 0.7em;
+    text-align: center;
+    background-size: 70px auto;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    font-family: "Gotham", sans-serif; }
+    ul.filter_time li.ui-show {
+      height: 45px; }
 
 ul.ratings {
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
+  background-color: #e8e8e2;
   color: rgba(0, 0, 0, 0);
   vertical-align: top;
   padding: 5px; }
@@ -461,21 +491,19 @@ ul.ratings {
     text-align: right;
     color: #2a2a2a; }
 
-ul.filter_ratings {
-  margin: 0 0 50px 0; }
-  ul.filter_ratings li {
-    height: 40px;
-    width: 50px;
-    margin: 0 10px 5px 0;
-    padding: 2px; }
-    ul.filter_ratings li img {
-      height: 15px; }
-    ul.filter_ratings li p {
-      font-weight: bold;
-      font-size: 7px;
-      width: 40px;
-      text-align: center;
-      padding: 0 0 0 10px; }
+ul.filter_ratings li {
+  height: 40px;
+  width: 50px;
+  margin: 0 10px 5px 0;
+  padding: 2px; }
+  ul.filter_ratings li img {
+    height: 15px; }
+  ul.filter_ratings li p {
+    font-weight: bold;
+    font-size: 7px;
+    width: 40px;
+    text-align: center;
+    padding: 0 0 0 10px; }
 
 .leaflet-bottom {
   display: none; }
@@ -494,8 +522,7 @@ nav .bottom {
   nav .bottom li:first-child {
     border-left: none; }
   nav .bottom li {
-    background-color: black;
-    background-image: -webkit-linear-gradient(top, rgba(237, 202, 221, 0.1) 0%, rgba(237, 232, 231, 0.4) 100%);
+    background-color: #3e3e42;
     text-align: center;
     padding: 3px;
     color: white;
@@ -551,16 +578,21 @@ button.vote {
   position: relative;
   left: 200px; }
 
-button.subtle_style {
-  vertical-align: middle;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #2a2a2a !important;
-  text-shadow: 0px 1px 1px black;
-  margin: 4px 0 0 0;
-  background-color: rgba(200, 192, 192, 0.8) !important; }
-  button.subtle_style a {
-    color: #2a2a2a !important; }
+ul.options {
+  margin: 55px 0 0 0; }
+  ul.options li button {
+    height: 30px; }
+  ul.options li input {
+    height: 24px;
+    margin: 0 0 0 -3px; }
+
+ul.options.filter {
+  margin: 0 0 0 0; }
+  ul.options.filter li button {
+    height: 30px; }
+  ul.options.filter li input {
+    height: 24px;
+    margin: 0 0 0 -3px; }
 
 .grids {
   display: inline-block;

@@ -24,12 +24,12 @@ function SignupCtrl($scope, $http, $navigate, meetingSvc) {
 }
 
 
-function ProfileCtrl($scope, $http, $navigate) {
-    $scope.pageTitle = "Profile";
+function RateCtrl($scope, $http, $navigate) {
+    $scope.pageTitle = "Rate";
 }
 
-function DailyDoseCtrl($scope, $http, $navigate) {
-    $scope.pageTitle = "Daily Dose";
+function RateRewardCtrl($scope, $http, $navigate) {
+    $scope.pageTitle = "Rate Reward";
 }
 
 

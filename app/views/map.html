@@ -20,11 +20,15 @@
      <!--ui-event="{'map-click': 'addMarker($event)', 'map-zoom_changed': 'setZoomMessage(myMap.getZoom())' }"-->
      <!--ui-options="mapOptions">-->
 <!--</div>-->
-
-
+<ul class="options">
+<li  class="grid-3"ng-tap="$navigate.go('/filter', 'slide')"><button class="grid-12">filter</button></li>
+<li class="grid-6"><input class="grid-12" type="text" placeholder="search"></input></li>
+<li class="grid-3" ng-tap="$navigate.go('/meetinglist', 'slide')"><button class="grid-12">list</button></li>
+    </ul>
 <div leaflet-map="mapid"
      leaflet-options="mapOptions"
      class="mapclass">
+     
 </div>
 
 
@@ -61,5 +65,6 @@
     .mapclass {
         /*width: ;*/
         height: 90%;
+        top: 0px;
     }
 </style>

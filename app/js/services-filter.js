@@ -54,6 +54,14 @@ var defaultFiltersObject = {
             cssClass: "NA",
             filters: [ { "fellowship.name" : "NarcoticsAnonymous" } ],
             selected: false
+        },
+
+        {
+            text: "SMART Recovery",
+            imgSrc: "images/NAcircle.png",
+            cssClass: "NA",
+            filters: [ { "fellowship.name" : "SMARTRecovery" } ],
+            selected: false
         }
     ],
     days: [
@@ -126,7 +134,7 @@ var defaultFiltersObject = {
         },
         {
             text1: "night",
-            text2: "8PM AND ON",
+            text2: "8PM...?",
             imgFilename: "clock",
             filters: [
                 { name: "between", key: "timeAsNumber", start: 20, end: 24 },
@@ -142,21 +150,21 @@ var defaultFiltersObject = {
             selected: false
         },
         {
-            text: "meditation",
-            filters: [ { "rating.isHasMeditation" : "true" } ],
+            text: "snacks",
+            filters: [ { "rating.isHasSnacks" : "true" } ],
             selected: false
         },
         {
-            text: "womens",
-            filters: [ { "rating.forWomen" : "true" } ],
+            text: "fellowship",
+            filters: [ { "rating.forFellowship" : "true" } ],
             selected: false
         },
         {
-            text: "mens",
-            filters: [ { "rating.isForMen" : "true" } ],
+            text: "cool venue?",
+            filters: [ { "rating.isCoolVenue" : "true" } ],
             selected: false
-        },
-        {
+        }
+       /* {
             text: "lgbt",
             filters: [ { "rating.isLgbt" : "true" } ],
             selected: false
@@ -199,6 +207,6 @@ var defaultFiltersObject = {
             text: "coffee",
             filters: [ { "rating.hasCoffee" : "true" } ],
             selected: false
-        }
+        } */
     ]
 };
