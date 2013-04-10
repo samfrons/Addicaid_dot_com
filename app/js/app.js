@@ -9,6 +9,7 @@ angular.module('addicaidApp',
             ,'mobile-navigate'
             ,'ui'
             // ,'ui.bootstrap'
+            ,'analytics'
         ])
 
     .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
