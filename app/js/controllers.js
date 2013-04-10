@@ -12,14 +12,14 @@
 
 
 //MainCtrl.$inject = [$scope, $navigate];
-function AppCtrl($scope, $navigate) {
+function AppCtrl($scope, $navigate, analytics) {
     $scope.$navigate = $navigate;
     $navigate.go('/','none');
 }
 
 
 
-function SignupCtrl($scope, $http, $navigate, meetingSvc) {
+function SignupCtrl($scope, $http, $navigate, meetingSvc, analytics) {
     $scope.pageTitle = "Signup";
 }
 
