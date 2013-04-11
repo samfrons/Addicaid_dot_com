@@ -242,9 +242,10 @@ button.signup_skip
  bottom: 45px
  left: 73%
 
-section.filterpage
- /*background-image: url(../images/blurlight.png)*/
+section.filterpage, section.ratepage
+ background-image: url(../images/blurlight.png)
  background-repeat: repeat
+ height: 100%
 
 
 section.meetinglist
@@ -343,7 +344,7 @@ article.filter
    @include gradientbutton_lime
 
  div.filter
-  background-color: rgba(255,255,255,0.9)
+  background-color: rgba(255,255,255,0.1)
  div.filter_where
   font-weight: bold
   vertical-align: middle
@@ -382,9 +383,27 @@ input.zipcode
 
 section.ratepage
  font-size: .7em
+
  h1, h2
   text-align: center
- 
+
+.rate_submit
+ width: 95% !important
+ margin: 10px 0 10px 0
+
+.or_search
+ text-align: center
+
+input 
+ height: 20px
+ font-size: 1.3em !important
+ width: 60%
+ margin: 0 0 0 5% !important
+
+button
+
+
+
 article.meeting_entry
  
 
@@ -633,18 +652,21 @@ ul.ratings
   color: $main_color
 
 ul.filter_ratings
- li 
-  height: 40px
-  width: 50px
+ li
+  background-color: #f2f2ec
+  -webkit-box-shadow: inset 0px 0px 1px 1px #deded8
+  border-radius: 5px
+  height: 57px
+  width: 20%
   margin: 0 10px 5px 0
   padding: 2px
+  &:hover
+   background-color: red
   img
-   height: 15px
+   height: 40px
   p
    font-weight: bold
-   font-size: 7px
-   width: 40px
-   text-align: center
+   font-size: 8px
    padding: 0 0 0 10px
    
 .leaflet-bottom

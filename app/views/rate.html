@@ -1,7 +1,7 @@
 <ng-include src="views.header" xmlns="http://www.w3.org/1999/html"></ng-include>
 <section class="ratepage">
     <h1>Help us make Addicaid better!</h1>
-    <h2>We think you may have attended some of these meetings. Let us know if they match any of these catogories and get 100 mystery points on each meeting for great stuff. 
+    <h2>We think you may have attended some of these meetings. Let us know if they match any of these catogories and get 100 mystery points on each meeting for great stuff. </h2>
 
 <article class="grids grid-12 meeting_entry ng-scope">
     <aside class="grids grid-1 saveaside">
@@ -34,7 +34,7 @@
                     <p class="ng-binding">young people</p>
                 </li>
                 <li >
-                    <img height="25px" ng-src="images/snacks.png" src="images/snacks.png">
+                    <img height="50px" ng-src="images/snacks.png" src="images/snacks.png">
                     <p class="ng-binding">snacks</p>
                 </li>
                 <li >
@@ -42,14 +42,16 @@
                     <p class="ng-binding">fellowship</p>
                 </li>
                 <li >
-                    <img height="25px" ng-src="images/cool_venue?.png" src="images/cool_venue?.png">
+                    <img height="25px" ng-src="images/cool_venue.png" src="images/cool_venue?.png">
                     <p class="ng-binding">cool venue?</p>
                 </li>
                 </ul>
 </article>
 
 
-<button type="submit" ng-tap="$navigate.go('/ratereward', 'slide')">submit</button>
+<button type="submit" class="submit_button rate_submit" ng-tap="$navigate.go('/ratereward', 'slide')">rate em'!
+<span class="submit_arrow"></span>
+</button>
 
 <!-- those meeting details I couldn't get working . let's also maybe indicate if they clicked it, favorited it, calandered it etc... 
         <article class="grids grid-12 meeting_entry">
@@ -86,8 +88,8 @@
                     <img height="25px" ng-src="{{getImgSrc(rating)}}" />
                     <p>{{rating.text}}</p>
                 </li>-->
-
-<input type="text" placeholder="or search for a different one"></input>
+<h4 class="or_search">or</h4>
+<input type="text" class="rate_search" placeholder="search for a different one"></input>
 
 
             
