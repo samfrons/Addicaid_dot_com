@@ -125,7 +125,9 @@ section.signup {
     width: 90%; }
   section.signup h3 {
     font-weight: normal;
-    color: white; }
+    font-size: 10px;
+    color: white;
+    text-transform: lowercase; }
 
 button.signup_skip {
   position: fixed;

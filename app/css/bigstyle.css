@@ -1,0 +1,119 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    min-height: 100%;
+    background: url(bg.jpg) center center;
+    background-size: cover;
+    color: #000;
+    text-shadow: 0 1px 1px rgba(255,255,255,.4);
+}
+
+html,body {
+    -webkit-font-smoothing: antialiased;
+}
+
+.bigdealcontainer {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -250px 0 0 -250px;
+    font-family: 'Rancho',cursive;
+    font-size: 3em;
+    line-height: .8;
+}
+
+.meta {
+    margin-top: 24px;
+    font-size: .33333em;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    line-height: 1.5;
+    -webkit-animation: fadeInDown 1s 4s ease;
+    -webkit-animation-fill-mode: both;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+a {
+    color: #fe5741;
+    text-decoration: none;
+}
+
+.words span {
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-iteration-count: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-duration: .75s;
+    position: relative;
+    display: inline-block;
+}
+
+.word1 {
+    -webkit-animation-delay: .2s;
+    -webkit-animation-name: fadeInDown;
+}
+
+.word2 {
+    -webkit-animation-delay: .4s;
+    -webkit-animation-name: fadeInDown;
+}
+
+.word3 {
+    -webkit-animation-delay: .6s;
+    -webkit-animation-name: fadeInDown;
+}
+
+.word4 {
+    -webkit-animation-delay: .8s;
+    -webkit-animation-name: fadeInDown;
+}
+
+.word5 {
+    -webkit-animation-delay: 1s;
+    -webkit-animation-name: fadeInDown;
+}
+
+.word6 {
+    -webkit-animation-delay: 1.2s;
+    -webkit-animation-name: fadeInDown;
+}
+
+.word7 {
+    -webkit-animation-delay: 1.4s;
+    -webkit-animation-name: fadeInDown;
+}
+
+.word8 {
+    -webkit-animation-delay: 1.8s;
+    -webkit-animation-name: bounceInDown;
+}
+
+.word9,.word10,.word11,.word12 {
+    font-size: 3em;
+    line-height: 1;
+    -webkit-animation-delay: 2.4s;
+    -webkit-animation-name: bounceInLeft;
+}
+
+.word13 {
+    font-size: 4em;
+    font-family: 'Geostar',serif;
+    text-transform: uppercase;
+    -webkit-animation-delay: 2.8s;
+    -webkit-animation-name: bounceInLeft;
+}
+
+.word14 {
+    font-size: 2.5em;
+    font-family: 'Geostar',serif;
+    text-transform: uppercase;
+    -webkit-animation-delay: 3.2s;
+    -webkit-animation-name: bounceInLeft;
+} 
