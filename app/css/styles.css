@@ -101,7 +101,7 @@ button.back {
 
 button.settings {
   background-image: url(../images/profile.png);
-  margin: 10px 0 0 5px;
+  margin: 20px 0 0 5px;
   background-color: transparent;
   border-style: none;
   min-height: 20px;
@@ -146,6 +146,7 @@ section.meetinglist {
 button.submit_button {
   color: white !important;
   width: 58%;
+  height: 20px;
   border-radius: 5px;
   background: #e3e3e3;
   border-radius: 3px;
@@ -158,6 +159,19 @@ button.submit_button {
     height: 20px;
     width: 20px;
     background-image: url(../images/arrow_right.png); }
+
+button.facebook {
+  background: #216cc0;
+  border-radius: 3px;
+  -moz-box-shadow: 0px 5px 0px #113e73, 0px 9px 25px #0f3868;
+  box-shadow: 0px 5px 0px #113e73, 0px 9px 25px #0f3868;
+  background-color: #216cc0;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2575cd), color-stop(1, #135096)); }
+  button.facebook span.facebooklogo {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-image: url(../images/facebook.png); }
 
 .facebook {
   margin: 0 0 0 0px;
@@ -268,13 +282,17 @@ input.zipcode {
   width: 60px; }
 
 section.ratepage {
-  font-size: 0.7em; }
+  font-size: 0.8em; }
   section.ratepage h1, section.ratepage h2 {
     text-align: center; }
 
 .rate_submit {
   width: 95% !important;
   margin: 10px 0 10px 0; }
+
+button.search_submit {
+  height: 20px;
+  padding: 1px 5px 1px 5px; }
 
 .or_search {
   text-align: center; }
@@ -366,11 +384,11 @@ div.filter_fellowship {
       padding: 8px 0 0 0; }
 
 .FilterToggle.ui-show {
-  background-color: #deded8;
+  background-color: #0f86ab;
   -webkit-box-shadow: inset 0px 0px 1px 1px #cacace; }
 
 .timeandday {
-  margin: -5px 0 0 25%;
+  margin: 5px 0 0 25%;
   color: #2a2a2a;
   height: 77px;
   background-repeat: no-repeat;
@@ -381,14 +399,14 @@ div.filter_fellowship {
     margin: 0 20% 0 20%; }
   .timeandday p {
     font-weight: bold;
-    line-height: 17px;
+    line-height: 27px;
     text-align: center;
     width: 60px;
     position: relative;
-    top: 5px;
+    top: 0px;
     font-size: 1.2em; }
   .timeandday p.day {
-    padding: 2px 0 0 0; }
+    padding: 8px 0 0 0; }
   .timeandday span.distance {
     font-weight: bold;
     color: white; }
@@ -516,7 +534,7 @@ ul.filter_ratings li {
   margin: 0 10px 5px 0;
   padding: 2px; }
   ul.filter_ratings li:hover {
-    background-color: red; }
+    background-color: #0f86ab; }
   ul.filter_ratings li img {
     height: 40px; }
   ul.filter_ratings li p {
@@ -607,11 +625,15 @@ ul.options {
 
 ul.options.filter {
   margin: 0 0 0 0; }
-  ul.options.filter li button {
-    height: 30px; }
-  ul.options.filter li input {
-    height: 24px;
-    margin: 0 0 0 -3px; }
+  ul.options.filter li {
+    background: transparent;
+      background--webkit-box-shadow: none !important;
+    box-shadow: none !important; }
+    ul.options.filter li button {
+      height: 30px; }
+    ul.options.filter li input {
+      height: 24px;
+      margin: 0 0 0 -3px; }
 
 .grids {
   display: inline-block;

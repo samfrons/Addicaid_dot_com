@@ -57,6 +57,14 @@ $buttonbackground: rgba(252,62,66,1)
  background-color: $buttonbackground
  background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, $topcolor), color-stop(1, $bottomcolor) )
 
+@mixin gradientfacebook
+ background: #216cc0
+ border-radius: 3px
+ -moz-box-shadow: 0px 5px 0px #113e73, 0px 9px 25px #0f3868
+ box-shadow: 0px 5px 0px #113e73, 0px 9px 25px #0f3868
+ background-color: #216cc0
+ background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, #2575cd), color-stop(1, #135096) )
+
 @mixin gradientaa
  $bottomcolor: rgba(9,157,211,1)
  $topcolor: rgba(9,107,131,1)
@@ -215,7 +223,7 @@ button.back
 
 button.settings
  background-image: url(../images/profile.png)
- margin: 10px 0 0 5px
+ margin: 20px 0 0 5px
  @include backgrounds
  background-size: auto
  width: 8%
@@ -257,6 +265,7 @@ section.meetinglist
 button.submit_button 
  color: white !important
  width: 58%
+ height: 20px
  border-radius: 5px
  @include gradientbutton
  span.submit_arrow
@@ -264,6 +273,14 @@ button.submit_button
   height: 20px
   width: 20px
   background-image: url(../images/arrow_right.png)
+
+button.facebook
+ @include gradientfacebook
+ span.facebooklogo
+  display: inline-block
+  height: 20px
+  width: 20px
+  background-image: url(../images/facebook.png)
 
 .facebook
  margin: 0 0 0 0px
@@ -384,7 +401,7 @@ input.zipcode
 
 
 section.ratepage
- font-size: .7em
+ font-size: .8em
 
  h1, h2
   text-align: center
@@ -392,6 +409,10 @@ section.ratepage
 .rate_submit
  width: 95% !important
  margin: 10px 0 10px 0
+
+button.search_submit
+ height: 20px
+ padding: 1px 5px 1px 5px
 
 .or_search
  text-align: center
@@ -500,7 +521,7 @@ div.filter_fellowship
    &.NA
 
 .FilterToggle.ui-show
- background-color: rgba(222,222,216,1)
+ background-color: #0f86ab
  -webkit-box-shadow: inset 0px 0px 1px 1px rgba(202,202,206,1)
  
 
@@ -524,7 +545,7 @@ div.filter_fellowship
   top: 0px
   font-size: 1.2em
  p.day
-  padding: 2px 0 0 0
+  padding: 8px 0 0 0
  span.distance
   font-weight: bold
   color: white
@@ -663,7 +684,7 @@ ul.filter_ratings
   margin: 0 10px 5px 0
   padding: 2px
   &:hover
-   background-color: red
+   background-color: #0f86ab
   img
    height: 40px
   p
@@ -762,6 +783,9 @@ ul.options
 ul.options.filter
  margin: 0 0 0 0
  li
+  background: transparent
+   -webkit-box-shadow: none !important
+  box-shadow: none !important
   button
    height: 30px
   input

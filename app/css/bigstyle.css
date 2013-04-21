@@ -26,6 +26,16 @@ html,body {
     font-family: 'Rancho',cursive;
     font-size: 3em;
     line-height: .8;
+    display: block;
+    -webkit-animation: fadeAway 6s 4s ease;
+    -webkit-animation-fill-mode: both;
+}
+
+
+.signup_content {
+-webkit-animation: fadeInDown 6s 4s ease;
+-webkit-animation-fill-mode: both;
+
 }
 
 .meta {
