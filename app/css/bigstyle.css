@@ -9,33 +9,32 @@ html {
     background: url(bg.jpg) center center;
     background-size: cover;
     color: #000;
-    text-shadow: 0 1px 1px rgba(255,255,255,.4);
 }
 
 html,body {
     -webkit-font-smoothing: antialiased;
+
 }
 
 .bigdealcontainer {
-    width: 500px;
+    width: 100%;
     height: 500px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -250px 0 0 -250px;
-    font-family: 'Rancho',cursive;
-    font-size: 3em;
+    position: absolute; 
+    font-family: 'PT Sans',sans-serif;
+    font-size: 2em;
     line-height: .8;
+    margin: 15px 0 0 0;
     display: block;
-    -webkit-animation: fadeAway 6s 4s ease;
-    -webkit-animation-fill-mode: both;
+    overflow: visible;
+  /*  -webkit-animation: fadeAway 6s 4s ease;
+    -webkit-animation-fill-mode: both;*/
 }
 
 
 .signup_content {
 -webkit-animation: fadeInDown 6s 4s ease;
 -webkit-animation-fill-mode: both;
-
+display: none;
 }
 
 .meta {
@@ -46,7 +45,6 @@ html,body {
     line-height: 1.5;
     -webkit-animation: fadeInDown 1s 4s ease;
     -webkit-animation-fill-mode: both;
-    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
 
@@ -106,23 +104,23 @@ a {
 }
 
 .word9,.word10,.word11,.word12 {
-    font-size: 3em;
+    font-size: 2.5em;
     line-height: 1;
     -webkit-animation-delay: 2.4s;
     -webkit-animation-name: bounceInLeft;
 }
 
 .word13 {
-    font-size: 4em;
-    font-family: 'Geostar',serif;
+    font-size: 3.5em;
+    font-family: 'PT Sans',sans-serif;
     text-transform: uppercase;
     -webkit-animation-delay: 2.8s;
     -webkit-animation-name: bounceInLeft;
 }
 
 .word14 {
-    font-size: 2.5em;
-    font-family: 'Geostar',serif;
+    font-size: 2em;
+    font-family: 'PT Sans',sans-serif;
     text-transform: uppercase;
     -webkit-animation-delay: 3.2s;
     -webkit-animation-name: bounceInLeft;

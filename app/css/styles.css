@@ -21,7 +21,8 @@ body {
 button {
   background-color: #fc3e42;
   color: white !important;
-  text-transform: uppercase !important; }
+  text-transform: uppercase !important;
+  font-family: Damion, cursive; }
 
 form h1 {
   font-size: 1.3em; }
@@ -29,13 +30,15 @@ form h1 {
 header h1 {
   position: relative;
   text-transform: capitalize;
-  top: 15px;
+  top: 0px;
   margin: 0;
   padding: 0;
+  font-family: Damion;
   text-align: center;
   color: white;
   min-height: 55px;
-  text-shadow: 0px 1px 1px black; }
+  text-shadow: 0px 1px 1px black;
+  font-size: 3em; }
 
 p {
   font-family: helvetica; }
@@ -66,6 +69,12 @@ header.grid-12 {
 .mapclass {
   height: 90%;
   top: 50px; }
+
+li.map_top {
+  width: 25.23%; }
+
+button.map_top {
+  width: 100%; }
 
 header button {
   min-height: 33px !important; }
@@ -115,7 +124,6 @@ section.signup {
   margin: 0 auto;
   margin-top: 50px;
   text-align: center;
-  padding: 10px;
   height: 100%;
   color: white;
   text-transform: lowercase; }
@@ -135,7 +143,6 @@ button.signup_skip {
   left: 73%; }
 
 section.filterpage, section.ratepage {
-  background-image: url(../images/blurlight.png);
   background-repeat: repeat;
   height: 100%; }
 
@@ -185,14 +192,10 @@ button.facebook {
   color: #2a2a2a; }
   .filter h3 {
     text-indent: 10px; }
-  .filter ul {
-    padding: 0 0 0 10px; }
-    .filter ul li {
-      background-color: #f2f2ec;
-      -webkit-box-shadow: inset 0px 0px 1px 1px #deded8;
-      border-radius: 5px; }
+  .filter ul li {
+    background-color: #f2f2ec;
+    -webkit-box-shadow: inset 0px 0px 1px 1px #deded8; }
   .filter button.filter_submit {
-    border-radius: 5px;
     color: white;
     font-family: "Gotham", sans-serif;
     margin: 10px 0 50px 0%;
@@ -201,11 +204,16 @@ button.facebook {
 .submit_text {
   text-transform: uppercase;
   position: relative;
-  top: -5px;
-  left: -5px; }
-  .submit_text input {
+  font-family: Damion;
+  font-size: 3em;
+  display: block; }
+
+button.submit_simple {
+  width: 100%;
+  height: 50px; }
+  button.submit_simple input {
     width: 90px; }
-    .submit_text input:active {
+    button.submit_simple input:active {
       background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #3eb8e5), color-stop(1, #2ca0ca));
       box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px white; }
 
@@ -240,8 +248,7 @@ aside.right2_side {
 article.filter h3 {
   margin: 10px 0 0 0;
   padding: 5px;
-  background-color: #71cbc9;
-  color: white; }
+  color: gray; }
 article.filter button:active {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #a5a34b), color-stop(1, #e1f355));
   -webkit-box-shadow: 0px 3px 0px #7d7b2d, 0px 3px 6px rgba(0, 0, 0, 0.7);
@@ -279,7 +286,7 @@ article.filter button.here {
     background-repeat: no-repeat; }
 
 input.zipcode {
-  width: 60px; }
+  width: 70px; }
 
 section.ratepage {
   font-size: 0.8em; }
@@ -373,15 +380,19 @@ div.filter_fellowship {
     height: 70px; }
     div.filter_fellowship ul li {
       background-color: #f2f2ec;
-      -webkit-box-shadow: inset 0px 0px 1px 1px #deded8;
-      border-radius: 5px;
-      width: 25%;
-      margin: 5px;
+      -webkit-box-shadow: none;
+      width: 33%;
       font-weight: bold;
       text-transform: uppercase;
       height: 35px;
       text-align: center;
       padding: 8px 0 0 0; }
+    div.filter_fellowship ul li:first-child {
+      background-color: #2084ad; }
+    div.filter_fellowship ul li:nth-child(2) {
+      background-color: #ac2b3c; }
+    div.filter_fellowship ul li:nth-child(3) {
+      background-color: #f0742c; }
 
 .FilterToggle.ui-show {
   background-color: #0f86ab;
@@ -411,17 +422,12 @@ div.filter_fellowship {
     font-weight: bold;
     color: white; }
 
-ul.filter_day {
-  margin: 10px 0 0 0; }
-
 ul.filter_day li {
-  background-image: url(../images/calendar_sprite.png);
-  width: 35px;
-  height: 18px;
+  width: 14.2%;
+  height: 25px;
   background-size: 35px auto;
   text-align: center;
   padding: 11px 0 0 0;
-  margin: 0 0 0 7px;
   font-weight: bold; }
   ul.filter_day li.ui-show {
     background-position: 0px 29px; }
@@ -429,20 +435,17 @@ ul.filter_day li {
 div.filter_time h3 {
   margin: 10px 0 0 0; }
 
-ul.filter_time {
-  margin: 10px 0 0 0; }
-  ul.filter_time li {
-    width: 60px;
-    margin: 0 10px 0 0;
-    padding: 5px 0 5px 0;
-    font-size: 0.7em;
-    text-align: center;
-    background-size: 70px auto;
-    background-repeat: no-repeat;
-    font-weight: bold;
-    font-family: "Gotham", sans-serif; }
-    ul.filter_time li.ui-show {
-      height: 45px; }
+ul.filter_time li {
+  width: 25%;
+  padding: 5px 0 5px 0;
+  font-size: 0.7em;
+  text-align: center;
+  background-size: 70px auto;
+  background-repeat: no-repeat;
+  font-weight: bold;
+  font-family: "Gotham", sans-serif; }
+  ul.filter_time li.ui-show {
+    height: 45px; }
 
 ul.ratings {
   background-color: #e8e8e2;
@@ -456,7 +459,7 @@ ul.ratings {
     vertical-align: middle;
     height: 20px;
     padding: 5px 5px 0 5px;
-    width: 60px;
+    width: 25%;
     font-size: 8px; }
   ul.ratings li.snacks {
     background-position: -512px 0;
@@ -528,10 +531,8 @@ ul.ratings {
 ul.filter_ratings li {
   background-color: #f2f2ec;
   -webkit-box-shadow: inset 0px 0px 1px 1px #deded8;
-  border-radius: 5px;
   height: 57px;
-  width: 20%;
-  margin: 0 10px 5px 0;
+  width: 24%;
   padding: 2px; }
   ul.filter_ratings li:hover {
     background-color: #0f86ab; }
@@ -539,8 +540,10 @@ ul.filter_ratings li {
     height: 40px; }
   ul.filter_ratings li p {
     font-weight: bold;
-    font-size: 8px;
-    padding: 0 0 0 10px; }
+    font-size: 8px; }
+
+button.reset {
+  background-color: gray; }
 
 .leaflet-bottom {
   display: none; }
@@ -620,8 +623,11 @@ ul.options {
   ul.options li button {
     height: 30px; }
   ul.options li input {
-    height: 24px;
-    margin: 0 0 0 -3px; }
+    height: 26px;
+    margin: 0 0 0 -3px;
+    position: relative;
+    left: -13px;
+    width: 101%; }
 
 ul.options.filter {
   margin: 0 0 0 0; }
@@ -681,5 +687,5 @@ ul.options.filter {
 
 .bottom .grid-3 {
   font-size: 0.7em;
-  width: 22.2%;
+  width: 22.6%;
   margin: 0; }
