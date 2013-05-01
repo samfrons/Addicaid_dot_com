@@ -26,7 +26,7 @@ var defaultFiltersObject = {
 
     {
       text: 'SMART Recovery',
-      imgSrc: 'images/NAcircle.png',
+      imgSrc: 'images/NAcircle.png', // TODO: custom smart recovery styles
       cssClass: 'NA',
       filters: [{ 'fellowship.name' : 'SMARTRecovery' }],
       selected: false
