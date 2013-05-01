@@ -189,12 +189,15 @@ angular.module('addicaidApp')
     };
 
     meetingSvc.getMeetingByID = function(meetingID) {
+      if (angular.isString(meetingID)) {
+        meetingID = parseInt(meetingID, 10);
+      }
       for (var i = 0; i < meetingSvc.getMeetings().length; i++) {
-        if (meetingSvc.getMeetings()[i].id == meetingID) {
+        if (meetingSvc.getMeetings()[i].id === meetingID) {
           return meetingSvc.getMeetings()[i];
         }
       }
-      return null;
+      return null; // TODO: error case?
     };
 
     // isMeetingStartingSoon(meeting)
