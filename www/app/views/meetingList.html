@@ -1,0 +1,8 @@
+<section class="meetinglist">
+  <article ng-repeat="meeting in meetings | orderBy:'distanceValue'">
+    <!--<article ng-repeat="meeting in meetings | filter:{'fellowship.name':'AlcoholicsAnonymous'} | orderBy:'distanceValue'">-->
+    <ng-include src="getPartialUrl('meetingDetailSmall')" ng-controller="MeetingDetailCtrl"></ng-include>
+  </article>
+</section>
+
+

@@ -1,0 +1,1013 @@
+/* style.sass */
+/*=keyframes($wobble)
+ * /*0%  -webkit-transform: translateX(0%) 
+ * /*15%  -webkit-transform: translateX(-25%) rotate(-5deg) 
+ * /*30%  -webkit-transform: translateX(20%) rotate(3deg) 
+ * /*45%  -webkit-transform: translateX(-15%) rotate(-3deg) 
+ * /*60%  -webkit-transform: translateX(10%) rotate(2deg) 
+ * /*75%  -webkit-transform: translateX(-5%) rotate(-1deg) 
+ * /*100%  -webkit-transform: translateX(0%)  */
+/* line 106, mainstyle.sass */
+html {
+  font-size: 0.7em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 110, mainstyle.sass */
+body {
+  padding: 0;
+  font-family: "Gotham", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  background-size: auto;
+}
+
+/* line 118, mainstyle.sass */
+button {
+  background-color: #fc3e42;
+  color: white !important;
+  text-transform: uppercase !important;
+  font-family: Damion, cursive;
+}
+
+/* line 125, mainstyle.sass */
+form h1 {
+  font-size: 1.3em;
+}
+
+/* line 129, mainstyle.sass */
+header h1 {
+  position: relative;
+  text-transform: capitalize;
+  top: 0px;
+  margin: 0;
+  padding: 0;
+  font-family: Damion;
+  text-align: center;
+  color: white;
+  min-height: 55px;
+  text-shadow: 0px 1px 1px black;
+  font-size: 3em;
+}
+
+/* line 141, mainstyle.sass */
+p {
+  font-family: helvetica;
+}
+
+/* line 144, mainstyle.sass */
+a {
+  text-decoration: none;
+  color: black !important;
+}
+/* line 148, mainstyle.sass */
+a:hover {
+  color: inherit;
+}
+/* line 150, mainstyle.sass */
+a:visited {
+  color: inherit;
+}
+/* line 152, mainstyle.sass */
+a:active {
+  color: inherit;
+}
+
+/* line 155, mainstyle.sass */
+section {
+  overflow-x: hidden;
+  margin: 55px 0 0 0;
+}
+
+/* line 159, mainstyle.sass */
+header.grid-12 {
+  background-color: #c5ce23;
+  background-repeat: repeat-x;
+  background-size: auto 55px;
+  box-shadow: 0px 1px 4px #899205;
+  position: fixed;
+  z-index: 1000;
+  top: 0px;
+}
+
+/* line 168, mainstyle.sass */
+.mapclass {
+  height: 90%;
+  top: 50px;
+}
+
+/* line 172, mainstyle.sass */
+li.map_top {
+  width: 25.23%;
+}
+
+/* line 175, mainstyle.sass */
+button.map_top {
+  width: 100%;
+}
+
+/* line 179, mainstyle.sass */
+header button {
+  min-height: 33px !important;
+}
+
+/* line 182, mainstyle.sass */
+button {
+  margin: 20px;
+  border-style: none;
+}
+
+/* line 190, mainstyle.sass */
+a.profilebutton {
+  background-color: rgba(200, 200, 20, 0.4);
+  border-radius: 10px;
+  color: rgba(0, 0, 0, 0) !important;
+}
+
+/* line 195, mainstyle.sass */
+a.dailydosebutton {
+  color: rgba(0, 0, 0, 0) !important;
+  height: 10px;
+  width: 10px;
+  background-color: rgba(20, 20, 200, 0.4);
+  border-radius: 10px;
+  position: relative;
+  top: 20px;
+  left: -10px;
+}
+
+/* line 205, mainstyle.sass */
+button.back {
+  background-image: url(../images/back_button.png);
+  background-color: transparent;
+  border-style: none;
+  min-height: 20px;
+  background-repeat: no-repeat;
+  background-size: 80% auto;
+  background-size: auto;
+  margin: 10px 0 0 0;
+}
+
+/* line 211, mainstyle.sass */
+button.settings {
+  background-image: url(../images/profile.png);
+  margin: 20px 0 0 5px;
+  background-color: transparent;
+  border-style: none;
+  min-height: 20px;
+  background-repeat: no-repeat;
+  background-size: 80% auto;
+  background-size: auto;
+  width: 8%;
+}
+
+/* line 218, mainstyle.sass */
+section.signup {
+  background-image: url(../images/6.jpg);
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+  height: 100%;
+  color: white;
+  text-transform: lowercase;
+}
+/* line 226, mainstyle.sass */
+section.signup input {
+  margin: 2px 0 7px 0;
+  font-size: 1.3em;
+  width: 90%;
+}
+/* line 230, mainstyle.sass */
+section.signup h3 {
+  font-weight: normal;
+  font-size: 10px;
+  color: white;
+  text-transform: lowercase;
+}
+
+/* line 236, mainstyle.sass */
+button.signup_skip {
+  position: fixed;
+  bottom: 45px;
+  left: 73%;
+}
+
+/* line 241, mainstyle.sass */
+section.filterpage, section.ratepage {
+  background-repeat: repeat;
+  height: 100%;
+}
+
+/* line 246, mainstyle.sass */
+section.meetinglist {
+  background-image: url(../images/blurlight.png);
+  height: 100%;
+}
+
+/* line 250, mainstyle.sass */
+button.submit_button {
+  color: white !important;
+  width: 58%;
+  height: 20px;
+  border-radius: 5px;
+  background: #e3e3e3;
+  border-radius: 3px;
+  -moz-box-shadow: 0px 5px 0px #db1f05, 0px 9px 25px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 5px 0px #db1f05, 0px 9px 25px rgba(0, 0, 0, 0.7);
+  background-color: #fc3e42;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f92f05), color-stop(1, #db5705));
+}
+/* line 256, mainstyle.sass */
+button.submit_button span.submit_arrow {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-image: url(../images/arrow_right.png);
+}
+
+/* line 262, mainstyle.sass */
+button.facebook {
+  background: #216cc0;
+  border-radius: 3px;
+  -moz-box-shadow: 0px 5px 0px #113e73, 0px 9px 25px #0f3868;
+  box-shadow: 0px 5px 0px #113e73, 0px 9px 25px #0f3868;
+  background-color: #216cc0;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2575cd), color-stop(1, #135096));
+}
+/* line 264, mainstyle.sass */
+button.facebook span.facebooklogo {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-image: url(../images/facebook.png);
+}
+
+/* line 270, mainstyle.sass */
+.facebook {
+  margin: 0 0 0 0px;
+  background: transparent;
+}
+/* line 273, mainstyle.sass */
+.facebook h3 {
+  position: relative;
+  top: -40px;
+  text-shadow: 0px 1px 1px black;
+}
+
+/* line 278, mainstyle.sass */
+.filter {
+  color: #2a2a2a;
+}
+/* line 280, mainstyle.sass */
+.filter h3 {
+  text-indent: 10px;
+}
+/* line 283, mainstyle.sass */
+.filter ul li {
+  background-color: #f2f2ec;
+  -webkit-box-shadow: inset 0px 0px 1px 1px #deded8;
+}
+/* line 288, mainstyle.sass */
+.filter button.filter_submit {
+  color: white;
+  font-family: "Gotham", sans-serif;
+  margin: 10px 0 50px 0%;
+  width: 100%;
+}
+
+/* line 295, mainstyle.sass */
+.submit_text {
+  text-transform: uppercase;
+  position: relative;
+  font-family: Damion;
+  font-size: 3em;
+  display: block;
+}
+
+/* line 303, mainstyle.sass */
+button.submit_simple {
+  width: 100%;
+  height: 50px;
+}
+/* line 308, mainstyle.sass */
+button.submit_simple input {
+  width: 90px;
+}
+/* line 311, mainstyle.sass */
+button.submit_simple input:active {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #3eb8e5), color-stop(1, #2ca0ca));
+  box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px white;
+}
+
+/* line 315, mainstyle.sass */
+aside.saveaside {
+  width: 7.3%;
+}
+
+/* line 318, mainstyle.sass */
+button.save {
+  background: transparent;
+  width: auto;
+  padding: 0 0 0 4px;
+}
+/* line 322, mainstyle.sass */
+button.save img {
+  width: 20px;
+}
+
+/* line 325, mainstyle.sass */
+button.directions {
+  position: relative;
+  background: transparent;
+}
+/* line 329, mainstyle.sass */
+button.directions img {
+  height: 85px;
+}
+
+/* line 332, mainstyle.sass */
+aside.right2_side {
+  width: 8.5%;
+  height: 81px;
+  margin: 0 0 0 -5px;
+}
+/* line 336, mainstyle.sass */
+aside.right2_side button {
+  font-family: "Gotham", sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 0 -7px;
+}
+/* line 340, mainstyle.sass */
+aside.right2_side button:active {
+  position: relative !important;
+  top: 0 !important;
+}
+
+/* line 345, mainstyle.sass */
+article.filter h3 {
+  margin: 10px 0 0 0;
+  padding: 5px;
+  color: gray;
+}
+/* line 350, mainstyle.sass */
+article.filter button:active {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #a5a34b), color-stop(1, #e1f355));
+  -webkit-box-shadow: 0px 3px 0px #7d7b2d, 0px 3px 6px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 3px 0px #7d7b2d, 0px 3px 6px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 3px 0px #7d7b2d, 0px 3px 6px rgba(0, 0, 0, 0.7);
+}
+/* line 353, mainstyle.sass */
+article.filter div.filter {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* line 355, mainstyle.sass */
+article.filter div.filter_where {
+  font-weight: bold;
+  vertical-align: middle;
+}
+/* line 358, mainstyle.sass */
+article.filter div.filter_where ul.filter_where {
+  vertical-align: middle;
+  margin: 10px 0 0 5px;
+}
+/* line 361, mainstyle.sass */
+article.filter div.filter_where ul.filter_where span.or {
+  vertical-align: top;
+}
+/* line 363, mainstyle.sass */
+article.filter input.miles {
+  width: 30px;
+}
+/* line 366, mainstyle.sass */
+article.filter button.here {
+  background-color: white;
+  width: 30px;
+  height: 20px;
+  background-size: 60px auto;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0;
+}
+/* line 376, mainstyle.sass */
+article.filter button.here span.hereicon {
+  height: 20px;
+  padding: 0 2px 0 0;
+  background-position: 5px 1px;
+  display: inline-block;
+  width: 22px;
+  background-image: url(../images/here_icon.png);
+  background-size: 20px auto;
+  background-repeat: no-repeat;
+}
+
+/* line 386, mainstyle.sass */
+input.zipcode {
+  width: 70px;
+}
+
+/* line 391, mainstyle.sass */
+section.ratepage {
+  font-size: 0.8em;
+}
+/* line 394, mainstyle.sass */
+section.ratepage h1, section.ratepage h2 {
+  text-align: center;
+}
+
+/* line 397, mainstyle.sass */
+.rate_submit {
+  width: 95% !important;
+  margin: 10px 0 10px 0;
+}
+
+/* line 401, mainstyle.sass */
+button.search_submit {
+  height: 20px;
+  padding: 1px 5px 1px 5px;
+}
+
+/* line 405, mainstyle.sass */
+.or_search {
+  text-align: center;
+}
+
+/* line 408, mainstyle.sass */
+input {
+  height: 20px;
+  font-size: 1.3em !important;
+  width: 60%;
+  margin: 0 0 0 5% !important;
+}
+
+/* line 417, mainstyle.sass */
+article.meeting_entry {
+  width: 100%;
+  margin: 2px 0 0 0%;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(255, 255, 255, 0.9)), color-stop(1, rgba(255, 255, 255, 0))) !important;
+  background-color: #f2f2ed;
+  text-align: left;
+}
+
+/* line 424, mainstyle.sass */
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 428, mainstyle.sass */
+ul li {
+  list-style-type: none;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 435, mainstyle.sass */
+hgroup {
+  max-height: 85px;
+  line-height: 10px;
+  text-transform: capitalize;
+  font-family: "Gotham", sans-serif;
+  color: #2a2a2a;
+  z-index: -1;
+}
+/* line 442, mainstyle.sass */
+hgroup span.meetinglocation {
+  font-style: italic;
+  opacity: 0.8;
+  text-transform: capitalize;
+}
+
+/* line 448, mainstyle.sass */
+hgroup h3 {
+  margin: 10px 0 0 0;
+}
+/* line 450, mainstyle.sass */
+hgroup h4 {
+  line-height: 10px;
+  margin: 5px 0 5px 0;
+}
+/* line 453, mainstyle.sass */
+hgroup h5, hgroup h6 {
+  line-height: 0px;
+}
+
+/* line 456, mainstyle.sass */
+.fellowshipType {
+  height: 65px;
+  min-width: 28px;
+  margin: 0 0 0 0px;
+  background-size: 25px auto;
+  background-repeat: no-repeat;
+  background-position: 2px 40px;
+}
+/* line 463, mainstyle.sass */
+.fellowshipType.AA {
+  background-image: url(../images/AAcircle.png);
+}
+/* line 465, mainstyle.sass */
+.fellowshipType.NA {
+  background-image: url(../images/NAcircle.png);
+}
+
+/* line 468, mainstyle.sass */
+aside.right_side {
+  height: 100%;
+  min-height: 60px;
+  width: 28.91%;
+  margin: 0 0 0 5%;
+  /* background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgba(20, 136, 203, 1)), color-stop(1, rgba(20, 136, 203, .5)) ) */
+}
+/* line 469, mainstyle.sass */
+aside.right_side.map-popup {
+  width: 100px;
+}
+/* line 478, mainstyle.sass */
+aside.right_side.AA {
+  background-color: rgba(10, 72, 119, 0.5);
+  /*background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgba(255,0,18,1)), color-stop(1, rgba(255,0,50,.9)) ) */
+}
+/* line 482, mainstyle.sass */
+aside.right_side.NA {
+  background-color: rgba(202, 22, 26, 0.5);
+}
+
+/* line 487, mainstyle.sass */
+div.filter_fellowship {
+  height: 70px;
+}
+/* line 489, mainstyle.sass */
+div.filter_fellowship ul {
+  height: 70px;
+}
+/* line 491, mainstyle.sass */
+div.filter_fellowship ul li {
+  background-color: #f2f2ec;
+  -webkit-box-shadow: none;
+  width: 33%;
+  font-weight: bold;
+  text-transform: uppercase;
+  height: 35px;
+  text-align: center;
+  padding: 8px 0 0 0;
+}
+/* line 500, mainstyle.sass */
+div.filter_fellowship ul li:first-child {
+  background-color: #2084ad;
+}
+/* line 502, mainstyle.sass */
+div.filter_fellowship ul li:nth-child(2) {
+  background-color: #ac2b3c;
+}
+/* line 504, mainstyle.sass */
+div.filter_fellowship ul li:nth-child(3) {
+  background-color: #f0742c;
+}
+
+/* line 507, mainstyle.sass */
+.FilterToggle.ui-show {
+  background-color: #0f86ab;
+  -webkit-box-shadow: inset 0px 0px 1px 1px #cacace;
+}
+
+/* line 513, mainstyle.sass */
+.timeandday {
+  margin: 5px 0 0 25%;
+  color: #2a2a2a;
+  height: 77px;
+  background-repeat: no-repeat;
+  background-image: url(../images/calendar.png);
+  text-align: left;
+}
+/* line 514, mainstyle.sass */
+.timeandday.map-popup {
+  height: auto;
+  margin: 0 20% 0 20%;
+}
+/* line 523, mainstyle.sass */
+.timeandday p {
+  font-weight: bold;
+  line-height: 27px;
+  text-align: center;
+  width: 60px;
+  position: relative;
+  top: 0px;
+  font-size: 1.2em;
+}
+/* line 531, mainstyle.sass */
+.timeandday p.day {
+  padding: 8px 0 0 0;
+}
+/* line 533, mainstyle.sass */
+.timeandday span.distance {
+  font-weight: bold;
+  color: white;
+}
+
+/* line 539, mainstyle.sass */
+ul.filter_day li {
+  width: 14.2%;
+  height: 25px;
+  background-size: 35px auto;
+  text-align: center;
+  padding: 11px 0 0 0;
+  font-weight: bold;
+}
+/* line 546, mainstyle.sass */
+ul.filter_day li.ui-show {
+  background-position: 0px 29px;
+}
+
+/* line 551, mainstyle.sass */
+div.filter_time h3 {
+  margin: 10px 0 0 0;
+}
+
+/* line 554, mainstyle.sass */
+ul.filter_time li {
+  width: 25%;
+  padding: 5px 0 5px 0;
+  font-size: 0.7em;
+  text-align: center;
+  background-size: 70px auto;
+  background-repeat: no-repeat;
+  font-weight: bold;
+  font-family: "Gotham", sans-serif;
+}
+/* line 564, mainstyle.sass */
+ul.filter_time li.ui-show {
+  height: 45px;
+}
+
+/* line 568, mainstyle.sass */
+ul.ratings {
+  background-color: #e8e8e2;
+  color: rgba(0, 0, 0, 0);
+  vertical-align: top;
+  padding: 5px;
+}
+/* line 574, mainstyle.sass */
+ul.ratings li:first-child {
+  border-left: 0px solid white !important;
+}
+/* line 577, mainstyle.sass */
+ul.ratings li {
+  background: url(../images/rating_icon_sprite_black.png) no-repeat top left;
+  vertical-align: middle;
+  height: 20px;
+  padding: 5px 5px 0 5px;
+  width: 25%;
+  font-size: 8px;
+}
+/* line 585, mainstyle.sass */
+ul.ratings li.snacks {
+  background-position: -512px 0;
+  width: 46px;
+}
+/* line 588, mainstyle.sass */
+ul.ratings li.coffee {
+  background-position: 0px 0px;
+  width: 44px;
+}
+/* line 591, mainstyle.sass */
+ul.ratings li.fellowship {
+  background-position: -59px 0;
+  width: 47px;
+}
+/* line 594, mainstyle.sass */
+ul.ratings li.youngpeople {
+  background-position: -724px 0;
+  width: 47px;
+}
+/* line 597, mainstyle.sass */
+ul.ratings li.large_group {
+  background-position: -59px 0;
+  width: 47px;
+}
+/* line 600, mainstyle.sass */
+ul.ratings li.lgbt {
+  background-position: -121px 0;
+  width: 45px;
+}
+/* line 603, mainstyle.sass */
+ul.ratings li.meditation {
+  background-position: -181px 0;
+  width: 63px;
+}
+/* line 606, mainstyle.sass */
+ul.ratings li.mens {
+  background-position: -259px 0;
+  width: 39px;
+}
+/* line 609, mainstyle.sass */
+ul.ratings li.newcomer {
+  background-position: -313px 0;
+  width: 61px;
+}
+/* line 612, mainstyle.sass */
+ul.ratings li.outsiders {
+  background-position: -391px 0;
+  width: 54px;
+}
+/* line 615, mainstyle.sass */
+ul.ratings li.pets {
+  background-position: -451px 0;
+  width: 36px;
+}
+/* line 618, mainstyle.sass */
+ul.ratings li.wheelchair {
+  background-position: -573px 0;
+  width: 63px;
+}
+/* line 621, mainstyle.sass */
+ul.ratings li.womens {
+  background-position: -651px 0;
+  width: 58px;
+}
+/* line 624, mainstyle.sass */
+ul.ratings li.young_people {
+  background-position: -724px 0;
+  width: 47px;
+}
+/* line 629, mainstyle.sass */
+ul.ratings p.voteNumber {
+  color: #2a2a2a;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgba(250, 250, 245, 0.7);
+  box-shadow: inset 0px 0px 1px 2px rgba(150, 136, 155, 0.2), inset 0px 1px 4px 4px rgba(150, 130, 185, 0.5), 0px 1px 2px 2px rgba(202, 170, 235, 0.5), 0px 1px 4px 4px rgba(222, 229, 223, 0.4);
+  width: 30px;
+  position: relative;
+  top: -11px;
+  left: 30px;
+  -webkit-animation: wobble 2s linear 0s alternate;
+}
+/* line 640, mainstyle.sass */
+ul.ratings p.voteNumber:active {
+  background-color: rgba(75, 214, 246, 0.7);
+}
+/* line 645, mainstyle.sass */
+ul.ratings li.vote {
+  background-color: rgba(250, 250, 245, 0.5);
+  padding: 2px;
+  background-position: -78px 2px;
+  width: 45px;
+  height: 15px;
+  position: relative;
+  top: -10px;
+  font-weight: bold;
+  text-align: right;
+  color: #2a2a2a;
+}
+
+/* line 658, mainstyle.sass */
+ul.filter_ratings li {
+  background-color: #f2f2ec;
+  -webkit-box-shadow: inset 0px 0px 1px 1px #deded8;
+  height: 57px;
+  width: 24%;
+  padding: 2px;
+}
+/* line 664, mainstyle.sass */
+ul.filter_ratings li:hover {
+  background-color: #0f86ab;
+}
+/* line 666, mainstyle.sass */
+ul.filter_ratings li img {
+  height: 40px;
+}
+/* line 668, mainstyle.sass */
+ul.filter_ratings li p {
+  font-weight: bold;
+  font-size: 8px;
+}
+
+/* line 672, mainstyle.sass */
+button.reset {
+  background-color: gray;
+}
+
+/* line 675, mainstyle.sass */
+.leaflet-bottom {
+  display: none;
+}
+
+/* line 678, mainstyle.sass */
+.invisible {
+  display: none;
+}
+
+/* line 682, mainstyle.sass */
+nav .bottom {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: black;
+  background-size: 80% auto;
+  height: 44px;
+  z-index: 1000;
+}
+/* line 690, mainstyle.sass */
+nav .bottom li:first-child {
+  border-left: none;
+}
+/* line 692, mainstyle.sass */
+nav .bottom li {
+  background-color: #3e3e42;
+  text-align: center;
+  padding: 3px;
+  color: white;
+  height: 50px;
+}
+/* line 700, mainstyle.sass */
+nav .bottom li img {
+  height: 25px;
+}
+/* line 703, mainstyle.sass */
+nav .bottom li:hover {
+  background-color: #0f86ab;
+}
+
+/* line 706, mainstyle.sass */
+section.profile {
+  background-image: url(../images/profile.jpg);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+/* line 712, mainstyle.sass */
+section.dailydose {
+  background-image: url(../images/dailychallenge.jpg);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+/* line 718, mainstyle.sass */
+a.user {
+  color: #006bc9 !important;
+}
+
+/* line 722, mainstyle.sass */
+div.comment {
+  margin: 3px 0 3px 10px;
+}
+/* line 724, mainstyle.sass */
+div.comment img {
+  height: 25px;
+  width: 25px;
+  position: relative;
+  top: 2px;
+}
+/* line 729, mainstyle.sass */
+div.comment blockquote {
+  margin: 0;
+  display: inline-block;
+  width: 80%;
+  text-transform: none;
+}
+/* line 734, mainstyle.sass */
+div.comment blockquote h4 {
+  margin: 0;
+}
+/* line 736, mainstyle.sass */
+div.comment blockquote p {
+  font-family: "Gotham", sans-serif !important;
+  margin: 0;
+}
+/* line 739, mainstyle.sass */
+div.comment blockquote span.postdate {
+  color: gray;
+  font-size: 0.5em;
+}
+
+/* line 742, mainstyle.sass */
+input.commentbox {
+  width: 60%;
+  margin: 5px 0 0 10px !important;
+  vertical-align: middle;
+}
+
+/* line 749, mainstyle.sass */
+button.vote {
+  float: right;
+  position: relative;
+  left: 200px;
+}
+
+/* line 754, mainstyle.sass */
+ul.options {
+  margin: 55px 0 0 0;
+}
+/* line 757, mainstyle.sass */
+ul.options li button {
+  height: 30px;
+}
+/* line 759, mainstyle.sass */
+ul.options li input {
+  height: 26px;
+  margin: 0 0 0 -3px;
+  position: relative;
+  left: -13px;
+  width: 101%;
+}
+
+/* line 766, mainstyle.sass */
+ul.options.filter {
+  margin: 0 0 0 0;
+}
+/* line 768, mainstyle.sass */
+ul.options.filter li {
+  background: transparent;
+  background--webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+/* line 772, mainstyle.sass */
+ul.options.filter li button {
+  height: 30px;
+}
+/* line 774, mainstyle.sass */
+ul.options.filter li input {
+  height: 24px;
+  margin: 0 0 0 -3px;
+}
+
+/* line 779, mainstyle.sass */
+.grids {
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+}
+
+/* line 786, mainstyle.sass */
+.grid-1 {
+  width: 6.15%;
+}
+
+/* line 789, mainstyle.sass */
+.grid-2 {
+  width: 14.583%;
+}
+
+/* line 792, mainstyle.sass */
+.grid-3 {
+  width: 22.792%;
+}
+
+/* line 795, mainstyle.sass */
+.grid-4 {
+  width: 32.25%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 800, mainstyle.sass */
+.grid-5 {
+  width: 39.583%;
+}
+
+/* line 803, mainstyle.sass */
+.grid-6 {
+  width: 47.917%;
+}
+
+/* line 806, mainstyle.sass */
+.grid-7 {
+  width: 56.25%;
+}
+
+/* line 809, mainstyle.sass */
+.grid-8 {
+  width: 64.583%;
+}
+
+/* line 812, mainstyle.sass */
+.grid-9 {
+  width: 72.917%;
+}
+
+/* line 815, mainstyle.sass */
+.grid-10 {
+  width: 81.25%;
+}
+
+/* line 818, mainstyle.sass */
+.grid-11 {
+  width: 89.583%;
+}
+
+/* line 821, mainstyle.sass */
+.grid-12 {
+  width: 100%;
+  width-margin: 0;
+}
+
+/* line 827, mainstyle.sass */
+.bottom .grid-3 {
+  font-size: 0.7em;
+  width: 22.6%;
+  margin: 0;
+}

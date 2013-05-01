@@ -1,8 +1,0 @@
---filters!
---reset button filter
---map current location
---    get image icon
---comma in details address
---map in meetingpage
-low: filter by time
-
