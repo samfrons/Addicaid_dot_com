@@ -11,7 +11,7 @@
             <h4>{{parseAddress(meeting.address,1)}}</h4>
             <h4>{{parseAddress(meeting.address,2)}}</h4>
         </hgroup>
-        <aside class="grids grid-4 right_side {{getFellowshipID(meeting.fellowship.name)}}" ng-tap="$navigate.go('/meetinglist/{{meeting.id}}', 'slide')">
+        <aside class="grids grid-4 right_side {{getFellowshipID(meeting.fellowship.name)}}" ng-tap="$navigate.go('/meetingList/{{meeting.id}}', 'slide')">
             <div class="timeandday">
                 <p class="time">{{formatTime(meeting.time)}}</p>
                 <p class="day">{{formatDay(meeting.day)}}</p>
@@ -76,9 +76,6 @@
 
     </leaflet-marker></article>
 </section>
-
-
-
 
 
 <style>
