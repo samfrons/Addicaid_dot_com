@@ -2,8 +2,9 @@
     <article class="grids grid-12 filter">
 
         <ul class="options filter">
-            <li class="grid-3"><button class="grid-10 reset"ng-tap="resetFilters()">RESET</button></li>
-            <li class="grid-8"><input class="grid-10" type="text" placeholder="search"></li>
+            <li  class="map_top"ng-tap="$navigate.go('/filter', 'slide')"><button class="map_top">filter</button></li>
+            <li class="grid-6"><input class="grid-12" type="text" placeholder="search"></input></li>
+            <li class=" map_top" ng-tap="$navigate.go('/meetinglist', 'slide')"><button class="map_top">list</button></li>
         </ul>
 
         <div class="filter filter_fellowship">
@@ -24,23 +25,29 @@
             <h3>where</h3>
 
             <ul class="grids grid-12 filter_where">
-                <input type="field" class="miles" placeholder="5"
-                       ng-model="filters.location.radius"
-                       ng-pattern="/\d+/" />
-                <label>&nbsp;&nbsp;miles</label>
-                &nbsp;from&nbsp;&nbsp;
+                <li>
+
+                    <input type="field" class="miles" placeholder="5 miles"
+                           ng-model="filters.location.radius"
+                           ng-pattern="/\d+/" />
+                    <label><button class="here FilterToggle"
+                                   ng-tap="filters.location.useCurrentLocation=!filters.location.useCurrentLocation"
+                                   ui-show="filters.location.useCurrentLocation">here</button></label>
+                </li>
 
                 <li>
-                    <button class="here FilterToggle"
-                            ng-tap="filters.location.useCurrentLocation=!filters.location.useCurrentLocation"
-                            ui-show="filters.location.useCurrentLocation">
-                        <span class="hereicon"></span>here&nbsp;&nbsp;
-                    </button>&nbsp;&nbsp;
-                    <span class="or">or</span>&nbsp;&nbsp;
+
+
+                    <br/>
+
                 </li>
-                <input type="field" class="zipcode" placeholder="zip code"
-                       ng-model="filters.location.zip"
-                       ng-minlength="5" ng-maxlength="5" ng-pattern="/\d{5}/" />
+
+                <li>
+                    <span class="or">or</span>&nbsp;&nbsp;
+                    <input type="field" class="zipcode" placeholder="zip code"
+                           ng-model="filters.location.zip"
+                           ng-minlength="5" ng-maxlength="5" ng-pattern="/\d{5}/" />
+                </li>
             </ul>
 
         </div>
@@ -87,4 +94,3 @@
 
     <button type="submit" class="submit_simple"><span class="submit_text">submit</span><span class="submit_arrow"></span></button>
 </section>
-

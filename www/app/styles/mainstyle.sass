@@ -106,6 +106,8 @@ $buttonbackground: rgba(252,62,66,1)
 html
  font-size: .7em
  -webkit-font-smoothing: antialiased
+ overflow-x: hidden
+ background-color: #2855a2
 
 body
  padding: 0
@@ -113,6 +115,7 @@ body
  -webkit-font-smoothing: antialiased
  text-transform: uppercase
  background-size: auto
+ overflow-x: hidden
 
 
 button
@@ -124,6 +127,12 @@ button
 form
  h1 
   font-size: 1.3em
+
+.circle_man
+ border-radius: 400px
+ height: 300px
+ width: 400px
+ opacity: 0.6
   
 header
  h1 
@@ -134,9 +143,9 @@ header
   padding: 0
   font-family: Damion
   text-align: center
-  color: white
+  color: rgba(70,70,70,1)
   min-height: 55px
-  text-shadow: 0px 1px 1px black
+
   font-size: 3em
 p
  font-family: helvetica
@@ -157,10 +166,10 @@ section
  margin: 55px 0 0 0
 
 header.grid-12
- background-color: rgba(197,206,35,1)
+ background-color: #f2f2f2
+ border-bottom: 1px solid #d9d9d9
  background-repeat: repeat-x
  background-size: auto 55px
- box-shadow: 0px 1px 4px rgba(137,146,5,1)
  position: fixed
  z-index: 1000
  top: 0px
@@ -216,7 +225,8 @@ button.settings
  width: 8%
 
 section.signup
- background-image: url(../images/6.jpg)
+ background-image: url(../images/appsignupbk.jpg)
+ background-size: 100% 100%
  margin: 0 auto
  margin-top: 50px
  text-align: center
@@ -244,7 +254,7 @@ section.filterpage, section.ratepage
 
 
 section.meetinglist
- background-image: url(../images/blurlight.png)
+
  height: 100%
 
 button.submit_button 
@@ -295,7 +305,7 @@ button.facebook
 .submit_text
  text-transform: uppercase
  position: relative
- font-family: Damion
+ font-family: Gotham
  font-size: 3em
  display: block
 
@@ -351,7 +361,7 @@ article.filter
    @include gradientbutton_lime
 
  div.filter
-  background-color: rgba(255,255,255,0.1)
+  background-color: #f2f2f2
  div.filter_where
   font-weight: bold
   vertical-align: middle
@@ -390,6 +400,8 @@ input.zipcode
 
 section.ratepage
  font-size: .8em
+ article > hgroup
+  font-size: 1.3em
 
  h1, h2
   text-align: center
@@ -460,10 +472,7 @@ hgroup
  background-size: 25px auto
  background-repeat: no-repeat
  background-position: 2px 40px
- &.AA
-  background-image: url(../images/AAcircle.png)
- &.NA
-  background-image: url(../images/NAcircle.png)
+
 
 aside.right_side
  &.map-popup
@@ -472,15 +481,22 @@ aside.right_side
  min-height: 60px
  width: 28.91%
  margin: 0 0 0 5%
+ border-radius: 100px
+ height: 100px
+ width: 100px
 
 
  /* background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgba(20, 136, 203, 1)), color-stop(1, rgba(20, 136, 203, .5)) )*/
  &.AA
-  background-color: rgba(10, 72,119, .5)
+  background-color: rgba(10, 72,119, .9)
+  border-radius: 100px
+  height: 100px
 
   /*background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgba(255,0,18,1)), color-stop(1, rgba(255,0,50,.9)) )*/
  &.NA
-  background-color: rgba(202, 22,26, .5)
+  background-color: rgba(202, 22,26, .9)
+  border-radius: 100px
+  height: 100px
 
   
 
@@ -491,18 +507,13 @@ div.filter_fellowship
   li
    background-color: rgba(242,242,236,1)
    -webkit-box-shadow: none
-   width: 33%
+   width: 33.3%
    font-weight: bold
    text-transform: uppercase
    height: 35px
    text-align: center
    padding: 8px 0 0 0
-  li:first-child
-   background-color: rgba(32,132,173,1)
-  li:nth-child(2)
-   background-color: rgba(172,43,60,1)
-  li:nth-child(3)
-   background-color: rgba(240,116,44,1)
+
 
 .FilterToggle.ui-show
  background-color: #0f86ab
@@ -510,15 +521,31 @@ div.filter_fellowship
  
 
 
+.map-popup
+ .timeandday
+  margin: -15px 0 0 25% 
+  font-size: .9em
+  p
+   line-height: 27px
+   text-align: center
+   width: 60px
+   position: relative
+   top: 10px
+  p.day
+   position: relative
+   top: 0px
+  span.distance
+   top: -20px
+   position: relative
+
+
 .timeandday
- &.map-popup
-  height: auto
-  margin: 0 20% 0 20%
  margin: 5px 0 0 25%
  color: $main-color
  height: 77px
  background-repeat: no-repeat
  background-image: url(../images/calendar.png)
+ background-position: 0px 10px
  text-align: left
  p
   font-weight: bold
@@ -526,13 +553,17 @@ div.filter_fellowship
   text-align: center
   width: 60px
   position: relative
-  top: 0px
+  top: 10px
   font-size: 1.2em
  p.day
-  padding: 8px 0 0 0
+  top: 20px
  span.distance
   font-weight: bold
   color: white
+  top: 20px
+  position: relative
+  text-align: center
+
 
 ul.filter_day
 
@@ -658,16 +689,18 @@ ul.filter_ratings
  li
   background-color: #f2f2ec
   -webkit-box-shadow: inset 0px 0px 1px 1px #deded8
-  height: 57px
-  width: 24%
-  padding: 2px
+  height: 30px
+  width: 24.4%
+  padding: 15px 0 0 0
+
+  text-align: center
   &:hover
    background-color: #0f86ab
   img
-   height: 40px
+   display: none
   p
    font-weight: bold
-   font-size: 8px
+   font-size: 1em
 
 button.reset
  background-color: gray
@@ -765,6 +798,7 @@ ul.options
 
 ul.options.filter
  margin: 0 0 0 0
+
  li
   background: transparent
    -webkit-box-shadow: none !important
@@ -826,5 +860,5 @@ nav
 .bottom
  .grid-3
   font-size: .7em
-  width: 22.6%
+  width: 22.4%
   margin: 0

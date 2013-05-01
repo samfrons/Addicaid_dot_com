@@ -12,15 +12,15 @@
 	-webkit-perspective: 1000; /* Add depth to the rotation */
 }
 
-#spincontainer li { height:5px; width:500px; }
+#spincontainer li { height:5px; width:500px; background-repeat: no-repeat;}
 #spincontainer li div { position:absolute; height:5px; width:500px;
 	-webkit-animation-duration: 4s; /* Duration of the animations */
 	-webkit-transform-style: preserve-3d; /* Ensure 3d animation */
 	-webkit-animation-fill-mode: forwards; /* Stop the animation at the last keyframe */
 }
 
-#spincontainer li div:nth-child(1) { background-image:url("../images/fox_1x.png"); } /* Horizontal flipped iPad image is used */
-#spincontainer li div:nth-child(2) { background-image:url("../images/fox_2x.png");
+#spincontainer li div:nth-child(1) { background-image:url("../images/sadman.png");background-repeat: no-repeat; } /* Horizontal flipped iPad image is used */
+#spincontainer li div:nth-child(2) { background-image:url("../images/happyman.png");background-repeat: no-repeat;
 	-webkit-backface-visibility: hidden; /* Hide the iPhone when facing the other side */
 }
 
