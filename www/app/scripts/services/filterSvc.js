@@ -128,7 +128,7 @@ var defaultFiltersObject = {
       selected: false
     },
     {
-      text: 'cool venue?',
+      text: 'cool venue',
       filters: [{ 'rating.isCoolVenue' : 'true' }],
       selected: false
     }

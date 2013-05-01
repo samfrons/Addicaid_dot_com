@@ -14,7 +14,7 @@
                 <h4 class="ng-binding">953 Deharo</h4>
                 <h4 class="ng-binding">San Francisco, CA 94107</h4>
             </hgroup>
-            <aside class="grids grid-4 right_side NA" ng-tap="$navigate.go('/meetinglist/61023/true', 'slide')">
+            <aside class="grids grid-4 right_side NA" ng-tap="$navigate.go('/meetingList/61023/true', 'slide')">
                 <div class="timeandday">
                     <p class="time ng-binding">20:00</p>
                     <p class="day ng-binding">WED</p>
@@ -60,7 +60,7 @@
                 <h4>{{parseAddress(meeting.address,1)}}</h4>
                 <h4>{{parseAddress(meeting.address,2)}}</h4>
             </hgroup>
-            <aside class="grids grid-4 right_side {{getFellowshipID(meeting.fellowship.name)}}" ng-tap="$navigate.go('/meetinglist/{{meeting.id}}/true', 'slide')">
+            <aside class="grids grid-4 right_side {{getFellowshipID(meeting.fellowship.name)}}" ng-tap="$navigate.go('/meetingList/{{meeting.id}}/true', 'slide')">
                 <div class="timeandday">
                     <p class="time">{{formatTime(meeting.time)}}</p>
                     <p class="day">{{formatDay(meeting.day)}}</p>
