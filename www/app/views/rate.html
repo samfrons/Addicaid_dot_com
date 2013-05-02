@@ -1,8 +1,10 @@
 <section class="ratepage">
+
+    <article class="ratetop">
     <h1>make Addicaid better!</h1>
     <h2>Let everyone know if these meetings have any of the following qualities.</h2>
     <h3>There's prizes</h3>
-
+</article>
     <section class="meetinglist">
         <article ng-repeat="meeting in meetings">
             <ng-include src="getPartialUrl('meetingDetailSmall')" ng-controller="MeetingDetailCtrl"></ng-include>
@@ -40,7 +42,7 @@
         <button type="submit" ng-show="showSubmit"
                 class="submit_simple search_submit"
                 ng-tap="$navigate.go('/rateReward', 'slide')">
-            submit
+            <h3>submit</h3
         </button>
     </section>
 

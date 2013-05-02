@@ -19,13 +19,20 @@ body {
   -webkit-font-smoothing: antialiased;
   text-transform: uppercase;
   background-size: auto;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  background-color: #2855a2; }
 
 button {
-  background-color: #fc3e42;
-  color: white !important;
+  background-color: #e9e9e9;
+  border: 1px solid #d0d0d0 !important;
+  color: #333333;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   text-transform: uppercase !important;
   font-family: Damion, cursive; }
+  button:hover {
+    background-color: #d0d0d0 !important;
+    display: none; }
 
 form h1 {
   font-size: 1.3em; }
@@ -35,9 +42,6 @@ form h1 {
   height: 300px;
   width: 400px;
   opacity: 0.6; }
-
-p {
-  font-family: helvetica; }
 
 a {
   text-decoration: none;
@@ -51,19 +55,20 @@ a {
 
 section {
   overflow-x: hidden;
-  margin: 55px 0 0 0; }
+  margin: 55px 0 0 0;
+  background-color: #2855a2 !important; }
 
-nav.header.grid-12 {
-  background-color: #f2f2f2;
+header.grid-12 {
+  background-color: #f05122;
   border-bottom: 1px solid #d9d9d9;
   background-repeat: repeat-x;
   background-size: auto 55px;
   position: fixed;
   z-index: 1000;
   top: 0px; }
-  nav.header.grid-12 button {
+  header.grid-12 button {
     min-height: 33px !important; }
-  nav.header.grid-12 h1 {
+  header.grid-12 h1 {
     position: relative;
     text-transform: capitalize;
     top: 0px;
@@ -73,7 +78,7 @@ nav.header.grid-12 {
     text-align: center;
     color: #464646;
     min-height: 55px;
-    font-size: 3em; }
+    font-size: 2.5em; }
 
 .appBody {
   margin-top: 56px; }
@@ -81,11 +86,19 @@ nav.header.grid-12 {
 .mapclass {
   height: 80%; }
 
+li {
+  transition: background-color 300ms ease-out; }
+  li:hover {
+    background-color: #d0d0d0 !important; }
+
 li.map_top {
-  width: 25.23%; }
+  width: 24%; }
 
 button.map_top {
-  width: 100%; }
+  width: 100%;
+    width-border: none !important;
+    width--webkit-box-shadow: none;
+    width-box-shadow: none; }
 
 button {
   margin: 20px;
@@ -246,7 +259,11 @@ aside.right2_side {
       top: 0 !important; }
 
 .FilterToggle.ui-show {
-  background-color: #0f86ab !important;
+  background-color: red !important;
+  -webkit-box-shadow: inset 0px 0px 1px 1px #cacace; }
+
+.FilterToggle.ui-hide {
+  background-color: red !important;
   -webkit-box-shadow: inset 0px 0px 1px 1px #cacace; }
 
 article.filter h3 {
@@ -259,20 +276,30 @@ article.filter div.filter {
   article.filter div.filter h3 {
     text-indent: 10px; }
   article.filter div.filter ul li {
-    background-color: #f2f2ec;
-    -webkit-box-shadow: inset 0px 0px 1px 1px #deded8; }
+    background-color: #e9e9e9;
+    border: 1px solid #d0d0d0;
+    color: #333333;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; }
 article.filter div.filter_where {
   font-weight: bold;
-  vertical-align: middle; }
+  vertical-align: middle;
+  width: 100%; }
   article.filter div.filter_where ul.filter_where {
     vertical-align: middle;
-    margin: 10px 0 0 5px; }
+    margin: 10px 0 10px 5px;
+    width: 100%; }
+    article.filter div.filter_where ul.filter_where li {
+      background: transparent !important;
+      border: none !important;
+      width: 47%;
+      box-shadow: none !important; }
     article.filter div.filter_where ul.filter_where span.or {
-      vertical-align: top; }
+      width: 50%; }
 article.filter input.miles {
-  width: 30px; }
+  width: 65px; }
 article.filter button.here {
-  background-color: white;
+  background-color: white !important;
   width: 30px;
   height: 20px;
   background-size: 60px auto;
@@ -293,11 +320,32 @@ article.filter button.here {
 input.zipcode {
   width: 70px; }
 
+ol#spincontainer {
+  margin: 55% 0 0 0; }
+
+.ratetop {
+  width: 100%;
+  margin: 0 auto;
+  border-color: #d9d9d9;
+  margin: 20px 0 5px 0;
+  padding: 5px;
+  background: #f2f2f2; }
+  .ratetop h3 {
+    text-align: center; }
+
 section.ratepage {
   font-size: 0.8em; }
   section.ratepage article > hgroup {
     font-size: 1.3em; }
-  section.ratepage h1, section.ratepage h2 {
+  section.ratepage .bigdealcontainer {
+    padding: 10px;
+    width: 90%; }
+    section.ratepage .bigdealcontainer .words {
+      margin: 10px !important; }
+
+button.get_started {
+  margin: 70px 0 0 0 !important; }
+  button.get_started h1, button.get_started h2 {
     text-align: center; }
 
 .rate_submit {
@@ -305,7 +353,8 @@ section.ratepage {
   margin: 10px 0 10px 0; }
 
 button.search_submit {
-  height: 20px;
+  height: 40px;
+  margin: 30px 0 0 0;
   padding: 1px 5px 1px 5px; }
 
 .or_search {
@@ -364,16 +413,12 @@ hgroup h5, hgroup h6 {
   background-position: 2px 40px; }
 
 aside.right_side {
-  height: 100%;
   min-height: 60px;
-  width: 28.91%;
   margin: 0 0 0 5%;
   border-radius: 100px;
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
   /* background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgba(20, 136, 203, 1)), color-stop(1, rgba(20, 136, 203, .5)) ) */ }
-  aside.right_side.map-popup {
-    width: 100px; }
   aside.right_side.AA {
     background-color: rgba(10, 72, 119, 0.9);
     border-radius: 100px;
@@ -391,12 +436,15 @@ div.filter_fellowship {
     div.filter_fellowship ul li {
       background-color: #f2f2ec;
       -webkit-box-shadow: none;
-      width: 33.3%;
+      width: 32.5%;
       font-weight: bold;
       text-transform: uppercase;
       height: 35px;
       text-align: center;
       padding: 8px 0 0 0; }
+
+.leaflet-container {
+  top: 0px; }
 
 .map-popup .timeandday {
   margin: -15px 0 0 25%;
@@ -440,7 +488,7 @@ div.filter_fellowship {
     text-align: center; }
 
 ul.filter_day li {
-  width: 14.2%;
+  width: 13.7%;
   height: 25px;
   background-size: 35px auto;
   text-align: center;
@@ -453,7 +501,7 @@ div.filter_time h3 {
   margin: 10px 0 0 0; }
 
 ul.filter_time li {
-  width: 25%;
+  width: 24%;
   padding: 5px 0 5px 0;
   font-size: 0.7em;
   text-align: center;
@@ -463,6 +511,9 @@ ul.filter_time li {
   font-family: "Gotham", sans-serif; }
   ul.filter_time li.ui-show {
     height: 45px; }
+
+button.filter {
+  margin: 10px 0 100px; }
 
 ul.ratings {
   background-color: #e8e8e2;
@@ -548,20 +599,32 @@ ul.ratings {
 ul.filter_ratings li {
   background-color: #f2f2ec;
   -webkit-box-shadow: inset 0px 0px 1px 1px #deded8;
-  height: 30px;
-  width: 24.4%;
-  padding: 15px 0 0 0;
+  height: 20px;
+  width: 17% !important;
+  padding: 10px;
+  font-family: Gotham !important;
+  text-align: center;
+  max-height: 20px !important; }
+  ul.filter_ratings li h3 {
+    font-size: 0.7em !important; }
+ul.filter_ratings .meeting_option {
+  padding: 10px !important;
+  background-color: blue !important;
   text-align: center; }
-  ul.filter_ratings li:hover {
+  ul.filter_ratings .meeting_option:hover {
     background-color: #0f86ab; }
-  ul.filter_ratings li img {
+  ul.filter_ratings .meeting_option img {
     display: none; }
-  ul.filter_ratings li p {
+  ul.filter_ratings .meeting_option p {
     font-weight: bold;
-    font-size: 1em; }
+    font-size: 0.8em; }
 
 button.reset {
   background-color: gray; }
+
+li.input {
+  border: none !important;
+  margin: 0; }
 
 .leaflet-bottom {
   display: none; }
@@ -639,24 +702,30 @@ button.vote {
 ul.options {
   margin: 55px 0 0 0; }
   ul.options li button {
-    height: 30px; }
+    height: 32px; }
   ul.options li input {
-    height: 26px;
+    height: 32px;
     margin: 0 0 0 -3px;
     position: relative;
-    left: -13px;
+    left: -23px;
     width: 101%; }
 
 ul.options.filter {
   margin: 0 0 0 0; }
-  ul.options.filter li {
+
+.from_here {
+  background: transparent;
+  -webkit-box-shadow: none !important;
+  border: none !important;
+  font-weight: bold; }
+  .from_here li {
     background: transparent;
       background--webkit-box-shadow: none !important;
     box-shadow: none !important; }
-    ul.options.filter li button {
+    .from_here li button {
       height: 30px; }
-    ul.options.filter li input {
-      height: 24px;
+    .from_here li input {
+      height: 28px;
       margin: 0 0 0 -3px; }
 
 .grids {
