@@ -161,8 +161,9 @@ section
  background-color: #2855a2 !important
 
 header.grid-12
- background-color: #f05122
+ background-color: #dedede
  border-bottom: 1px solid #d9d9d9
+ box-shadow: 0px 1px 1px rgba(20,20,20,0.7)
  background-repeat: repeat-x
  background-size: auto 55px
  position: fixed
@@ -170,6 +171,8 @@ header.grid-12
  top: 0px
  button
   min-height: 33px !important
+  box-shadow: none !Important
+  border: none !important
  h1
   position: relative
   text-transform: capitalize
@@ -199,6 +202,7 @@ li.map_top
 
 button.map_top
  width: 100%
+ font-weight: bold
 
   border: none !important
   -webkit-box-shadow: none
@@ -336,6 +340,8 @@ button.save
  background: transparent
  width: auto
  padding: 0 0 0 4px
+ border: none !Important
+
  img
   width: 20px
 
@@ -359,7 +365,7 @@ aside.right2_side
    top: 0 !important
 
 .FilterToggle.ui-show
- background-color: red !important
+ background-color: #d0d0d0 !important
  -webkit-box-shadow: inset 0px 0px 1px 1px rgba(202,202,206,1)
 
 .FilterToggle.ui-hide
@@ -742,18 +748,22 @@ ul.ratings
   color: $main_color
 
 ul.filter_ratings
+ background-color: #f2f2ec
+ margin: 0 auto
  li
   background-color: #f2f2ec
   -webkit-box-shadow: inset 0px 0px 1px 1px #deded8
-  height: 20px
-  width: 17% !Important
-  padding: 10px
+  width: 24.5% !Important
+  padding: 0
   font-family: Gotham !important
   text-align: center
-  max-height: 20px !important
+  vertical-align: middle
+  min-height: 30px !important
+  p
+   font-weight: bold !important
+   position: relative
+   top: -5px !important
 
-  h3
-   font-size: .7em !important
 
 
  .meeting_option
@@ -857,11 +867,16 @@ button.vote
 
 ul.options
  margin: 55px 0 0 0
+ background-color: #e9e9e9
  li
+  border: none !important
   button
+   border: none !important
+
    height: 32px
   input
    height: 32px
+   border: none !important
    margin: 0 0 0 -3px
    position: relative
    left: -23px

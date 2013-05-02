@@ -59,15 +59,18 @@ section {
   background-color: #2855a2 !important; }
 
 header.grid-12 {
-  background-color: #f05122;
+  background-color: #dedede;
   border-bottom: 1px solid #d9d9d9;
+  box-shadow: 0px 1px 1px rgba(20, 20, 20, 0.7);
   background-repeat: repeat-x;
   background-size: auto 55px;
   position: fixed;
   z-index: 1000;
   top: 0px; }
   header.grid-12 button {
-    min-height: 33px !important; }
+    min-height: 33px !important;
+    box-shadow: none !important;
+    border: none !important; }
   header.grid-12 h1 {
     position: relative;
     text-transform: capitalize;
@@ -96,9 +99,10 @@ li.map_top {
 
 button.map_top {
   width: 100%;
-    width-border: none !important;
-    width--webkit-box-shadow: none;
-    width-box-shadow: none; }
+  font-weight: bold;
+    font-weight-border: none !important;
+    font-weight--webkit-box-shadow: none;
+    font-weight-box-shadow: none; }
 
 button {
   margin: 20px;
@@ -236,7 +240,8 @@ aside.saveaside {
 button.save {
   background: transparent;
   width: auto;
-  padding: 0 0 0 4px; }
+  padding: 0 0 0 4px;
+  border: none !important; }
   button.save img {
     width: 20px; }
 
@@ -259,7 +264,7 @@ aside.right2_side {
       top: 0 !important; }
 
 .FilterToggle.ui-show {
-  background-color: red !important;
+  background-color: #d0d0d0 !important;
   -webkit-box-shadow: inset 0px 0px 1px 1px #cacace; }
 
 .FilterToggle.ui-hide {
@@ -596,28 +601,33 @@ ul.ratings {
     text-align: right;
     color: #2a2a2a; }
 
-ul.filter_ratings li {
+ul.filter_ratings {
   background-color: #f2f2ec;
-  -webkit-box-shadow: inset 0px 0px 1px 1px #deded8;
-  height: 20px;
-  width: 17% !important;
-  padding: 10px;
-  font-family: Gotham !important;
-  text-align: center;
-  max-height: 20px !important; }
-  ul.filter_ratings li h3 {
-    font-size: 0.7em !important; }
-ul.filter_ratings .meeting_option {
-  padding: 10px !important;
-  background-color: blue !important;
-  text-align: center; }
-  ul.filter_ratings .meeting_option:hover {
-    background-color: #0f86ab; }
-  ul.filter_ratings .meeting_option img {
-    display: none; }
-  ul.filter_ratings .meeting_option p {
-    font-weight: bold;
-    font-size: 0.8em; }
+  margin: 0 auto; }
+  ul.filter_ratings li {
+    background-color: #f2f2ec;
+    -webkit-box-shadow: inset 0px 0px 1px 1px #deded8;
+    width: 24.5% !important;
+    padding: 0;
+    font-family: Gotham !important;
+    text-align: center;
+    vertical-align: middle;
+    min-height: 30px !important; }
+    ul.filter_ratings li p {
+      font-weight: bold !important;
+      position: relative;
+      top: -5px !important; }
+  ul.filter_ratings .meeting_option {
+    padding: 10px !important;
+    background-color: blue !important;
+    text-align: center; }
+    ul.filter_ratings .meeting_option:hover {
+      background-color: #0f86ab; }
+    ul.filter_ratings .meeting_option img {
+      display: none; }
+    ul.filter_ratings .meeting_option p {
+      font-weight: bold;
+      font-size: 0.8em; }
 
 button.reset {
   background-color: gray; }
@@ -700,15 +710,20 @@ button.vote {
   left: 200px; }
 
 ul.options {
-  margin: 55px 0 0 0; }
-  ul.options li button {
-    height: 32px; }
-  ul.options li input {
-    height: 32px;
-    margin: 0 0 0 -3px;
-    position: relative;
-    left: -23px;
-    width: 101%; }
+  margin: 55px 0 0 0;
+  background-color: #e9e9e9; }
+  ul.options li {
+    border: none !important; }
+    ul.options li button {
+      border: none !important;
+      height: 32px; }
+    ul.options li input {
+      height: 32px;
+      border: none !important;
+      margin: 0 0 0 -3px;
+      position: relative;
+      left: -23px;
+      width: 101%; }
 
 ul.options.filter {
   margin: 0 0 0 0; }
