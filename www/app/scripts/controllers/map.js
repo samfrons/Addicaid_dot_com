@@ -1,20 +1,21 @@
 'use strict';
 
 angular.module('addicaidApp')
-  .controller('MapCtrl', ['$scope', '$rootScope', '$filter', 'meetingSvc', 'filterSvc', function($scope, $rootScope, $filter, meetingSvc, filterSvc) {
+  .controller('MapCtrl', ['$scope', '$rootScope', '$filter', 'meetingSvc', 'filterSvc', 'geolocationBrowser', function($scope, $rootScope, $filter, meetingSvc, filterSvc, geolocation) {
     $rootScope.sharedVars.pageTitle = 'Map';
 
-    // Current location
-    $scope.currentLatLng = L.latLng(meetingSvc.getCurrentLocation().latitude, meetingSvc.getCurrentLocation().longitude);
+    geolocation.getCurrentLocation().then(function(coords) {
+      // map options
+      $scope.currentLatLng = L.latLng(coords.latitude, coords.longitude);
+      $scope.mapOptions = {
+        center: $scope.currentLatLng,
+        zoom: 13,
+        markers: [
+          L.marker($scope.currentLatLng, { icon: L.icon({iconUrl: 'images/heremap.png'})})
+        ]
+      };
+    });
 
-    // map options
-    $scope.mapOptions = {
-      center: $scope.currentLatLng,
-      zoom: 13,
-      markers: [
-        L.marker($scope.currentLatLng, { icon: L.icon({iconUrl: 'images/heremap.png'})})
-      ]
-    };
 
     $scope.openPop = function() {
       console.log('openPop function');

@@ -1,18 +1,9 @@
 'use strict';
 
 
-//var defaultCoordinates = { // NYC
-//    latitude : 40.763562,
-//    longitude : -73.97140100000001
-//};
-var defaultCoordinates = { // San Fran
-  latitude: 37.771139,
-  longitude: -122.403424
-};
-
 
 angular.module('addicaidApp')
-  .factory('meetingSvc', ['$http', '$rootScope', 'filterSvc', function($http, $rootScope, filterSvc) {
+  .factory('meetingSvc', ['$http', '$rootScope', 'filterSvc', 'geolocationBrowser', function($http, $rootScope, filterSvc, geolocation) {
     var meetingSvc = {
       baseUrl: 'http://addicaid.appspot.com/meetings/jsonp',
       testUrl: 'http://addicaid.appspot.com/meetings/jsonp?daylist=MoTu&callback=JSON_CALLBACK',
@@ -23,15 +14,6 @@ angular.module('addicaidApp')
       meetingsCache: [], // latest list of meetings retrieved from server
       meetingsChangedEvent: 'meetingsChanged'
     };
-
-    // current location
-    meetingSvc.getCurrentLocation = function() {
-      return {
-        latitude: defaultCoordinates.latitude,
-        longitude: defaultCoordinates.longitude
-      };
-    };
-
 
     // helper css string functions
     var namify = function namify(filterObj, param) {
@@ -57,69 +39,50 @@ angular.module('addicaidApp')
       if (meetingSvc.isFilterDirty && !meetingSvc.waitingForServerResults) {
         // populate meetings from server
         meetingSvc.waitingForServerResults = true;
-        $http.jsonp(meetingSvc.getUrl())
-//        $http.get("../../app/testfiles/meetings-demo.json")// TODO: HACK using local json file
-          .success(function(data) {
-            meetingSvc.meetingsCache = data.value;
-
-//                        // TODO: fake data-carto
-//                        $http.jsonp('http://'+defaultCartodbAccount+'.cartodb.com/api/v2/sql/?q='+defaultCartodbSql+'&callback=JSON_CALLBACK')
-//                            .success(function(data,status) {
-//                                console.log('http://'+defaultCartodbAccount+'.cartodb.com/api/v2/sql/?q='+defaultCartodbSql+'&callback=JSON_CALLBACK');
-//                                for (var i=0; i < meetingSvc.meetingsCache.length; i++) {
-//                                    meetingSvc.meetingsCache[i].latLon.latitude = data.rows[i].latitude;
-//                                    meetingSvc.meetingsCache[i].latLon.longitude = data.rows[i].longitude;
-//                                }
-//
-//
-//                                meetingSvc.isFilterDirty = false;
-//                                $rootScope.$broadcast(meetingSvc.meetingsChangedEvent, [/* meetingsChangedArgs */]);
-//                            })
+        meetingSvc.getUrl().then(function(url) {
+          $http.jsonp(url)
+//          $http.get("../../app/testfiles/meetings-demo.json")// TODO: HACK using local json file
+            .success(function(data) {
+              meetingSvc.meetingsCache = data.value;
 
 //                        // TODO: fake data-favorites
 //                        for (var i=0; i < meetingSvc.meetingsCache.length; i++) {
 //                            meetingSvc.meetingsCache[i].isFavorite = Math.random()<.2 ? true : false;
 //                        }
 
-            // TODO: fake data-ratings
-//                        for (var i=0; i < meetingSvc.meetingsCache.length; i++) {
-//                            meetingSvc.meetingsCache[i].rating = getFakeRating(meetingSvc.meetingsCache[i]);
-//                        }
+              // PROCESS MEETINGS CACHE
+              angular.forEach(meetingSvc.meetingsCache, function(meeting) {
+                // clean up ratings object
+                var newRatings = {};
+                angular.forEach(meeting.rating, function(value, key) {
+                  if (value) {
+                    newRatings[key] = value;
+                  }
+                });
+                meeting.rating = newRatings;
 
-            // TODO: single meeting
-//                        meetingSvc.meetingsCache = [ meetingSvc.meetingsCache[0] ];
 
-            // PROCESS MEETINGS CACHE
-            angular.forEach(meetingSvc.meetingsCache, function(meeting) {
-              // clean up ratings object
-              var newRatings = {};
-              angular.forEach(meeting.rating, function(value, key) {
-                if (value) {
-                  newRatings[key] = value;
+                // clean up time
+                meeting.time = meeting.time.split(':')[0] + ':' + meeting.time.split(':')[1];
+
+                // TODO: HACK change time on wed womens meeting
+                if (meeting.id === 73021) {
+                  meeting.time = '19:00';
+                  meeting.timeAsNumber = 19;
                 }
               });
-              meeting.rating = newRatings;
 
-
-              // clean up time
-              meeting.time = meeting.time.split(':')[0] + ':' + meeting.time.split(':')[1];
-
-              // TODO: HACK change time on wed womens meeting
-              if (meeting.id === 73021) {
-                meeting.time = '19:00';
-                meeting.timeAsNumber = 19;
-              }
+              meetingSvc.isFilterDirty = false;
+              meetingSvc.waitingForServerResults = false;
+              console.log('******** got ' + meetingSvc.meetingsCache.length + ' meetings **********');
+              $rootScope.$broadcast(meetingSvc.meetingsChangedEvent, [/* meetingsChangedArgs */]);
+            })
+            .error(function(data,status) {
+              // TODO: error handling
+              console.log('FAILURE', data, status);
             });
+        });
 
-            meetingSvc.isFilterDirty = false;
-            meetingSvc.waitingForServerResults = false;
-            console.log('******** got ' + meetingSvc.meetingsCache.length + ' meetings **********');
-            $rootScope.$broadcast(meetingSvc.meetingsChangedEvent, [/* meetingsChangedArgs */]);
-          })
-          .error(function(data,status) {
-            // TODO: error handling
-            console.log('FAILURE', data, status);
-          });
       }
     };
 
@@ -138,30 +101,30 @@ angular.module('addicaidApp')
     };
 
     meetingSvc.getUrl = function() { // returns url for jsonp call
-      var url = meetingSvc.baseUrl;
-      // TODO: complete function
-//            testUrl: "http://addicaid.appspot.com/meetings/jsonp?daylist=MoTu&callback=JSON_CALLBACK",
+      var urlPromise = geolocation.getCurrentLocation() // a promise
+        .then(function(coords) {
+          var url = meetingSvc.baseUrl;
 
-      // add daylist filter
-      url += '?';
-      url += meetingSvc.getQueryStringDays();
+          // add daylist filter
+          url += '?';
+          url += meetingSvc.getQueryStringDays();
 
-      // add location
-      if (filterSvc.filters.location.useCurrentLocation) {
-        url += '&lat=' + meetingSvc.getCurrentLocation().latitude;
-        url += '&long=' + meetingSvc.getCurrentLocation().longitude;
-//                // TODO: HACK swap lat lng
-//                url += "&lat=" + meetingSvc.getCurrentLocation().longitude;
-//                url += "&long=" + meetingSvc.getCurrentLocation().latitude;
-      } else if (filterSvc.filters.location.zip) {
-        url += '&address=' + encodeURI(filterSvc.filters.location.zip);
-      }
+          // add location
+          if (filterSvc.filters.location.useCurrentLocation) {
+            url += '&lat=' + coords.latitude;
+            url += '&long=' + coords.longitude;
+          } else if (filterSvc.filters.location.zip) { // TODO: performance: if manual zip, don't do geolocation
+            url += '&address=' + encodeURI(filterSvc.filters.location.zip);
+          }
 
-      // add jsonp callback
-      url += '&callback=JSON_CALLBACK'; // needed for angular $http.jsonp() to work
+          // add jsonp callback
+          url += '&callback=JSON_CALLBACK'; // needed for angular $http.jsonp() to work
 
-      console.log('meetingSvc url', url);
-      return url;
+          console.log('meetingSvc url', url);
+          return url; // return url to promise
+        });
+
+      return urlPromise;
     };
 
     meetingSvc.getMeetings = function() {
@@ -274,3 +237,24 @@ angular.module('addicaidApp')
 //      }
 //    };
   }]);
+
+
+
+
+
+
+
+
+//                        // TODO: fake data-carto
+//                        $http.jsonp('http://'+defaultCartodbAccount+'.cartodb.com/api/v2/sql/?q='+defaultCartodbSql+'&callback=JSON_CALLBACK')
+//                            .success(function(data,status) {
+//                                console.log('http://'+defaultCartodbAccount+'.cartodb.com/api/v2/sql/?q='+defaultCartodbSql+'&callback=JSON_CALLBACK');
+//                                for (var i=0; i < meetingSvc.meetingsCache.length; i++) {
+//                                    meetingSvc.meetingsCache[i].latLon.latitude = data.rows[i].latitude;
+//                                    meetingSvc.meetingsCache[i].latLon.longitude = data.rows[i].longitude;
+//                                }
+//
+//
+//                                meetingSvc.isFilterDirty = false;
+//                                $rootScope.$broadcast(meetingSvc.meetingsChangedEvent, [/* meetingsChangedArgs */]);
+//                            })
