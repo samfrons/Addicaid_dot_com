@@ -14,7 +14,7 @@ var defaultFiltersObject = {
       cssClass: 'AA',
       imgSrc: 'images/AAcircle.png',
       filters: [{ 'fellowship.name' : 'AlcoholicsAnonymous' }],
-      selected: true
+      selected: false
     },
     {
       text: 'Narcotics Anonymous',

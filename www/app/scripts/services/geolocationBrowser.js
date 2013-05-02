@@ -50,16 +50,16 @@ angular.module('addicaidApp')
         console.log('geolocationBrowser.getCurrentLocation: returning result', promise);
         return promise;
       },
-      getCurrentPosition: function() {
+      getCurrentPosition: function() { // TODO: lets move this into the constructor and run once using cache
         console.log('geolocationBrowser.getCurrentPosition start');
         var deferred = $q.defer();
         try {
           if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
               console.log('geolocationBrowser.getCurrentPosition got position');
-              deferred.resolve({
+              $rootScope.$apply(deferred.resolve({
                 coords: position.coords
-              });
+              }));
             });
           } else {
             console.log('geolocationBrowser.getCurrentPosition rejecting');

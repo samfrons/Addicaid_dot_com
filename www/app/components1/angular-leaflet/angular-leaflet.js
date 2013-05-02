@@ -55,29 +55,37 @@
         map.addLayer(L.tileLayer('http://{s}.tiles.mapbox.com/v3/samfrons.map-dcwttqie/{z}/{x}/{y}.png', { maxZoom: 18 }));
 
         // mapOptions
-        if (attrs.leafletOptions !== undefined) {
-          scope.$watch(attrs.leafletOptions, function (mapOptions) {
-            if (mapOptions === undefined) { // create mapOptions if doesn't exist
-              mapOptions = {};
-            }
+        if (angular.isDefined(attrs.leafletOptions)) {
+          scope.$watch(attrs.leafletOptions, function (mapOptions, oldMapOptions) {
+            console.log('leafletOptions changed', mapOptions, oldMapOptions);
+//            if (angular.isUndefined(mapOptions) || angular.isUndefined(mapOptions.center)) {
+//              return;
+//            }
+            // create mapOptions if doesn't exist
+            mapOptions = mapOptions || {};
+            oldMapOptions = oldMapOptions || {};
 
             // Center of the map
-            if (mapOptions.center === undefined) { // default center
+            if (angular.isUndefined(mapOptions.center)) { // default center
               angular.extend(mapOptions, { center : L.latLng(38.8977, -77.0366) });
             }
             // zoom
-            if (mapOptions.zoom === undefined) { // default zoom
+            if (angular.isUndefined(mapOptions.zoom)) { // default zoom
               angular.extend(mapOptions, { zoom : 8 });
             }
+            console.log('leafletOptions changed', mapOptions, oldMapOptions);
+
             map.setView(mapOptions.center, mapOptions.zoom);
 
-            // markers
-            if (mapOptions.markers) {
-              angular.forEach(mapOptions.markers, function(marker) {
-                /* jshint -W033 */
-                marker.addTo(map);
-              })
-            }
+            // map option markers
+            // first remove any old mapOptions markers
+            angular.forEach(oldMapOptions.markers, function(marker) {
+              map.removeLayer(marker);
+            });
+            // now add new markers
+            angular.forEach(mapOptions.markers, function(marker) {
+              marker.addTo(map);
+            });
 
           });
         }

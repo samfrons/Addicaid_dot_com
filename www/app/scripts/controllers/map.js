@@ -4,17 +4,19 @@ angular.module('addicaidApp')
   .controller('MapCtrl', ['$scope', '$rootScope', '$filter', 'meetingSvc', 'filterSvc', 'geolocationBrowser', function($scope, $rootScope, $filter, meetingSvc, filterSvc, geolocation) {
     $rootScope.sharedVars.pageTitle = 'Map';
 
-    geolocation.getCurrentLocation().then(function(coords) {
-      // map options
-      $scope.currentLatLng = L.latLng(coords.latitude, coords.longitude);
-      $scope.mapOptions = {
-        center: $scope.currentLatLng,
-        zoom: 13,
-        markers: [
-          L.marker($scope.currentLatLng, { icon: L.icon({iconUrl: 'images/heremap.png'})})
-        ]
-      };
-    });
+//    $scope.$apply(function() {
+      geolocation.getCurrentLocation().then(function(coords) {
+        // map options
+        $scope.currentLatLng = L.latLng(coords.latitude, coords.longitude);
+        $scope.mapOptions = {
+          center: $scope.currentLatLng,
+          zoom: 13,
+          markers: [
+            L.marker($scope.currentLatLng, { icon: L.icon({iconUrl: 'images/heremap.png'})})
+          ]
+        };
+      });
+//    });
 
 
     $scope.openPop = function() {
