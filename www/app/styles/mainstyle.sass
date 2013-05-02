@@ -116,13 +116,21 @@ body
  text-transform: uppercase
  background-size: auto
  overflow-x: hidden
+ background-color: #2855a2
+
 
 
 button
- background-color: $buttonbackground
- color: white !important
+ background-color: #e9e9e9
+ border: 1px solid #d0d0d0 !important
+ color: #333333
+ -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset
+ box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset
  text-transform: uppercase !important
  font-family: Damion, cursive
+ &:hover
+  background-color: #d0d0d0 !Important
+  display: none
 
 form
  h1 
@@ -145,10 +153,8 @@ header
   text-align: center
   color: rgba(70,70,70,1)
   min-height: 55px
-
-  font-size: 3em
+  font-size: 2.5em
 p
- font-family: helvetica
 
 a
  text-decoration: none
@@ -164,9 +170,10 @@ a
 section
  overflow-x: hidden
  margin: 55px 0 0 0
+ background-color: #2855a2 !important
 
 header.grid-12
- background-color: #f2f2f2
+ background-color: #f05122
  border-bottom: 1px solid #d9d9d9
  background-repeat: repeat-x
  background-size: auto 55px
@@ -178,8 +185,13 @@ header.grid-12
  height: 90%
  top: 50px
 
+li
+ transition: background-color 300ms ease-out
+ &:hover
+  background-color: #d0d0d0 !important
+
 li.map_top
- width: 25.23%
+ width: 24%
 
 button.map_top 
  width: 100%
@@ -187,6 +199,9 @@ button.map_top
 header
  button
   min-height: 33px !important
+  border: none !important
+  -webkit-box-shadow: none
+  box-shadow: none
 
 button
  margin: 20px
@@ -290,9 +305,13 @@ button.facebook
  h3
   text-indent: 10px
  ul
+
   li
-   background-color: rgba(242,242,236,1)
-   -webkit-box-shadow: inset 0px 0px 1px 1px rgba(222,222,216,1)
+   background-color: #e9e9e9
+   border: 1px solid #d0d0d0 
+   color: #333333
+   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset
+   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset
  
 
  button.filter_submit
@@ -365,16 +384,25 @@ article.filter
  div.filter_where
   font-weight: bold
   vertical-align: middle
+  width: 100%
   ul.filter_where
    vertical-align: middle
-   margin: 10px 0 0 5px
+   margin: 10px 0 10px 5px
+   width: 100%
+   li
+    background: transparent !important
+    border: none !important
+    width: 47%
+    box-shadow: none !important
+
    span.or
     vertical-align: top
+    width: 50%
  input.miles
-  width: 30px
+  width: 50px
 
  button.here
-  background-color: white
+  background-color: white !important
   width: 30px
   height: 20px
   background-size: 60px auto
@@ -396,12 +424,34 @@ article.filter
 input.zipcode 
  width: 70px
 
+ol#spincontainer
+ margin: 55% 0 0 0
 
+.ratetop
+ width: 100%
+ margin: 0 auto
+ border-color: #d9d9d9
+ margin: 20px 0 5px 0
+ padding: 5px
+ background: #f2f2f2
+ 
+ h3
+  text-align: center
 
 section.ratepage
  font-size: .8em
  article > hgroup
   font-size: 1.3em
+ .bigdealcontainer
+  padding: 10px
+  width: 90%
+  .words
+   margin: 10px !important
+
+
+
+button.get_started
+ margin: 70px 0 0 0 !important
 
  h1, h2
   text-align: center
@@ -411,7 +461,8 @@ section.ratepage
  margin: 10px 0 10px 0
 
 button.search_submit
- height: 20px
+ height: 40px
+ margin: 30px 0 0 0 
  padding: 1px 5px 1px 5px
 
 .or_search
@@ -476,14 +527,11 @@ hgroup
 
 aside.right_side
  &.map-popup
-  width: 100px
- height: 100%
  min-height: 60px
- width: 28.91%
  margin: 0 0 0 5%
  border-radius: 100px
- height: 100px
- width: 100px
+ height: 90px
+ width: 90px
 
 
  /* background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgba(20, 136, 203, 1)), color-stop(1, rgba(20, 136, 203, .5)) )*/
@@ -507,7 +555,7 @@ div.filter_fellowship
   li
    background-color: rgba(242,242,236,1)
    -webkit-box-shadow: none
-   width: 33.3%
+   width: 32.5%
    font-weight: bold
    text-transform: uppercase
    height: 35px
@@ -516,10 +564,15 @@ div.filter_fellowship
 
 
 .FilterToggle.ui-show
- background-color: #0f86ab
+ background-color: red !important
+ -webkit-box-shadow: inset 0px 0px 1px 1px rgba(202,202,206,1)
+
+.FilterToggle.ui-hide
+ background-color: red !important
  -webkit-box-shadow: inset 0px 0px 1px 1px rgba(202,202,206,1)
  
-
+.leaflet-container
+ top: 0px
 
 .map-popup
  .timeandday
@@ -568,7 +621,7 @@ div.filter_fellowship
 ul.filter_day
 
 ul.filter_day li
- width: 14.2%
+ width: 13.7%
  height: 25px
  background-size: 35px auto
  text-align: center
@@ -583,7 +636,7 @@ div.filter_time
   margin: 10px 0 0 0
 ul.filter_time
  li
-  width: 25%
+  width: 24%
   padding: 5px 0 5px 0
   font-size: .7em
   text-align: center
@@ -594,6 +647,9 @@ ul.filter_time
   img
   &.ui-show
    height: 45px
+
+button.filter
+ margin: 10px 0 100px
 
 
 ul.ratings
@@ -689,9 +745,19 @@ ul.filter_ratings
  li
   background-color: #f2f2ec
   -webkit-box-shadow: inset 0px 0px 1px 1px #deded8
-  height: 30px
-  width: 24.4%
-  padding: 15px 0 0 0
+  height: 20px
+  max-width: 23%
+  padding: 10px
+  font-family: Gotham !important
+  text-align: center
+  max-height: 20px !important
+  h3
+   font-size: .7em !important
+
+
+ .meeting_option
+  padding: 10px !important
+  background-color: blue !important
 
   text-align: center
   &:hover
@@ -700,7 +766,7 @@ ul.filter_ratings
    display: none
   p
    font-weight: bold
-   font-size: 1em
+   font-size: .8em
 
 button.reset
  background-color: gray

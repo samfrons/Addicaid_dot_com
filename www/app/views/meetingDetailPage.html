@@ -57,19 +57,12 @@
             </div>
             </div>
         -->
-        <input class="grids grid11 commentbox" type="text" placeholder="how was your experience at this meeting?"></input>
-        <button type="submit" class="subtle_style">submit</button>
+        <button class="meeting_option"><a href="https://maps.google.com/maps?daddr={{meeting.address}}">
+            <h3>get directions</h3></a></button>
+        <button class="meeting_option"><a href="https://maps.google.com/maps?daddr={{meeting.address}}">
+            <h3>add to calander</h3></a></button>
 
-
-
-        <button type="submit" class="subtle_style"><a href="https://maps.google.com/maps?daddr={{meeting.address}}">
-            get directions</a></button>
-        <button type="submit" class="subtle_style"><a href="https://maps.google.com/maps?daddr={{meeting.address}}">
-            add to calander</a></button>
-
-        <button type="submit" class="subtle_style"><a href="https://maps.google.com/maps?daddr={{meeting.address}}">
-            share?</a></button>
-
+    
         <div leaflet-map="mapid"
              leaflet-options="mapOptions"
              class="short-mapclass">
@@ -89,6 +82,9 @@
 
 <style>
     .short-mapclass {
-        height: 180px;
+        height: 210px;
     }
+
+    .mapid
+     height: 300px
 </style>

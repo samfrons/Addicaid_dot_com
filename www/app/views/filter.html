@@ -30,16 +30,9 @@
                     <input type="field" class="miles" placeholder="5 miles"
                            ng-model="filters.location.radius"
                            ng-pattern="/\d+/" />
-                    <label><button class="here FilterToggle"
+                    <button class="FilterToggle"
                                    ng-tap="filters.location.useCurrentLocation=!filters.location.useCurrentLocation"
-                                   ui-show="filters.location.useCurrentLocation">here</button></label>
-                </li>
-
-                <li>
-
-
-                    <br/>
-
+                                   ui-show="filters.location.useCurrentLocation">here</button>
                 </li>
 
                 <li>
@@ -81,8 +74,8 @@
                 <li ng-repeat="rating in filters.ratings" class="grids grid-2 FilterToggle"
                     ui-show="rating.selected"
                     ng-tap="rating.selected=!rating.selected">
-                    <img height="25px" ng-src="{{getImgSrc(rating)}}" />
-                    <p>{{rating.text}}</p>
+        
+                    <h4>{{rating.text}}</h4>
                 </li>
             </ul>
         </div>
@@ -92,5 +85,5 @@
 
     </article>
 
-    <button type="submit" class="submit_simple"><span class="submit_text">submit</span><span class="submit_arrow"></span></button>
+    <button type="submit" class="filter submit_simple"><span class="submit_text">submit</span><span class="submit_arrow"></span></button>
 </section>
