@@ -36,18 +36,6 @@ form h1 {
   width: 400px;
   opacity: 0.6; }
 
-header h1 {
-  position: relative;
-  text-transform: capitalize;
-  top: 0px;
-  margin: 0;
-  padding: 0;
-  font-family: Damion;
-  text-align: center;
-  color: #464646;
-  min-height: 55px;
-  font-size: 3em; }
-
 p {
   font-family: helvetica; }
 
@@ -65,7 +53,7 @@ section {
   overflow-x: hidden;
   margin: 55px 0 0 0; }
 
-header.grid-12 {
+nav.header.grid-12 {
   background-color: #f2f2f2;
   border-bottom: 1px solid #d9d9d9;
   background-repeat: repeat-x;
@@ -73,19 +61,31 @@ header.grid-12 {
   position: fixed;
   z-index: 1000;
   top: 0px; }
+  nav.header.grid-12 button {
+    min-height: 33px !important; }
+  nav.header.grid-12 h1 {
+    position: relative;
+    text-transform: capitalize;
+    top: 0px;
+    margin: 0;
+    padding: 0;
+    font-family: Damion;
+    text-align: center;
+    color: #464646;
+    min-height: 55px;
+    font-size: 3em; }
+
+.appBody {
+  margin-top: 56px; }
 
 .mapclass {
-  height: 90%;
-  top: 50px; }
+  height: 80%; }
 
 li.map_top {
   width: 25.23%; }
 
 button.map_top {
   width: 100%; }
-
-header button {
-  min-height: 33px !important; }
 
 button {
   margin: 20px;
@@ -703,7 +703,7 @@ ul.options.filter {
   width: 100%;
     width-margin: 0; }
 
-.bottom .grid-3 {
+nav .bottom .grid-3 {
   font-size: 0.7em;
   width: 22.4%;
   margin: 0; }
