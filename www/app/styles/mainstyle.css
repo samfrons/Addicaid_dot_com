@@ -294,10 +294,9 @@ article.filter div.filter_where {
       width: 47%;
       box-shadow: none !important; }
     article.filter div.filter_where ul.filter_where span.or {
-      vertical-align: top;
       width: 50%; }
 article.filter input.miles {
-  width: 50px; }
+  width: 65px; }
 article.filter button.here {
   background-color: white !important;
   width: 30px;
@@ -608,7 +607,7 @@ ul.filter_ratings li {
   background-color: #f2f2ec;
   -webkit-box-shadow: inset 0px 0px 1px 1px #deded8;
   height: 20px;
-  max-width: 23%;
+  width: 17% !important;
   padding: 10px;
   font-family: Gotham !important;
   text-align: center;
@@ -629,6 +628,10 @@ ul.filter_ratings .meeting_option {
 
 button.reset {
   background-color: gray; }
+
+li.input {
+  border: none !important;
+  margin: 0; }
 
 .leaflet-bottom {
   display: none; }
@@ -706,24 +709,30 @@ button.vote {
 ul.options {
   margin: 55px 0 0 0; }
   ul.options li button {
-    height: 30px; }
+    height: 32px; }
   ul.options li input {
-    height: 26px;
+    height: 32px;
     margin: 0 0 0 -3px;
     position: relative;
-    left: -13px;
+    left: -23px;
     width: 101%; }
 
 ul.options.filter {
   margin: 0 0 0 0; }
-  ul.options.filter li {
+
+.from_here {
+  background: transparent;
+  -webkit-box-shadow: none !important;
+  border: none !important;
+  font-weight: bold; }
+  .from_here li {
     background: transparent;
       background--webkit-box-shadow: none !important;
     box-shadow: none !important; }
-    ul.options.filter li button {
+    .from_here li button {
       height: 30px; }
-    ul.options.filter li input {
-      height: 24px;
+    .from_here li input {
+      height: 28px;
       margin: 0 0 0 -3px; }
 
 .grids {

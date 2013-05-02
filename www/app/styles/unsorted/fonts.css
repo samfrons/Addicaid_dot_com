@@ -16,14 +16,9 @@
 	
 }
 
-@font-face {
-	font-family: 'Damion';
-	src: url("http://www.addicaid.org/app/fonts/Damion-Regular.ttf");
-	
-}
 
 @font-face {
-	font-family: 'Ronda', sans-serif;
+	font-family: 'Ronda';
 
 	src: url("http://www.addicaid.org/app/fonts/Ronda.ttf");
 	
@@ -32,7 +27,7 @@
 
 
 @font-face {
-	font-family:'AddElectricCity', sans-serif;
+	font-family:'AddElectricCity';
 
 	src: url("http://www.addicaid.org/app/fonts/ael.ttf");
 	

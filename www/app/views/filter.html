@@ -3,7 +3,7 @@
 
         <ul class="options filter">
             <li  class="map_top"ng-tap="$navigate.go('/filter', 'slide')"><button class="map_top">filter</button></li>
-            <li class="grid-6"><input class="grid-12" type="text" placeholder="search"></input></li>
+            <li class="grid-6 input"><input class="grid-12" type="text" placeholder="search"/></li>
             <li class=" map_top" ng-tap="$navigate.go('/meetingList', 'slide')"><button class="map_top">list</button></li>
         </ul>
 
@@ -30,12 +30,12 @@
                     <input type="field" class="miles" placeholder="5 miles"
                            ng-model="filters.location.radius"
                            ng-pattern="/\d+/" />
-                    <button class="FilterToggle"
+                    <button class="FilterToggle from_here"
                                    ng-tap="filters.location.useCurrentLocation=!filters.location.useCurrentLocation"
-                                   ui-show="filters.location.useCurrentLocation">here</button>
+                                   ui-show="filters.location.useCurrentLocation"> from here</button>
                 </li>
 
-                <li>
+                <li >
                     <span class="or">or</span>&nbsp;&nbsp;
                     <input type="field" class="zipcode" placeholder="zip code"
                            ng-model="filters.location.zip"
