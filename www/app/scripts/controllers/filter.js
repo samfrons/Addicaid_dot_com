@@ -12,4 +12,13 @@ angular.module('addicaidApp')
       filterSvc.resetFilters();
       $scope.filters = filterSvc.filters;
     };
+
+
+
+
+    $scope.toggleVar = function(preToggle) {
+      var postToggle = !preToggle;
+      console.log('TOGGLING: '+preToggle+' --> '+postToggle);
+      return postToggle;
+    };
   }]);

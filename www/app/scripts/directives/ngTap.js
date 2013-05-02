@@ -6,18 +6,18 @@ angular.module('addicaidApp')
     return {
 //      template: '<div></div>',
       restrict: 'A',
-      link: function postLink(scope, elm, attrs) {
+      link: function postLink(scope, element, attrs) {
         if (isTouchDevice) {
           var tapping = false;
-          elm.bind('touchstart', function() { tapping = true; });
-          elm.bind('touchmove', function() { tapping = false; });
-          elm.bind('touchend', function() {
+          element.bind('touchstart', function() { tapping = true; });
+          element.bind('touchmove', function() { tapping = false; });
+          element.bind('touchend', function() {
             /* jshint -W030 */
             // TODO: although there is probably a way to do following line without breaking jshint
             tapping && scope.$apply(attrs.ngTap);
           });
         } else {
-          elm.bind('click', function() {
+          element.bind('click', function() {
             scope.$apply(attrs.ngTap);
           });
         }
