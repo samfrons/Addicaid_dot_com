@@ -36,7 +36,7 @@ angular.module('addicaidApp')
               latitude: value.coords.latitude,
               longitude: value.coords.longitude
             };
-            console.log('got location from within geolocationBrowser.getCurrentLocation');
+            console.log('geolocationBrowser.getCurrentLocation: got location');
             return location;
           }, function(error) {
             var location = {
@@ -47,29 +47,28 @@ angular.module('addicaidApp')
             return location;
           });
 
-        console.log('geolocationBrowser.getCurrentLocation: returning result', promise);
         return promise;
       },
       getCurrentPosition: function() { // TODO: lets move this into the constructor and run once using cache
-        console.log('geolocationBrowser.getCurrentPosition start');
+        console.log('geolocationBrowser.getCurrentPosition: start');
         var deferred = $q.defer();
         try {
           if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
-              console.log('geolocationBrowser.getCurrentPosition got position');
+              console.log('geolocationBrowser.getCurrentPosition: got position');
               $rootScope.$apply(deferred.resolve({
                 coords: position.coords
               }));
             });
           } else {
-            console.log('geolocationBrowser.getCurrentPosition rejecting');
+            console.log('geolocationBrowser.getCurrentPosition: REJECT');
             deferred.reject('location services not allowed');
           }
         } catch(ex) {
-          console.log('geolocationBrowser.getCurrentPosition exception');
+          console.log('geolocationBrowser.getCurrentPosition: EXCEPTION');
           deferred.reject(ex);
         }
-        console.log('geolocationBrowser.getCurrentPosition returning promise', deferred.promise);
+        console.log('geolocationBrowser.getCurrentPosition: returning promise', deferred.promise);
         return deferred.promise;
       }
     };

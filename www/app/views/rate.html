@@ -3,94 +3,111 @@
     <h2>Let everyone know if these meetings have any of the following qualities.</h2>
     <h3>There's prizes</h3>
 
-        <article class="grids grid-12 meeting_entry ng-scope">
-            <aside class="grids grid-1 saveaside">
-                <button class="grids grid-5 save" type="submit" ng-tap="toggleFavorite(meeting)">
-                    <img ng-src="images/star_icon.png" src="images/star_icon.png">
-                </button>
-            </aside>
-            <hgroup class="grids grid-7">
-                <h3 class="ng-binding">Potreo Hill Community Center <span class="meetinglocation ng-binding">(Potreo Hill Community Center)</span></h3>
-                <h4 class="ng-binding">953 Deharo</h4>
-                <h4 class="ng-binding">San Francisco, CA 94107</h4>
-            </hgroup>
-            <aside class="grids grid-4 right_side NA" ng-tap="$navigate.go('/meetingList/61023/true', 'slide')">
-                <div class="timeandday">
-                    <p class="time ng-binding">20:00</p>
-                    <p class="day ng-binding">WED</p>
-                    <span class="distance ng-binding">0.9 MILES</span>
-                </div>
-
-            </aside>
-            <!--
-                <aside class="grids grid-3 right2_side">
-                </aside>
-            -->
-
+    <section class="meetinglist">
+        <article ng-repeat="meeting in meetings">
+            <ng-include src="getPartialUrl('meetingDetailSmall')" ng-controller="MeetingDetailCtrl"></ng-include>
             <ul class="grids grid-12 filter_ratings">
-
-                <li >
-                    <img height="25px" src="images/young_people.png">
-                    <p class="ng-binding">young people</p>
-                </li>
-                <li >
-                    <img height="50px" src="images/snacks.png">
-                    <p class="ng-binding">snacks</p>
-                </li>
-                <li >
-                    <img height="25px" src="images/fellowship.png">
-                    <p class="ng-binding">fellowship</p>
-                </li>
-                <li >
-                    <img height="25px" src="images/cool_venue.png">
-                    <p class="ng-binding">cool venue?</p>
+                <li ng-repeat="rating in meeting.newRatings"
+                    class="grids grid-2 FilterToggle"
+                    ng-tap="rating.selected=!rating.selected"
+                    ui-show="rating.selected">
+                    <img height="25px" ng-src="{{getImgSrc(rating)}}" />
+                    <p>{{rating.text}}</p>
                 </li>
             </ul>
+
+            <!--<ul class="grids grid-12 filter_ratings">-->
+                <!--<li class="grids grid-2 FilterToggle"-->
+                    <!--ng-tap="meeting.newRatings[0].selected=!meeting.newRatings[0].selected"-->
+                    <!--ui-show="meeting.newRatings[0].selected">-->
+                    <!--<img height="25px" src="images/young_people.png">-->
+                    <!--<p>young people</p>-->
+                <!--</li>-->
+                <!--<li >-->
+                    <!--<img height="50px" src="images/snacks.png">-->
+                    <!--<p>snacks</p>-->
+                <!--</li>-->
+                <!--<li >-->
+                    <!--<img height="25px" src="images/fellowship.png">-->
+                    <!--<p>fellowship</p>-->
+                <!--</li>-->
+                <!--<li >-->
+                    <!--<img height="25px" src="images/cool_venue.png">-->
+                    <!--<p>cool venue</p>-->
+                <!--</li>-->
+            <!--</ul>-->
         </article>
+        <button type="submit" ng-show="showSubmit"
+                class="submit_simple search_submit"
+                ng-tap="$navigate.go('/rateReward', 'slide')">
+            submit
+        </button>
+    </section>
 
-        <!-- those meeting details I couldn't get working . let's also maybe indicate if they clicked it, favorited it, calandered it etc...
-                <article class="grids grid-12 meeting_entry">
-            <aside class="grids grid-1 saveaside">
-                <button class="grids grid-5 save" type="submit" ng-tap="toggleFavorite(meeting)">
-                    <img ng-src="{{getStarImgSrc(meeting.isFavorite)}}">
-                </button>
-            </aside>
-            <hgroup class="grids grid-7">
-                <h3>{{meeting.title}} <span class="meetinglocation">({{meeting.latLon.locationName}})</span></h3>
-                <h4>{{parseAddress(meeting.address,1)}}</h4>
-                <h4>{{parseAddress(meeting.address,2)}}</h4>
-            </hgroup>
-            <aside class="grids grid-4 right_side {{getFellowshipID(meeting.fellowship.name)}}" ng-tap="$navigate.go('/meetingList/{{meeting.id}}/true', 'slide')">
-                <div class="timeandday">
-                    <p class="time">{{formatTime(meeting.time)}}</p>
-                    <p class="day">{{formatDay(meeting.day)}}</p>
-                    <span class="distance">{{formatDistance(meeting.distance)}}</span>
-                </div>
-            </aside>
-        -->
-
-
-
-        <!--
-       i couldn't  get this toggle thing to work right either. need help implementing that....
-        <li ng-repeat="rating in filters.ratings" class="grids grid-2 FilterToggle ng-scope" ui-show="rating.selected" ng-tap="rating.selected=!rating.selected">
-           <img height="25px" ng-src="images/snacks.png" src="images/snacks.png">
-           <p class="ng-binding">snacks</p>
-       </li>
-       <li ng-repeat="rating in filters.ratings" class="grids grid-2 FilterToggle"
-           ui-show="rating.selected"
-           ng-tap="rating.selected=!rating.selected">
-           <img height="25px" ng-src="{{getImgSrc(rating)}}" />
-           <p>{{rating.text}}</p>
-       </li>-->
-
-
-        </div>
-        <!--<a ng-tap="submitFilter()">-->
-        <!--<button type="submit" class="submit_button filter_submit"><span class="submit_text">submit</span><span class="submit_arrow"></span></button>-->
-        <!--</a>-->
-
-        </article>
-
-        <button type="submit" class="submit_simple search_submit" ng-tap="$navigate.go('/rateReward', 'slide')">submit</button>
 </section>
+    <!--<article class="grids grid-12 meeting_entry ng-scope">-->
+    <!--<aside class="grids grid-1 saveaside">-->
+    <!--<button class="grids grid-5 save" type="submit" ng-tap="toggleFavorite(meeting)">-->
+    <!--<img ng-src="images/star_icon.png" src="images/star_icon.png">-->
+    <!--</button>-->
+    <!--</aside>-->
+    <!--<hgroup class="grids grid-7">-->
+    <!--<h3 class="ng-binding">Potreo Hill Community Center <span class="meetinglocation ng-binding">(Potreo Hill Community Center)</span></h3>-->
+    <!--<h4 class="ng-binding">953 Deharo</h4>-->
+    <!--<h4 class="ng-binding">San Francisco, CA 94107</h4>-->
+    <!--</hgroup>-->
+    <!--<aside class="grids grid-4 right_side NA" ng-tap="$navigate.go('/meetingList/61023/true', 'slide')">-->
+    <!--<div class="timeandday">-->
+    <!--<p class="time ng-binding">20:00</p>-->
+    <!--<p class="day ng-binding">WED</p>-->
+    <!--<span class="distance ng-binding">0.9 MILES</span>-->
+    <!--</div>-->
+
+    <!--</aside>-->
+
+
+    <!--</article>-->
+
+    <!-- those meeting details I couldn't get working . let's also maybe indicate if they clicked it, favorited it, calandered it etc...
+            <article class="grids grid-12 meeting_entry">
+        <aside class="grids grid-1 saveaside">
+            <button class="grids grid-5 save" type="submit" ng-tap="toggleFavorite(meeting)">
+                <img ng-src="{{getStarImgSrc(meeting.isFavorite)}}">
+            </button>
+        </aside>
+        <hgroup class="grids grid-7">
+            <h3>{{meeting.title}} <span class="meetinglocation">({{meeting.latLon.locationName}})</span></h3>
+            <h4>{{parseAddress(meeting.address,1)}}</h4>
+            <h4>{{parseAddress(meeting.address,2)}}</h4>
+        </hgroup>
+        <aside class="grids grid-4 right_side {{getFellowshipID(meeting.fellowship.name)}}" ng-tap="$navigate.go('/meetingList/{{meeting.id}}/true', 'slide')">
+            <div class="timeandday">
+                <p class="time">{{formatTime(meeting.time)}}</p>
+                <p class="day">{{formatDay(meeting.day)}}</p>
+                <span class="distance">{{formatDistance(meeting.distance)}}</span>
+            </div>
+        </aside>
+    -->
+
+
+
+    <!--
+   i couldn't  get this toggle thing to work right either. need help implementing that....
+    <li ng-repeat="rating in filters.ratings" class="grids grid-2 FilterToggle ng-scope" ui-show="rating.selected" ng-tap="rating.selected=!rating.selected">
+       <img height="25px" ng-src="images/snacks.png" src="images/snacks.png">
+       <p class="ng-binding">snacks</p>
+   </li>
+   <li ng-repeat="rating in filters.ratings" class="grids grid-2 FilterToggle"
+       ui-show="rating.selected"
+       ng-tap="rating.selected=!rating.selected">
+       <img height="25px" ng-src="{{getImgSrc(rating)}}" />
+       <p>{{rating.text}}</p>
+   </li>-->
+
+
+    <!--</div>-->
+    <!--<a ng-tap="submitFilter()">-->
+    <!--<button type="submit" class="submit_button filter_submit"><span class="submit_text">submit</span><span class="submit_arrow"></span></button>-->
+    <!--</a>-->
+
+    <!--</article>-->

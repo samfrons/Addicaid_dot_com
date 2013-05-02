@@ -185,6 +185,11 @@ angular.module('addicaidApp')
   .factory('filterSvc', ['$filter', function($filter) {
     var filterSvc = {};
 
+    filterSvc.createRatingsArray = function() {
+      return angular.copy(defaultFiltersObject.ratings);
+    }
+    console.log('filterSvc.createRatingsArray',filterSvc.createRatingsArray());
+
     filterSvc.resetFilters = function() {
       filterSvc.filters = angular.copy(defaultFiltersObject);
     };

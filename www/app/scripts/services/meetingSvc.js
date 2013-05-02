@@ -52,6 +52,7 @@ angular.module('addicaidApp')
 
               // PROCESS MEETINGS CACHE
               angular.forEach(meetingSvc.meetingsCache, function(meeting) {
+
                 // clean up ratings object
                 var newRatings = {};
                 angular.forEach(meeting.rating, function(value, key) {
@@ -60,7 +61,6 @@ angular.module('addicaidApp')
                   }
                 });
                 meeting.rating = newRatings;
-
 
                 // clean up time
                 meeting.time = meeting.time.split(':')[0] + ':' + meeting.time.split(':')[1];
