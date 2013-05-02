@@ -23,7 +23,7 @@ h2#test {
   #outerspace {
     position: relative;
     height: 400px;
-    background: #0c0440 url(/images/outerspace.jpg);
+    background: #0c0440 url(../../images/outerspace.jpg);
   }
   div.rocket {
     position: absolute;

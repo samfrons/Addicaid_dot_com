@@ -3,4 +3,5 @@
 angular.module('addicaidApp')
   .controller('LoginCtrl', ['$scope', function($scope) {
     $scope.pageTitle = 'Signup';
+    console.log('LoginCtrl');
   }]);

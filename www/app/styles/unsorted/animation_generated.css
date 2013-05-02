@@ -19,8 +19,8 @@
 	-webkit-animation-fill-mode: forwards; /* Stop the animation at the last keyframe */
 }
 
-#spincontainer li div:nth-child(1) { background-image:url("../images/sadman.png");background-repeat: no-repeat; } /* Horizontal flipped iPad image is used */
-#spincontainer li div:nth-child(2) { background-image:url("../images/happyman.png");background-repeat: no-repeat;
+#spincontainer li div:nth-child(1) { background-image:url("../../images/sadman.png");background-repeat: no-repeat; } /* Horizontal flipped iPad image is used */
+#spincontainer li div:nth-child(2) { background-image:url("../../images/happyman.png");background-repeat: no-repeat;
 	-webkit-backface-visibility: hidden; /* Hide the iPhone when facing the other side */
 }
 

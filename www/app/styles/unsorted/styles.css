@@ -107,7 +107,7 @@ a.dailydosebutton {
   left: -10px; }
 
 button.back {
-  background-image: url(../images/back_button.png);
+  background-image: url(../../images/back_button.png);
   background-color: transparent;
   border-style: none;
   min-height: 20px;
@@ -117,7 +117,7 @@ button.back {
   margin: 10px 0 0 0; }
 
 button.settings {
-  background-image: url(../images/profile.png);
+  background-image: url(../../images/profile.png);
   margin: 20px 0 0 5px;
   background-color: transparent;
   border-style: none;
@@ -128,7 +128,7 @@ button.settings {
   width: 8%; }
 
 section.signup {
-  background-image: url(../images/appsignupbk.jpg);
+  background-image: url(../../images/appsignupbk.jpg);
   background-size: 100% 100%;
   margin: 0 auto;
   margin-top: 50px;
@@ -173,7 +173,7 @@ button.submit_button {
     display: inline-block;
     height: 20px;
     width: 20px;
-    background-image: url(../images/arrow_right.png); }
+    background-image: url(../../images/arrow_right.png); }
 
 button.facebook {
   background: #216cc0;
@@ -186,7 +186,7 @@ button.facebook {
     display: inline-block;
     height: 20px;
     width: 20px;
-    background-image: url(../images/facebook.png); }
+    background-image: url(../../images/facebook.png); }
 
 .facebook {
   margin: 0 0 0 0px;
@@ -289,7 +289,7 @@ article.filter button.here {
     background-position: 5px 1px;
     display: inline-block;
     width: 22px;
-    background-image: url(../images/here_icon.png);
+    background-image: url(../../images/here_icon.png);
     background-size: 20px auto;
     background-repeat: no-repeat; }
 
@@ -426,7 +426,7 @@ div.filter_fellowship {
   color: #2a2a2a;
   height: 77px;
   background-repeat: no-repeat;
-  background-image: url(../images/calendar.png);
+  background-image: url(../../images/calendar.png);
   background-position: 0px 10px;
   text-align: left; }
   .timeandday p {
@@ -479,7 +479,7 @@ ul.ratings {
   ul.ratings li:first-child {
     border-left: 0px solid white !important; }
   ul.ratings li {
-    background: url(../images/rating_icon_sprite_black.png) no-repeat top left;
+    background: url(../../images/rating_icon_sprite_black.png) no-repeat top left;
     vertical-align: middle;
     height: 20px;
     padding: 5px 5px 0 5px;
@@ -598,13 +598,13 @@ nav .bottom {
     background-color: #0f86ab; }
 
 section.profile {
-  background-image: url(../images/profile.jpg);
+  background-image: url(../../images/profile.jpg);
   height: 100%;
   background-repeat: no-repeat;
   background-size: 100% auto; }
 
 section.dailydose {
-  background-image: url(../images/dailychallenge.jpg);
+  background-image: url(../../images/dailychallenge.jpg);
   height: 100%;
   background-repeat: no-repeat;
   background-size: 100% auto; }
