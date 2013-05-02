@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('addicaidApp')
-  .controller('MapCtrl', ['$scope', '$filter', 'meetingSvc', 'filterSvc', function($scope, $filter, meetingSvc, filterSvc) {
-    $scope.pageTitle = 'Map';
+  .controller('MapCtrl', ['$scope', '$rootScope', '$filter', 'meetingSvc', 'filterSvc', function($scope, $rootScope, $filter, meetingSvc, filterSvc) {
+    $rootScope.sharedVars.pageTitle = 'Map';
 
     // Current location
     $scope.currentLatLng = L.latLng(meetingSvc.getCurrentLocation().latitude, meetingSvc.getCurrentLocation().longitude);

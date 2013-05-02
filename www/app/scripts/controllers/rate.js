@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('addicaidApp')
-  .controller('RateCtrl', ['$scope', function ($scope) {
-    $scope.pageTitle = 'Rate';
+  .controller('RateCtrl', ['$scope', '$rootScope', function ($scope, $rootScope) {
+    $rootScope.sharedVars.pageTitle = 'Rate';
   }]);

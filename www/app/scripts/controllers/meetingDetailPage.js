@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('addicaidApp')
-  .controller('MeetingDetailPageCtrl', ['$scope', '$routeParams', 'meetingSvc', function ($scope, $routeParams, meetingSvc) {
-    $scope.pageTitle = 'Meeting Title';
+  .controller('MeetingDetailPageCtrl', ['$scope', '$rootScope', '$routeParams', 'meetingSvc', function ($scope, $rootScope, $routeParams, meetingSvc) {
+    $rootScope.sharedVars.pageTitle = 'Meeting Title';
 
     // hack: disable comments if needed
     $scope.showComments = $routeParams.showComments;

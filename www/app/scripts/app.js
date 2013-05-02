@@ -55,6 +55,11 @@ angular.module('addicaidApp', ['ajoslin.mobile-navigate', 'angular-leaflet'])
   // load the $navigate (angular-mobile-nav) service for all controllers
   .run(['$rootScope', '$navigate', function($rootScope, $navigate) {
     $rootScope.$navigate = $navigate;
+
+    // shared vars at the rootScope level
+    $rootScope.sharedVars = {
+      pageTitle: ''
+    };
   }])
 
   // TODO: this needs to get out of rootScope

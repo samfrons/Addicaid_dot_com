@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('addicaidApp')
-  .controller('MeetingListFavoritesCtrl', ['$scope', 'meetingSvc', function ($scope, meetingSvc) {
-    $scope.pageTitle = 'Favorites';
+  .controller('MeetingListFavoritesCtrl', ['$scope', '$rootScope', 'meetingSvc', function ($scope, $rootScope, meetingSvc) {
+    $rootScope.sharedVars.pageTitle = 'Favorites';
 
     $scope.$on(meetingSvc.meetingsChangedEvent, function(event, args) {
       console.log('MeetingListFavoritesCtrl#on#meetings changed', event, args);

@@ -1,7 +1,6 @@
 'use strict';
 
 angular.module('addicaidApp')
-  .controller('LoginCtrl', ['$scope', function($scope) {
-    $scope.pageTitle = 'Signup';
-    console.log('LoginCtrl');
+  .controller('LoginCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
+    $rootScope.sharedVars.pageTitle = 'Signup';
   }]);
