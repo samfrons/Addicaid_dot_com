@@ -1,9 +1,0 @@
-{
-  "name": "angular-mobile-nav",
-  "version": "0.0.0",
-  "commit": "f5aeac8f328fd224cbe6fcd4b67abccb06a44b06",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/ajoslin/angular-mobile-nav"
-  }
-}
