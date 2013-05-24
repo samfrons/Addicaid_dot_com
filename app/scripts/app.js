@@ -15,6 +15,10 @@ angular.module('addicaidSiteApp', [])
         templateUrl: 'views/inspiration.html',
         controller: 'InspirationCtrl'
       })
+      .when('/press', {
+        templateUrl: 'views/press.html',
+        controller: 'PressCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
