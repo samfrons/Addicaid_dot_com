@@ -51,4 +51,11 @@ angular.module('addicaidSiteApp', [])
       }
       return src;
     };
+  }])
+
+  // create ng-clickable go function
+  .run(['$rootScope', '$location', function($rootScope, $location) {
+    $rootScope.goto = function(url) {
+      $location.url(url);
+    };
   }]);
