@@ -19,6 +19,10 @@ angular.module('addicaidSiteApp', [])
         templateUrl: 'views/press.html',
         controller: 'PressCtrl'
       })
+      .when('/emailListSignup', {
+        templateUrl: 'views/emailListSignup.html',
+        controller: 'EmailListSignupCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
