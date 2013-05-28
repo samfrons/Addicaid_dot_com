@@ -1,10 +1,5 @@
 'use strict';
 
-angular.module('AddicaidDotComApp')
+angular.module('addicaidSiteApp')
   .controller('EmailListSignupCtrl', ['$scope', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
   }]);
