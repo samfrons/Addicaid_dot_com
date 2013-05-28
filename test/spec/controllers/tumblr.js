@@ -1,17 +1,17 @@
 'use strict';
 
-describe('Controller: EmailListSignupCtrl', function () {
+describe('Controller: TumblrCtrl', function () {
 
   // load the controller's module
   beforeEach(module('addicaidSiteApp'));
 
-  var EmailListSignupCtrl,
+  var TumblrCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    EmailListSignupCtrl = $controller('EmailListSignupCtrl', {
+    TumblrCtrl = $controller('TumblrCtrl', {
       $scope: scope
     });
   }));

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('addicaidSiteApp', [])
+angular.module('addicaidSiteApp', ['ngResource'])
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -23,6 +23,21 @@ angular.module('addicaidSiteApp', [])
         templateUrl: 'views/emailListSignup.html',
         controller: 'EmailListSignupCtrl'
       })
+      .when('/tumblr', {
+        templateUrl: 'views/tumblr.html',
+        controller: 'TumblrCtrl'
+      })
+      // --------------Tumblr routes
+      .when('/tumblr/page/:page', {
+        template:'/views/tumblr.html',
+        controller:"TumblrCtrl"
+      })
+      .when('/tumblr/post/:id', {
+        template: '/views/tumblr/tumblr-post-detail.html',
+        controller:"TumblrPostDetailCtrl"
+      })
+      // ----------END tumblr routes
+
       .otherwise({
         redirectTo: '/'
       });
