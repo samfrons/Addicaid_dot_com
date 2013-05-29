@@ -15,9 +15,6 @@
     <!-- endbuild -->
 </head>
 <body ng-app="addicaidSiteApp">
-<header>
-    - Giving Addicts the treatment they deserve.
-</header>
 
 <!--[if lt IE 7]>
 <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
@@ -37,8 +34,10 @@
 
 <!-- Add your site or application content here -->
 <ng-include src="getPartialUrl('header')" ng-controller="HeaderCtrl"></ng-include>
-<div class="container" ng-view></div>
+<!--<div class="container" ng-view></div>-->
 
+<ng-include src="getPartialUrl('emailListSignup')" ng-controller="EmailListSignupCtrl" id="email"></ng-include>
+<ng-include src="getPartialUrl('tumblr')" ng-controller="TumblrCtrl" id="tumblr"></ng-include>
 
 
 
@@ -63,7 +62,7 @@
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    var _gaq=[['_setAccount','UA-40001145-2'],['_trackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
         s.parentNode.insertBefore(g,s)}(document,'script'));
