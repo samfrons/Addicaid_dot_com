@@ -12,6 +12,8 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/bigstyle.css">
+    <link rel="stylesheet" href="styles/animate-custom.css">
     <!-- endbuild -->
 </head>
 <body ng-app="addicaidSiteApp">
@@ -36,9 +38,14 @@
 <ng-include src="getPartialUrl('header')" ng-controller="HeaderCtrl"></ng-include>
 <!--<div class="container" ng-view></div>-->
 
-<ng-include src="getPartialUrl('emailListSignup')" ng-controller="EmailListSignupCtrl" id="emailSection"></ng-include>
-<ng-include src="getPartialUrl('tumblr')" ng-controller="TumblrCtrl" id="tumblrSection"></ng-include>
 
+
+<ng-include src="getPartialUrl('main')" ng-controller="MainCtrl" id="mainSection"></ng-include>
+
+<ng-include src="getPartialUrl('emailListSignup')" ng-controller="EmailListSignupCtrl" id="emailSection"></ng-include>
+<!--
+<ng-include src="getPartialUrl('tumblr')" ng-controller="TumblrCtrl" id="tumblrSection"></ng-include>
+-->
 
 
 <script src="components/angular/angular.js"></script>
