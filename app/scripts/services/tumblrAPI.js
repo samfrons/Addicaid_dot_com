@@ -3,7 +3,7 @@
 angular.module('addicaidSiteApp')
   .factory('tumblrAPI', ['$resource', function($resource) {
     var api_key = '3Uj5hvL773MVNlhFJC5gyVftNh4Qxci3hqoPkU3nAzp9bFJ8UB';
-    var base_hostname = 'demo.tumblr.com';
+    var base_hostname = 'addicaid.tumblr.com';
 
     // Public API here
     return {
