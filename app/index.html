@@ -12,7 +12,35 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/bigstyle.css">
+    <link rel="stylesheet" href="styles/animate-custom.css">
     <!-- endbuild -->
+<<<<<<< HEAD
+  </head>
+<body ng-app="addicaidSiteApp">
+<header>
+- Giving Addicts the treatment they deserve. 
+</header>
+
+
+
+  <!-- Begin MailChimp Signup Form -->
+<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+  #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+  /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="http://addicaid.us6.list-manage.com/subscribe/post?u=d8ee99e07b0749118fc2d06ef&amp;id=f7d184c8ba" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+  <label for="mce-EMAIL">We have a lot of great features coming up. Be the first to know!</label>
+  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+  <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
+=======
 </head>
 <body ng-app="addicaidSiteApp">
 
@@ -26,19 +54,60 @@
 <![endif]-->
 
 
+>>>>>>> b9d4850e03556ddbe6af8e6a0ff408ec1c52caf1
 
 
 
 
+<<<<<<< HEAD
+  
+    <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="components/es5-shim/es5-shim.js"></script>
+      <script src="components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="container" ng-view>
+        <script type=”text/javascript” src=”http://www.addicaid.tumblr.com/js”/>
+
+
+
+
+    </div>
+
+    <script src="components/angular/angular.js"></script>
+
+    <!-- build:js scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/services/filterSvc.js"></script>
+    <script src="scripts/services/meetingSvc.js"></script>
+    <script src="scripts/controllers/map.js"></script>
+    <script src="scripts/controllers/inspiration.js"></script>
+    <script src="scripts/controllers/press.js"></script>
+    <!-- endbuild -->
+=======
 
 
 <!-- Add your site or application content here -->
 <ng-include src="getPartialUrl('header')" ng-controller="HeaderCtrl"></ng-include>
 <!--<div class="container" ng-view></div>-->
 
-<ng-include src="getPartialUrl('emailListSignup')" ng-controller="EmailListSignupCtrl" id="emailSection"></ng-include>
-<ng-include src="getPartialUrl('tumblr')" ng-controller="TumblrCtrl" id="tumblrSection"></ng-include>
 
+
+<ng-include src="getPartialUrl('main')" ng-controller="MainCtrl" id="mainSection"></ng-include>
+
+<ng-include src="getPartialUrl('emailListSignup')" ng-controller="EmailListSignupCtrl" id="emailSection"></ng-include>
+
+
+<ng-include src="getPartialUrl('press')" ng-controller="PressCtrl" id="pressSection"></ng-include>
+<!--
+<ng-include src="getPartialUrl('tumblr')" ng-controller="TumblrCtrl" id="tumblrSection"></ng-include>
+-->
 
 
 <script src="components/angular/angular.js"></script>
@@ -59,6 +128,7 @@
 <script src="scripts/controllers/tumblr.js"></script>
 <script src="scripts/controllers/tumblrPostDetail.js"></script>
 <!-- endbuild -->
+>>>>>>> b9d4850e03556ddbe6af8e6a0ff408ec1c52caf1
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
