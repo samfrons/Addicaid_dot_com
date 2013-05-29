@@ -1,14 +1,9 @@
-<div class="people_background">
+<ng-include src="getPartialUrl('headline')" ng-controller="HeadlineCtrl" id="headlineSection"></ng-include>
 
-	<hgroup>
-<img src="../images/addicaid_wordmark.png"/>
-<h2>A new kind of treatment</h2>
+<ng-include src="getPartialUrl('emailListSignup')" ng-controller="EmailListSignupCtrl" id="emailSection"></ng-include>
 
+<ng-include src="getPartialUrl('press')" ng-controller="PressCtrl" id="pressSection"></ng-include>
 
-<div class="bigdealcontainer">
-                <div class="words"><span class="word1">
-your life</span> <span class="word2">is about to</span> <span class="word3">get</span> <span class="word4">way</span> <span class="word5">more</span> <span class="word6">awesome</span> <span class="word7">this,</span> <span class="word8">but...</span> <span class="word9">you</span> <span class="word10">are</span> <span class="word11">doing</span> <span class="word12">...once</span> <span class="word13">we</span> <span class="word14">launch...
-</span></div>
-
-</hgroup>
-</div>
+<!--
+<ng-include src="getPartialUrl('tumblr')" ng-controller="TumblrCtrl" id="tumblrSection"></ng-include>
+-->

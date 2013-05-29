@@ -37,10 +37,21 @@ angular.module('addicaidSiteApp', ['ngResource'])
         controller:"TumblrPostDetailCtrl"
       })
       // ----------END tumblr routes
-
       .when('/map', {
         templateUrl: 'views/map.html',
         controller: 'MapCtrl'
+      })
+      .when('/headline', {
+        templateUrl: 'views/headline.html',
+        controller: 'HeadlineCtrl'
+      })
+      .when('/investors', {
+        templateUrl: 'views/investors.html',
+        controller: 'InvestorsCtrl'
+      })
+      .when('/aboutUs', {
+        templateUrl: 'views/aboutUs.html',
+        controller: 'AboutUsCtrl'
       })
       .otherwise({
         redirectTo: '/'
@@ -51,23 +62,7 @@ angular.module('addicaidSiteApp', ['ngResource'])
   .run(['$rootScope', function($rootScope) {
     $rootScope.getPartialUrl = function(partial) { // DONE: jasmine
       var src = '';
-      switch (partial) {
-      case 'header':
-        src = 'views/header.html';
-        break;
-      case 'footer':
-        src = 'views/footer.html';
-        break;
-      case 'meetingDetailSmall':
-        src = 'views/meetingDetailSmall.html';
-        break;
-      case 'testSwitchStatement': // used for unit testing
-        src = 'testUrlHere';
-        break;
-      default:
-        src = 'views/' + partial + '.html';
-        break;
-      }
+      src = 'views/' + partial + '.html';
       return src;
     };
   }])
