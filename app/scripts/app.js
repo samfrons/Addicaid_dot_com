@@ -38,6 +38,10 @@ angular.module('addicaidSiteApp', ['ngResource'])
       })
       // ----------END tumblr routes
 
+      .when('/map', {
+        templateUrl: 'views/map.html',
+        controller: 'MapCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
