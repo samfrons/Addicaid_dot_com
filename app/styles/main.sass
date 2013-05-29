@@ -1,1 +1,17 @@
 @import "compass_twitter_bootstrap"
+
+$blue: rgba(20,220,220,1)
+
+@mixin box-style
+ background-color: blue
+ color: teel
+
+
+body
+ @include box-style
+
+ header
+  color: blue
+  &:hover
+   color: green
+
