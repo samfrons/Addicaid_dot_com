@@ -53,6 +53,10 @@ angular.module('addicaidSiteApp', ['ngResource'])
         templateUrl: 'views/aboutUs.html',
         controller: 'AboutUsCtrl'
       })
+      .when('/thankYou', {
+        templateUrl: 'views/thankYou.html',
+        controller: 'ThankYouCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
