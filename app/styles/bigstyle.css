@@ -116,20 +116,24 @@ a {
 
 .word9 {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
-}
-.word9,.word10,.word11 {
     font-size: 2em;
-    font-family: 'Mensch';
-    line-height: 1;
     -webkit-animation-delay: 2.4s;
     -webkit-animation-name: bounceInLeft;
+}
+.word10,.word11,.word13 {
+    
+    font-family: 'Georgia';
+    font-style: italic;
+    line-height: 1;
+    -webkit-animation-delay: 3s;
+    -webkit-animation-name: bounceInLeft;
+    
 }
 
 .word13 {
    
     text-transform: uppercase;
-    -webkit-animation-delay: 2.8s;
-    -webkit-animation-name: bounceInLeft;
+
 
 }
 
