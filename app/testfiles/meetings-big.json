@@ -1,0 +1,3302 @@
+[
+    {
+        "id": 45005,
+        "title": "1001 Polk Street",
+        "address": "1001 Polk Street\nSan Francisco, CA 94109",
+        "time": "20:30",
+        "day": "FRIDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.419759,
+            "latitude": 37.785895,
+            "locationName": "1001 Polk Street"
+        },
+        "timeAsNumber": 20.0
+    },
+    {
+        "id": 45006,
+        "title": "Hope without Dope",
+        "address": ", CA ",
+        "time": "20:00",
+        "day": "WEDNESDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.423184,
+            "latitude": 37.784601,
+            "locationName": "Urban Life Center"
+        },
+        "timeAsNumber": 20.0
+    },
+    {
+        "id": 45007,
+        "title": "Saint Mary Hospital",
+        "address": "2200 Hayes Street\nSan Francisco, CA 94117",
+        "time": "19:30",
+        "day": "TUESDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.453599,
+            "latitude": 37.773748,
+            "locationName": "Saint Mary Hospital"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 45008,
+        "title": "Bernal Heights Community Center",
+        "address": "515 Cortland\nSan Francisco, CA 94110",
+        "time": "19:30",
+        "day": "WEDNESDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.416134,
+            "latitude": 37.739223,
+            "locationName": "Bernal Heights Community Center"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 45009,
+        "title": "Titanic Restored",
+        "address": "479 Naples St\nsan francisco, CA 94112",
+        "time": "10:00",
+        "day": "SATURDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.430678,
+            "latitude": 37.721099,
+            "locationName": "Excelsior District"
+        },
+        "timeAsNumber": 10.0
+    },
+    {
+        "id": 45010,
+        "title": "Sunset",
+        "address": "1366 48Th Avenue\nSan Francisco, CA 94122",
+        "time": "20:00",
+        "day": "SUNDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.507783,
+            "latitude": 37.760967,
+            "locationName": "Sunset"
+        },
+        "timeAsNumber": 20.0
+    },
+    {
+        "id": 45011,
+        "title": "Oaks Hotel",
+        "address": "587 15th Street\nOakland, CA 94612",
+        "time": "15:00",
+        "day": "SUNDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.274098,
+            "latitude": 37.806116,
+            "locationName": "Oaks Hotel"
+        },
+        "timeAsNumber": 15.0
+    },
+    {
+        "id": 45012,
+        "title": "Fresh Start",
+        "address": "900 Hoffman Blvd\nRICHMOND, 94804",
+        "time": "20:00",
+        "day": "FRIDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.360765,
+            "latitude": 37.92234,
+            "locationName": "Fresh Start"
+        },
+        "timeAsNumber": 20.0
+    },
+    {
+        "id": 46006,
+        "title": "705 Natoma",
+        "address": "705 Natoma\nSan Francisco, CA 94103",
+        "time": "12:00",
+        "day": "MONDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.41231,
+            "latitude": 37.776324,
+            "locationName": "705 Natoma"
+        },
+        "timeAsNumber": 12.0
+    },
+    {
+        "id": 46007,
+        "title": "Kaiser Building",
+        "address": "1201 Fillmore Street\nSan Francisco, CA 94115",
+        "time": "11:30",
+        "day": "SATURDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.432161,
+            "latitude": 37.780503,
+            "locationName": "Kaiser Building"
+        },
+        "timeAsNumber": 11.0
+    },
+    {
+        "id": 46008,
+        "title": "Third Baptist Church",
+        "address": "1399 Mcallister\nSan Francisco, CA 94117",
+        "time": "19:30",
+        "day": "MONDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.434625,
+            "latitude": 37.777928,
+            "locationName": "Third Baptist Church"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 46009,
+        "title": "Marina Dock",
+        "address": "2118 Greenwich\nSan Francisco, CA 94123",
+        "time": "20:00",
+        "day": "FRIDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.435374,
+            "latitude": 37.799048,
+            "locationName": "Marina Dock"
+        },
+        "timeAsNumber": 20.0
+    },
+    {
+        "id": 46010,
+        "title": "Open Door Group",
+        "address": "2727 College\nCASTRO VALLEY, ",
+        "time": "8:30",
+        "day": "FRIDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.431746,
+            "latitude": 37.749558,
+            "locationName": "St John's Ch"
+        },
+        "timeAsNumber": 8.0
+    },
+    {
+        "id": 46011,
+        "title": "United Lutheran Church",
+        "address": "6555 Geary Street\nSan Francisco, CA 94121",
+        "time": "18:00",
+        "day": "SATURDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.489804,
+            "latitude": 37.779548,
+            "locationName": "United Lutheran Church"
+        },
+        "timeAsNumber": 18.0
+    },
+    {
+        "id": 46012,
+        "title": "Marta de la Rosa",
+        "address": "307 Willow St\nSOUTH SAN FRANCISCO, 94080",
+        "time": "19:30",
+        "day": "MONDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.433513,
+            "latitude": 37.662066,
+            "locationName": "KEEP IT SIMPLE GROUP-new location starting 3/26"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 46013,
+        "title": "Latino Commission",
+        "address": "301 Grand Avenue\nSouth San Francisco, CA 94080",
+        "time": "19:00",
+        "day": "TUESDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.41038,
+            "latitude": 37.655003,
+            "locationName": "Latino Commission"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 46014,
+        "title": "AA",
+        "address": "1203 Willow St\nOAKLAND, 94607",
+        "time": "19:00",
+        "day": "TUESDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.297846,
+            "latitude": 37.811878,
+            "locationName": "Baptist Ch, downstairs"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 46015,
+        "title": "The Upper Room",
+        "address": "1188 12th St at Adeline St\nOAKLAND, 94607",
+        "time": "16:00",
+        "day": "WEDNESDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.287127,
+            "latitude": 37.808466,
+            "locationName": "Taylor Memorial Church"
+        },
+        "timeAsNumber": 16.0
+    },
+    {
+        "id": 46016,
+        "title": "The Ridge Hotel",
+        "address": "634 15Th Street\nOakland, CA 94612",
+        "time": "19:30",
+        "day": "WEDNESDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.275031,
+            "latitude": 37.806896,
+            "locationName": "The Ridge Hotel"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 46017,
+        "title": "St. Roberts",
+        "address": "349 Oak St.@ Dababneh (Mahoney Rm. behind Convent)\nSAN BRUNO, ",
+        "time": "10:00",
+        "day": "SATURDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.411084,
+            "latitude": 37.63049,
+            "locationName": "COME AS YOU ARE-Big Book Disc"
+        },
+        "timeAsNumber": 10.0
+    },
+    {
+        "id": 46018,
+        "title": "St. Bruno's Church",
+        "address": "Green St. & San Bruno Ave.\nSAN BRUNO, 94066",
+        "time": "20:00",
+        "day": "FRIDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.415158,
+            "latitude": 37.629414,
+            "locationName": "GRUPO 6 DE NOVIEMBRE"
+        },
+        "timeAsNumber": 20.0
+    },
+    {
+        "id": 46019,
+        "title": "Saint Vincent De Paul of Society Church 2",
+        "address": "2272 San Pablo Avenue\nOakland, CA 94608",
+        "time": "19:30",
+        "day": "SATURDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.283756,
+            "latitude": 37.843403,
+            "locationName": "Saint Vincent De Paul of Society Church"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 46020,
+        "title": "Finally Friday",
+        "address": "200 Grand Ave\nOAKLAND, 94610",
+        "time": "12:00",
+        "day": "FRIDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.261358,
+            "latitude": 37.811193,
+            "locationName": "Veterans Mem Building Hall 3"
+        },
+        "timeAsNumber": 12.0
+    },
+    {
+        "id": 47006,
+        "title": "56 Julian Street",
+        "address": "56 Julian Street\nSan Francisco, CA 94103",
+        "time": "19:30",
+        "day": "TUESDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.421396,
+            "latitude": 37.767246,
+            "locationName": "56 Julian Street"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 47007,
+        "title": "First Tongan United Methodist Church",
+        "address": "560 El Camino Real\nSan Bruno, CA 94066",
+        "time": "12:00",
+        "day": "FRIDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.413466,
+            "latitude": 37.624395,
+            "locationName": "First Tongan United Methodist Church"
+        },
+        "timeAsNumber": 12.0
+    },
+    {
+        "id": 47008,
+        "title": "Recreation Center",
+        "address": "2800 Park Street\nBerkeley, CA 94702",
+        "time": "19:00",
+        "day": "WEDNESDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.283033,
+            "latitude": 37.855562,
+            "locationName": "Recreation Center"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 48008,
+        "title": "WBAC - West Bay Fellowship - Phone: 650-756-3322 ",
+        "address": "7324 Mission Street\nDaly City, CA ",
+        "time": "18:00",
+        "day": "SATURDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.465792,
+            "latitude": 37.690967,
+            "locationName": "West Bay Alano Club"
+        },
+        "timeAsNumber": 18.0
+    },
+    {
+        "id": 48009,
+        "title": "Lesbian/Gay Mtg",
+        "address": "1823 - 9th St\nBERKELEY, 94710",
+        "time": "7:00",
+        "day": "MONDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.294613,
+            "latitude": 37.870463,
+            "locationName": "Episc Church"
+        },
+        "timeAsNumber": 7.0
+    },
+    {
+        "id": 49008,
+        "title": "Book Store",
+        "address": "1369 Haight Street\nSan Francisco, CA 94117",
+        "time": "20:00",
+        "day": "MONDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.444691,
+            "latitude": 37.770007,
+            "locationName": "Book Store"
+        },
+        "timeAsNumber": 20.0
+    },
+    {
+        "id": 49009,
+        "title": "Potreo Hill Community Center",
+        "address": "953 Deharo\nSan Francisco, CA 94107",
+        "time": "20:00",
+        "day": "WEDNESDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.400656,
+            "latitude": 37.758274,
+            "locationName": "Potreo Hill Community Center"
+        },
+        "timeAsNumber": 20.0
+    },
+    {
+        "id": 49010,
+        "title": "Sunday Night 3rd Step Group",
+        "address": "1658 Church Street\nsan_francisco, CA 94131",
+        "time": "17:00",
+        "day": "SUNDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.426749,
+            "latitude": 37.744309,
+            "locationName": "St. Paul's Church"
+        },
+        "timeAsNumber": 17.0
+    },
+    {
+        "id": 49011,
+        "title": "Oyster Point Yacht Club",
+        "address": "Marina\nSOUTH SAN FRANCISCO, 94118",
+        "time": "16:15",
+        "day": "THURSDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.458628,
+            "latitude": 37.767275,
+            "locationName": "OYSTER POINT DISCUSSION"
+        },
+        "timeAsNumber": 16.0
+    },
+    {
+        "id": 49012,
+        "title": "Se Community College",
+        "address": "1800 Oakdale\nSan Francisco, CA 94124",
+        "time": "18:00",
+        "day": "FRIDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.39409,
+            "latitude": 37.73675,
+            "locationName": "Se Community College"
+        },
+        "timeAsNumber": 18.0
+    },
+    {
+        "id": 49013,
+        "title": "Seton Med. Ctr",
+        "address": "1900 Sullivan - Cafeteria\nDALY CITY, ",
+        "time": "19:30",
+        "day": "FRIDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.461917,
+            "latitude": 37.705766,
+            "locationName": "HELPING HAND GROUP"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 50005,
+        "title": "living with hiv",
+        "address": ".\nsan_francisco, CA ",
+        "time": "18:00",
+        "day": "WEDNESDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.419415,
+            "latitude": 37.774929,
+            "locationName": "our lady of safeway"
+        },
+        "timeAsNumber": 18.0
+    },
+    {
+        "id": 50006,
+        "title": "Crocker Park-\"From the Heart\"",
+        "address": "799 Moscow St\nSan Francisco, CA 94112",
+        "time": "19:30",
+        "day": "FRIDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.432307,
+            "latitude": 37.715057,
+            "locationName": "San Francisco, Crocker Park"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 50007,
+        "title": "Dolger Sr Ctr. Rm 7",
+        "address": "101 Lake Merced Bl.\nDALY CITY, 94015",
+        "time": "20:00",
+        "day": "FRIDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.486186,
+            "latitude": 37.704127,
+            "locationName": "WESTLAKE SPEAKER DISCUSSION"
+        },
+        "timeAsNumber": 20.0
+    },
+    {
+        "id": 50008,
+        "title": "Chosen Vessel Church",
+        "address": "710 Haight Avenue\nAlameda, CA 94501",
+        "time": "17:00",
+        "day": "SATURDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.276092,
+            "latitude": 37.773961,
+            "locationName": "Chosen Vessel Church"
+        },
+        "timeAsNumber": 17.0
+    },
+    {
+        "id": 50009,
+        "title": "Rap At Noon",
+        "address": "685 14th St at Castro St\nOAKLAND, 94612",
+        "time": "0:00",
+        "day": "FRIDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.276916,
+            "latitude": 37.806304,
+            "locationName": "Unitarian Church"
+        },
+        "timeAsNumber": 0.0
+    },
+    {
+        "id": 50010,
+        "title": "Atheist Meeting",
+        "address": "1970 Chestnut St.\nBERKELEY, 94702",
+        "time": "12:00",
+        "day": "WEDNESDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.288381,
+            "latitude": 37.870133,
+            "locationName": "Atheist Meeting"
+        },
+        "timeAsNumber": 12.0
+    },
+    {
+        "id": 50011,
+        "title": "Lakeside Group",
+        "address": "114 Montecito Ave off Bay Pl\nOAKLAND, ",
+        "time": "12:00",
+        "day": "SATURDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.261626,
+            "latitude": 37.812776,
+            "locationName": "St Paul's Ch"
+        },
+        "timeAsNumber": 12.0
+    },
+    {
+        "id": 51004,
+        "title": "290 Turk Street",
+        "address": "290 Turk Street\nSan Francisco, CA 94102",
+        "time": "18:00",
+        "day": "TUESDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.413763,
+            "latitude": 37.78305,
+            "locationName": "290 Turk Street"
+        },
+        "timeAsNumber": 18.0
+    },
+    {
+        "id": 51005,
+        "title": "Addiction And Recovery",
+        "address": "1187 Franklin Street\nSan Francisco, CA 94109",
+        "time": "19:00",
+        "day": "TUESDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.423596,
+            "latitude": 37.785093,
+            "locationName": "First Unitarian Church"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 51006,
+        "title": "Saturday Meeting",
+        "address": ", CA ",
+        "time": "10:45",
+        "day": "SATURDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.415205,
+            "latitude": 37.755851,
+            "locationName": "Polish Club"
+        },
+        "timeAsNumber": 10.0
+    },
+    {
+        "id": 51007,
+        "title": "4058 18th street",
+        "address": "4058 18th street\nSan Francisco, CA 94114",
+        "time": "20:00",
+        "day": "SATURDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.434144,
+            "latitude": 37.761167,
+            "locationName": "4058 18th street"
+        },
+        "timeAsNumber": 20.0
+    },
+    {
+        "id": 51008,
+        "title": "Progress Not Perfection",
+        "address": "4058 18th St\nSan Francisco, CA 94114",
+        "time": "20:30",
+        "day": "TUESDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.434124,
+            "latitude": 37.760957,
+            "locationName": "Castro Country Club"
+        },
+        "timeAsNumber": 20.0
+    },
+    {
+        "id": 51009,
+        "title": "Fuck No!",
+        "address": "1649 Hayes Street\nSan Francisco, CA 94117",
+        "time": "20:00",
+        "day": "MONDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.443478,
+            "latitude": 37.773955,
+            "locationName": "1649 Hayes Street"
+        },
+        "timeAsNumber": 20.0
+    },
+    {
+        "id": 51010,
+        "title": "Bernal Big Book",
+        "address": "704 Cortland Avenue\nsan_francisco, CA 94110",
+        "time": "17:00",
+        "day": "SATURDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.414894,
+            "latitude": 37.738567,
+            "locationName": "St. Kevin's Church"
+        },
+        "timeAsNumber": 17.0
+    },
+    {
+        "id": 51011,
+        "title": "2525 Alemany Boulevard",
+        "address": "2525 Alemany Boulevard\nSan Francisco, CA 94112",
+        "time": "19:30",
+        "day": "MONDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.446261,
+            "latitude": 37.714863,
+            "locationName": "2525 Alemany Boulevard"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 51012,
+        "title": "Brisbane Com Ctr",
+        "address": "250 Visitation Ave.\nBRISBANE, 94005",
+        "time": "11:00",
+        "day": "SUNDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.403993,
+            "latitude": 37.682382,
+            "locationName": "BRISBANE BREAKFAST MEETING"
+        },
+        "timeAsNumber": 11.0
+    },
+    {
+        "id": 51013,
+        "title": "Oakland Army Base",
+        "address": "Maritime and 7th Street\nOakland, CA 94607",
+        "time": "11:15",
+        "day": "TUESDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.312166,
+            "latitude": 37.808687,
+            "locationName": "Oakland Army Base"
+        },
+        "timeAsNumber": 11.0
+    },
+    {
+        "id": 52008,
+        "title": "Alano Club 3",
+        "address": "1748 Market Street\nSan Francisco, CA 94102",
+        "time": "16:00",
+        "day": "SATURDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.423047,
+            "latitude": 37.772538,
+            "locationName": "1748 Market Street"
+        },
+        "timeAsNumber": 16.0
+    },
+    {
+        "id": 52009,
+        "title": "Women's Building",
+        "address": "3543 18Th Street\nSan Francisco, CA 94110",
+        "time": "12:00",
+        "day": "FRIDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.422619,
+            "latitude": 37.76142,
+            "locationName": "Women's Building"
+        },
+        "timeAsNumber": 12.0
+    },
+    {
+        "id": 52010,
+        "title": "Bayview Hunters Point Foundation",
+        "address": "1625 Carroll Avenue\nSan Francisco, CA 94124",
+        "time": "11:00",
+        "day": "TUESDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.394223,
+            "latitude": 37.725447,
+            "locationName": "Bayview Hunters Point Foundation"
+        },
+        "timeAsNumber": 11.0
+    },
+    {
+        "id": 52011,
+        "title": "GRUPO GENEVA 2",
+        "address": "71 Templeton Ave.\nDALY CITY, 94014",
+        "time": "20:00",
+        "day": "SATURDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.454453,
+            "latitude": 37.707561,
+            "locationName": "GRUPO GENEVA"
+        },
+        "timeAsNumber": 20.0
+    },
+    {
+        "id": 52012,
+        "title": "Alameda Point",
+        "address": "677 West Ranger Avenue\nAlameda, CA 94501",
+        "time": "17:00",
+        "day": "TUESDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.298153,
+            "latitude": 37.784576,
+            "locationName": "Alameda Point"
+        },
+        "timeAsNumber": 17.0
+    },
+    {
+        "id": 52013,
+        "title": "Kaiser Hospital",
+        "address": "1200 El Camino-2nd Fl\nSOUTH SAN FRANCISCO, ",
+        "time": "20:00",
+        "day": "FRIDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.40775,
+            "latitude": 37.654656,
+            "locationName": "FRIDAY NIGHT ACCEPTANCE GROUP"
+        },
+        "timeAsNumber": 20.0
+    },
+    {
+        "id": 52014,
+        "title": "451 28th Street",
+        "address": "451 28th Street\nOakland, CA 94612",
+        "time": "20:00",
+        "day": "TUESDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.266979,
+            "latitude": 37.816423,
+            "locationName": "451 28th Street"
+        },
+        "timeAsNumber": 20.0
+    },
+    {
+        "id": 53005,
+        "title": "First Step Recovery Center",
+        "address": "1531 Jefferson Street\nOakland, CA 94612",
+        "time": "15:00",
+        "day": "SATURDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.274146,
+            "latitude": 37.806792,
+            "locationName": "First Step Recovery Center"
+        },
+        "timeAsNumber": 15.0
+    },
+    {
+        "id": 53006,
+        "title": "Amassi Inc Building",
+        "address": "222 14th Street\nOakland, CA 94612",
+        "time": "19:00",
+        "day": "TUESDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.265609,
+            "latitude": 37.802411,
+            "locationName": "Amassi Inc Building"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 53007,
+        "title": "3007 Telegraph Avenue",
+        "address": "3007 Telegraph Avenue\nOakland, CA 94609",
+        "time": "12:00",
+        "day": "FRIDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.26718,
+            "latitude": 37.819109,
+            "locationName": "3007 Telegraph Avenue"
+        },
+        "timeAsNumber": 12.0
+    },
+    {
+        "id": 54004,
+        "title": "1070A Folsom Street",
+        "address": "1070A Folsom Street\nSan Francisco, CA 94103",
+        "time": "22:00",
+        "day": "THURSDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.407184,
+            "latitude": 37.777291,
+            "locationName": "1070A Folsom Street"
+        },
+        "timeAsNumber": 22.0
+    },
+    {
+        "id": 54005,
+        "title": "820 Valencia Street",
+        "address": "820 Valencia Street\nSan Francisco, CA 94110",
+        "time": "19:00",
+        "day": "THURSDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.421408,
+            "latitude": 37.759711,
+            "locationName": "820 Valencia Street"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 54006,
+        "title": "Young People's Meeting",
+        "address": "525 29th St. @ Telegraph\nOAKLAND, ",
+        "time": "20:00",
+        "day": "MONDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.270803,
+            "latitude": 37.804372,
+            "locationName": "St. Augustine's Ch"
+        },
+        "timeAsNumber": 20.0
+    },
+    {
+        "id": 54007,
+        "title": "Liberty Hill Baptist Church",
+        "address": "997 University Avenue\nBerkeley, CA 94710",
+        "time": "19:00",
+        "day": "THURSDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.294729,
+            "latitude": 37.86893,
+            "locationName": "Liberty Hill Baptist Church"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 54008,
+        "title": "Sinking Ship ",
+        "address": "295 27th St\nOakland, CA 94612",
+        "time": "1:00",
+        "day": "SUNDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.262701,
+            "latitude": 37.814131,
+            "locationName": "\tCentral Office"
+        },
+        "timeAsNumber": 1.0
+    },
+    {
+        "id": 54009,
+        "title": "Serenity Now",
+        "address": "3100 Summit\nOAKLAND, 94609",
+        "time": "17:30",
+        "day": "SUNDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.264013,
+            "latitude": 37.820237,
+            "locationName": "Serenity Now"
+        },
+        "timeAsNumber": 17.0
+    },
+    {
+        "id": 55006,
+        "title": "West Portal",
+        "address": "280 Claremont\nsan_francisco, CA 94127",
+        "time": "17:30",
+        "day": "FRIDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.465177,
+            "latitude": 37.741041,
+            "locationName": "Center for Spiritual Living"
+        },
+        "timeAsNumber": 17.0
+    },
+    {
+        "id": 55007,
+        "title": "420 29Th Avenue",
+        "address": "420 29Th Avenue\nSan Francisco, CA 94121",
+        "time": "20:00",
+        "day": "WEDNESDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.488796,
+            "latitude": 37.781316,
+            "locationName": "420 29Th Avenue"
+        },
+        "timeAsNumber": 20.0
+    },
+    {
+        "id": 55008,
+        "title": "GRUPO 29 DE MAYO 2",
+        "address": "405 Grand Ave. Suite 205\nSOUTH SAN FRANCISCO, 94080",
+        "time": "20:00",
+        "day": "SATURDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.412762,
+            "latitude": 37.655442,
+            "locationName": "GRUPO 29 DE MAYO"
+        },
+        "timeAsNumber": 20.0
+    },
+    {
+        "id": 55009,
+        "title": "St. Elizabeth's",
+        "address": "280 Country Club Dr.\nSOUTH SAN FRANCISCO, 94080",
+        "time": "18:30",
+        "day": "THURSDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.433212,
+            "latitude": 37.643113,
+            "locationName": "SOUTH CITY WOMEN'S DISCUSSION"
+        },
+        "timeAsNumber": 18.0
+    },
+    {
+        "id": 55010,
+        "title": "House of Dignity Grp",
+        "address": "585 8th St\nOAKLAND, 94607",
+        "time": "12:00",
+        "day": "THURSDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.277095,
+            "latitude": 37.801231,
+            "locationName": "House of Dignity Grp"
+        },
+        "timeAsNumber": 12.0
+    },
+    {
+        "id": 55011,
+        "title": "3205 West Street",
+        "address": "3205 West Street\nEmeryville, CA 94609",
+        "time": "19:00",
+        "day": "FRIDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.273049,
+            "latitude": 37.822094,
+            "locationName": "3205 West Street"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 55012,
+        "title": "The Late Show",
+        "address": "295 27th Street\nOAKLAND, 94612",
+        "time": "22:00",
+        "day": "MONDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.262847,
+            "latitude": 37.814053,
+            "locationName": "Central Office"
+        },
+        "timeAsNumber": 22.0
+    },
+    {
+        "id": 56003,
+        "title": "Haight Ashbury Free Clinic 2",
+        "address": "1735 Mission Street\nSan Francisco, CA 94103",
+        "time": "20:00",
+        "day": "SATURDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.41999,
+            "latitude": 37.76936,
+            "locationName": "Haight Ashbury Free Clinic"
+        },
+        "timeAsNumber": 20.0
+    },
+    {
+        "id": 56004,
+        "title": "Good Morning",
+        "address": ", CA ",
+        "time": "9:00",
+        "day": "SUNDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.435251,
+            "latitude": 37.76862,
+            "locationName": "Davies Medical Center"
+        },
+        "timeAsNumber": 9.0
+    },
+    {
+        "id": 56005,
+        "title": "Lighthouse Group",
+        "address": "3354 San Pablo Ave\nOAKLAND, 94608",
+        "time": "19:00",
+        "day": "WEDNESDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.277409,
+            "latitude": 37.824896,
+            "locationName": "Baptist Church"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 56006,
+        "title": "Saint Columba Parish hall",
+        "address": "6401 San Pablo Avenue\nEmeryville, CA 94608",
+        "time": "19:00",
+        "day": "FRIDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.285072,
+            "latitude": 37.846928,
+            "locationName": "Saint Columba Parish hall"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 56007,
+        "title": "Town Hall",
+        "address": "120 1St Street East\nMeadow Lake, SK ",
+        "time": "20:00",
+        "day": "THURSDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.265384,
+            "latitude": 37.791297,
+            "locationName": "Town Hall"
+        },
+        "timeAsNumber": 20.0
+    },
+    {
+        "id": 57002,
+        "title": "1661 15th Street",
+        "address": "1661 15th Street\nSan Francisco, CA 94103",
+        "time": "22:00",
+        "day": "TUESDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.421176,
+            "latitude": 37.766576,
+            "locationName": "1661 15th Street"
+        },
+        "timeAsNumber": 22.0
+    },
+    {
+        "id": 57003,
+        "title": "Sesame Step",
+        "address": "1021 Sanchez Street\nsan_francisco, CA 94114",
+        "time": "19:30",
+        "day": "TUESDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.429429,
+            "latitude": 37.752824,
+            "locationName": "Noe Valley Ministry"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 57004,
+        "title": "1757 Waller",
+        "address": "1757 Waller\nSan Francisco, CA 94117",
+        "time": "19:00",
+        "day": "WEDNESDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.452574,
+            "latitude": 37.768046,
+            "locationName": "1757 Waller"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 57005,
+        "title": "Presbyterian Church",
+        "address": "1329 7Th Avenue\nSan Francisco, CA 94122",
+        "time": "20:00",
+        "day": "MONDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.464458,
+            "latitude": 37.763495,
+            "locationName": "Presbyterian Church"
+        },
+        "timeAsNumber": 20.0
+    },
+    {
+        "id": 57006,
+        "title": "WBAC - West Bay Fellowship - Phone: 756-3322 3",
+        "address": "7330 Mission Street\nDaly City, CA 94014",
+        "time": "19:30",
+        "day": "SATURDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.465478,
+            "latitude": 37.691784,
+            "locationName": "West Bay Alano Club"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 57007,
+        "title": "Alta Mira",
+        "address": "125 Bulkley Avenue\nSausalito, CA 94965",
+        "time": "19:00",
+        "day": "SATURDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.481154,
+            "latitude": 37.856136,
+            "locationName": "Alta Mira"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 57008,
+        "title": "Adeline Group",
+        "address": "10th and Peralta\nOAKLAND, 94607",
+        "time": "10:00",
+        "day": "MONDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.2963,
+            "latitude": 37.808412,
+            "locationName": "Howard Comm Center, (behind Catholic Church)"
+        },
+        "timeAsNumber": 10.0
+    },
+    {
+        "id": 57009,
+        "title": "Breath of Fresh Air",
+        "address": "Oakland, CA ",
+        "time": "10:00",
+        "day": "SUNDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.271114,
+            "latitude": 37.804364,
+            "locationName": "Outdoors"
+        },
+        "timeAsNumber": 10.0
+    },
+    {
+        "id": 57010,
+        "title": "St. John's Church",
+        "address": "Sylvan & Mastick\nSAN BRUNO, 94066",
+        "time": "18:30",
+        "day": "TUESDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.41033,
+            "latitude": 37.624619,
+            "locationName": "SAN BRUNO GROUP"
+        },
+        "timeAsNumber": 18.0
+    },
+    {
+        "id": 57011,
+        "title": "Work the Steps or Die",
+        "address": "924 Gilman STreet\nberkeley, CA 94703",
+        "time": "19:00",
+        "day": "MONDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.299297,
+            "latitude": 37.879504,
+            "locationName": "Alternative Music Foundation"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 58003,
+        "title": "Fillmore Ella Hill Community Center",
+        "address": "1050 Mcallister\nSan Francisco, CA 94115",
+        "time": "17:30",
+        "day": "THURSDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.429254,
+            "latitude": 37.778971,
+            "locationName": "Fillmore Ella Hill Community Center"
+        },
+        "timeAsNumber": 17.0
+    },
+    {
+        "id": 58004,
+        "title": "Each Day a New Beginning",
+        "address": "152 Church St\nSan Francisco, CA 94114",
+        "time": "7:00",
+        "day": "FRIDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.429417,
+            "latitude": 37.768578,
+            "locationName": "St. Francis Lutheran Church"
+        },
+        "timeAsNumber": 7.0
+    },
+    {
+        "id": 58005,
+        "title": "501 Steiner Street",
+        "address": "501 Steiner Street\nSan Francisco, CA 94117",
+        "time": "19:30",
+        "day": "SATURDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.432772,
+            "latitude": 37.773933,
+            "locationName": "501 Steiner Street"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 58006,
+        "title": "San Francisco General Hospital",
+        "address": "1001 Potrero\nSan Francisco, CA 94110",
+        "time": "12:00",
+        "day": "SUNDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.406299,
+            "latitude": 37.755685,
+            "locationName": "San Francisco General Hospital"
+        },
+        "timeAsNumber": 12.0
+    },
+    {
+        "id": 58007,
+        "title": "As Bill Sees It",
+        "address": "100 Collingwood Street\nsan_francisco, CA 94114",
+        "time": "18:00",
+        "day": "THURSDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.436155,
+            "latitude": 37.760804,
+            "locationName": "San Francisco"
+        },
+        "timeAsNumber": 18.0
+    },
+    {
+        "id": 58008,
+        "title": "High Noon",
+        "address": "400 Broadway\nOakland, CA 94607",
+        "time": "12:00",
+        "day": "FRIDAY",
+        "fellowship": {
+            "name": "NarcoticsAnonymous",
+            "displayText": "Narcotics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.275422,
+            "latitude": 37.797415,
+            "locationName": "Probation Department Building"
+        },
+        "timeAsNumber": 12.0
+    },
+    {
+        "id": 58009,
+        "title": "Finally Smart",
+        "address": "969 Broadway\nOakland, CA 94607",
+        "time": "20:00",
+        "day": "THURSDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.27306,
+            "latitude": 37.801497,
+            "locationName": "Kaiser Outpatient Clinic"
+        },
+        "timeAsNumber": 20.0
+    },
+    {
+        "id": 59001,
+        "title": "Dark Secrets",
+        "address": "1748 Market St\nSan Francisco, CA 94102",
+        "time": "22:00",
+        "day": "FRIDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.422963,
+            "latitude": 37.772525,
+            "locationName": "SF Alano Club"
+        },
+        "timeAsNumber": 22.0
+    },
+    {
+        "id": 59002,
+        "title": "Kaiser Hospital",
+        "address": "1200 El Camino\nSOUTH SAN FRANCISCO, 94080",
+        "time": "20:00",
+        "day": "THURSDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.439216,
+            "latitude": 37.659256,
+            "locationName": "MIDWAY SOUTH SF GROUP"
+        },
+        "timeAsNumber": 20.0
+    },
+    {
+        "id": 59003,
+        "title": "Variety in Sobriety",
+        "address": "601 Webster St\nOAKLAND, 94607",
+        "time": "19:30",
+        "day": "MONDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.272143,
+            "latitude": 37.798054,
+            "locationName": "ARC"
+        },
+        "timeAsNumber": 19.0
+    },
+    {
+        "id": 59004,
+        "title": "The  Point Richmond Group",
+        "address": "301 W Richmond Ave\nPOINT RICHMOND, 94801",
+        "time": "19:30",
+        "day": "THURSDAY",
+        "fellowship": {
+            "name": "AlcoholicsAnonymous",
+            "displayText": "Alcoholics Anonymous"
+        },
+        "distance": null,
+        "distanceValue": 0,
+        "schedule": null,
+        "rating": {
+            "forYoungPeople": false,
+            "isLgbt": false,
+            "forWomen": false,
+            "forNewcomer": false,
+            "outsidersWelcome": false,
+            "hasWheelchairAccess": false,
+            "petsAllowed": false,
+            "isHasSnacks": false,
+            "isLargeGroup": false,
+            "isHasMeditation": false,
+            "isForMen": false
+        },
+        "latLon": {
+            "longitude": -122.386972,
+            "latitude": 37.92673,
+            "locationName": "Catholic  Church"
+        },
+        "timeAsNumber": 19.0
+    }
+]

@@ -28,26 +28,14 @@
 
 
 <!-- Add your site or application content here -->
-<ng-include src="getPartialUrl('header')" ng-controller="HeaderCtrl"></ng-include>
-<!--<div class="container" ng-view></div>-->
-
-
-
-<ng-include src="getPartialUrl('main')" ng-controller="MainCtrl" id="mainSection"></ng-include>
-
-<ng-include src="getPartialUrl('emailListSignup')" ng-controller="EmailListSignupCtrl" id="emailSection"></ng-include>
-
-
-<ng-include src="getPartialUrl('press')" ng-controller="PressCtrl" id="pressSection"></ng-include>
-<!--
-<ng-include src="getPartialUrl('tumblr')" ng-controller="TumblrCtrl" id="tumblrSection"></ng-include>
--->
-
+<ng-include src="getPartialUrl('header')" ng-controller="HeaderCtrl" id="headerSection"></ng-include>
+<div class="container" ng-view></div>
 <ng-include src="getPartialUrl('footer')" ng-controller="FooterCtrl" id="footerSection"></ng-include>
 
 
 <script src="components/angular/angular.js"></script>
 <script src="components/angular-resource/angular-resource.js"></script>
+<script src="components/angular-ui/build/angular-ui.js"></script>
 <!--<script src="components/restangular/dist/restangular.js"></script>-->
 
 <!-- build:js scripts/scripts.js -->
@@ -63,6 +51,11 @@
 <script src="scripts/services/tumblrAPI.js"></script>
 <script src="scripts/controllers/tumblr.js"></script>
 <script src="scripts/controllers/tumblrPostDetail.js"></script>
+<script src="scripts/services/meetings.js"></script>
+<script src="scripts/controllers/headline.js"></script>
+<script src="scripts/controllers/footer.js"></script>
+<script src="scripts/controllers/investors.js"></script>
+<script src="scripts/controllers/aboutUs.js"></script>
 <!-- endbuild -->
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
