@@ -1,13 +1,15 @@
 @import "compass_twitter_bootstrap"
 @import "compass_twitter_bootstrap_responsive"
 @import "animate-custom.css"
+@import "fonts.css"
 @import "bigstyle.css"
 @import "email.css"
 @import "tumblr"
 @import "map"
 
+
 body
- font-family: Alright Sans
+ font-family: Open sans, sans-serif
  padding: 0px !important
 
 nav
@@ -16,6 +18,11 @@ nav
    display: inline-block
    text-transform: uppercase
    margin: 0 20px 0 0
+
+
+
+p
+ font-weight: 200
 
 .container
  margin: 0 auto
@@ -33,7 +40,7 @@ nav
   margin: 0 auto
   text-align: center
   font-family: Mensch
-  padding: 100px 40px 40px 40px
+  padding: 100px 40px 0px 40px
   color: white
   text-shadow: 0px 1px 1px black
 
@@ -50,7 +57,7 @@ nav
  height: inherit
  padding: 20px 0 20px 0
  color: white
- font-family: Alright Sans
+ font-family: Open sans, sans-serif
  background-size: cover
  img
   height: 120px
@@ -63,7 +70,7 @@ nav
   text-align: center
 
 .quotes
- margin: 20px 0 0 0
+ margin: 20px 
  div.span4
   text-align: center
  blockquote
@@ -76,7 +83,7 @@ nav
 
 footer
  text-align: center
- margin: 20px 0 0 0
+ margin: 100px 0 20px 0
 
 #feedlyMiniIcon
  display: none !important
@@ -107,6 +114,10 @@ footer
 .investor_info
  padding: 5px
 
+label 
+ font-weight: 100 !important
+ margin: 5px 0 0 0
+
 .aboutus
  background-image: url(../images/aboutus.jpeg)
  background-size: cover
@@ -118,16 +129,58 @@ footer
   height: 60px
 
 .name
- width: 58%
+ width: 65%
  display: inline-block
  vertical-align: middle
+ font-weight: 400
+ margin: 0 0 0 5px
 
 .thankyou
  background-image: url(../images/tng3.gif)
  background-size: cover
  text-align: left
 
+.press
+ div
+  img
+  opacity: .5
+  -webkit-transition: 1s opacity ease
+  &:hover
+   opacity: 1
+.offset1
+ margin-left: 10.21111% !important
 
+.social
+ background-size: 20px 20px
+ background-repeat: no-repeat
+ background-position: 5px 5px
+ height: 20px
+ display: inline-block
+ padding: 5px
+ width: auto
+ text-indent: 25px
+ color: white
+ font-weight: bold
+ opacity: 0.9
+ &:hover
+  color: white
+  text-decoration: none
+  opacity: 1
+  -webkit-transition: .5s all ease-in
+
+.twitter_link 
+ background-image: url(../images/twitter.png)
+ background-color: rgba(27,182,236,1)
+.linkedin_link
+ background-image: url(../images/linkedin_icon.png)
+ background-color: rgba(0,118,158,1)
+.facebook_link
+ background-image: url(../images/facebook.png)
+ background-color: #3d5a9c
+ background-size: 15px 20px
+
+
+ 
 
 
 
