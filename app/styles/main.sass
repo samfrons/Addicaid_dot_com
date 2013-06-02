@@ -7,13 +7,20 @@
 @import "tumblr"
 @import "map"
 
+html
+ overflow: hidden
+ overflow-y: visible !important
+ font-size: 100% !important
 
 body
  font-family: Open sans, sans-serif
  padding: 0px !important
+ overflow-x: hidden !important
+ min-width: 500px
 
 nav
  ul
+  min-width: 100%
   li
    display: inline-block
    text-transform: uppercase
@@ -34,7 +41,6 @@ p
 .headline
  height: 100%
  min-height: 500px
- width: 100% !important
  background-repeat: repeat-x
  hgroup
   margin: 0 auto
@@ -48,8 +54,9 @@ p
  background-image: url(../images/people_background.jpeg)
  width: 100% !important
  hgroup
+  font-size: 90% !important
   h2
-   font-size: 3.4em
+  
 
 .awards
  background-image: url(../images/cheerleaders.jpeg)
@@ -70,7 +77,7 @@ p
   text-align: center
 
 .quotes
- margin: 20px 
+ margin: 20px 0 0 7%
  div.span4
   text-align: center
  blockquote
