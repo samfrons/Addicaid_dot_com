@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .controller('InspirationCtrl', ['$scope', function ($scope) {
+  .controller('InspirationCtrl', ['$scope', function($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

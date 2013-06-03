@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Service: filterSvc', function () {
+describe('Service: filterSvc', function() {
 
   // load the service's module
   beforeEach(module('addicaidSiteApp'));
@@ -11,7 +11,7 @@ describe('Service: filterSvc', function () {
     filterSvc = _filterSvc_;
   }));
 
-  it('should do something', function () {
+  it('should do something', function() {
     expect(!!filterSvc).toBe(true);
   });
 
