@@ -9,7 +9,6 @@
             "title" : "St. Andrew's Church",
             "address1" : "20 Cardinal Hayes Place",
             "address2" : "Brooklyn, NY 11206",
-
             "distance" : "0.5 MI"
         },
         "calendar" : {
@@ -28,7 +27,6 @@
             "title" : "Location Title 2",
             "address1" : "180 Sterling Pl",
             "address2" : "Brooklyn, NY 11217",
-
             "distance" : "1.5 MI"
         },
         "calendar" : {
@@ -47,7 +45,6 @@
             "title" : "Location Title 3",
             "address1" : "Address1 3",
             "address2" : "Address2 3",
-
             "distance" : "000 MI"
         },
         "calendar" : {

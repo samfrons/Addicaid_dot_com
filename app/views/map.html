@@ -1,63 +1,8 @@
 <!--Giving the div an id="map_canvas" fix problems with twitter bootstrap affecting google maps-->
-<div class="row-fluid filter">
-<div class=" span2 type">
-	<h5>type <button class="all">all</button></h5>
-	<button class="selected">alcoholics</button>
-	<button>narcotics</button>
-
-</div>
-
-<div class="span4 day">
-	<h5>day <button class="all">all</button></h5>
-	<button>mon</button>
-	<button>tues</button>
-	<button>wed</button>
-	<button>thurs</button>
-	<button>fri</button>
-	<button>sat</button>
-	<button>sun</button>
-
-</div>
-
-<div class="span3 time">
-	<h5>time <button class="all">all</button></h5>
-	<button>morning</button>
-	<button>afternoon</button>
-	<button>evening</button>
-	<button>night</button>
-</div>
-
-<div class="span3 location">
-	<h5>place</h5>
-	<input class='distance' placeholder="5 miles from"/>
-	current location
-	or
-	<input class="zipcode" placeholder="zipcode"/>
-</div>
-<button type="submit">submit</button>
-<hr/>
-</div>
 
 
 
-<div class="meeting_results span6">
 
-<div class="span8">
-<hgroup class="meeting_info span4">
-<h3>Potreo Hill Community Center (Potreo Hill Community Center)</h3>
-<h4>953 Deharo</h4>
-<h5>San Francisco, CA 94107</h5>
-<h6 class="type">Alcoholics Anonymous</h6>
-</hgroup>
-<div class="span2 info">
-	<span class="time">20:00</span></br>
-	<span class="day">wed</span><br/>
-	<span class="distance">0.9 miles</span>
-</div>
-
-</div>
-
-</div>
 
 <div id="map_canvas" ui-map="myMap" class="map"
      ui-event="{'map-click': 'addMarker($event)', 'map-zoom_changed': 'setZoomMessage(myMap.getZoom())' }"
