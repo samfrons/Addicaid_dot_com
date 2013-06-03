@@ -1,15 +1,17 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .factory('meetings', ['$resource', function($resource) {
+  .factory('meetings', ['$http', '$rootScope', function($http, $rootScope) {
+//  .factory('meetings', ['$resource', function($resource) {
     var defaultCoordinates = { // NYC
-      latitude : 40.763562,
-      longitude : -73.97140100000001
+      latitude: 40.763562,
+      longitude: -73.97140100000001
     };
 //    var defaultCoordinates = { // San Fran
 //      latitude : 37.771139,
 //      longitude : -122.403424
 //    };
+    console.log('defaultCoordinates', defaultCoordinates);
 
 // TODO: remove CartoDB stuff
 //    var defaultST_Point = function() {
@@ -27,14 +29,14 @@ angular.module('addicaidSiteApp')
 
     var meetingSvc;
     meetingSvc.getMeetingsFromServer = function() {
-      console.log ("getMeetingsFromServer")
+      console.log('getMeetingsFromServer');
       // Retrieves meeting objects from server based on current filters
       if (meetingSvc.isFilterDirty && !meetingSvc.waitingForServerResults) {
         // populate meetings from server
         meetingSvc.waitingForServerResults = true;
         // $http.jsonp(meetingSvc.getUrl())
-        $http.get("testfiles/meetings-demo.json")// TODO: HACK using local json file
-          .success(function(data, status) {
+        $http.get('testfiles/meetings-demo.json')// TODO: HACK using local json file
+          .success(function(data) {
             meetingSvc.meetingsCache = data.value;
 
 //                        // TODO: fake data-carto
@@ -69,17 +71,19 @@ angular.module('addicaidSiteApp')
               // clean up ratings object
               var newRatings = {};
               angular.forEach(meeting.rating, function(value, key) {
-                if (value) newRatings[key] = value;
+                if (value) {
+                  newRatings[key] = value;
+                }
               });
               meeting.rating = newRatings;
 
 
               // clean up time
-              meeting.time = meeting.time.split(":")[0] + ":" + meeting.time.split(":")[1];
+              meeting.time = meeting.time.split(':')[0] + ':' + meeting.time.split(':')[1];
 
               // TODO: HACK change time on wed womens meeting
-              if (meeting.id == 73021) {
-                meeting.time = "19:00";
+              if (meeting.id === 73021) {
+                meeting.time = '19:00';
                 meeting.timeAsNumber = 19;
               }
 //                            console.log(meeting)
@@ -87,20 +91,14 @@ angular.module('addicaidSiteApp')
 
             meetingSvc.isFilterDirty = false;
             meetingSvc.waitingForServerResults = false;
-            console.log("******** got "+meetingSvc.meetingsCache.length+" meetings **********")
+            console.log('******** got '+ meetingSvc.meetingsCache.length + ' meetings **********');
             $rootScope.$broadcast(meetingSvc.meetingsChangedEvent, [/* meetingsChangedArgs */]);
           })
           .error(function(data,status) {
             // TODO: error handling
-            console.log("FAILURE", data, status);
+            console.log('FAILURE', data, status);
           });
       }
     };
 
-    // Public API here
-    return {
-      someMethod: function() {
-        return meaningOfLife;
-      }
-    };
   }]);

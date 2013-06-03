@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Controller: TumblrCtrl', function () {
+describe('Controller: TumblrCtrl', function() {
 
   // load the controller's module
   beforeEach(module('addicaidSiteApp'));
@@ -9,7 +9,7 @@ describe('Controller: TumblrCtrl', function () {
     scope;
 
   // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope) {
+  beforeEach(inject(function($controller, $rootScope) {
     scope = $rootScope.$new();
     TumblrCtrl = $controller('TumblrCtrl', {
       $scope: scope

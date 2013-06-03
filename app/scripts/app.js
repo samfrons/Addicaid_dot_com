@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('addicaidSiteApp', ['ngResource'])
-  .config(['$routeProvider', function ($routeProvider) {
+  .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -29,12 +29,12 @@ angular.module('addicaidSiteApp', ['ngResource'])
       })
       // --------------Tumblr routes
       .when('/tumblr/page/:page', {
-        template:'/views/tumblr.html',
-        controller:"TumblrCtrl"
+        template: '/views/tumblr.html',
+        controller: 'TumblrCtrl'
       })
       .when('/tumblr/post/:id', {
         template: '/views/tumblr/tumblr-post-detail.html',
-        controller:"TumblrPostDetailCtrl"
+        controller: 'TumblrPostDetailCtrl'
       })
       // ----------END tumblr routes
       .when('/map', {

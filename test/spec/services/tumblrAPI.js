@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Service: tumblrAPI', function () {
+describe('Service: tumblrAPI', function() {
 
   // load the service's module
   beforeEach(module('addicaidSiteApp'));
@@ -11,7 +11,7 @@ describe('Service: tumblrAPI', function () {
     tumblrAPI = _tumblrAPI_;
   }));
 
-  it('should do something', function () {
+  it('should do something', function() {
     expect(!!tumblrAPI).toBe(true);
   });
 

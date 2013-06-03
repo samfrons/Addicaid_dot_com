@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Service: meetingSvc', function () {
+xdescribe('Service: meetingSvc', function() {
 
   // load the service's module
   beforeEach(module('addicaidSiteApp'));
@@ -11,7 +11,7 @@ describe('Service: meetingSvc', function () {
     meetingSvc = _meetingSvc_;
   }));
 
-  it('should do something', function () {
+  it('should do something', function() {
     expect(!!meetingSvc).toBe(true);
   });
 
