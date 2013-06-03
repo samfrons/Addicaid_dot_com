@@ -9,14 +9,12 @@ html,body {
 }
 
 .bigdealcontainer {
-    width: 80%;
-    height: 500px;
-    position: absolute;
+    height: auto;
     font-family: 'Mensch',sans-serif;
     font-size: 2em;
     line-height: .9;
-    margin: 0 auto;
-    display: block;
+    font-weight: bold;
+    display: inline-block;
     color: white;
   /*  -webkit-animation: fadeAway 6s 4s ease;
     -webkit-animation-fill-mode: both;*/
