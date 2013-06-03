@@ -7,6 +7,9 @@
 @import "tumblr"
 @import "map"
 
+
+$gray: rgba(230,230,230,1)
+
 html
  overflow: hidden
  overflow-y: visible !important
@@ -35,7 +38,10 @@ nav
    margin: 0 20px 0 0
    font-size: 85%
 
-
+button
+ background: $gray
+ border-style: none
+ padding: 5px
 
 p
  font-weight: 200
@@ -198,6 +204,29 @@ label
 
 
  
+/* meeting page */
+
+div.meeting_results
+hgroup.meeting_info > *
+ font-size: 1em
+ line-height: 1em
+h3
+ font-weight: 600
+
+.type
+ font-style: italic
+
+
+.filter
+ padding: 0 0 0 2%
+h5
+ font-style: normal
+ text-transform: uppercase
+
+
+.location
+ input
+  width: auto
 
 
 
