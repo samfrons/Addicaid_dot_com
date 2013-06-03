@@ -1,14 +1,14 @@
 <!--Giving the div an id="map_canvas" fix problems with twitter bootstrap affecting google maps-->
 <div class="row-fluid filter">
-<div class=" span3 type">
-	<h5>type <button>all</button></h5>
-	<button>alcoholics</button>
+<div class=" span2 type">
+	<h5>type <button class="all">all</button></h5>
+	<button class="selected">alcoholics</button>
 	<button>narcotics</button>
 
 </div>
 
-<div class="span3 day">
-	<h5>day</h5>
+<div class="span4 day">
+	<h5>day <button class="all">all</button></h5>
 	<button>mon</button>
 	<button>tues</button>
 	<button>wed</button>
@@ -20,7 +20,7 @@
 </div>
 
 <div class="span3 time">
-	<h5>time</h5>
+	<h5>time <button class="all">all</button></h5>
 	<button>morning</button>
 	<button>afternoon</button>
 	<button>evening</button>
@@ -49,10 +49,10 @@
 <h5>San Francisco, CA 94107</h5>
 <h6 class="type">Alcoholics Anonymous</h6>
 </hgroup>
-<div class="span2">
-	20:00
-	wed
-	0.9 miles
+<div class="span2 info">
+	<span class="time">20:00</span></br>
+	<span class="day">wed</span><br/>
+	<span class="distance">0.9 miles</span>
 </div>
 
 </div>
@@ -70,10 +70,10 @@
      ui-event="{'map-click': 'openMarkerInfo(marker)'}">
 </div>
 
-
+<!--
 
 <div ui-map-info-window="myInfoWindow">
     <h1>Marker</h1>
     Lat: <input ng-model="currentMarkerLat">, Lng: <input ng-model="currentMarkerLng">
     <a class="btn btn-primary" ng-click="setMarkerPosition(currentMarker, currentMarkerLat, currentMarkerLng)">Set Position</a>
-</div>
+</div> -->
