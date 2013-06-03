@@ -9,13 +9,13 @@
 
 <div class="span4 day">
 	<h5>day <button class="all">all</button></h5>
-	<button>mon</button>
-	<button>tues</button>
-	<button>wed</button>
-	<button>thurs</button>
-	<button>fri</button>
-	<button>sat</button>
-	<button>sun</button>
+	<button>m</button>
+	<button>t</button>
+	<button>w</button>
+	<button>t</button>
+	<button>f</button>
+	<button class="weekend">s</button>
+	<button class="weekend">s</button>
 
 </div>
 
@@ -29,36 +29,38 @@
 
 <div class="span3 location">
 	<h5>place</h5>
-	<input class='distance' placeholder="5 miles from"/>
-	current location
+	<input class='distance' placeholder="5 miles"/>
+	from here
 	or
 	<input class="zipcode" placeholder="zipcode"/>
 </div>
-</div>
-<div class="container">
-<button type="submit">submit</button>
+
+<div class="row-fluid">
+<button class="find_meeting" type="submit">find a meeting!</button>
 <hr/>
 </div>
+</div>
 
 
+<div class="meeting_results">
 
-<div class="meeting_results span6">
-
-<div class="span8">
-<hgroup class="meeting_info span4">
-<h3>Potreo Hill Community Center (Potreo Hill Community Center)</h3>
-<h4>953 Deharo</h4>
-<h5>San Francisco, CA 94107</h5>
-<h6 class="type">Alcoholics Anonymous</h6>
-</hgroup>
-<div class="span2 info">
-	<span class="time">20:00</span></br>
+<div id="meeting_info" style="
+    width: 60%;
+    display: inline-block;
+">
+<p>
+<span class="location_name">Potreo Hill Community Center (Potreo Hill Community Center)</span>
+<span class="address">953 Deharo</span>
+<span class="city_state">San Francisco, CA 94107</span>
+<span class="type">Alcoholics Anonymous</span>
+</p>
+</div>
+<div id="info">
+	<span class="time">8:30 AM</span></br>
 	<span class="day">wed</span><br/>
 	<span class="distance">0.9 miles</span>
 </div>
-
-</div>
-
+<hr/>
 </div>
 
 <div id="map_canvas" ui-map="myMap" class="map"
