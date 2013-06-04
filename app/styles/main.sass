@@ -23,6 +23,9 @@ body
  min-width: 500px !important
  width: 100%
 
+hr
+ margin: 0
+
 
 h1
  font-size: 2em
@@ -47,25 +50,27 @@ button[type="submit"]
  text-transform: uppercase
 button
  border: 1px solid rgba(220,220,220,1)
+ opacity: .9
  padding: 5px
- background: rgba(255,255,255,1)
+ background-color: transparent
  text-transform: capitalize
- color: white
- font-weight: 400
+ color: rgba(184,176,184,1)
+ font-weight: 500
  letter-spacing: .2em
- text-shadow: 0px 1px 1px gray
- background-color: rgba(92, 164, 164, 0.5)
 .selected
- background: rgba(214,216,214,1)
- border: 1px solid rgba(212,214,212,1)
- -webkit-box-shadow: inset 0px -3px 1px rgba(255, 255, 255, 1), inset 0 0px 3px rgba(0, 0, 0, 0.9)
-
+ color: white
+ background-color: #fe5741
+button.find_meeting
+ text-align: center
+ margin: 10px 0 0 10%
+  
 
 h5
  border-bottom: 1px solid rgba(220,220,220,1)
  line-height: auto
  vertical-align: baseline
  .all
+  width: 30px !important
   padding: 0 2px 0 2px
   border-top: 1px solid rgba(220,220,220,1)
   border-left: 1px solid rgba(220,220,220,1)
@@ -127,10 +132,9 @@ p
   text-align: center
 
 .quotes
- margin: 20px 0 0 7%
+ margin: 20px 1% 0 1%
  div.span4
   text-align: center
-  width: 28%
  blockquote
   border-style: none
   text-align: left
@@ -141,7 +145,7 @@ p
 
 footer
  text-align: center
- margin: 100px 0 20px 0
+ margin: 50px 0 20px 0
 
 #feedlyMiniIcon
  display: none !important
@@ -243,32 +247,60 @@ label
 /* meeting page */
 
 div.meeting_results
-hgroup.meeting_info > *
- font-size: 1em
- line-height: 1em
- font-weight: 300
-h3
- font-weight: 400 !important
-
-.type
- font-style: italic
+ width: 100%
+ max-width: 500px
+ margin: 5px
+ div#meeting_info
+  font-size: 1em
+  font-weight: 600
+  display: inline-block !important
+  p
+   font-weight: 100
+   span.location_name
+    font-weight: bold
+    display: block
+   span.address
+   span.city_state
+   span.type
+ 
+ div#info
+  width: 20%
+  text-align: center
+  display: inline-block !important
+  vertical-align: top
+  font-weight: bold
+ span.time
+ span.day 
+  text-transform: uppercase
+ span.distance
+  font-weight: normal
 
 
 .filter
  padding: 0 0 0 2%
-h5
- font-style: normal
- text-transform: uppercase
+ h5
+  font-style: normal
+  text-transform: uppercase
+ .type
+  button
+   width: 100px
+
+ .day 
+  button
+   width: 30px
+  button.weekend
+   color: #e5dd0d
+ .time
+  button
+   width: 90px
 
 
 .location
  input
-  width: auto
+  width: 50px
+  border: 1px solid rgba(220,220,220,1)
+  padding: 2px
 
-div.meeting_results
- div.info
-  text-align: center
-  span.time
-   color: red
+
 
 

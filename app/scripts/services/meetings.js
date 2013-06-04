@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .factory('meetings', ['$http', '$rootScope', function($http, $rootScope) {
+  .factory('meetings', ['$http', '$rootScope', '$q', function($http, $rootScope, $q) {
 //  .factory('meetings', ['$resource', function($resource) {
     var defaultCoordinates = { // NYC
       latitude: 40.763562,
@@ -13,86 +13,55 @@ angular.module('addicaidSiteApp')
 //    };
     console.log('defaultCoordinates', defaultCoordinates);
 
-// TODO: remove CartoDB stuff
-//    var defaultST_Point = function() {
-//      return "ST_Point(" + defaultCoordinates.longitude.toString() + ", " + defaultCoordinates.latitude.toString() + ")";
-//    }
-//    var defaultCartodbAccount = "bigmickey";
-//    var defaultCartodbTable = "intherooms";
-//    var defaultCartodbSql = "SELECT rooms.*, ST_Distance(ST_AsText(rooms.the_geom), ST_AsText("+defaultST_Point()+")) as dst from "+defaultCartodbTable+" rooms join (SELECT max(cartodb_id) as id,  ST_Distance(ST_AsText(the_geom), ST_AsText("+defaultST_Point()+")) as dst FROM "+defaultCartodbTable+" where fellowship in ('Alcoholics Anonymous', 'Narcotics Anonymous') group by dst) x on rooms.cartodb_id = x.id order by dst asc limit 100";
-// select rooms.*, x.dst as dst from intherooms rooms join (SELECT max(cartodb_id) as id,  ST_Distance(ST_AsText(the_geom), ST_AsText(ST_Point(-73.97140100000001, 40.763562))) as dst FROM intherooms where fellowship in ('Alcoholics Anonymous', 'Narcotics Anonymous') group by dst) x on rooms.cartodb_id = x.id order by dst asc limit 40
-// select rooms.*, x.dst as dst from intherooms rooms join (SELECT max(cartodb_id) as id,  ST_Distance(ST_AsText(the_geom), ST_AsText(ST_Point(-122.416728, 37.777182))) as dst FROM intherooms where fellowship in ('Alcoholics Anonymous', 'Narcotics Anonymous') group by dst) x on rooms.cartodb_id = x.id order by dst asc limit 40
+
+    var serviceAPI = {
+      meetingsChangedEvent: 'meetingsChanged'
+    };
+
+
+
+//    // Url creation items
+//    var baseUrl = 'http://addicaid.appspot.com/meetings/jsonp';
+//    var testUrl = 'http://addicaid.appspot.com/meetings/jsonp?daylist=MoTu&callback=JSON_CALLBACK';
+//    var getCurrentLocation = function() {
+//      // current location
+//      return {
+//        latitude: defaultCoordinates.latitude,
+//        longitude: defaultCoordinates.longitude
+//      };
+//    };
+
+
+    var isFilterDirty = true; // flag used to determine whether server needs to be called for new data
+    var waitingForServerResults = false; // flag to make sure only one server request at a time
+
+    var meetingsCache = []; // latest list of meetings retrieved from server
 
 
 
 
-
-    var meetingSvc;
-    meetingSvc.getMeetingsFromServer = function() {
-      console.log('getMeetingsFromServer');
+    var getMeetingsFromServer = function() {
+      console.log('entering getMeetingsFromServer');
       // Retrieves meeting objects from server based on current filters
-      if (meetingSvc.isFilterDirty && !meetingSvc.waitingForServerResults) {
+
+      if (isFilterDirty && !waitingForServerResults) {
         // populate meetings from server
-        meetingSvc.waitingForServerResults = true;
-        // $http.jsonp(meetingSvc.getUrl())
+        waitingForServerResults = true;
+        // $http.jsonp(privateAPI.getUrl())
         $http.get('testfiles/meetings-demo.json')// TODO: HACK using local json file
           .success(function(data) {
-            meetingSvc.meetingsCache = data.value;
-
-//                        // TODO: fake data-carto
-//                        $http.jsonp('http://'+defaultCartodbAccount+'.cartodb.com/api/v2/sql/?q='+defaultCartodbSql+'&callback=JSON_CALLBACK')
-//                            .success(function(data,status) {
-//                                console.log('http://'+defaultCartodbAccount+'.cartodb.com/api/v2/sql/?q='+defaultCartodbSql+'&callback=JSON_CALLBACK');
-//                                for (var i=0; i < meetingSvc.meetingsCache.length; i++) {
-//                                    meetingSvc.meetingsCache[i].latLon.latitude = data.rows[i].latitude;
-//                                    meetingSvc.meetingsCache[i].latLon.longitude = data.rows[i].longitude;
-//                                }
-//
-//
-//                                meetingSvc.isFilterDirty = false;
-//                                $rootScope.$broadcast(meetingSvc.meetingsChangedEvent, [/* meetingsChangedArgs */]);
-//                            })
-
-//                        // TODO: fake data-favorites
-//                        for (var i=0; i < meetingSvc.meetingsCache.length; i++) {
-//                            meetingSvc.meetingsCache[i].isFavorite = Math.random()<.2 ? true : false;
-//                        }
-
-            // TODO: fake data-ratings
-//                        for (var i=0; i < meetingSvc.meetingsCache.length; i++) {
-//                            meetingSvc.meetingsCache[i].rating = getFakeRating(meetingSvc.meetingsCache[i]);
-//                        }
-
-            // TODO: single meeting
-//                        meetingSvc.meetingsCache = [ meetingSvc.meetingsCache[0] ];
+            meetingsCache = data.value;
 
             // PROCESS MEETINGS CACHE
-            angular.forEach(meetingSvc.meetingsCache, function(meeting) {
-              // clean up ratings object
-              var newRatings = {};
-              angular.forEach(meeting.rating, function(value, key) {
-                if (value) {
-                  newRatings[key] = value;
-                }
-              });
-              meeting.rating = newRatings;
-
-
+            angular.forEach(meetingsCache, function(meeting) {
               // clean up time
-              meeting.time = meeting.time.split(':')[0] + ':' + meeting.time.split(':')[1];
-
-              // TODO: HACK change time on wed womens meeting
-              if (meeting.id === 73021) {
-                meeting.time = '19:00';
-                meeting.timeAsNumber = 19;
-              }
-//                            console.log(meeting)
+//              meeting.time = meeting.time.split(':')[0] + ':' + meeting.time.split(':')[1];
             });
 
-            meetingSvc.isFilterDirty = false;
-            meetingSvc.waitingForServerResults = false;
-            console.log('******** got '+ meetingSvc.meetingsCache.length + ' meetings **********');
-            $rootScope.$broadcast(meetingSvc.meetingsChangedEvent, [/* meetingsChangedArgs */]);
+            isFilterDirty = false;
+            waitingForServerResults = false;
+            console.log('******** got '+ meetingsCache.length + ' meetings **********');
+            $rootScope.$broadcast(serviceAPI.meetingsChangedEvent, [/* meetingsChangedArgs */]);
           })
           .error(function(data,status) {
             // TODO: error handling
@@ -101,4 +70,19 @@ angular.module('addicaidSiteApp')
       }
     };
 
+    // Public API
+    angular.extend(serviceAPI, {
+      getMeetings: function() {
+        console.log('getMeetings - '+ arguments[0]); // optional arg used for logging to determine where call originated
+        if (isFilterDirty) {
+          getMeetingsFromServer();
+        }
+
+        // TODO: need promises here.  for now, returns the old meetingsCache and use broadcast to make change
+        return meetingsCache;
+        // return: array of meeting objects from server
+      }
+    });
+
+    return serviceAPI;
   }]);
