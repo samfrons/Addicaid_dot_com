@@ -158,6 +158,8 @@ module.exports = function (grunt) {
       }
     },
     usemin: {
+      // html: ['<%= yeoman.dist %>/**/*.html'],
+      // css: ['<%= yeoman.dist %>/styles/**/*.css'],
       html: ['<%= yeoman.dist %>/{,*/}*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
       options: {
@@ -299,5 +301,23 @@ module.exports = function (grunt) {
     'usemin'
   ]);
 
+  grunt.registerTask('build-quick', [
+    'clean:dist',
+    // 'jshint',
+    // 'test',
+    'coffee',
+    'compass:dist',
+    'useminPrepare',
+    'concat',
+    'imagemin',
+    'cssmin',
+    'htmlmin',
+    'copy',
+    'cdnify',
+    'ngmin',
+    'uglify',
+    'rev',
+    'usemin'
+  ]);
   grunt.registerTask('default', ['build']);
 };

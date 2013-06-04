@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .factory('meetings', ['$http', '$rootScope', '$q', function($http, $rootScope, $q) {
+  .factory('meetings', ['$http', '$rootScope', function($http, $rootScope) {
 //  .factory('meetings', ['$resource', function($resource) {
     var defaultCoordinates = { // NYC
       latitude: 40.763562,
@@ -53,10 +53,10 @@ angular.module('addicaidSiteApp')
             meetingsCache = data.value;
 
             // PROCESS MEETINGS CACHE
-            angular.forEach(meetingsCache, function(meeting) {
+//            angular.forEach(meetingsCache, function(meeting) {
               // clean up time
 //              meeting.time = meeting.time.split(':')[0] + ':' + meeting.time.split(':')[1];
-            });
+//            });
 
             isFilterDirty = false;
             waitingForServerResults = false;
