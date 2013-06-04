@@ -1,67 +1,8 @@
 <!--Giving the div an id="map_canvas" fix problems with twitter bootstrap affecting google maps-->
-<div class="row-fluid filter">
-<div class=" span2 type">
-	<h5>type <button class="all">all</button></h5>
-	<button class="selected">alcoholics</button>
-	<button>narcotics</button>
+<ng-include src="getPartialUrl('meetingFilters')" ng-controller="MeetingFiltersCtrl" id="meetingFiltersSection"></ng-include>
 
-</div>
+<ng-include src="getPartialUrl('meetingDetailSmall')" ng-controller="MeetingDetailSmallCtrl" id="meetingDetailSmallSection"></ng-include>
 
-<div class="span4 day">
-	<h5>day <button class="all">all</button></h5>
-	<button>m</button>
-	<button>t</button>
-	<button>w</button>
-	<button>t</button>
-	<button>f</button>
-	<button class="weekend">s</button>
-	<button class="weekend">s</button>
-
-</div>
-
-<div class="span3 time">
-	<h5>time <button class="all">all</button></h5>
-	<button>morning</button>
-	<button>afternoon</button>
-	<button>evening</button>
-	<button>night</button>
-</div>
-
-<div class="span3 location">
-	<h5>place</h5>
-	<input class='distance' placeholder="5 miles"/>
-	from here
-	or
-	<input class="zipcode" placeholder="zipcode"/>
-</div>
-
-<div class="row-fluid">
-<button class="find_meeting" type="submit">find a meeting!</button>
-<hr/>
-</div>
-</div>
-
-
-<div class="meeting_results">
-
-<div id="meeting_info" style="
-    width: 60%;
-    display: inline-block;
-">
-<p>
-<span class="location_name">Potreo Hill Community Center (Potreo Hill Community Center)</span>
-<span class="address">953 Deharo</span>
-<span class="city_state">San Francisco, CA 94107</span>
-<span class="type">Alcoholics Anonymous</span>
-</p>
-</div>
-<div id="info">
-	<span class="time">8:30 AM</span></br>
-	<span class="day">wed</span><br/>
-	<span class="distance">0.9 miles</span>
-</div>
-<hr/>
-</div>
 
 <div id="map_canvas" ui-map="myMap" class="map"
      ui-event="{'map-click': 'addMarker($event)', 'map-zoom_changed': 'setZoomMessage(myMap.getZoom())' }"
