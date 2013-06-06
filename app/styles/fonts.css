@@ -1,7 +1,7 @@
-@font-face { font-family: Mensch, sans-serif; src: url('http://www.samfrons.com/fonts/mensch.ttf'); } 
+@font-face { font-family: Mensch, sans-serif; src: url('fonts/mensch.ttf'); } 
 
-@font-face { font-family: Mensch Inline, sans-serif; src: url('http://www.samfrons.com/fonts/mensch-inline.ttf'); } 
+@font-face { font-family: Mensch Inline, sans-serif; src: url('fonts/mensch-inline.ttf'); } 
 
-@font-face { font-family: Mensch Bold, sans-serif; src: url('http://www.samfrons.com/fonts/mensch-bold.ttf'); } 
+@font-face { font-family: Mensch Bold, sans-serif; src: url('fonts/mensch-bold.ttf'); } 
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700);
