@@ -4,9 +4,11 @@
     display: block;
     position: relative;
     text-align: left;
-    padding: 15px 0 10px 0;
+    padding: 15px 0 10px 10px;
     margin: 0 auto;
+    max-width: 900px
 }
+
 
 #mc_embed_signup h2 {
     font-weight: bold;
@@ -34,7 +36,7 @@
     border-color: #333;
 }
 
-#mc_embed_signup .button {
+form .button {
     clear: both;
     background-color: #20499d;
     border: 0 none;
@@ -86,6 +88,7 @@
     margin: 0 4% 10px 0;
     text-indent: 5px;
     min-width: 130px;
+    max-width: 320px;
 }
 
 #mc_embed_signup input.button {

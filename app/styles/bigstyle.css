@@ -111,8 +111,6 @@ a {
     -webkit-animation-name: bounceInLeft;
 }
 .word10,.word11,.word13 {
-    
-    font-family: 'Georgia';
     font-style: italic;
     line-height: 1;
     -webkit-animation-delay: 3s;
