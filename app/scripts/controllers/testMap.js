@@ -19,6 +19,6 @@ angular.module('addicaidSiteApp')
 
     var baseMeetings= Restangular.all('meetings.json');
     baseMeetings.getList().then(function(data) {
-      console.log(data);
+      console.log(data[0]);
     });
   }]);
