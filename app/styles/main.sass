@@ -9,7 +9,6 @@
 @import "compass"
 @import "compass/css3/font-face"
 
-
 +font-face("Mensch", sans-serif, font-files("fonts/mensch.ttf"))
 
 $gray: rgba(230,230,230,1)
@@ -295,35 +294,38 @@ label
 
  
 /* meeting page */
-
 div.meeting_results
- width: 100%
- max-width: 500px
- margin: 5px
- div#meeting_info
-  font-size: 1em
-  font-weight: 600
-  display: inline-block !important
-  p
-   font-weight: 100
-   span.location_name
-    font-weight: bold
-    display: block
-   span.address
-   span.city_state
-   span.type
- 
- div#info
-  width: 20%
-  text-align: center
-  display: inline-block !important
-  vertical-align: top
-  font-weight: bold
- span.time
- span.day 
-  text-transform: uppercase
- span.distance
-  font-weight: normal
+ width: 40%
+ display: inline-block
+ div.meeting_result
+  width: 100%
+  max-width: 500px
+  margin: 5px
+  div#meeting_info
+   width: 72%
+   font-size: 1em
+   font-weight: 600
+   display: inline-block !important
+   p
+    font-weight: 100
+    span.location_name
+     font-weight: bold
+     display: block
+    span.address
+    span.city_state
+    span.type
+  
+  div#info
+   width: 25%
+   text-align: center
+   display: inline-block !important
+   vertical-align: top
+   font-weight: bold
+  span.time
+  span.day 
+   text-transform: uppercase
+  span.distance
+   font-weight: normal
 
 
 .filter
@@ -332,17 +334,21 @@ div.meeting_results
   font-style: normal
   text-transform: uppercase
  .type
+  width: auto
   button
    padding: 2px
    min-width: 100px
+   width: auto
    
 
- .day 
+ .day
+  width: auto
   button
    width: 30px
   button.weekend
    color: #e5dd0d
  .time
+  width: auto
   .span3
    background-color: red
 
@@ -352,6 +358,7 @@ div.meeting_results
 
 
 .location
+ width: auto
  input
   width: 50px
   border: 1px solid rgba(220,220,220,1)

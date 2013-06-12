@@ -1,0 +1,14 @@
+body {
+	
+}
+
+nav.bottom {
+	position: fixed;
+	bottom: 0px;
+	background-color: white
+}
+
+nav.bottom ul li {
+ border: 1px solid gray;
+
+}

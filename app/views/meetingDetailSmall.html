@@ -1,5 +1,6 @@
-<div class="meeting_results">
-  <div id="meeting_info" style="width: 60%; display: inline-block;">
+<div class="meeting_result">
+ <div class="meeting_entry">
+  <div id="meeting_info">
     <p>
       <span class="location_name">{{meeting.title}}</span>
       <span class="address">{{meeting.location.address.address1}}</span>
@@ -11,6 +12,8 @@
     <span class="time">{{meeting.schedule.timeObj | date:'shortTime'}}</span></br>
     <span class="day">{{meeting.schedule.timeObj | date:'EEE'}}</span><br/>
     <span class="distance">{{meeting.distance | number:1}} miles</span>
+    <button>directions</button>
   </div>
   <hr/>
+</div>
 </div>
