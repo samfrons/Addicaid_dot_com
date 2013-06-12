@@ -1,22 +1,16 @@
 <div class="meeting_results">
-
-<div id="meeting_info" style="
-    width: 60%;
-    display: inline-block;
-">
-<p>
-<span class="location_name">Potreo Hill Community Center (Potreo Hill Community Center)</span>
-<span class="address">953 Deharo</span>
-<span class="city_state">San Francisco, CA 94107</span>
-<span class="type">Alcoholics Anonymous</span>
-</p>
-</div>
-<div id="info">
-	<span class="time">8:30 AM</span></br>
-	<span class="day">wed</span><br/>
-	<span class="distance">0.9 miles</span>
-</div>
-<hr/>
-
-
+  <div id="meeting_info" style="width: 60%; display: inline-block;">
+    <p>
+      <span class="location_name">{{meeting.title}}</span>
+      <span class="address">{{meeting.location.address.address1}}</span>
+      <span class="city_state">{{meeting.location.address.city.city}},{{meeting.location.address.city.state}}</span>
+      <span class="type">{{meeting.fellowship.displayText}}</span>
+    </p>
+  </div>
+  <div id="info">
+    <span class="time">{{meeting.schedule.timeObj | date:'shortTime'}}</span></br>
+    <span class="day">{{meeting.schedule.timeObj | date:'EEE'}}</span><br/>
+    <span class="distance">{{meeting.distance | number:1}} miles</span>
+  </div>
+  <hr/>
 </div>

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('addicaidSiteApp', ['ngResource', 'restangular'])
+angular.module('addicaidSiteApp', ['ngResource', 'restangular', 'ui'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
@@ -88,7 +88,8 @@ angular.module('addicaidSiteApp', ['ngResource', 'restangular'])
   }])
 
   .config(function(RestangularProvider) {
-    RestangularProvider.setBaseUrl('http://localhost\\:9000/testfiles');
+//    RestangularProvider.setBaseUrl('http://localhost\\:9000/testfiles');
+    RestangularProvider.setBaseUrl('http://localhost\\:8080');
   })
 
   // create ng-clickable go function

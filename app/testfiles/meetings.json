@@ -1,56 +1,1752 @@
 [
-    {
-        "title" : "A Bridge Back",
-        "fellowship" : {
-            "id" : "AA",
-            "name" : "Alcoholics Anonymous"
-        },
-        "location" : {
-            "title" : "St. Andrew's Church",
-            "address1" : "20 Cardinal Hayes Place",
-            "address2" : "Brooklyn, NY 11206",
-            "distance" : "0.5 MI"
-        },
-        "calendar" : {
-            "dayShort" : "WED",
-            "dayLong" : "WEDNESDAY",
-            "time" : "10 AM"
-        }
+  {
+    "id": 1,
+    "title": "Salvation Army",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
     },
-    {
-        "title" : "Meeting Title 2",
-        "fellowship" : {
-            "id" : "NA",
-            "name" : "Narcotics Anonymous"
-        },
-        "location" : {
-            "title" : "Location Title 2",
-            "address1" : "180 Sterling Pl",
-            "address2" : "Brooklyn, NY 11217",
-            "distance" : "1.5 MI"
-        },
-        "calendar" : {
-            "dayShort" : "MON",
-            "dayLong" : "MONDAY",
-            "time" : "6 PM"
-        }
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TH",
+      "day": "THURSDAY",
+      "time": "19:30"
     },
-    {
-        "title" : "Meeting Title 3",
-        "fellowship" : {
-            "id" : "AA",
-            "name" : "Alcoholics Anonymous"
-        },
-        "location" : {
-            "title" : "Location Title 3",
-            "address1" : "Address1 3",
-            "address2" : "Address2 3",
-            "distance" : "000 MI"
-        },
-        "calendar" : {
-            "dayShort" : "SUN",
-            "dayLong" : "SUNDAY",
-            "time" : "12:30 PM"
+    "location": {
+      "id": null,
+      "name": "Salvation Army",
+      "address": {
+        "id": null,
+        "address1": "40 3rd Street",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Hudson",
+          "state": "NY 12534",
+          "country": "US"
         }
+      },
+      "center": {
+        "latitude": 42.25113,
+        "longitude": -73.791435
+      }
     }
+  },
+  {
+    "id": 2,
+    "title": "First Presbyterian Church",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "MO",
+      "day": "MONDAY",
+      "time": "19:00"
+    },
+    "location": {
+      "id": null,
+      "name": "First Presbyterian Church",
+      "address": {
+        "id": null,
+        "address1": "369 Warren Street",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Hudson",
+          "state": "NY 12534",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 42.251556,
+        "longitude": -73.78931
+      }
+    }
+  },
+  {
+    "id": 3,
+    "title": "First Reformed Church",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "19:00"
+    },
+    "location": {
+      "id": null,
+      "name": "First Reformed Church",
+      "address": {
+        "id": null,
+        "address1": "52 Green Street",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Hudson",
+          "state": "NY 12534",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 42.247604,
+        "longitude": -73.78069
+      }
+    }
+  },
+  {
+    "id": 4,
+    "title": "Christ The King Church",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "WE",
+      "day": "WEDNESDAY",
+      "time": "20:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Christ The King Church",
+      "address": {
+        "id": null,
+        "address1": "740 North Broadway",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Yonkers",
+          "state": "NY 10703",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 41.821697,
+        "longitude": -71.36703
+      }
+    }
+  },
+  {
+    "id": 5,
+    "title": "Christ The King Church",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "20:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Christ The King Church",
+      "address": {
+        "id": null,
+        "address1": "740 North Broadway",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Yonkers",
+          "state": "NY 10703",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 41.821697,
+        "longitude": -71.36703
+      }
+    }
+  },
+  {
+    "id": 6,
+    "title": "Christ The King Church 2",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TH",
+      "day": "THURSDAY",
+      "time": "19:30"
+    },
+    "location": {
+      "id": null,
+      "name": "Christ The King Church",
+      "address": {
+        "id": null,
+        "address1": "740 North Broadway",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Yonkers",
+          "state": "NY 10703",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 41.821697,
+        "longitude": -71.36703
+      }
+    }
+  },
+  {
+    "id": 7,
+    "title": "Christ The King Church 3",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SA",
+      "day": "SATURDAY",
+      "time": "18:45"
+    },
+    "location": {
+      "id": null,
+      "name": "Christ The King Church",
+      "address": {
+        "id": null,
+        "address1": "740 North Broadway",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Yonkers",
+          "state": "NY 10703",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 41.821697,
+        "longitude": -71.36703
+      }
+    }
+  },
+  {
+    "id": 8,
+    "title": "Christ The King Church 4",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SA",
+      "day": "SATURDAY",
+      "time": "20:30"
+    },
+    "location": {
+      "id": null,
+      "name": "Christ The King Church",
+      "address": {
+        "id": null,
+        "address1": "740 North Broadway",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Yonkers",
+          "state": "NY 10703",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 41.821697,
+        "longitude": -71.36703
+      }
+    }
+  },
+  {
+    "id": 9,
+    "title": "First Baptist Church",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TU",
+      "day": "TUESDAY",
+      "time": "19:00"
+    },
+    "location": {
+      "id": null,
+      "name": "First Baptist Church",
+      "address": {
+        "id": null,
+        "address1": "100 Maple Street",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Glens Falls",
+          "state": "NY 12801",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 43.311874,
+        "longitude": -73.642426
+      }
+    }
+  },
+  {
+    "id": 10,
+    "title": "First Baptist Church",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "WE",
+      "day": "WEDNESDAY",
+      "time": "19:00"
+    },
+    "location": {
+      "id": null,
+      "name": "First Baptist Church",
+      "address": {
+        "id": null,
+        "address1": "100 Maple Street",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Glens Falls",
+          "state": "NY 12801",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 43.311874,
+        "longitude": -73.642426
+      }
+    }
+  },
+  {
+    "id": 11,
+    "title": "First Baptist Church",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TH",
+      "day": "THURSDAY",
+      "time": "19:00"
+    },
+    "location": {
+      "id": null,
+      "name": "First Baptist Church",
+      "address": {
+        "id": null,
+        "address1": "100 Maple Street",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Glens Falls",
+          "state": "NY 12801",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 43.311874,
+        "longitude": -73.642426
+      }
+    }
+  },
+  {
+    "id": 12,
+    "title": "820 River Street, Inc",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SU",
+      "day": "SUNDAY",
+      "time": "18:30"
+    },
+    "location": {
+      "id": null,
+      "name": "820 River Street, Inc",
+      "address": {
+        "id": null,
+        "address1": "13 Crandall Street",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Glens Falls",
+          "state": "NY 12801",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 43.309345,
+        "longitude": -73.64992
+      }
+    }
+  },
+  {
+    "id": 13,
+    "title": "820 River Street, Inc",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SA",
+      "day": "SATURDAY",
+      "time": "19:00"
+    },
+    "location": {
+      "id": null,
+      "name": "820 River Street, Inc",
+      "address": {
+        "id": null,
+        "address1": "13 Crandall Street",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Glens Falls",
+          "state": "NY 12801",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 43.309345,
+        "longitude": -73.64992
+      }
+    }
+  },
+  {
+    "id": 14,
+    "title": "Saint Mary's Church",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "20:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Saint Mary's Church",
+      "address": {
+        "id": null,
+        "address1": "62 Warren Street",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Glens Falls",
+          "state": "NY 12801",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 43.310158,
+        "longitude": -73.64167
+      }
+    }
+  },
+  {
+    "id": 15,
+    "title": "Granville Women's Halfway House",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TU",
+      "day": "TUESDAY",
+      "time": "19:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Granville Women's Halfway House",
+      "address": {
+        "id": null,
+        "address1": "9145 Route 22",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Granville",
+          "state": "NY 12832",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 43.403015,
+        "longitude": -73.27399
+      }
+    }
+  },
+  {
+    "id": 16,
+    "title": "Unitarian Universalist Church",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TU",
+      "day": "TUESDAY",
+      "time": "19:30"
+    },
+    "location": {
+      "id": null,
+      "name": "Unitarian Universalist Church",
+      "address": {
+        "id": null,
+        "address1": "624 North Broadway",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Saratoga Springs",
+          "state": "NY 12866",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 43.08812,
+        "longitude": -73.78229
+      }
+    }
+  },
+  {
+    "id": 17,
+    "title": "Saratoga Springs City Hall",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TH",
+      "day": "THURSDAY",
+      "time": "19:30"
+    },
+    "location": {
+      "id": null,
+      "name": "Saratoga Springs City Hall",
+      "address": {
+        "id": null,
+        "address1": "474 Broadway",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Saratoga Springs",
+          "state": "NY 12866",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 43.08331,
+        "longitude": -73.78413
+      }
+    }
+  },
+  {
+    "id": 18,
+    "title": "10 Franklin Street",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "WE",
+      "day": "WEDNESDAY",
+      "time": "19:30"
+    },
+    "location": {
+      "id": null,
+      "name": "10 Franklin Street",
+      "address": {
+        "id": null,
+        "address1": "10 Franklin Street",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Saratoga Springs",
+          "state": "NY 12866",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 43.079994,
+        "longitude": -73.79084
+      }
+    }
+  },
+  {
+    "id": 19,
+    "title": "Young Adults in Recovery",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "WE",
+      "day": "WEDNESDAY",
+      "time": "19:30"
+    },
+    "location": {
+      "id": null,
+      "name": "Prevention Council 2cd floor",
+      "address": {
+        "id": null,
+        "address1": "36 Phila St.",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "saratoga_springs",
+          "state": "NY 12866",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 43.080402,
+        "longitude": -73.78375
+      }
+    }
+  },
+  {
+    "id": 20,
+    "title": "Gemini Group",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "MO",
+      "day": "MONDAY",
+      "time": "19:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Bethesda Church Parish House",
+      "address": {
+        "id": null,
+        "address1": "41 Washington St.",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "saratoga_springs",
+          "state": "NY 12866",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 43.07987,
+        "longitude": -73.78744
+      }
+    }
+  },
+  {
+    "id": 21,
+    "title": "How It Works Group",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TU",
+      "day": "TUESDAY",
+      "time": "12:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Bethesda Church Parish House",
+      "address": {
+        "id": null,
+        "address1": "41 Washington St.",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "saratoga_springs",
+          "state": "NY 12866",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 43.07987,
+        "longitude": -73.78744
+      }
+    }
+  },
+  {
+    "id": 22,
+    "title": "Saratoga Original Group",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TU",
+      "day": "TUESDAY",
+      "time": "19:30"
+    },
+    "location": {
+      "id": null,
+      "name": "Bethesda Church Parish House",
+      "address": {
+        "id": null,
+        "address1": "41 Washington St.",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "saratoga_springs",
+          "state": "NY 12866",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 43.07987,
+        "longitude": -73.78744
+      }
+    }
+  },
+  {
+    "id": 23,
+    "title": "Saratoga Original Group 2",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TU",
+      "day": "TUESDAY",
+      "time": "21:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Bethesda Church Parish House",
+      "address": {
+        "id": null,
+        "address1": "41 Washington St.",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "saratoga_springs",
+          "state": "NY 12866",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 43.07987,
+        "longitude": -73.78744
+      }
+    }
+  },
+  {
+    "id": 24,
+    "title": "Saratoga Original Group 2",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "21:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Bethesda Church Parish House",
+      "address": {
+        "id": null,
+        "address1": "41 Washington St.",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "saratoga_springs",
+          "state": "NY 12866",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 43.07987,
+        "longitude": -73.78744
+      }
+    }
+  },
+  {
+    "id": 25,
+    "title": "Top 'O The Morning Group",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "11:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Bethesda Church Parish House",
+      "address": {
+        "id": null,
+        "address1": "41 Washington St.",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "saratoga_springs",
+          "state": "NY 12866",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 43.07987,
+        "longitude": -73.78744
+      }
+    }
+  },
+  {
+    "id": 26,
+    "title": "Time For Yourself group",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TH",
+      "day": "THURSDAY",
+      "time": "12:00"
+    },
+    "location": {
+      "id": null,
+      "name": "United Methodist Church",
+      "address": {
+        "id": null,
+        "address1": "5th Ave. & Henning Rd",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "saratoga_springs",
+          "state": "NY 12866",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 43.08093,
+        "longitude": -73.755
+      }
+    }
+  },
+  {
+    "id": 27,
+    "title": "Time For Yourself group",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "MO",
+      "day": "MONDAY",
+      "time": "12:00"
+    },
+    "location": {
+      "id": null,
+      "name": "United Methodist Church",
+      "address": {
+        "id": null,
+        "address1": "5th Ave. & Henning Rd",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "saratoga_springs",
+          "state": "NY 12866",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 43.08093,
+        "longitude": -73.755
+      }
+    }
+  },
+  {
+    "id": 28,
+    "title": "Saturday Winners Group",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SA",
+      "day": "SATURDAY",
+      "time": "14:00"
+    },
+    "location": {
+      "id": null,
+      "name": "New England Presbyterian Church",
+      "address": {
+        "id": null,
+        "address1": "24 Circular St.",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "saratoga_springs",
+          "state": "NY 12866",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 43.075916,
+        "longitude": -73.78441
+      }
+    }
+  },
+  {
+    "id": 29,
+    "title": "Saturday Winners Group",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SU",
+      "day": "SUNDAY",
+      "time": "10:00"
+    },
+    "location": {
+      "id": null,
+      "name": "New England Presbyterian Church",
+      "address": {
+        "id": null,
+        "address1": "24 Circular St.",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "saratoga_springs",
+          "state": "NY 12866",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 43.075916,
+        "longitude": -73.78441
+      }
+    }
+  },
+  {
+    "id": 30,
+    "title": "4 Winds",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SA",
+      "day": "SATURDAY",
+      "time": "19:00"
+    },
+    "location": {
+      "id": null,
+      "name": "4 Winds",
+      "address": {
+        "id": null,
+        "address1": "Crescent Avenue",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Saratoga Springs",
+          "state": "NY 12866",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 43.05443,
+        "longitude": -73.75497
+      }
+    }
+  },
+  {
+    "id": 31,
+    "title": "Hedgerow House",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "MO",
+      "day": "MONDAY",
+      "time": "19:30"
+    },
+    "location": {
+      "id": null,
+      "name": "Hedgerow House",
+      "address": {
+        "id": null,
+        "address1": "994 Route 67",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Ballston Spa",
+          "state": "NY 12020",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 42.988087,
+        "longitude": -73.85161
+      }
+    }
+  },
+  {
+    "id": 32,
+    "title": "Saint Mary's Outpatient",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "WE",
+      "day": "WEDNESDAY",
+      "time": "12:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Saint Mary's Outpatient",
+      "address": {
+        "id": null,
+        "address1": "76 Guy Park Avenue",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Amsterdam",
+          "state": "NY 12010",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 42.942146,
+        "longitude": -74.195755
+      }
+    }
+  },
+  {
+    "id": 33,
+    "title": "Saint Mary's Outpatient 2",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "WE",
+      "day": "WEDNESDAY",
+      "time": "19:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Saint Mary's Outpatient",
+      "address": {
+        "id": null,
+        "address1": "76 Guy Park Avenue",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Amsterdam",
+          "state": "NY 12010",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 42.942146,
+        "longitude": -74.195755
+      }
+    }
+  },
+  {
+    "id": 34,
+    "title": "Saint Mary's Outpatient 3",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TH",
+      "day": "THURSDAY",
+      "time": "19:30"
+    },
+    "location": {
+      "id": null,
+      "name": "Saint Mary's Outpatient",
+      "address": {
+        "id": null,
+        "address1": "76 Guy Park Avenue",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Amsterdam",
+          "state": "NY 12010",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 42.942146,
+        "longitude": -74.195755
+      }
+    }
+  },
+  {
+    "id": 35,
+    "title": "Saint Mary's Outpatient 4",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SA",
+      "day": "SATURDAY",
+      "time": "17:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Saint Mary's Outpatient",
+      "address": {
+        "id": null,
+        "address1": "76 Guy Park Avenue",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Amsterdam",
+          "state": "NY 12010",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 42.942146,
+        "longitude": -74.195755
+      }
+    }
+  },
+  {
+    "id": 36,
+    "title": "New Frontier",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SU",
+      "day": "SUNDAY",
+      "time": "18:00"
+    },
+    "location": {
+      "id": null,
+      "name": "New Frontier",
+      "address": {
+        "id": null,
+        "address1": "301-303 East Main Street",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Amsterdam",
+          "state": "NY 12010",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 42.930946,
+        "longitude": -74.179276
+      }
+    }
+  },
+  {
+    "id": 37,
+    "title": "Peaceful Happy Hour Group",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TH",
+      "day": "THURSDAY",
+      "time": "17:30"
+    },
+    "location": {
+      "id": null,
+      "name": "Shenendehowa United Methodist",
+      "address": {
+        "id": null,
+        "address1": "971 Route 146",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "clifton_park",
+          "state": "NY 12065",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 42.869484,
+        "longitude": -73.80901
+      }
+    }
+  },
+  {
+    "id": 38,
+    "title": "Friday Without Fear",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "19:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Prince of Peace Church",
+      "address": {
+        "id": null,
+        "address1": "4 Northcrest Drive",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Clifton Park",
+          "state": "NY 12065",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 42.86613,
+        "longitude": -73.79269
+      }
+    }
+  },
+  {
+    "id": 39,
+    "title": "Firing Line Group",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SU",
+      "day": "SUNDAY",
+      "time": "18:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Prince of Peace Lutheran Church",
+      "address": {
+        "id": null,
+        "address1": "New York 146 & Northcrest Dr",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Clifton Park",
+          "state": "NY 12065",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 42.86578,
+        "longitude": -73.7939
+      }
+    }
+  },
+  {
+    "id": 40,
+    "title": "Scotia United Methodist Church",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SU",
+      "day": "SUNDAY",
+      "time": "19:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Scotia United Methodist Church",
+      "address": {
+        "id": null,
+        "address1": "10 Broek Street",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Schenectady",
+          "state": "NY 12302",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 42.828125,
+        "longitude": -73.96316
+      }
+    }
+  },
+  {
+    "id": 41,
+    "title": "Union Presbyterian Church",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SA",
+      "day": "SATURDAY",
+      "time": "19:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Union Presbyterian Church",
+      "address": {
+        "id": null,
+        "address1": "1068 Park Avenue",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Schenectady",
+          "state": "NY 12308",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 42.81437,
+        "longitude": -73.92466
+      }
+    }
+  },
+  {
+    "id": 43,
+    "title": "Saint Joseph's Church",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TU",
+      "day": "TUESDAY",
+      "time": "19:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Saint Joseph's Church",
+      "address": {
+        "id": null,
+        "address1": "225 Lafayette Street",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Schenectady",
+          "state": "NY 12305",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 42.810352,
+        "longitude": -73.94076
+      }
+    }
+  },
+  {
+    "id": 44,
+    "title": "Refreshing Spring Church",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "MO",
+      "day": "MONDAY",
+      "time": "19:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Refreshing Spring Church",
+      "address": {
+        "id": null,
+        "address1": "327 Summit Avenue",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Schenectady",
+          "state": "NY 12307",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 42.808178,
+        "longitude": -73.940704
+      }
+    }
+  },
+  {
+    "id": 45,
+    "title": "Refreshing Spring Church",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "WE",
+      "day": "WEDNESDAY",
+      "time": "19:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Refreshing Spring Church",
+      "address": {
+        "id": null,
+        "address1": "327 Summit Avenue",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Schenectady",
+          "state": "NY 12307",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 42.808178,
+        "longitude": -73.940704
+      }
+    }
+  },
+  {
+    "id": 46,
+    "title": "Bethel AME Church",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "MO",
+      "day": "MONDAY",
+      "time": "08:30"
+    },
+    "location": {
+      "id": null,
+      "name": "Bethel AME Church",
+      "address": {
+        "id": null,
+        "address1": "540 Mumford Street",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Schenectady",
+          "state": "NY 12307",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 42.80642,
+        "longitude": -73.942924
+      }
+    }
+  },
+  {
+    "id": 47,
+    "title": "Bethel AME Church",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TU",
+      "day": "TUESDAY",
+      "time": "08:30"
+    },
+    "location": {
+      "id": null,
+      "name": "Bethel AME Church",
+      "address": {
+        "id": null,
+        "address1": "540 Mumford Street",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Schenectady",
+          "state": "NY 12307",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 42.80642,
+        "longitude": -73.942924
+      }
+    }
+  },
+  {
+    "id": 48,
+    "title": "Bethel AME Church",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "WE",
+      "day": "WEDNESDAY",
+      "time": "08:30"
+    },
+    "location": {
+      "id": null,
+      "name": "Bethel AME Church",
+      "address": {
+        "id": null,
+        "address1": "540 Mumford Street",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Schenectady",
+          "state": "NY 12307",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 42.80642,
+        "longitude": -73.942924
+      }
+    }
+  },
+  {
+    "id": 49,
+    "title": "Bethel AME Church",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TH",
+      "day": "THURSDAY",
+      "time": "08:30"
+    },
+    "location": {
+      "id": null,
+      "name": "Bethel AME Church",
+      "address": {
+        "id": null,
+        "address1": "540 Mumford Street",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Schenectady",
+          "state": "NY 12307",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 42.80642,
+        "longitude": -73.942924
+      }
+    }
+  },
+  {
+    "id": 50,
+    "title": "Bethel AME Church",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "08:30"
+    },
+    "location": {
+      "id": null,
+      "name": "Bethel AME Church",
+      "address": {
+        "id": null,
+        "address1": "540 Mumford Street",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Schenectady",
+          "state": "NY 12307",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 42.80642,
+        "longitude": -73.942924
+      }
+    }
+  },
+  {
+    "id": 51,
+    "title": "New Prebyterian Church",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "WE",
+      "day": "WEDNESDAY",
+      "time": "19:00"
+    },
+    "location": {
+      "id": null,
+      "name": "New Prebyterian Church",
+      "address": {
+        "id": null,
+        "address1": "830 State Street",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Schenectady",
+          "state": "NY 12307",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 42.80627,
+        "longitude": -73.93422
+      }
+    }
+  }
 ]

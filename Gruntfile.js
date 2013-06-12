@@ -37,6 +37,7 @@ module.exports = function (grunt) {
         files: [
           '<%= yeoman.app %>/{,*/,*/*/}*.html',
           '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
+          '<%= yeoman.app %>/styles/{,*/}*.json', // mapStyle.json
           '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ],
@@ -236,6 +237,7 @@ module.exports = function (grunt) {
         files: {
           src: [
             '<%= yeoman.dist %>/scripts/{,*/}*.js',
+            // '<%= yeoman.dist %>/styles/{,*/}*.json', // mapStyle.json
             '<%= yeoman.dist %>/styles/{,*/}*.css',
             '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             '<%= yeoman.dist %>/styles/fonts/*'
@@ -255,7 +257,8 @@ module.exports = function (grunt) {
             '.htaccess',
             'components/**/*',
             'images/{,*/}*.{gif,webp}',
-            'styles/fonts/*'
+            'styles/fonts/*',
+            'styles/{,*/}*.json' // mapStyle.json
           ]
         }]
       }
@@ -271,6 +274,15 @@ module.exports = function (grunt) {
     'livereload-start',
     'connect:livereload',
     'open',
+    'watch'
+  ]);
+  grunt.registerTask('server1', [
+    'clean:server',
+    'coffee:dist',
+    'compass:server',
+    'livereload-start',
+    'connect:livereload',
+//    'open',
     'watch'
   ]);
 
