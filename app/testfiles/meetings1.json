@@ -1,0 +1,2242 @@
+[
+  {
+    "id": 1,
+    "title": "SAFE HAVEN",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "18:30"
+    },
+    "location": {
+      "id": null,
+      "name": "SAFE HAVEN",
+      "address": {
+        "id": null,
+        "address1": "920 E. New York St",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "LONG BEACH",
+          "state": "90813",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 33.784603,
+        "longitude": -118.181175
+      }
+    }
+  },
+  {
+    "id": 2,
+    "title": "Senior Center",
+    "fellowship": {
+      "id": null,
+      "name": "Narcotics Anonymous",
+      "displayText": "Narcotics Anonymous",
+      "abbrevName": "NA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "19:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Senior Center",
+      "address": {
+        "id": null,
+        "address1": "229 New York Ranch Road",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Jackson",
+          "state": "CA 95642",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 38.354782,
+        "longitude": -120.76901
+      }
+    }
+  },
+  {
+    "id": 3,
+    "title": "Firing Line Group",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SU",
+      "day": "SUNDAY",
+      "time": "18:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Prince of Peace Lutheran Church",
+      "address": {
+        "id": null,
+        "address1": "New York 146 & Northcrest Dr",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "Clifton Park",
+          "state": "NY 12065",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 42.86578,
+        "longitude": -73.7939
+      }
+    }
+  },
+  {
+    "id": 4,
+    "title": "Diamonds In the Rough",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TH",
+      "day": "THURSDAY",
+      "time": "18:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Plattsburgh, New York",
+      "address": {
+        "id": null,
+        "address1": "1 Durkee Street",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "plattsburgh",
+          "state": "NY 12901",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 44.694828,
+        "longitude": -73.452515
+      }
+    }
+  },
+  {
+    "id": 5,
+    "title": "FORTY- SIXTH STREET",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "MO",
+      "day": "MONDAY",
+      "time": "20:00"
+    },
+    "location": {
+      "id": null,
+      "name": "All Saints Church",
+      "address": {
+        "id": null,
+        "address1": "43-12 46th Street, Basement ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 6,
+    "title": "FORTY- SIXTH STREET",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "WE",
+      "day": "WEDNESDAY",
+      "time": "18:30"
+    },
+    "location": {
+      "id": null,
+      "name": "All Saints Church",
+      "address": {
+        "id": null,
+        "address1": "43-12 46th Street, Basement ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 7,
+    "title": "FOUND-A-WAY",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SA",
+      "day": "SATURDAY",
+      "time": "00:30"
+    },
+    "location": {
+      "id": null,
+      "name": "Church of the Intercession",
+      "address": {
+        "id": null,
+        "address1": "550 West 155th Street, 2nd Floor Guild Room ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 8,
+    "title": "FOUR O'CLOCK LOUNGE",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "MO",
+      "day": "MONDAY",
+      "time": "16:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Unitarian Church of Staten Island",
+      "address": {
+        "id": null,
+        "address1": "312 Fillmore Street, 1st Floor Assembly Hall ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 9,
+    "title": "FOUR O'CLOCK LOUNGE",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TU",
+      "day": "TUESDAY",
+      "time": "16:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Unitarian Church of Staten Island",
+      "address": {
+        "id": null,
+        "address1": "312 Fillmore Street, 1st Floor Assembly Hall ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 10,
+    "title": "FOUR O'CLOCK LOUNGE",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "WE",
+      "day": "WEDNESDAY",
+      "time": "16:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Unitarian Church of Staten Island",
+      "address": {
+        "id": null,
+        "address1": "312 Fillmore Street, 1st Floor Assembly Hall ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 11,
+    "title": "FOUR O'CLOCK LOUNGE",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TH",
+      "day": "THURSDAY",
+      "time": "16:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Unitarian Church of Staten Island",
+      "address": {
+        "id": null,
+        "address1": "312 Fillmore Street, 1st Floor Assembly Hall ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 12,
+    "title": "FOUR O'CLOCK LOUNGE",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "16:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Unitarian Church of Staten Island",
+      "address": {
+        "id": null,
+        "address1": "312 Fillmore Street, 1st Floor Assembly Hall ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 13,
+    "title": "FREE-AT-LAST",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TH",
+      "day": "THURSDAY",
+      "time": "19:00"
+    },
+    "location": {
+      "id": null,
+      "name": "St. John's Lutheran Church",
+      "address": {
+        "id": null,
+        "address1": "86-20 114th Street, Basement ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 14,
+    "title": "FREEPORT (:II)",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "MO",
+      "day": "MONDAY",
+      "time": "19:30"
+    },
+    "location": {
+      "id": null,
+      "name": "Our Holy Redeemer School",
+      "address": {
+        "id": null,
+        "address1": "87 Pine Street, Basement ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 15,
+    "title": "FREEPORT (:II)",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "20:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Our Holy Redeemer School",
+      "address": {
+        "id": null,
+        "address1": "87 Pine Street, Basement ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 16,
+    "title": "ANNADALE",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TH",
+      "day": "THURSDAY",
+      "time": "13:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Messiah Lutheran Church",
+      "address": {
+        "id": null,
+        "address1": "195 Jefferson Blvd., Parish House ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 17,
+    "title": "FRIDAY AFTERNOON STEP",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "13:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Messiah Lutheran Church",
+      "address": {
+        "id": null,
+        "address1": "195 Jefferson Blvd., Parish House ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 18,
+    "title": "FRIDAY NIGHT LIVE  (Formerly the FOSTER GROUP)",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "19:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Church of the Redeemer",
+      "address": {
+        "id": null,
+        "address1": "East 23rd Street & Foster Avenue, Basement ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 19,
+    "title": "FRIDAY NIGHT STEP",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "18:30"
+    },
+    "location": {
+      "id": null,
+      "name": "St. Ignatius Church",
+      "address": {
+        "id": null,
+        "address1": "552 West End Avenue, Ring Library Bell, 3rd Floor ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 20,
+    "title": "FRIDAY NIGHTERS",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TU",
+      "day": "TUESDAY",
+      "time": "19:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Our Savior Lutheran School",
+      "address": {
+        "id": null,
+        "address1": "1734 Williamsbridge Road, enter thru parking lot @ back of building ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 21,
+    "title": "FRIDAY NIGHTERS",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "19:30"
+    },
+    "location": {
+      "id": null,
+      "name": "Our Savior Lutheran School",
+      "address": {
+        "id": null,
+        "address1": "1734 Williamsbridge Road, enter thru parking lot @ back of building ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 22,
+    "title": "FRIENDS OF BILL W.",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "19:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Holy Rosary Church",
+      "address": {
+        "id": null,
+        "address1": "207 Sand Lane, Basement ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 23,
+    "title": "FROM THE ASHES",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SU",
+      "day": "SUNDAY",
+      "time": "18:00"
+    },
+    "location": {
+      "id": null,
+      "name": "First Reformed Church of College Point",
+      "address": {
+        "id": null,
+        "address1": "118-01 14th Avenue, Basement ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 24,
+    "title": "FROM THE ASHES",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "WE",
+      "day": "WEDNESDAY",
+      "time": "19:30"
+    },
+    "location": {
+      "id": null,
+      "name": "First Reformed Church of College Point",
+      "address": {
+        "id": null,
+        "address1": "118-01 14th Avenue, Basement ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 25,
+    "title": "FRONT RUNNERS",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "MO",
+      "day": "MONDAY",
+      "time": "20:30"
+    },
+    "location": {
+      "id": null,
+      "name": "Steinway Reformed Church",
+      "address": {
+        "id": null,
+        "address1": "21-65 41st Street, Basement ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 26,
+    "title": "FRONT RUNNERS",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "WE",
+      "day": "WEDNESDAY",
+      "time": "20:30"
+    },
+    "location": {
+      "id": null,
+      "name": "Steinway Reformed Church",
+      "address": {
+        "id": null,
+        "address1": "21-65 41st Street, Basement ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 27,
+    "title": "FRONT RUNNERS",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "20:30"
+    },
+    "location": {
+      "id": null,
+      "name": "Steinway Reformed Church",
+      "address": {
+        "id": null,
+        "address1": "21-65 41st Street, Basement ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 28,
+    "title": "GARDENS GROUP OF FOREST HILLS",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "19:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Our Lady of Mercy Church",
+      "address": {
+        "id": null,
+        "address1": "70-01 Kessel Street, School Basement ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 29,
+    "title": "GARDENS GROUP OF FOREST HILLS",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SA",
+      "day": "SATURDAY",
+      "time": "20:30"
+    },
+    "location": {
+      "id": null,
+      "name": "Our Lady of Mercy Church",
+      "address": {
+        "id": null,
+        "address1": "70-01 Kessel Street, School Basement ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 30,
+    "title": "GARRISON    (:II)",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "20:00"
+    },
+    "location": {
+      "id": null,
+      "name": "Graymoor Spiritual Life Center",
+      "address": {
+        "id": null,
+        "address1": "Route 9, 4th Floor Conference Room  ",
+        "address2": "",
+        "city": {
+          "id": null,
+          "city": "New York",
+          "state": "NY ",
+          "country": "US"
+        }
+      },
+      "center": {
+        "latitude": 40.714268,
+        "longitude": -74.005974
+      }
+    }
+  },
+  {
+    "id": 31,
+    "title": "42nd AT 9:00pm",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SU",
+      "day": "SUNDAY",
+      "time": "21:15"
+    },
+    "location": null
+  },
+  {
+    "id": 32,
+    "title": "42nd AT 9:00pm",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "MO",
+      "day": "MONDAY",
+      "time": "21:15"
+    },
+    "location": null
+  },
+  {
+    "id": 33,
+    "title": "42nd AT 9:00pm",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TU",
+      "day": "TUESDAY",
+      "time": "21:15"
+    },
+    "location": null
+  },
+  {
+    "id": 34,
+    "title": "42nd AT 9:00pm",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "WE",
+      "day": "WEDNESDAY",
+      "time": "21:15"
+    },
+    "location": null
+  },
+  {
+    "id": 35,
+    "title": "42nd AT 9:00pm",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TH",
+      "day": "THURSDAY",
+      "time": "21:15"
+    },
+    "location": null
+  },
+  {
+    "id": 36,
+    "title": "42nd AT 9:00pm",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "21:15"
+    },
+    "location": null
+  },
+  {
+    "id": 37,
+    "title": "42nd AT 9:00pm",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SA",
+      "day": "SATURDAY",
+      "time": "21:15"
+    },
+    "location": null
+  },
+  {
+    "id": 38,
+    "title": "993 WORKSHOP",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "20:00"
+    },
+    "location": null
+  },
+  {
+    "id": 39,
+    "title": "AA LITERATURE",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SU",
+      "day": "SUNDAY",
+      "time": "18:15"
+    },
+    "location": null
+  },
+  {
+    "id": 40,
+    "title": "ALANON HOUSE   (AA Meetings Only)",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SU",
+      "day": "SUNDAY",
+      "time": "12:00"
+    },
+    "location": null
+  },
+  {
+    "id": 41,
+    "title": "ALANON HOUSE   (AA Meetings Only)",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "MO",
+      "day": "MONDAY",
+      "time": "12:00"
+    },
+    "location": null
+  },
+  {
+    "id": 42,
+    "title": "ALANON HOUSE   (AA Meetings Only)",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TU",
+      "day": "TUESDAY",
+      "time": "12:00"
+    },
+    "location": null
+  },
+  {
+    "id": 43,
+    "title": "ALANON HOUSE   (AA Meetings Only)",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "WE",
+      "day": "WEDNESDAY",
+      "time": "12:00"
+    },
+    "location": null
+  },
+  {
+    "id": 44,
+    "title": "ALANON HOUSE   (AA Meetings Only)",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TH",
+      "day": "THURSDAY",
+      "time": "12:00"
+    },
+    "location": null
+  },
+  {
+    "id": 45,
+    "title": "ALANON HOUSE   (AA Meetings Only)",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "12:00"
+    },
+    "location": null
+  },
+  {
+    "id": 46,
+    "title": "ALANON HOUSE   (AA Meetings Only)",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SA",
+      "day": "SATURDAY",
+      "time": "12:00"
+    },
+    "location": null
+  },
+  {
+    "id": 47,
+    "title": "BLAIRSTOWN GROUP",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "MO",
+      "day": "MONDAY",
+      "time": "20:00"
+    },
+    "location": null
+  },
+  {
+    "id": 48,
+    "title": "BREAKFAST CLUB",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "MO",
+      "day": "MONDAY",
+      "time": "19:30"
+    },
+    "location": null
+  },
+  {
+    "id": 49,
+    "title": "BREAKFAST CLUB",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TU",
+      "day": "TUESDAY",
+      "time": "19:30"
+    },
+    "location": null
+  },
+  {
+    "id": 50,
+    "title": "BREAKFAST CLUB",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "WE",
+      "day": "WEDNESDAY",
+      "time": "19:30"
+    },
+    "location": null
+  },
+  {
+    "id": 51,
+    "title": "BREAKFAST CLUB",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TH",
+      "day": "THURSDAY",
+      "time": "19:30"
+    },
+    "location": null
+  },
+  {
+    "id": 52,
+    "title": "BREAKFAST CLUB",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "19:30"
+    },
+    "location": null
+  },
+  {
+    "id": 53,
+    "title": "CEAD MILE FAILTE",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SU",
+      "day": "SUNDAY",
+      "time": "19:30"
+    },
+    "location": null
+  },
+  {
+    "id": 54,
+    "title": "CEAD MILE FAILTE",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TH",
+      "day": "THURSDAY",
+      "time": "18:15"
+    },
+    "location": null
+  },
+  {
+    "id": 55,
+    "title": "COURAGE TO CHANGE",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SU",
+      "day": "SUNDAY",
+      "time": "00:45"
+    },
+    "location": null
+  },
+  {
+    "id": 56,
+    "title": "COURAGE TO CHANGE",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "MO",
+      "day": "MONDAY",
+      "time": "18:15"
+    },
+    "location": null
+  },
+  {
+    "id": 57,
+    "title": "COURAGE TO CHANGE",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TU",
+      "day": "TUESDAY",
+      "time": "18:15"
+    },
+    "location": null
+  },
+  {
+    "id": 58,
+    "title": "COURAGE TO CHANGE",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "WE",
+      "day": "WEDNESDAY",
+      "time": "18:15"
+    },
+    "location": null
+  },
+  {
+    "id": 59,
+    "title": "COURAGE TO CHANGE",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TH",
+      "day": "THURSDAY",
+      "time": "18:15"
+    },
+    "location": null
+  },
+  {
+    "id": 60,
+    "title": "COURAGE TO CHANGE",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "18:15"
+    },
+    "location": null
+  },
+  {
+    "id": 61,
+    "title": "COURAGE TO CHANGE",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SA",
+      "day": "SATURDAY",
+      "time": "17:30"
+    },
+    "location": null
+  },
+  {
+    "id": 62,
+    "title": "DAILY REFLECTIONS WORKSHOP",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "MO",
+      "day": "MONDAY",
+      "time": "11:30"
+    },
+    "location": null
+  },
+  {
+    "id": 63,
+    "title": "DAILY REFLECTIONS WORKSHOP",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TH",
+      "day": "THURSDAY",
+      "time": "11:30"
+    },
+    "location": null
+  },
+  {
+    "id": 64,
+    "title": "ELDRED NEW BEGINNINGS",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TH",
+      "day": "THURSDAY",
+      "time": "20:00"
+    },
+    "location": null
+  },
+  {
+    "id": 65,
+    "title": "EXCHANGE VIEWS",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SU",
+      "day": "SUNDAY",
+      "time": "19:45"
+    },
+    "location": null
+  },
+  {
+    "id": 66,
+    "title": "EXCHANGE VIEWS",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "MO",
+      "day": "MONDAY",
+      "time": "18:30"
+    },
+    "location": null
+  },
+  {
+    "id": 67,
+    "title": "EXCHANGE VIEWS",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TU",
+      "day": "TUESDAY",
+      "time": "18:30"
+    },
+    "location": null
+  },
+  {
+    "id": 68,
+    "title": "EXCHANGE VIEWS",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "WE",
+      "day": "WEDNESDAY",
+      "time": "18:30"
+    },
+    "location": null
+  },
+  {
+    "id": 69,
+    "title": "EXCHANGE VIEWS",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TH",
+      "day": "THURSDAY",
+      "time": "18:30"
+    },
+    "location": null
+  },
+  {
+    "id": 70,
+    "title": "EXCHANGE VIEWS",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "18:30"
+    },
+    "location": null
+  },
+  {
+    "id": 71,
+    "title": "EXCHANGE VIEWS",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SA",
+      "day": "SATURDAY",
+      "time": "19:45"
+    },
+    "location": null
+  },
+  {
+    "id": 72,
+    "title": "FIRE ISLAND CHERRY GROVE",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SU",
+      "day": "SUNDAY",
+      "time": "18:00"
+    },
+    "location": null
+  },
+  {
+    "id": 73,
+    "title": "FIRE ISLAND CHERRY GROVE",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "MO",
+      "day": "MONDAY",
+      "time": "18:00"
+    },
+    "location": null
+  },
+  {
+    "id": 74,
+    "title": "FIRE ISLAND CHERRY GROVE",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TU",
+      "day": "TUESDAY",
+      "time": "18:00"
+    },
+    "location": null
+  },
+  {
+    "id": 75,
+    "title": "FIRE ISLAND CHERRY GROVE",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "WE",
+      "day": "WEDNESDAY",
+      "time": "18:00"
+    },
+    "location": null
+  },
+  {
+    "id": 76,
+    "title": "FIRE ISLAND CHERRY GROVE",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TH",
+      "day": "THURSDAY",
+      "time": "18:00"
+    },
+    "location": null
+  },
+  {
+    "id": 77,
+    "title": "FIRE ISLAND CHERRY GROVE",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "18:00"
+    },
+    "location": null
+  },
+  {
+    "id": 78,
+    "title": "FIRE ISLAND CHERRY GROVE",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SA",
+      "day": "SATURDAY",
+      "time": "18:00"
+    },
+    "location": null
+  },
+  {
+    "id": 79,
+    "title": "FIRE ISLAND PINES CLEAN AND DRY",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SU",
+      "day": "SUNDAY",
+      "time": "10:00"
+    },
+    "location": null
+  },
+  {
+    "id": 80,
+    "title": "FIRE ISLAND PINES CLEAN AND DRY",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "MO",
+      "day": "MONDAY",
+      "time": "18:00"
+    },
+    "location": null
+  },
+  {
+    "id": 81,
+    "title": "FIRE ISLAND PINES CLEAN AND DRY",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TU",
+      "day": "TUESDAY",
+      "time": "18:00"
+    },
+    "location": null
+  },
+  {
+    "id": 82,
+    "title": "FIRE ISLAND PINES CLEAN AND DRY",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "WE",
+      "day": "WEDNESDAY",
+      "time": "12:00"
+    },
+    "location": null
+  },
+  {
+    "id": 83,
+    "title": "FIRE ISLAND PINES CLEAN AND DRY",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TH",
+      "day": "THURSDAY",
+      "time": "12:00"
+    },
+    "location": null
+  },
+  {
+    "id": 84,
+    "title": "FIRE ISLAND PINES CLEAN AND DRY",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "18:00"
+    },
+    "location": null
+  },
+  {
+    "id": 85,
+    "title": "FIRE ISLAND PINES CLEAN AND DRY",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SA",
+      "day": "SATURDAY",
+      "time": "18:00"
+    },
+    "location": null
+  },
+  {
+    "id": 86,
+    "title": "GATEWAY",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SU",
+      "day": "SUNDAY",
+      "time": "18:00"
+    },
+    "location": null
+  },
+  {
+    "id": 87,
+    "title": "GREENWOOD",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SU",
+      "day": "SUNDAY",
+      "time": "11:00"
+    },
+    "location": null
+  },
+  {
+    "id": 88,
+    "title": "GREENWOOD",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "MO",
+      "day": "MONDAY",
+      "time": "15:00"
+    },
+    "location": null
+  },
+  {
+    "id": 89,
+    "title": "GREENWOOD",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TU",
+      "day": "TUESDAY",
+      "time": "15:00"
+    },
+    "location": null
+  },
+  {
+    "id": 90,
+    "title": "GREENWOOD",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "WE",
+      "day": "WEDNESDAY",
+      "time": "15:00"
+    },
+    "location": null
+  },
+  {
+    "id": 91,
+    "title": "GREENWOOD",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TH",
+      "day": "THURSDAY",
+      "time": "15:00"
+    },
+    "location": null
+  },
+  {
+    "id": 92,
+    "title": "GREENWOOD",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "15:00"
+    },
+    "location": null
+  },
+  {
+    "id": 93,
+    "title": "GREENWOOD",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SA",
+      "day": "SATURDAY",
+      "time": "11:00"
+    },
+    "location": null
+  },
+  {
+    "id": 94,
+    "title": "GRUPO 24 HORAS DE QUEENS",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SU",
+      "day": "SUNDAY",
+      "time": "19:00"
+    },
+    "location": null
+  },
+  {
+    "id": 95,
+    "title": "GRUPO 24 HORAS DE QUEENS",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "MO",
+      "day": "MONDAY",
+      "time": "20:00"
+    },
+    "location": null
+  },
+  {
+    "id": 96,
+    "title": "GRUPO 24 HORAS DE QUEENS",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "TU",
+      "day": "TUESDAY",
+      "time": "20:00"
+    },
+    "location": null
+  },
+  {
+    "id": 97,
+    "title": "GRUPO 24 HORAS DE QUEENS",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "WE",
+      "day": "WEDNESDAY",
+      "time": "20:00"
+    },
+    "location": null
+  },
+  {
+    "id": 98,
+    "title": "GRUPO 24 HORAS DE QUEENS",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "FR",
+      "day": "FRIDAY",
+      "time": "20:00"
+    },
+    "location": null
+  },
+  {
+    "id": 99,
+    "title": "GRUPO ACCION/YONKERS   ",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "SU",
+      "day": "SUNDAY",
+      "time": "20:00"
+    },
+    "location": null
+  },
+  {
+    "id": 100,
+    "title": "GRUPO ACCION/YONKERS   ",
+    "fellowship": {
+      "id": null,
+      "name": "Alcoholics Anonymous",
+      "displayText": "Alcoholics Anonymous",
+      "abbrevName": "AA"
+    },
+    "schedule": {
+      "id": null,
+      "dayAbbrev": "MO",
+      "day": "MONDAY",
+      "time": "20:00"
+    },
+    "location": null
+  }
+]

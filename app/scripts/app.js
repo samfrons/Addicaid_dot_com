@@ -73,6 +73,16 @@ angular.module('addicaidSiteApp', ['ngResource', 'restangular', 'ui'])
         templateUrl: 'views/signupFlow.html',
         controller: 'SignupFlowCtrl'
       })
+      // --------------mobile routes
+      .when('/mobile', {
+        template: '/views/mobile/main.html',
+        controller: 'MainMobileCtrl'
+      })
+      .when('/mobile/map', {
+        template: '/views/mobile/map.html',
+        controller: 'MapMobileCtrl'
+      })
+    // ----------END mobile routes
       .otherwise({
         redirectTo: '/'
       });
@@ -81,10 +91,32 @@ angular.module('addicaidSiteApp', ['ngResource', 'restangular', 'ui'])
   // TODO: this needs to get out of rootScope?
   .run(['$rootScope', function($rootScope) {
     $rootScope.getPartialUrl = function(partial) { // DONE: jasmine
-      var src = '';
-      src = 'views/' + partial + '.html';
+      var src = 'views/';
+      if ($rootScope.isMobileView === true) {
+        src += 'mobile/';
+      }
+      src += partial + '.html';
       return src;
     };
+
+    $rootScope.getCtrl = function(basename, processMobile) {
+      // takes in the basename of controller and spits out the appropriate full controller name
+      // this function capitalizes the first letter of the basename as per convention
+      // If processMobile is true, then this function adds the Mobile in-fix to the controller name
+      var ctrl = basename[0].toUpperCase() + basename.slice(1);
+      if (angular.isDefined(processMobile) && processMobile===true && $rootScope.isMobileView === true) {
+        console.log('processMobile='+processMobile, 'isMobileView='+$rootScope.isMobileView);
+        ctrl += 'Mobile';
+      }
+      ctrl += 'Ctrl';
+      return ctrl;
+    };
+  }])
+
+  // reset isMobileView
+  .run(['mobileViewToggle', function(mobileViewToggle) {
+    console.log('setIsMobileView(false) in app.js');
+    mobileViewToggle.setIsMobileView(false);
   }])
 
   .config(function(RestangularProvider) {
