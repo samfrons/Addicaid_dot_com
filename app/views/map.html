@@ -1,5 +1,5 @@
-<link rel='stylesheet' media='screen and (min-width: 320px) and (max-width: 480px)' href='../styles/medium.css' />
-<link rel='stylesheet' media='screen and (min-device-width: 320px) and (max-device-width: 480px)' href='../styles/medium.css' />
+<link rel='stylesheet' media='screen and (min-width: 320px) and (max-width: 480px)' href='/styles/medium.css' />
+<link rel='stylesheet' media='screen and (min-device-width: 320px) and (max-device-width: 480px)' href='/styles/medium.css' />
 
 
 <!--Giving the div an id="map_canvas" fix problems with twitter bootstrap affecting google maps-->
@@ -48,8 +48,8 @@
 
   <nav class="bottom_mobile">
     <ul>
-      <a href="#list_page"><li>list</li></a>
-      <a href="?scrollTo=map1_page"><li>map</li></a>
+      <a ng-click="scrollTo('list_page')"><li>list</li></a>
+      <a ng-click="scrollTo('map_canvas')"><li>map</li></a>
       <li>filter</li>
       <li>feedback</li>
     </ul>
