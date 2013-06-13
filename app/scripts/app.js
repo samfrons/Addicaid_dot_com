@@ -4,11 +4,19 @@ angular.module('addicaidSiteApp', ['ngResource', 'restangular', 'ui'])
   .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
+        template: '<div></div>',
+        controller: 'BrowserCheckCtrl'
+      })
+      .when('/main', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
       // --------------mobile routes
       .when('/mobile', {
+        templateUrl: 'views/mobileMain.html',
+        controller: 'MainCtrl'
+      })
+      .when('/mobile/main', {
         templateUrl: 'views/mobileMain.html',
         controller: 'MainCtrl'
       })

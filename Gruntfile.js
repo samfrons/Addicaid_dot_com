@@ -258,6 +258,7 @@ module.exports = function (grunt) {
             'components/**/*',
             'images/{,*/}*.{gif,webp}',
             'styles/fonts/*',
+            'styles/medium.css',
             'styles/{,*/}*.json' // mapStyle.json
           ]
         }]
@@ -294,7 +295,7 @@ module.exports = function (grunt) {
     'karma'
   ]);
 
-  grunt.registerTask('build', [
+  grunt.registerTask('build-test', [
     'clean:dist',
     'jshint',
     'test',
@@ -313,7 +314,7 @@ module.exports = function (grunt) {
     'usemin'
   ]);
 
-  grunt.registerTask('build-quick', [
+  grunt.registerTask('build', [
     'clean:dist',
     // 'jshint',
     // 'test',
