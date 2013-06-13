@@ -2,6 +2,16 @@ body {
 	min-width: auto !important;
 }
 
+section.mobile_page {
+	height: 500px !important;
+	max-height: 200% !important;
+	min-height: 200% !important; 
+	display: block;
+}
+
+div.filter div {
+	margin-bottom: 5%;
+}
 nav.header {
  display: none;
 }
@@ -11,6 +21,7 @@ nav.bottom {
 	bottom: 0px;
 	background-color: white;
 	margin: 0;
+	display: block;
 }
 nav.bottom ul {
 	margin: 0;
@@ -158,7 +169,7 @@ a {
     text-transform: capitalize;
     font-family: Alright Sans, Open Sans, sans-serif;
     position: relative;
-    color: rgba(0,0,0,.6);
+    color: rgba(0,0,0,.8);
     font-size: .5em
 
 
