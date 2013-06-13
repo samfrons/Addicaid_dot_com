@@ -2,6 +2,7 @@
 
 angular.module('addicaidSiteApp', ['ngResource', 'restangular', 'ui'])
   .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+//    $locationProvider.html5Mode(true);
     $routeProvider
       .when('/', {
         template: '<div></div>',
@@ -113,9 +114,16 @@ angular.module('addicaidSiteApp', ['ngResource', 'restangular', 'ui'])
 
   .run(['$rootScope', '$location', '$anchorScroll', '$routeParams', function($rootScope, $location, $anchorScroll, $routeParams) {
     //when the route is changed scroll to the proper element.
-//    $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
-//      console.log('on $routeChangeSuccess', $routeParams.scrollTo, newRoute, oldRoute)
-//      $location.hash($routeParams.scrollTo);
-//      $anchorScroll();
-//    });
+    $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
+      console.log('on $routeChangeSuccess', $routeParams.scrollTo, newRoute, oldRoute)
+      $location.hash($routeParams.scrollTo);
+      $anchorScroll();
+    });
+
+
+    $rootScope.scrollTo = function(anchor) {
+      console.log('scrollTo '+anchor, $location.path());
+      $location.search({scrollTo: anchor});
+      console.log($location.path());
+    };
   }]);

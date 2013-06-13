@@ -1,9 +1,13 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .controller('MapCtrl', ['$scope', 'meetings', 'Restangular', '$resource', '$http', '$filter', '$rootScope', 'browserDetection', function($scope, meetings, Restangular, $resource, $http, $filter, $rootScope, browserDetection) {
+  .controller('MapCtrl', ['$scope', 'meetings', 'Restangular', '$resource', '$http', '$filter', '$rootScope', 'browserDetection', '$location', function($scope, meetings, Restangular, $resource, $http, $filter, $rootScope, browserDetection, $location) {
 
     $rootScope.useMobileHeaderFooter = browserDetection.isMobile();
+
+
+
+
 
 
     $scope.meetings = [];
