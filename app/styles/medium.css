@@ -12,6 +12,12 @@ section.mobile_page {
 div.filter div {
 	margin-bottom: 5%;
 }
+
+
+#map_canvas {
+  width: 100%;
+  background-color: red;
+}
 nav.header {
  display: none;
 }
@@ -47,139 +53,3 @@ footer {
 	display: none;
 }
 
-.icon_part {
- margin: 0 auto;
- text-align: center;
-
-}
-
-img.icon_large {
-	text-align: center;
-	margin: 0 auto;
-}
-
-div.copy {
-	background-image: url(../images/meeting_background.png);
-	margin: 50px 0 0 0;
-}
-
-.bigdealcontainer {
-    height: auto;
-    font-family: 'Alright Sans', sans-serif;
-    font-size: 2em;
-    line-height: .9;
-    font-weight: bold;
-    display: inline-block;
-    color: white;
-
-  /*  -webkit-animation: fadeAway 6s 4s ease;
-    -webkit-animation-fill-mode: both;*/
-}
-
-
-.signup_content {
--webkit-animation: fadeInDown 6s 4s ease;
--webkit-animation-fill-mode: both;
-display: none;
-}
-
-
-a {
-    color: #fe5741;
-    text-decoration: none;
-}
-
-.words span {
-    -webkit-animation-fill-mode: both;
-    -webkit-animation-iteration-count: 1;
-    -webkit-backface-visibility: hidden;
-    -webkit-animation-timing-function: ease;
-    -webkit-animation-duration: .75s;
-    position: relative;
-    display: inline-block;
-
-}
-
-.word1 {
-    -webkit-animation-delay: .2s;
-    -webkit-animation-name: fadeInDown;
-
-
-}
-
-.word2 {
-    -webkit-animation-delay: .4s;
-    -webkit-animation-name: fadeInDown;
-    margin-top: 20px;
-
-}
-
-.word3 {
-    -webkit-animation-delay: .6s;
-    -webkit-animation-name: fadeInDown;
-    color: rgba(0,0,0,.6);
-    text-transform: capitalize;
-    font-size: 1em;
-    font-family: Damion
-}
-
-.word4 {
-    -webkit-animation-delay: .8s;
-    -webkit-animation-name: fadeInDown;
-}
-
-.word5 {
-    -webkit-animation-delay: 1s;
-    -webkit-animation-name: fadeInDown;
-}
-
-.word6 {
-    -webkit-animation-delay: 1.2s;
-    -webkit-animation-name: fadeInDown;
-}
-
-.word7 {
-    -webkit-animation-delay: 1.4s;
-    -webkit-animation-name: fadeInDown;
-}
-
-.word8 {
-    -webkit-animation-delay: 1.8s;
-    -webkit-animation-name: bounceInDown;
-}
-
-.word9 {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
-    text-shadow: none;
-    font-family: 'Mensch', sans-serif;
-    -webkit-animation-delay: 2.4s;
-    -webkit-animation-name: bounceInLeft;
-}
-.word10,.word11,.word13 {
-    font-style: italic;
-    line-height: 1;
-    -webkit-animation-delay: 3s;
-    -webkit-animation-name: bounceInLeft;
-    color: gray;
-    
-}
-
-.word13 {
-    
-    text-transform: capitalize;
-    font-family: Alright Sans, Open Sans, sans-serif;
-    position: relative;
-    color: rgba(0,0,0,.8);
-    font-size: .5em
-
-
-}
-
-
-.word14 {
-    
-    text-transform: uppercase;
-    -webkit-animation-delay: 3.2s;
-    -webkit-animation-name: bounceInLeft;
-    
-}

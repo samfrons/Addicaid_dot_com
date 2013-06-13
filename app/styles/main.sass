@@ -355,7 +355,7 @@ div.meeting_results
  .time
   width: auto
   .span3
-   background-color: red
+
 
   button
    width: auto
@@ -375,3 +375,434 @@ nav.bottom
  display: none
 
 
+/* mobile main page */
+
+#main_page
+
+ @import "compass_twitter_bootstrap"
+@import "compass_twitter_bootstrap_responsive"
+@import "animate-custom.css"
+@import "fonts.css"
+@import "bigstyle.css"
+@import "email.css"
+@import "tumblr"
+@import "map"
+@import "compass"
+@import "compass/css3/font-face"
+
++font-face("Mensch", sans-serif, font-files("fonts/mensch.ttf"))
+
+$gray: rgba(230,230,230,1)
+
+
+html
+ overflow-x: hidden !important
+ font-size: 100% !important
+ width: 100%
+
+body
+ font-family: Alright Sans, Open sans, sans-serif
+ padding: 0px !important
+ overflow-x: hidden !important
+ min-width: 500px !important
+ width: 100%
+
+hr
+ margin: 0
+
+
+h1
+ font-size: 2em
+h2
+ font-size: 2em
+h3
+ font-size: 2em
+
+nav
+ ul
+  min-width: 500px
+  width: 100%
+  li
+   display: inline-block
+   text-transform: uppercase
+   margin: 0 20px 0 0
+   font-weight: bold
+   a
+    color: #0088cc
+
+
+button[type="submit"]
+ background-color: #20499d
+ color: white
+ text-transform: uppercase
+button
+ border: 1px solid rgba(220,220,220,1)
+ opacity: .9
+ padding: 3px
+ background-color: transparent
+ text-transform: capitalize
+ color: rgba(184,176,184,1)
+ font-weight: 500
+ letter-spacing: .2em
+.selected
+ color: white
+ background-color: #fe5741
+button.find_meeting
+ text-align: center
+ width: 95%
+ margin: 2% 0 0 0
+  
+
+h5
+ border-bottom: 1px solid rgba(220,220,220,1)
+ line-height: auto
+ vertical-align: baseline
+ .all
+  width: 30px !important
+  padding: 0 2px 0 2px
+  border-top: 1px solid rgba(220,220,220,1)
+  border-left: 1px solid rgba(220,220,220,1)
+  border-right: 1px solid rgba(220,220,220,1)
+  border-bottom: none
+  &:hover
+   background-color: #fe5741
+   color: white
+   border-style: none
+   padding: 0 2px 1px 2px
+
+
+p
+ font-weight: 200
+
+
+.meeting_button
+ text-align: center
+ text-transform: uppercase
+ font-weight: bold
+ padding: 15px 0 10px 0
+ background-color: rgba(240, 81, 35, .7)
+ color: white
+ font-size: 2em
+
+.container
+ margin: 0 auto
+ width: 100%
+
+.row-fluid
+ margin: 0 auto
+
+.headline
+ height: 100%
+ min-height: 500px
+ background-repeat: repeat-x
+ hgroup
+  margin: 0 auto
+  text-align: center
+  font-family: Mensch, sans-serif
+  padding: 50px 40px 0px 40px
+  color: white
+  text-shadow: 0px 1px 1px black
+
+.people_background
+ background-image: url(../images/people_background.jpeg)
+ width: 100% !important
+ hgroup
+  font-size: 90% !important
+  h2
+   font-size: 3.5em !important
+
+/* signup */
+div.signup
+ width: 80%
+ form.signup
+  max-width: 100%
+  margin: 10px 0 0 0
+  
+  label
+   font-weight: bold !important
+  input
+   max-width: 305px
+   padding: 8px
+   border: 1px solid #999
+   -webkit-appearance: none
+   width: 100%
+   border-radius: 0px !important
+      
+  div
+   ul
+    margin: 0 0 5px 0
+    li
+     display: inline-block
+    .or
+     font-weight: bold
+     .social
+      padding: 8px
+      min-width: 100px
+
+
+
+
+
+.awards
+ background-image: url(../images/cheerleaders.jpeg)
+ width: 100% !important
+ height: inherit
+ padding: 20px 0 20px 0
+ color: white
+ font-family: Open sans, sans-serif
+ background-size: cover
+ img
+  height: 120px
+ p
+  text-transform: uppercase
+  font-weight: bold
+  margin: 10px 0 0 0
+
+ .span4
+  text-align: center
+
+.quotes
+ margin: 20px 1% 0 1%
+ div.span4
+  text-align: center
+ blockquote
+  border-style: none
+  text-align: left
+ span
+  font-style: italic
+ img
+  height: 40px
+
+footer
+ text-align: center
+ margin: 50px 0 20px 0
+
+#feedlyMiniIcon
+ display: none !important
+
+.investors
+ background-image: url(../images/bender.jpeg)
+ background-size: cover
+ 
+ hgroup
+  text-align: left
+  h2
+   font-size: 2em
+   font-weight: normal
+  h3
+   font-family: Georgia
+   font-style: italic
+   font-size: 2em
+   font-weight: normal
+
+
+.videos
+ width: 90%
+ margin: 0 auto
+ h2
+  text-transform: uppercase
+  text-align: center
+
+.investor_info
+ padding: 5px
+
+label 
+ font-weight: 100 !important
+ margin: 5px 0 0 0
+
+.aboutus
+ background-image: url(../images/aboutus.jpeg)
+ background-size: cover
+ hgroup
+  text-align: left
+
+.person
+ img 
+  height: 60px
+
+.name
+ width: 65%
+ display: inline-block
+ vertical-align: middle
+ font-weight: 400
+ margin: 0 0 0 5px
+
+.thankyou
+ background-image: url(../images/tng3.gif)
+ background-size: cover
+ text-align: left
+
+.press
+ div
+  img
+  opacity: .5
+  -webkit-transition: 1s opacity ease
+  &:hover
+   opacity: 1
+.offset1
+ margin-left: 10.21111% !important
+
+.social
+ background-size: 20px 20px
+ background-repeat: no-repeat
+ background-position: 5px 5px
+ 
+ height: 20px
+ display: inline-block
+ padding: 5px
+ min-width: 20px
+ text-indent: 25px
+ color: white
+ font-weight: bold
+ opacity: 0.9
+ &:hover
+  color: white
+  text-decoration: none
+  opacity: 1
+  -webkit-transition: .5s all ease-in
+
+.twitter_link 
+ background-image: url(../images/twitter.png)
+ background-color: rgba(27,182,236,1)
+.linkedin_link
+ background-image: url(../images/linkedin_icon.png)
+ background-color: rgba(0,118,158,1)
+.facebook_link
+ background-image: url(../images/facebook.png)
+ background-color: #3d5a9c
+ background-size: 13px 20px
+ background-position:  7px 5px
+
+
+ 
+/* meeting page */
+div.meeting_results
+ display: inline-block
+ div.meeting_result
+  width: 100%
+  max-width: 500px
+  margin: 5px
+  div#meeting_info
+   width: 72%
+   font-size: 1em
+   font-weight: 600
+   display: inline-block !important
+  button.directions
+   letter-spacing: auto
+   font-size: .9em !important
+   position: relative
+   background: white
+   left: -20px
+   p
+    font-weight: 100
+    span.location_name
+     font-weight: bold
+     display: block
+    span.address
+    span.city_state
+    span.type
+  
+  div#info
+   width: 25%
+   text-align: center
+   display: inline-block !important
+   vertical-align: top
+   font-weight: bold
+  span.time
+  span.day 
+   text-transform: uppercase
+  span.distance
+   font-weight: normal
+
+
+.filter
+ padding: 0 0 0 2%
+ h5
+  font-style: normal
+  text-transform: uppercase
+ .type
+  width: auto
+  button
+   padding: 2px
+   width: auto
+   
+
+ .day
+  width: auto
+  button
+   width: 30px
+  button.weekend
+   color: #e5dd0d
+ .time
+  width: auto
+  .span3
+  button
+   width: auto
+   min-width: 80px
+   font-size: .8em
+
+
+.location
+ min-width: 200px
+ width: 23.92818%
+ input
+  width: 50px
+  border: 1px solid rgba(220,220,220,1)
+  padding: 2px
+
+nav.bottom
+ display: none
+
+
+/* mobile pages */
+
+
+
+
+/* mobile main page */
+
+#main_page
+ margin: 0 auto
+ width: auto
+ text-align: center
+ overflow-x: hidden
+ .bigdealcontainer#mobile_view
+  background-color: green
+  overflow-x: hidden
+  width: 100%
+  height: auto
+  font-family: 'Alright Sans', sans-serif
+  font-size: 2em
+  line-height: .9
+  font-weight: bold
+  display: inline-block
+  color: white
+  
+  .icon_part
+   img.icon_large
+    -webkit-animation-fill-mode: both
+    -webkit-animation-iteration-count: 1
+    -webkit-backface-visibility: hidden
+    -webkit-animation-timing-function: ease
+    -webkit-animation-duration: .75s
+    position: relative
+    display: inline-block
+  .homescreen_add
+ 
+ div.copy 
+  background-image: url(../images/meeting_background.png)
+  margin: 50px 0 0 0
+
+ .word9 
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de
+  text-shadow: none
+  font-family: 'Mensch', sans-serif
+  -webkit-animation-delay: 2.4s
+  -webkit-animation-name: bounceInLeft
+
+ .word13 
+  text-transform: capitalize
+  font-family: Alright Sans, Open Sans, sans-serif
+  position: relative
+  color: rgba(0,0,0,.8)
+  font-size: .5em
