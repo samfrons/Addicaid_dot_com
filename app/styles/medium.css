@@ -1,3 +1,7 @@
+body {
+	min-width: auto !important;
+}
+
 nav.header {
  display: none;
 }
@@ -32,16 +36,19 @@ footer {
 	display: none;
 }
 
+.icon_part {
+ margin: 0 auto;
+ text-align: center;
 
+}
 
 img.icon_large {
 	text-align: center;
 	margin: 0 auto;
-	box-shadow: 0px 1px 2px red;
 }
 
 div.copy {
-	background-image: url(../images/people_background.jpeg);
+	background-image: url(../images/meeting_background.png);
 	margin: 50px 0 0 0;
 }
 
@@ -99,7 +106,10 @@ a {
 .word3 {
     -webkit-animation-delay: .6s;
     -webkit-animation-name: fadeInDown;
-    color: gray;
+    color: rgba(0,0,0,.6);
+    text-transform: capitalize;
+    font-size: 1em;
+    font-family: Damion
 }
 
 .word4 {
@@ -129,6 +139,7 @@ a {
 
 .word9 {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    text-shadow: none;
     font-family: 'Mensch', sans-serif;
     -webkit-animation-delay: 2.4s;
     -webkit-animation-name: bounceInLeft;
@@ -138,12 +149,17 @@ a {
     line-height: 1;
     -webkit-animation-delay: 3s;
     -webkit-animation-name: bounceInLeft;
+    color: gray;
     
 }
 
 .word13 {
-   
-    text-transform: uppercase;
+    
+    text-transform: capitalize;
+    font-family: Alright Sans, Open Sans, sans-serif;
+    position: relative;
+    color: rgba(0,0,0,.6);
+    font-size: .5em
 
 
 }
