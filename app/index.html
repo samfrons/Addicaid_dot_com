@@ -33,9 +33,9 @@
 
 
 <!-- Add your site or application content here -->
-<ng-include src="getPartialUrl('header')" ng-controller="HeaderCtrl" id="headerSection"></ng-include>
+<ng-include src="getPartialUrl('header')" ng-controller="HeaderCtrl" id="headerSection" ng-hide="useMobileHeaderFooter"></ng-include>
 <div class="container" ng-view></div>
-<ng-include src="getPartialUrl('footer')" ng-controller="FooterCtrl" id="footerSection"></ng-include>
+<ng-include src="getPartialUrl('footer')" ng-controller="FooterCtrl" id="footerSection" ng-hide="useMobileHeaderFooter"></ng-include>
 
 
 <script src="http://code.jquery.com/jquery-1.10.0.js"></script>
