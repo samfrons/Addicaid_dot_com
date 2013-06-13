@@ -1,9 +1,6 @@
 
 section.mobile_page {
-	height: 500px !important;
-	max-height: 200% !important;
-	min-height: 200% !important; 
-	display: inline-block;
+	display: block;
 }
 
 div.filter div {
@@ -13,7 +10,7 @@ div.filter div {
 
 #map_canvas {
   width: 100%;
-  background-color: red;
+  display: block;
 }
 nav.header {
  display: none;
