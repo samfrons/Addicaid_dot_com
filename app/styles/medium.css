@@ -1,12 +1,9 @@
-body {
-	min-width: auto !important;
-}
 
 section.mobile_page {
 	height: 500px !important;
 	max-height: 200% !important;
 	min-height: 200% !important; 
-	display: block;
+	display: inline-block;
 }
 
 div.filter div {
