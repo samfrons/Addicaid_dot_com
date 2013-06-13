@@ -64,9 +64,31 @@ angular.module('addicaidSiteApp')
 
 
 
-    meetings.setLimitTo(10);
     $scope.$watch('map', function(mapObj) {
       console.log('watch map function');
       $scope.updateCurrentLocationFromMapCenter();
     });
+
+
+
+
+
+
+//    meetings.setLimitTo(10);
+    // PAGINATION
+    $scope.currentPage = 0;
+    $scope.pageSize = 6;
+    $scope.numberOfPages = function() {
+      return Math.ceil($scope.meetings.length/$scope.pageSize);
+    };
   }]);
+
+
+// TODO: move filter to another file
+angular.module('addicaidSiteApp')
+  .filter('startFrom', function() {
+    return function(input, start) {
+      start = +start; //parse to int
+      return input.slice(start);
+    }
+  });
