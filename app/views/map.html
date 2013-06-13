@@ -30,7 +30,7 @@
 
 
 
-  <section class="mobile_page map_page">
+  <section class="mobile_page map_page" id="map1_page">
     <!-- Giving the div an id="map_canvas" fix problems with twitter bootstrap affecting google maps -->
     <div id="map_canvas" ui-map="map" class="span8 map" width="67.95745%"
          ui-event="{'map-bounds_changed': 'updateMapBounds()', 'map-center_changed': 'updateCurrentLocationFromMapCenter()'}"
@@ -51,7 +51,7 @@
   <nav class="bottom">
     <ul>
       <a href="#list_page"><li>list</li></a>
-      <li>map</li>
+      <a href="?scrollTo=map1_page"><li>map</li></a>
       <li>filter</li>
       <li>feedback</li>
     </ul>

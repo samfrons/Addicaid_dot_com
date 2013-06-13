@@ -1,10 +1,7 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .controller('MainCtrl', ['$scope', function($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', ['$scope', '$location', function($scope, $location) {
+    $scope.useMobile = $location.path() === '/mobile';
+    console.log('MainCtrl useMobile='+$scope.useMobile, $location.path());
   }]);
