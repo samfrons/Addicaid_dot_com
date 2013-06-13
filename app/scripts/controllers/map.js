@@ -1,11 +1,9 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .controller('MapCtrl', ['$scope', 'meetings', 'Restangular', '$resource', '$http', function($scope, meetings, Restangular, $resource, $http) {
+  .controller('MapCtrl', ['$scope', 'meetings', 'Restangular', '$resource', '$http', '$filter', function($scope, meetings, Restangular, $resource, $http, $filter) {
 
-
-    $scope.myMarkers = [];
-
+    $scope.meetings = [];
     // meetings
     $scope.$on(meetings.meetingsChangedEvent, function(event, args) {
       console.log('MapCtrl#on_meetingsChanged', event, args);
@@ -16,14 +14,13 @@ angular.module('addicaidSiteApp')
           map: $scope.map,
           position: new google.maps.LatLng(meeting.location.center.latitude, meeting.location.center.longitude)
         });
-        $scope.myMarkers.push(marker);
         angular.extend(meeting, { marker: marker });
       });
       $scope.meetings = meetingsList;
 
     });
 //    $scope.meetings = $filter('andOrFilter')(meetingSvc.getMeetings('map-init'), filterSvc.filtersToApply());
-    $scope.meetings = meetings.getMeetings('map-init');
+//    $scope.meetings = meetings.getMeetings('map-init');
 
 
     $scope.openMarkerInfo = function(meeting) {
@@ -34,75 +31,42 @@ angular.module('addicaidSiteApp')
 
     $scope.mapOptions = {
 //      center: new google.maps.LatLng(40.763562,-73.97140100000001),
-      center: new google.maps.LatLng(42.25113,-73.791435),
-      zoom: 15,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      styles: [
-  {
-    "featureType": "water",
-    "elementType": "geometry.fill",
-    "stylers": [
-      { "color": "#4ebbea" },
-      { "saturation": -13 }
-    ]
-  },{
-    "featureType": "road.highway",
-    "elementType": "geometry.fill",
-    "stylers": [
-      { "color": "#e7e9e7" }
-    ]
-  },{
-  },{
-    "elementType": "geometry.stroke",
-    "stylers": [
-      { "color": "#b2b2b1" }
-    ]
-  },{
-    "featureType": "road.arterial",
-    "elementType": "geometry.fill",
-    "stylers": [
-      { "color": "#ffffff" }
-    ]
-  },{
-    "featureType": "road.arterial",
-    "elementType": "labels.text.stroke",
-    "stylers": [
-      { "visibility": "on" },
-      { "saturation": -2 },
-      { "color": "#ffffff" }
-    ]
-  },{
-    "elementType": "labels.text.fill",
-    "stylers": [
-      { "color": "#060606" },
-      { "lightness": 23 }
-    ]
-  },{
-    "elementType": "labels.text.stroke",
-    "stylers": [
-      { "color": "#ffffff" }
-    ]
-  },{
-    "featureType": "poi.park",
-    "elementType": "geometry.fill",
-    "stylers": [
-      { "hue": "#b2ff00" },
-      { "gamma": 1.07 },
-      { "saturation": 52 },
-      { "lightness": -18 }
-    ]
-  },{
-  }
-]
+//      center: new google.maps.LatLng(42.25113,-73.791435),
+      center: new google.maps.LatLng(42.633326 , -73.801232),
+      zoom: 13,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
     };
-/*
+
     $http.get('styles/mapStyle.json')
       .success(function(data, status) {
-        console.log('success', data, status);
         $scope.map.setOptions({styles: data});
       })
       .error(function(data,status) {
         // TODO: error handling
-        console.error('FAILURE', data, status);
-      });*/
-  }]); 
+        console.error('http mapStyle FAILURE', data, status);
+      });
+
+
+    $scope.updateMapBounds = function() {
+      console.log('update map bounds', $scope.map.getBounds());
+      meetings.setMapBounds($scope.map.getBounds());
+      meetings.getMeetings('updateMapBounds');
+    };
+
+    $scope.updateCurrentLocationFromMapCenter = function() {
+      console.log('updateCurrentLocationFromMapCenter');
+      meetings.setCurrentLocation($scope.map.getCenter());
+      meetings.getMeetings('updateCurrentLocationFromMapCenter');
+    };
+
+
+
+
+
+
+    meetings.setLimitTo(10);
+    $scope.$watch('map', function(mapObj) {
+      console.log('watch map function');
+      $scope.updateCurrentLocationFromMapCenter();
+    });
+  }]);

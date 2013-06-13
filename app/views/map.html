@@ -29,7 +29,7 @@ google maps -->
 
 <section class="mobile_page map_page">
 <div id="map_canvas" ui-map="map" class="span8 map"
-     ui-event="{ }"
+     ui-event="{'map-bounds_changed': 'updateMapBounds()', 'map-center_changed': 'updateCurrentLocationFromMapCenter()'}"
      ui-options="mapOptions">
 </div>
 </section>

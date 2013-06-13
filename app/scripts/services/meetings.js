@@ -1,12 +1,9 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .factory('meetings', ['$http', '$rootScope', function($http, $rootScope) {
+  .factory('meetings', ['$http', '$rootScope', '$filter', function($http, $rootScope, $filter) {
 //  .factory('meetings', ['$resource', function($resource) {
-    var defaultCoordinates = { // NYC
-      latitude: 40.763562,
-      longitude: -73.97140100000001
-    };
+    var defaultCoordinates = new google.maps.LatLng(40.763562, -73.97140100000001);  // NYC
 //    var defaultCoordinates = { // San Fran
 //      latitude : 37.771139,
 //      longitude : -122.403424
@@ -19,38 +16,65 @@ angular.module('addicaidSiteApp')
     };
 
 
+    var searchBounds; //new google.maps.LatLngBounds(new google.maps.LatLng(0,0), new google.maps.LatLng(0,0)); // google.maps.LatLngBounds
+    var currentLocation = new google.maps.LatLng(defaultCoordinates.lat(), defaultCoordinates.lng()); // google.maps.LatLng
+    var limitTo;
 
-//    // Url creation items
-//    var baseUrl = 'http://addicaid.appspot.com/meetings/jsonp';
+    var isDirty = true; // flag used to determine whether server needs to be called for new data
+    var waitingForServerResults = false; // flag to make sure only one server request at a time
+
+    var meetingsCache = []; // latest list of meetings retrieved from server
+
+
+
+
+    var calculateSearchBounds = function(mapBounds) {
+      // Increase the size of the search boundary from a given map bounds
+      // mapBounds is type google.maps.LatLngBounds
+      // returns a new google.maps.LatLngBounds object
+      return new google.maps.LatLngBounds(mapBounds.getSouthWest(), mapBounds.getNorthEast());
+    };
+
+    // Url creation items
+    var getUrl = function() {
+      // bb is the bounding box of type google.maps.LatLngBounds
+      // TODO: comment and test
+      var baseUrl = 'http://causecodetech.appspot.com/meeting';
 //    var testUrl = 'http://addicaid.appspot.com/meetings/jsonp?daylist=MoTu&callback=JSON_CALLBACK';
-//    var getCurrentLocation = function() {
-//      // current location
-//      return {
-//        latitude: defaultCoordinates.latitude,
-//        longitude: defaultCoordinates.longitude
-//      };
-//    };
+      var url = baseUrl;
+      url += '?';
+      url +=  'swLat=' + searchBounds.getSouthWest().lat();
+      url += '&swLong=' + searchBounds.getSouthWest().lng();
+      url += '&neLat=' + searchBounds.getNorthEast().lat();
+      url += '&neLong=' + searchBounds.getNorthEast().lng();
+      // TODO: add current location here
+      url += '&callback=JSON_CALLBACK';
+
+      console.log('getUrl = '+url);
+      return url;
+    };
 
 
 
 
-    function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
-      var R = 6371; // Radius of the earth in km
-      var dLat = deg2rad(lat2-lat1);  // deg2rad below
-      var dLon = deg2rad(lon2-lon1);
-      var a =
-          Math.sin(dLat/2) * Math.sin(dLat/2) +
-            Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
-              Math.sin(dLon/2) * Math.sin(dLon/2)
-        ;
-      var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-      var d = R * c; // Distance in km
-      return d;
-    }
+    /*
+     function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
+     var R = 6371; // Radius of the earth in km
+     var dLat = deg2rad(lat2-lat1);  // deg2rad below
+     var dLon = deg2rad(lon2-lon1);
+     var a =
+     Math.sin(dLat/2) * Math.sin(dLat/2) +
+     Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+     Math.sin(dLon/2) * Math.sin(dLon/2)
+     ;
+     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+     var d = R * c; // Distance in km
+     return d;
+     }
 
-    function deg2rad(deg) {
-      return deg * (Math.PI/180)
-    }
+     function deg2rad(deg) {
+     return deg * (Math.PI/180)
+     }*/
 
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //:::                                                                         :::
@@ -81,7 +105,7 @@ angular.module('addicaidSiteApp')
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
     // TODO: Distance calculation NEEDS TEST CASES!
-    function calculateDistance(lat1, lon1, lat2, lon2, unit) {
+    var calculateDistance = function(lat1, lon1, lat2, lon2, unit) {
       var radlat1 = Math.PI * lat1/180;
       var radlat2 = Math.PI * lat2/180;
       var radlon1 = Math.PI * lon1/180;
@@ -92,33 +116,29 @@ angular.module('addicaidSiteApp')
       dist = Math.acos(dist);
       dist = dist * 180/Math.PI;
       dist = dist * 60 * 1.1515;
-      if (unit=="K") { dist = dist * 1.609344 };
-      if (unit=="N") { dist = dist * 0.8684 };
+      if (unit==='K') { dist = dist * 1.609344; }
+      if (unit==='N') { dist = dist * 0.8684; }
       return dist;
-    }
-
-
-
-    var isFilterDirty = true; // flag used to determine whether server needs to be called for new data
-    var waitingForServerResults = false; // flag to make sure only one server request at a time
-
-    var meetingsCache = []; // latest list of meetings retrieved from server
+    };
 
 
 
 
-    var getMeetingsFromServer = function(currentLocation) {
-      console.log('entering getMeetingsFromServer');
+
+
+    var getMeetingsFromServer = function() {
       // Retrieves meeting objects from server based on current filters
+      // bb is the bounding box of type google.maps.LatLngBounds
+      console.log('entering getMeetingsFromServer');
 
-      if (isFilterDirty && !waitingForServerResults) {
+      if (isDirty && !waitingForServerResults && angular.isDefined(searchBounds)) {
         // populate meetings from server
         waitingForServerResults = true;
-        // $http.jsonp(privateAPI.getUrl())
-        $http.get('testfiles/meetings.json')// TODO: HACK using local json file
+        $http.jsonp(getUrl())
+//        $http.get('testfiles/meetings.json')// TODO: HACK using local json file
           .success(function(data, status) {
-            console.log('success', status);
-            meetingsCache = data;
+            console.log('meeting service success', status);
+            meetingsCache = angular.isNumber(limitTo) ? $filter('limitTo')(data,limitTo) : data;
             // PROCESS MEETINGS CACHE
             angular.forEach(meetingsCache, function(meeting) {
 
@@ -142,34 +162,51 @@ angular.module('addicaidSiteApp')
               });
 
               // distance calculation
-              var distance = calculateDistance(currentLocation.latitude, currentLocation.longitude, meeting.location.center.latitude, meeting.location.center.longitude, 'M');
+              var distance = calculateDistance(currentLocation.lat(), currentLocation.lng(), meeting.location.center.latitude, meeting.location.center.longitude, 'M');
               angular.extend(meeting, { distance: distance });
             });
 
-            isFilterDirty = false;
+            isDirty = false;
             waitingForServerResults = false;
             console.log('******** got '+ meetingsCache.length + ' meetings **********');
             $rootScope.$broadcast(serviceAPI.meetingsChangedEvent, [/* meetingsChangedArgs */]);
           })
           .error(function(data,status) {
             // TODO: error handling
-            console.error('FAILURE', data, status);
+            console.error('meeting service FAILURE', data, status);
           });
       }
     };
 
     // Public API
     angular.extend(serviceAPI, {
-      getMeetings: function() {
-        console.log('getMeetings - '+ arguments[0]); // optional arg used for logging to determine where call originated
-        if (isFilterDirty) {
-          getMeetingsFromServer(defaultCoordinates);
+      setMapBounds: function(mapBounds) {
+        // sets the searchBounds based on the input map bounds
+        // bb is the bounding box of type google.maps.LatLngBounds
+        searchBounds = calculateSearchBounds(mapBounds);
+        isDirty = true;
+      },
+      setCurrentLocation: function(latLng) {
+        // sets the current location
+        // latLng is of type google.maps.LatLng
+        currentLocation = new google.maps.LatLng(latLng.lat(), latLng.lng());
+        isDirty = true;
+      },
+      setLimitTo: function(limit) {
+        limitTo = limit;
+      },
+      getMeetings: function(callingFuncName) {
+        // bb is the bounding box of type google.maps.LatLngBounds
+        console.log('getMeetings - '+ callingFuncName + ' and isDirty='+isDirty); // optional arg used for logging to determine where call originated
+        if (isDirty) {
+          getMeetingsFromServer();
         }
 
         // TODO: need promises here.  for now, returns the old meetingsCache and use broadcast to make change
         return meetingsCache;
         // return: array of meeting objects from server
       }
+
     });
 
     return serviceAPI;
