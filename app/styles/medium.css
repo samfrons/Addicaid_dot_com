@@ -1,12 +1,9 @@
-body {
-	min-width: auto !important;
-}
 
 section.mobile_page {
 	height: 500px !important;
 	max-height: 200% !important;
 	min-height: 200% !important; 
-	display: block;
+	display: inline-block;
 }
 
 div.filter div {
@@ -22,19 +19,19 @@ nav.header {
  display: none;
 }
 
-nav.bottom {
+nav.bottom_mobile {
 	position: fixed;
 	bottom: 0px;
 	background-color: white;
 	margin: 0;
 	display: block;
 }
-nav.bottom ul {
+nav.bottom_mobile ul {
 	margin: 0;
 	background-color: gray;
 	border-top: 1px solid gray;
 }
-nav.bottom ul li {
+nav.bottom_mobile ul li {
  width: 20%;
  margin: 0;
  padding: 5px 0 5px 0;

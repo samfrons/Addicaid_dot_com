@@ -23,12 +23,10 @@ body
  font-family: Alright Sans, Open sans, sans-serif
  padding: 0px !important
  overflow-x: hidden !important
- min-width: 500px !important
  width: 100%
 
 hr
  margin: 0
-
 
 h1
  font-size: 2em
@@ -404,7 +402,6 @@ body
  font-family: Alright Sans, Open sans, sans-serif
  padding: 0px !important
  overflow-x: hidden !important
- min-width: 500px !important
  width: 100%
 
 hr
@@ -420,7 +417,6 @@ h3
 
 nav
  ul
-  min-width: 500px
   width: 100%
   li
    display: inline-block
@@ -762,14 +758,12 @@ nav.bottom
 /* mobile main page */
 
 #main_page
- margin: 0 auto
- width: auto
  text-align: center
- overflow-x: hidden
+ overflow-x: hidden !important
+ background: red
+
  .bigdealcontainer#mobile_view
-  background-color: green
-  overflow-x: hidden
-  width: 100%
+  background-color: blue
   height: auto
   font-family: 'Alright Sans', sans-serif
   font-size: 2em
@@ -777,6 +771,7 @@ nav.bottom
   font-weight: bold
   display: inline-block
   color: white
+  margin: 0
   
   .icon_part
    img.icon_large
@@ -806,3 +801,21 @@ nav.bottom
   position: relative
   color: rgba(0,0,0,.8)
   font-size: .5em
+
+ nav.bottom_mobile
+  position: fixed
+  bottom: 0px
+  background-color: white
+  margin: 0
+  display: block
+  ul
+   margin: 0
+   background-color: gray
+   border-top: 1px solid gray
+   li 
+    width: 20%
+    margin: 0
+    padding: 5px 0 5px 0
+    text-align: center
+    background-color: white
+
