@@ -42,6 +42,7 @@ img.icon_large {
 
 div.copy {
 	background-image: url(../images/people_background.jpeg);
+	margin: 50px 0 0 0;
 }
 
 .bigdealcontainer {
@@ -64,24 +65,6 @@ div.copy {
 display: none;
 }
 
-.meta {
-    margin-top: 24px;
-    font-size: 1em;
-    color: #fff;
-    text-shadow: 0 1px 1px rgba(0,0,0,.3);
-    line-height: 1.5;
-    font-family: 'Gotham', sans-serif;
-    -webkit-animation: fadeInDown 1s 4s ease;
-    -webkit-animation-fill-mode: both;
-    font-weight: 700;
-}
-
-.meta button {
-    background-color: #dedede;
-    color: rgba(80,80,80,1) !important;
-    font-weight: bold;
-    font-family: 'Gotham', sans-serif;
-}
 
 a {
     color: #fe5741;
@@ -110,11 +93,13 @@ a {
     -webkit-animation-delay: .4s;
     -webkit-animation-name: fadeInDown;
     margin-top: 20px;
+
 }
 
 .word3 {
     -webkit-animation-delay: .6s;
     -webkit-animation-name: fadeInDown;
+    color: gray;
 }
 
 .word4 {
@@ -144,7 +129,6 @@ a {
 
 .word9 {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
-    font-size: 2em;
     font-family: 'Mensch', sans-serif;
     -webkit-animation-delay: 2.4s;
     -webkit-animation-name: bounceInLeft;
