@@ -16,19 +16,19 @@ nav.header {
  display: none;
 }
 
-nav.bottom_mobile {
+nav.bottom_map {
 	position: fixed;
 	bottom: 0px;
 	background-color: white;
 	margin: 0;
 	display: block;
 }
-nav.bottom_mobile ul {
+nav.bottom_map ul {
 	margin: 0;
 	background-color: gray;
 	border-top: 1px solid gray;
 }
-nav.bottom_mobile ul li {
+nav.bottom_map ul li {
  width: 20%;
  margin: 0;
  padding: 5px 0 5px 0;
