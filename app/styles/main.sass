@@ -781,16 +781,23 @@ nav.bottom
     -webkit-animation-duration: .75s
     position: relative
     display: inline-block
+    height: 50%
+    width: 50%
+
   .homescreen_add
-   color: rgba(0,0,0,0.8)
+   color: rgba(240,80,35,1)
    text-transform: capitalize
    font-style: italic
-   font-size: .7em
+   font-size: .5em
 
  
  div.copy 
   background-image: url(../images/meeting_background.png)
   margin: 50px 0 0 0
+  min-width: 320px
+  width: 100%
+  max-width: 100%
+  background-size: cover
 
  .word9 
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de
@@ -798,6 +805,9 @@ nav.bottom
   font-family: 'Mensch', sans-serif
   -webkit-animation-delay: 2.4s
   -webkit-animation-name: bounceInLeft
+  font-size: 1.1em
+  padding: 10px 0 0 0
+  
 
  .word13 
   text-transform: capitalize
@@ -805,23 +815,29 @@ nav.bottom
   position: relative
   color: rgba(0,0,0,.8)
   font-size: .5em
+  font-weight: normal
+  margin: 0 0 50px 0
 
  nav.bottom_mobile
   position: fixed
   bottom: 0px
-  background-color: white
+  background-color: red !important
   margin: 0 auto
   display: block
-  width: auto
   ul
    text-align: left
    margin: 0
    background-color: gray
    border-top: 1px solid gray
+   width: 100%
    li 
-    width: 20%
+    display: inline-block
+    width: 15.99% !important
+    min-width: auto !important
     margin: 0
-    padding: 2px 0 2px 0
+    font-size: .7em
+    border-left: 1px solid gray
+    padding: 5px 0 5px 0
     text-align: center
     background-color: white
 

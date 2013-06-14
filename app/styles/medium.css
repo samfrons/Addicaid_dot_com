@@ -1,0 +1,33 @@
+
+section.mobile_page {
+	display: block;
+}
+
+div.filter div {
+	margin-bottom: 5%;
+}
+
+
+#map_canvas {
+  width: 100%;
+  display: block;
+}
+nav.header {
+ display: none;
+}
+
+section.filter_page {
+	height: 100% !important;
+	min-height: 100% !important;
+	max-height: 100% !important;
+	background-color: red;
+	display: none;
+}
+
+footer {
+	display: none;
+}
+
+nav.bottom_mobile {
+	background-color: red !important;
+}
