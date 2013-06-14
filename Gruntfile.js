@@ -182,7 +182,8 @@ module.exports = function (grunt) {
         files: {
           '<%= yeoman.dist %>/styles/main.css': [
             '.tmp/styles/{,*/}*.css',
-            '<%= yeoman.app %>/styles/{,*/}*.css'
+            '<%= yeoman.app %>/styles/{,*/}*.css',
+            '!<%= yeoman.app %>/styles/medium.css' // negate: medium.css needs to be seperate TODO: put in special dir
           ]
         }
       }

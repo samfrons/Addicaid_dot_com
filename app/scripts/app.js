@@ -115,9 +115,9 @@ angular.module('addicaidSiteApp', ['ngResource', 'restangular', 'ui'])
   .run(['$rootScope', '$location', '$anchorScroll', '$routeParams', function($rootScope, $location, $anchorScroll, $routeParams) {
     //when the route is changed scroll to the proper element.
     $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
-      console.log('on $routeChangeSuccess', $routeParams.scrollTo, newRoute, oldRoute)
-      $location.hash($routeParams.scrollTo);
-      $anchorScroll();
+//      console.log('on $routeChangeSuccess', $routeParams.scrollTo, newRoute, oldRoute)
+//      $location.hash($routeParams.scrollTo);
+//      $anchorScroll();
     });
 
 
