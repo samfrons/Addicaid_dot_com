@@ -49,7 +49,7 @@ module.exports = function (grunt) {
           livereload: LIVERELOAD_PORT
         },
         files: [
-          '<%= yeoman.app %>/**/*.html',
+          '<%= yeoman.app %>/{,*/,*/*/}*.html',
           '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
           '<%= yeoman.app %>/styles/special/*', // special style files
           '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
@@ -185,7 +185,7 @@ module.exports = function (grunt) {
       }
     },
     usemin: {
-      html: ['<%= yeoman.dist %>/{,*/}*.html'], // TODO: tumblr
+      html: ['<%= yeoman.dist %>/{,*/,*/*/}*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
       options: {
         dirs: ['<%= yeoman.dist %>']
@@ -228,7 +228,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.app %>',
-          src: ['*.html', 'views/*.html'], // TODO: tumblr , 'views/tumblr/*.html'],
+          src: ['*.html', 'views/*.html', 'views/tumblr/*.html'],
           dest: '<%= yeoman.dist %>'
         }]
       }
