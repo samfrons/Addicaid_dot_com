@@ -1,17 +1,17 @@
 'use strict';
 
-describe('Controller: HeaderMobileCtrl', function () {
+describe('Controller: BrowserCheckCtrl', function () {
 
   // load the controller's module
   beforeEach(module('addicaidSiteApp'));
 
-  var HeaderMobileCtrl,
+  var BrowserCheckCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    HeaderMobileCtrl = $controller('HeaderMobileCtrl', {
+    BrowserCheckCtrl = $controller('BrowserCheckCtrl', {
       $scope: scope
     });
   }));

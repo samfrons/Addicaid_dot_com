@@ -1,7 +1,14 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .controller('MapCtrl', ['$scope', 'meetings', 'Restangular', '$resource', '$http', '$filter', function($scope, meetings, Restangular, $resource, $http, $filter) {
+  .controller('MapCtrl', ['$scope', 'meetings', 'Restangular', '$resource', '$http', '$filter', '$rootScope', 'browserDetection', '$location', function($scope, meetings, Restangular, $resource, $http, $filter, $rootScope, browserDetection, $location) {
+
+    $rootScope.useMobileHeaderFooter = browserDetection.isMobile();
+
+
+
+
+
 
     $scope.meetings = [];
     // meetings
@@ -37,7 +44,7 @@ angular.module('addicaidSiteApp')
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
-    $http.get('styles/mapStyle.json')
+    $http.get('/styles/special/mapStyle.json')
       .success(function(data, status) {
         $scope.map.setOptions({styles: data});
       })

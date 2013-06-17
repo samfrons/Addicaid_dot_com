@@ -1,0 +1,53 @@
+
+section.mobile_page {
+	display: block;
+}
+
+div.filter div {
+	margin-bottom: 5%;
+}
+
+#map_canvas {
+  width: 100%;
+  display: block;
+}
+nav.header {
+ display: none;
+}
+
+nav.bottom_map {
+	position: fixed;
+  bottom: 0px;
+  margin: 0 auto;
+  display: block;
+}
+nav.bottom_map ul {
+	text-align: left;
+   margin: 0;
+   background-color:white;
+   border-top: 1px solid gray;
+   width: 100%;
+}
+nav.bottom_map ul li {
+ display: inline-block !important;
+    width: 15.9% !important;
+    min-width: auto !important;
+    margin: 0;
+    font-size: .7em;
+    border-left: 1px solid gray;
+    padding: 5px 0 5px 0;
+    text-align: center;
+    background-color: white;
+}
+
+section.filter_page {
+	height: 100% !important;
+	min-height: 100% !important;
+	max-height: 100% !important;
+	background-color: red;
+}
+
+footer {
+	display: none;
+}
+

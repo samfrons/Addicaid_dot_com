@@ -8,16 +8,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title></title>
     <meta name="description" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="viewport" content="width=device-width">
+    <link rel="apple-touch-icon" href="images/glossyicon.png"/>
+    <link rel="SHORTCUT ICON" href="images/favicon.ico">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel='stylesheet' media='screen and (min-width: 320px) and (max-width: 480px)' href='styles/medium.css' />
-    <link rel='stylesheet' media='screen and (min-device-width: 320px) and (max-device-width: 480px)' href='styles/medium.css' />
     <!-- endbuild -->
+
 </head>
 <body ng-app="addicaidSiteApp" >
-
 
 
 
@@ -33,9 +37,9 @@
 
 
 <!-- Add your site or application content here -->
-<ng-include src="getPartialUrl('header')" ng-controller="HeaderCtrl" id="headerSection"></ng-include>
+<ng-include src="getPartialUrl('header')" ng-controller="HeaderCtrl" id="headerSection" ng-hide="useMobileHeaderFooter"></ng-include>
 <div class="container" ng-view></div>
-<ng-include src="getPartialUrl('footer')" ng-controller="FooterCtrl" id="footerSection"></ng-include>
+<ng-include src="getPartialUrl('footer')" ng-controller="FooterCtrl" id="footerSection" ng-hide="useMobileHeaderFooter"></ng-include>
 
 
 <script src="http://code.jquery.com/jquery-1.10.0.js"></script>
@@ -72,12 +76,9 @@
 <script src="scripts/controllers/testMap.js"></script>
 <script src="scripts/controllers/login.js"></script>
 <script src="scripts/controllers/signupFlow.js"></script>
-<script src="scripts/controllers/mainMobile.js"></script>
-<script src="scripts/controllers/mapMobile.js"></script>
-<script src="scripts/controllers/headerMobile.js"></script>
-<script src="scripts/controllers/footerMobile.js"></script>
 <script src="scripts/controllers/index.js"></script>
-<script src="scripts/services/mobileViewToggle.js"></script>
+<script src="scripts/services/browserDetection.js"></script>
+<script src="scripts/controllers/browserCheck.js"></script>
 <!-- endbuild -->
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -87,6 +88,10 @@
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
         s.parentNode.insertBefore(g,s)}(document,'script'));
 </script>
+
+
+
+
 
 
 </body>

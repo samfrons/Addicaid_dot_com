@@ -1,12 +1,27 @@
 'use strict';
 
 angular.module('addicaidSiteApp', ['ngResource', 'restangular', 'ui'])
-  .config(['$routeProvider', function($routeProvider) {
+  .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+//    $locationProvider.html5Mode(true);
     $routeProvider
       .when('/', {
+        template: '<div></div>',
+        controller: 'BrowserCheckCtrl'
+      })
+      .when('/main', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      // --------------mobile routes
+      .when('/mobile', {
+        templateUrl: 'views/mobileMain.html',
+        controller: 'MainCtrl'
+      })
+      .when('/mobile/main', {
+        templateUrl: 'views/mobileMain.html',
+        controller: 'MainCtrl'
+      })
+      // ----------END mobile routes
       .when('/map', {
         templateUrl: 'views/map.html',
         controller: 'MapCtrl'
@@ -23,24 +38,20 @@ angular.module('addicaidSiteApp', ['ngResource', 'restangular', 'ui'])
         templateUrl: 'views/emailListSignup.html',
         controller: 'EmailListSignupCtrl'
       })
+      // --------------Tumblr routes
       .when('/tumblr', {
         templateUrl: 'views/tumblr.html',
         controller: 'TumblrCtrl'
       })
-      // --------------Tumblr routes
       .when('/tumblr/page/:page', {
-        template: '/views/tumblr.html',
+        template: 'views/tumblr.html',
         controller: 'TumblrCtrl'
       })
       .when('/tumblr/post/:id', {
-        template: '/views/tumblr/tumblr-post-detail.html',
+        template: 'views/tumblr/tumblr-post-detail.html',
         controller: 'TumblrPostDetailCtrl'
       })
       // ----------END tumblr routes
-      .when('/map', {
-        templateUrl: 'views/map.html',
-        controller: 'MapCtrl'
-      })
       .when('/headline', {
         templateUrl: 'views/headline.html',
         controller: 'HeadlineCtrl'
@@ -73,16 +84,6 @@ angular.module('addicaidSiteApp', ['ngResource', 'restangular', 'ui'])
         templateUrl: 'views/signupFlow.html',
         controller: 'SignupFlowCtrl'
       })
-      // --------------mobile routes
-      .when('/mobile', {
-        template: '/views/mobile/main.html',
-        controller: 'MainMobileCtrl'
-      })
-      .when('/mobile/map', {
-        template: '/views/mobile/map.html',
-        controller: 'MapMobileCtrl'
-      })
-    // ----------END mobile routes
       .otherwise({
         redirectTo: '/'
       });
@@ -92,41 +93,37 @@ angular.module('addicaidSiteApp', ['ngResource', 'restangular', 'ui'])
   .run(['$rootScope', function($rootScope) {
     $rootScope.getPartialUrl = function(partial) { // DONE: jasmine
       var src = 'views/';
-      if ($rootScope.isMobileView === true) {
-        src += 'mobile/';
-      }
       src += partial + '.html';
       return src;
     };
 
-    $rootScope.getCtrl = function(basename, processMobile) {
+    /*$rootScope.getCtrl = function(basename, processMobile) {
       // takes in the basename of controller and spits out the appropriate full controller name
       // this function capitalizes the first letter of the basename as per convention
       // If processMobile is true, then this function adds the Mobile in-fix to the controller name
-      var ctrl = basename[0].toUpperCase() + basename.slice(1);
+      var ctrl = '';
       if (angular.isDefined(processMobile) && processMobile===true && $rootScope.isMobileView === true) {
         console.log('processMobile='+processMobile, 'isMobileView='+$rootScope.isMobileView);
         ctrl += 'Mobile';
       }
+      ctrl += basename[0].toUpperCase() + basename.slice(1);
       ctrl += 'Ctrl';
       return ctrl;
-    };
+    };*/
   }])
 
-  // reset isMobileView
-  .run(['mobileViewToggle', function(mobileViewToggle) {
-    console.log('setIsMobileView(false) in app.js');
-    mobileViewToggle.setIsMobileView(false);
-  }])
+  .run(['$rootScope', '$location', '$anchorScroll', '$routeParams', function($rootScope, $location, $anchorScroll, $routeParams) {
+    //when the route is changed scroll to the proper element.
+    $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
+//      console.log('on $routeChangeSuccess', $routeParams.scrollTo, newRoute, oldRoute)
+//      $location.hash($routeParams.scrollTo);
+//      $anchorScroll();
+    });
 
-  .config(function(RestangularProvider) {
-//    RestangularProvider.setBaseUrl('http://localhost\\:9000/testfiles');
-    RestangularProvider.setBaseUrl('http://localhost\\:8080');
-  })
 
-  // create ng-clickable go function
-  .run(['$rootScope', '$location', function($rootScope, $location) {
-    $rootScope.goto = function(url) {
-      $location.url(url);
+    $rootScope.scrollTo = function(anchor) {
+      console.log('scrollTo '+anchor, $location.path());
+      $location.search({scrollTo: anchor});
+      console.log($location.path());
     };
   }]);
