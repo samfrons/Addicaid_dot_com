@@ -312,6 +312,16 @@ module.exports = function (grunt) {
       return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
     }
 
+    // if target=mild, run without opening
+    if (target === 'mild') {
+      return grunt.task.run([
+        'clean:server',
+        'concurrent:server',
+        'connect:livereload',
+        'watch'
+      ]);
+    }
+
     grunt.task.run([
       'clean:server',
       'concurrent:server',
