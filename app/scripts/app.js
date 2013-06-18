@@ -122,8 +122,8 @@ angular.module('addicaidSiteApp', ['ngResource', 'restangular', 'ui'])
 
 
     $rootScope.scrollTo = function(anchor) {
-      console.log('scrollTo '+anchor, $location.path());
-      $location.search({scrollTo: anchor});
-      console.log($location.path());
+//      console.log('scrollTo '+anchor, $location.path());
+//      $location.search({scrollTo: anchor});
+//      console.log($location.path());
     };
   }]);
