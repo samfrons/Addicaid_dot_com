@@ -3,16 +3,20 @@
 
 
 <!--Giving the div an id="map_canvas" fix problems with twitter bootstrap affecting google maps-->
-<section class="mobile_page" id="filter_page">
+<section class="mobile_page" id="filter_page" ng-show="show.filter">
   <ng-include src="getPartialUrl('meetingFilters')" ng-controller="MeetingFiltersCtrl" id="meetingFiltersSection" class="filter_partial"></ng-include>
 </section>
 
 
 
 <div class="row-fluid">
+<<<<<<< HEAD
   <h1 class="section_head" id="meeting">Meeting Results</h1>
   <section class="mobile_page" id="list_page">
     
+=======
+  <section class="mobile_page" id="list_page" ng-show="show.list">
+>>>>>>> ce7f7207cfbea99f124dd0fb74e5ef92dc2659ef
     <div class="span4 meeting_results">
       <div ng-repeat="meeting in meetings | orderBy:distance | startFrom:currentPage*pageSize | limitTo:pageSize">
         <ng-include src="getPartialUrl('meetingDetailSmall')" ng-controller="MeetingDetailSmallCtrl"></ng-include>
@@ -31,8 +35,14 @@
 
 
 
+<<<<<<< HEAD
   <section class="mobile_page map_page" id="map1_page">
    <div id="map_canvas" ui-map="map" class="span8 map" title="hi" width="67.95745%"
+=======
+  <section class="mobile_page map_page" id="map_page" ng-show="show.map">
+
+   <div id="map_canvas" ui-map="map" class="span8 map" width="67.95745%"
+>>>>>>> ce7f7207cfbea99f124dd0fb74e5ef92dc2659ef
          ui-event="{'map-bounds_changed': 'updateMapBounds()', 'map-center_changed': 'updateCurrentLocationFromMapCenter()'}"
          ui-options="mapOptions">
     </div>
@@ -52,10 +62,13 @@
 
   <nav class="bottom_map">
     <ul>
-      <a ng-click="scrollTo('list_page')"><li class="span3">list</li></a>
-      <a ng-click="scrollTo('map_canvas')"><li class="span3">map</li></a>
-      <a ng-click="scrollTo('map_canvas')"><li class="span3">filter</li></a>
-      <a ng-click="scrollTo('map_canvas')"><li class="span3">feedback</li></a>
+      <!--<a ng-click="scrollTo('list_page')"><li class="span3">list</li></a>-->
+      <!--<a ng-click="scrollTo('map_page')"><li class="span3">map</li></a>-->
+      <!--<a ng-click="scrollTo('filter_page')"><li class="span3">filter</li></a>-->
+      <a ng-click="showOnly('list')"><li class="span3">list</li></a>
+      <a ng-click="showOnly('map')"><li class="span3">map</li></a>
+      <a ng-click="showOnly('filter')"><li class="span3">filter</li></a>
+      <a href="mailto:matt@addicaid.com?subject=[Feedback:map]"><li class="span3">feedback</li></a>
     </ul>
   </nav>
 
