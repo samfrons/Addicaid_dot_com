@@ -35,8 +35,8 @@ h3
  font-size: 2em
 
 nav
+ width: 100%
  ul
-  min-width: 500px
   width: 100%
   li
    display: inline-block
@@ -62,7 +62,7 @@ button
  letter-spacing: .2em
 .selected
  color: white
- background-color: #fe5741
+ background-color: rgba(20,20,20,.7)
 button.find_meeting
  text-align: center
  width: 95%
@@ -424,23 +424,41 @@ nav.bottom
   bottom: 0px
   margin: 0 auto
   display: block
-
   ul
    text-align: center
-   margin: 0 auto
-   background-color: gray
    border-top: 1px solid gray
    width: 100%
-   li 
-    display: inline-block
-    width: 15.99% !important
-    min-width: auto !important
-    margin: 0 auto
-    font-size: .7em
-    border-left: 1px solid gray
-    padding: 5px 0 5px 0
-    text-align: center
-    background-color: white
+   min-width: auto
+   -webkit-margin-start: 1px
+   -webkit-margin-before: 0em
+   -webkit-margin-after: 0em
+   -webkit-margin-end: 0px
+   -webkit-padding-start: 0px
+   a
+    li 
+     display: inline-block
+     width: 16.99% !important
+     min-width: auto !important
+     margin: 0 auto
+     font-size: .7em
+     border-left: 1px solid gray
+     padding: 5px 2px 5px 2px
+     text-align: center
+     background-color: white
 
 nav.bottom_map
  display: none
+
+
+h1.section_head
+ color: rgba(240,81,35,1)
+ text-transform: uppercase
+ padding: 3px
+
+#map_canvas:after
+ content: 'Where Are We? Here\'s a map'
+ color: rgba(240,81,35,1)
+ text-transform: uppercase
+ position: absolute
+ top: 0px
+ width: 100%
