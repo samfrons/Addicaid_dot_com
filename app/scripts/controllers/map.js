@@ -52,7 +52,7 @@ angular.module('addicaidSiteApp')
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
-    $http.get('/styles/special/mapStyle.json')
+    $http.get('styles/special/mapStyle.json')
       .success(function(data, status) {
         $scope.map.setOptions({styles: data});
       })
