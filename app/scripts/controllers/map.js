@@ -33,8 +33,6 @@ angular.module('addicaidSiteApp')
       $scope.meetings = meetingsList;
 
     });
-//    $scope.meetings = $filter('andOrFilter')(meetingSvc.getMeetings('map-init'), filterSvc.filtersToApply());
-//    $scope.meetings = meetings.getMeetings('map-init');
 
 
     $scope.openMarkerInfo = function(meeting) {
@@ -90,15 +88,6 @@ angular.module('addicaidSiteApp')
       list: true,
       map: true
     };
-//    $scope.showOnly = function(element) {
-//      angular.forEach($scope.show, function(value, key) {
-//        console.log(value, key);
-//        if (key === element) {
-//          value = true;
-//        } else {
-//          value = false;
-//        }
-//      });
     $scope.showOnly = function(element) {
       var newShow = {};
       angular.forEach($scope.show, function(value, key) {
