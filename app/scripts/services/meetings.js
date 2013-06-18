@@ -3,16 +3,16 @@
 angular.module('addicaidSiteApp')
   .factory('meetings', ['$http', '$rootScope', '$filter', function($http, $rootScope, $filter) {
 //  .factory('meetings', ['$resource', function($resource) {
-    var defaultCoordinates = new google.maps.LatLng(40.763562, -73.97140100000001);  // NYC
-//    var defaultCoordinates = { // San Fran
-//      latitude : 37.771139,
-//      longitude : -122.403424
-//    };
+//    var defaultCoordinates = new google.maps.LatLng(40.763562, -73.97140100000001);  // NYC
+//    var defaultCoordinates = new google.maps.LatLng(42.25113,-73.791435);  // upstate NY, for testfile
+//    var defaultCoordinates = new google.maps.LatLng(37.771139, -122.403424);  // San Francisco
+    var defaultCoordinates = new google.maps.LatLng(34.536107,-117.291156);  // Victorville, CA
     console.log('defaultCoordinates', defaultCoordinates);
 
 
     var serviceAPI = {
-      meetingsChangedEvent: 'meetingsChanged'
+      meetingsChangedEvent: 'meetingsChanged',
+      defaultCoordinates: defaultCoordinates // for debugging, until geolocation works
     };
 
 
@@ -39,7 +39,8 @@ angular.module('addicaidSiteApp')
     var getUrl = function() {
       // bb is the bounding box of type google.maps.LatLngBounds
       // TODO: comment and test
-      var baseUrl = 'http://causecodetech.appspot.com/meeting';
+//      var baseUrl = 'http://causecodetech.appspot.com/meeting';
+      var baseUrl = 'http://addicaid-backend-causecode.appspot.com/meeting';
 //    var testUrl = 'http://addicaid.appspot.com/meetings/jsonp?daylist=MoTu&callback=JSON_CALLBACK';
       var url = baseUrl;
       url += '?';
@@ -172,6 +173,7 @@ angular.module('addicaidSiteApp')
             $rootScope.$broadcast(serviceAPI.meetingsChangedEvent, [/* meetingsChangedArgs */]);
           })
           .error(function(data,status) {
+            waitingForServerResults = false;
             // TODO: error handling
             console.error('meeting service FAILURE', data, status);
           });

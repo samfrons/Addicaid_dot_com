@@ -46,7 +46,8 @@ angular.module('addicaidSiteApp')
     $scope.mapOptions = {
 //      center: new google.maps.LatLng(40.763562,-73.97140100000001),
 //      center: new google.maps.LatLng(42.25113,-73.791435),
-      center: new google.maps.LatLng(42.633326 , -73.801232),
+//      center: new google.maps.LatLng(42.633326 , -73.801232),
+      center: meetings.defaultCoordinates,
       zoom: 13,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
@@ -84,7 +85,32 @@ angular.module('addicaidSiteApp')
     });
 
 
-
+    $scope.show = {
+      filter: true,
+      list: true,
+      map: true
+    };
+//    $scope.showOnly = function(element) {
+//      angular.forEach($scope.show, function(value, key) {
+//        console.log(value, key);
+//        if (key === element) {
+//          value = true;
+//        } else {
+//          value = false;
+//        }
+//      });
+    $scope.showOnly = function(element) {
+      var newShow = {};
+      angular.forEach($scope.show, function(value, key) {
+        console.log(value, key);
+        if (key === element) {
+          newShow[key] = true;
+        } else {
+          newShow[key] = false;
+        }
+      });
+      $scope.show = newShow;
+    };
 
 
 
