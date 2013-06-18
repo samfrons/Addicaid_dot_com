@@ -166,6 +166,16 @@ module.exports = function (grunt) {
     /*concat: {
       dist: {}
     },*/
+    concat: {
+      dist: {
+        files: {
+          '<%= yeoman.dist %>/scripts/scripts.js': [
+            '.tmp/scripts/{,*/}*.js',
+            '<%= yeoman.app %>/scripts/{,*/}*.js'
+          ]
+        }
+      }
+    },
     rev: {
       dist: {
         files: {
@@ -342,8 +352,8 @@ module.exports = function (grunt) {
     'clean:dist',
     'useminPrepare',
     'concurrent:dist',
-    'cssmin',
-    'concat',
+    'cssmin:dist',
+    'concat:dist',
     'copy',
     'cdnify',
     'ngmin',
