@@ -12,7 +12,7 @@
     <span class="time">{{meeting.schedule.timeObj | date:'shortTime'}}</span></br>
     <span class="day">{{meeting.schedule.timeObj | date:'EEE'}}</span><br/>
     <span class="distance">{{meeting.distance | number:1}} miles</span>
-    <button class="directions">directions</button>
+    <a ng-href="http://maps.google.com/maps?q={{meeting.location.google.q}}&f=d" target="_blank"><button class="directions">directions</button></a>
   </div>
   <hr/>
 </div>

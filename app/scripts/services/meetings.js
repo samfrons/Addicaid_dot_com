@@ -162,6 +162,13 @@ angular.module('addicaidSiteApp')
                 timeObj: d
               });
 
+              // google maps directions api
+              angular.extend(meeting.location, {
+                google: {
+                  q: meeting.location.address.address1.replace(' ','+') + ',' + meeting.location.address.city.city.replace(' ','+') + ',' + meeting.location.address.city.state.replace(' ','+') + ','
+                }
+              });
+
               // distance calculation
               var distance = calculateDistance(currentLocation.lat(), currentLocation.lng(), meeting.location.center.latitude, meeting.location.center.longitude, 'M');
               angular.extend(meeting, { distance: distance });
