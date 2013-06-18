@@ -19,7 +19,14 @@ angular.module('addicaidSiteApp')
       angular.forEach(meetingsList, function(meeting) {
         var marker = new google.maps.Marker({
           map: $scope.map,
-          position: new google.maps.LatLng(meeting.location.center.latitude, meeting.location.center.longitude)
+          position: new google.maps.LatLng(meeting.location.center.latitude, meeting.location.center.longitude),
+          icon: {
+            url: 'images/' + meeting.fellowship.abbrevName + 'pin.png'
+//            scaledSize: new google.maps.Size(64,64)
+          },
+          shadow: {
+            url: 'images/' + meeting.fellowship.abbrevName + 'pin-shadow.png'
+          }
         });
         angular.extend(meeting, { marker: marker });
       });
