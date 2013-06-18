@@ -10,6 +10,7 @@ div.filter div {
 #map_canvas {
   width: 100%;
   display: block;
+  padding: 10px 0 0 0;
 }
 nav.header {
  display: none;
@@ -29,7 +30,7 @@ nav.bottom_map ul {
    width: 100%;
 }
 nav.bottom_map ul li {
- display: inline-block !important;
+   display: inline-block !important;
     width: 15.9% !important;
     min-width: auto !important;
     margin: 0;
@@ -44,10 +45,8 @@ section.filter_page {
 	height: 100% !important;
 	min-height: 100% !important;
 	max-height: 100% !important;
-	background-color: red;
 }
 
 footer {
 	display: none;
 }
-

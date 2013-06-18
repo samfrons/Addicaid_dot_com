@@ -10,25 +10,36 @@
 
 
 <div class="row-fluid">
-  <section class="mobile_page" id="list_page" ng-show="show.list">
-    <div class="span4 meeting_results">
 
+  <h1 class="section_head" id="meeting">Meeting Results</h1>
+  <section class="mobile_page" id="list_page">
+    
+
+  <section class="mobile_page" id="list_page" ng-show="show.list">
+
+    <div class="span4 meeting_results">
       <div ng-repeat="meeting in meetings | orderBy:distance | startFrom:currentPage*pageSize | limitTo:pageSize">
         <ng-include src="getPartialUrl('meetingDetailSmall')" ng-controller="MeetingDetailSmallCtrl"></ng-include>
       </div>
+      <div class="pagination">
       <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
         Previous
       </button>
-      {{currentPage+1}}/{{numberOfPages()}}
+      {{currentPage+1}} of {{numberOfPages()}}
       <button ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1">
         Next
       </button>
+    </div>
     </div>
   </section>
 
 
 
-  <section class="mobile_page map_page" id="map_page" ng-show="show.map">
+
+  <section class="mobile_page map_page" id="map_page">
+   <div id="map_canvas" ui-map="map" class="span8 map" title="hi" width="67.95745%"
+
+ 
 
    <div id="map_canvas" ui-map="map" class="span8 map" width="67.95745%"
          ui-event="{'map-bounds_changed': 'updateMapBounds()', 'map-center_changed': 'updateCurrentLocationFromMapCenter()'}"
