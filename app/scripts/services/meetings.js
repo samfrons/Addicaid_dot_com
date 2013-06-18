@@ -57,6 +57,20 @@ angular.module('addicaidSiteApp')
 
 
 
+    // isMeetingStartingSoon(meeting)
+    // returns true if meeting is starting soon
+    var isMeetingStartingSoon = function(meeting) {
+      var threshold = 4; // max hours from now that a meeting is considered "soon"
+      var now = new Date();
+      var t = meeting.schedule.timeObj;
+
+      var isSoon = now.getUTCDay() === t.getUTCDay() &&
+        t.getUTCHours() >= now.getUTCHours() &&
+        t.getUTCHours() <= now.getUTCHours()+threshold;
+
+      if (isSoon) console.log('meeting coming up !');
+      return isSoon;
+    };
 
     /*
      function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
@@ -160,6 +174,11 @@ angular.module('addicaidSiteApp')
               d.setUTCSeconds(0);
               angular.extend(meeting.schedule, {
                 timeObj: d
+              });
+
+              // add isSoon info
+              angular.extend(meeting.schedule, {
+                isSoon: isMeetingStartingSoon(meeting)
               });
 
               // google maps directions api
