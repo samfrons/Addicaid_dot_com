@@ -19,7 +19,8 @@ module.exports = function (grunt) {
   // configurable paths
   var yeomanConfig = {
     app: 'app',
-    dist: 'dist'
+    dist: 'dist',
+    appdist: 'appdist'
   };
 
   try {
@@ -92,6 +93,15 @@ module.exports = function (grunt) {
             ];
           }
         }
+      },
+      appdist: {
+        options: {
+          middleware: function (connect) {
+            return [
+              mountFolder(connect, yeomanConfig.appdist)
+            ];
+          }
+        }
       }
     },
     open: {
@@ -107,6 +117,16 @@ module.exports = function (grunt) {
             '.tmp',
             '<%= yeoman.dist %>/*',
             '!<%= yeoman.dist %>/.git*'
+          ]
+        }]
+      },
+      appdist: {
+        files: [{
+          dot: true,
+          src: [
+            '.tmp',
+            '<%= yeoman.appdist %>/*',
+            '!<%= yeoman.appdist %>/.git*'
           ]
         }]
       },
@@ -149,12 +169,14 @@ module.exports = function (grunt) {
         imagesDir: '<%= yeoman.app %>/images',
         javascriptsDir: '<%= yeoman.app %>/scripts',
         fontsDir: '<%= yeoman.app %>/styles/fonts',
+//        httpFontsPath: '/styles/fonts',
         importPath: '<%= yeoman.app %>/components',
         httpImagesPath: '/images',
         httpGeneratedImagesPath: '/images/generated',
         relativeAssets: false
       },
       dist: {},
+      appdist: {},
       server: {
         options: {
           debugInfo: true
@@ -166,16 +188,16 @@ module.exports = function (grunt) {
     /*concat: {
       dist: {}
     },*/
-    concat: {
-      dist: {
-        files: {
-          '<%= yeoman.dist %>/scripts/scripts.js': [
-            '.tmp/scripts/{,*/}*.js',
-            '<%= yeoman.app %>/scripts/{,*/}*.js'
-          ]
-        }
-      }
-    },
+//    concat: {
+//      dist: {
+//        files: {
+//          '<%= yeoman.dist %>/scripts/scripts.js': [
+//            '.tmp/scripts/{,*/}*.js',
+//            '<%= yeoman.app %>/scripts/{,*/}*.js'
+//          ]
+//        }
+//      }
+//    },
     rev: {
       dist: {
         files: {
@@ -267,6 +289,32 @@ module.exports = function (grunt) {
             'generated/*'
           ]
         }]
+      },
+      appdist: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>',
+          dest: '<%= yeoman.appdist %>',
+          src: [
+            '**/*',
+            '!styles/main.css'
+          ]
+        }, {
+          expand: true,
+          cwd: '.tmp/images',
+          dest: '<%= yeoman.appdist %>/images',
+          src: [
+            'generated/*'
+          ]
+        }, {
+          expand: true,
+          cwd: '.tmp/styles',
+          dest: '<%= yeoman.appdist %>/styles',
+          src: [
+            '*.css'
+          ]
+        }]
       }
     },
     concurrent: {
@@ -283,6 +331,10 @@ module.exports = function (grunt) {
         'compass:dist',
         'imagemin',
         'htmlmin'
+      ],
+      appdist: [
+//        'coffee:dist',
+        'compass:appdist'
       ]
     },
     karma: {
@@ -310,7 +362,8 @@ module.exports = function (grunt) {
       dist: {
         files: {
           '<%= yeoman.dist %>/scripts/scripts.js': [
-            '<%= yeoman.dist %>/scripts/scripts.js'
+//            '<%= yeoman.dist %>/scripts/scripts.js'
+            '<%= yeoman.app %>/scripts/{,*/}*.js'
           ]
         }
       }
@@ -319,7 +372,12 @@ module.exports = function (grunt) {
 
   grunt.registerTask('server', function (target) {
     if (target === 'dist') {
-      return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
+      return grunt.task.run(['build:dist', 'open', 'connect:dist:keepalive']);
+    }
+
+    if (target === 'appdist') {
+      return grunt.task.run(['build:appdist', 'open', 'connect:appdist:keepalive']);
+
     }
 
     // if target=mild, run without opening
@@ -348,18 +406,36 @@ module.exports = function (grunt) {
     'karma'
   ]);
 
-  grunt.registerTask('build', [
+  grunt.registerTask('build', function (target) {
+    if (target === 'dist') {
+      return grunt.task.run(['build-dist']);
+    }
+
+    if (target === 'appdist') {
+      return grunt.task.run(['build-appdist']);
+    }
+
+    return grunt.task.run(['build-appdist']); // default to build-appdist
+  });
+
+    grunt.registerTask('build-dist', [
     'clean:dist',
     'useminPrepare',
     'concurrent:dist',
     'cssmin:dist',
-    'concat:dist',
-    'copy',
+//    'concat:dist',
+    'copy:dist',
     'cdnify',
     'ngmin',
     'uglify',
     'rev',
     'usemin'
+  ]);
+
+  grunt.registerTask('build-appdist', [
+    'clean:appdist',
+    'concurrent:appdist',
+    'copy:appdist'
   ]);
 
   grunt.registerTask('default', [
