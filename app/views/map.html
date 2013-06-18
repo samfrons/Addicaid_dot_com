@@ -10,13 +10,13 @@
 
 
 <div class="row-fluid">
-<<<<<<< HEAD
+
   <h1 class="section_head" id="meeting">Meeting Results</h1>
   <section class="mobile_page" id="list_page">
     
-=======
+
   <section class="mobile_page" id="list_page" ng-show="show.list">
->>>>>>> ce7f7207cfbea99f124dd0fb74e5ef92dc2659ef
+
     <div class="span4 meeting_results">
       <div ng-repeat="meeting in meetings | orderBy:distance | startFrom:currentPage*pageSize | limitTo:pageSize">
         <ng-include src="getPartialUrl('meetingDetailSmall')" ng-controller="MeetingDetailSmallCtrl"></ng-include>
@@ -35,14 +35,13 @@
 
 
 
-<<<<<<< HEAD
-  <section class="mobile_page map_page" id="map1_page">
+
+  <section class="mobile_page map_page" id="map_page">
    <div id="map_canvas" ui-map="map" class="span8 map" title="hi" width="67.95745%"
-=======
-  <section class="mobile_page map_page" id="map_page" ng-show="show.map">
+
+ 
 
    <div id="map_canvas" ui-map="map" class="span8 map" width="67.95745%"
->>>>>>> ce7f7207cfbea99f124dd0fb74e5ef92dc2659ef
          ui-event="{'map-bounds_changed': 'updateMapBounds()', 'map-center_changed': 'updateCurrentLocationFromMapCenter()'}"
          ui-options="mapOptions">
     </div>
