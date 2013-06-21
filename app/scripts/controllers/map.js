@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .controller('MapCtrl', ['$scope', 'meetings', '$resource', '$http', '$filter', '$rootScope', 'browserDetection', '$location', function($scope, meetings, $resource, $http, $filter, $rootScope, browserDetection, $location) {
+  .controller('MapCtrl', ['$scope', 'meetings', '$resource', '$http', '$filter', '$rootScope', 'browserDetection', 'geolocation', function($scope, meetings, $resource, $http, $filter, $rootScope, browserDetection, geolocation) {
 
 
     $rootScope.useMobileHeaderFooter = browserDetection.isMobile();
@@ -40,6 +40,10 @@ angular.module('addicaidSiteApp')
     };
 
 
+
+
+
+
     $scope.mapOptions = {
 //      center: new google.maps.LatLng(40.763562,-73.97140100000001),
 //      center: new google.maps.LatLng(42.25113,-73.791435),
@@ -48,6 +52,15 @@ angular.module('addicaidSiteApp')
       zoom: 13,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
+
+    $scope.$on(geolocation.locationChangedEvent, function(latLng) {
+      console.log('map.$scope.on(locationChangedEvent)');
+      $scope.map.setCenter($rootScope.geolocationLatLng);
+      meetings.setCurrentLocation($rootScope.geolocationLatLng);
+    });
+
+
+
 
     $http.get('styles/special/mapStyle.json')
       .success(function(data, status) {
@@ -65,20 +78,10 @@ angular.module('addicaidSiteApp')
       meetings.getMeetings('updateMapBounds');
     };
 
-    $scope.updateCurrentLocationFromMapCenter = function() {
-      console.log('updateCurrentLocationFromMapCenter');
-      meetings.setCurrentLocation($scope.map.getCenter());
-      meetings.getMeetings('updateCurrentLocationFromMapCenter');
-    };
-
-
-
-
 
 
     $scope.$watch('map', function(mapObj) {
-      console.log('watch map function');
-      $scope.updateCurrentLocationFromMapCenter();
+//      $scope.updateCurrentLocationFromMapCenter();
     });
 
 
@@ -90,7 +93,6 @@ angular.module('addicaidSiteApp')
     $scope.showOnly = function(element) {
       var newShow = {};
       angular.forEach($scope.show, function(value, key) {
-        console.log(value, key);
         if (key === element) {
           newShow[key] = true;
         } else {
