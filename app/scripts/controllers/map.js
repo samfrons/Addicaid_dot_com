@@ -5,8 +5,12 @@ angular.module('addicaidSiteApp')
 
 
     $rootScope.useMobileHeaderFooter = browserDetection.isMobile();
-    geolocation.startPolling();
 
+    // location polling
+    geolocation.startPolling();
+    $scope.$on('$destroy', function() {
+      geolocation.stopPolling();
+    });
 
 
 
