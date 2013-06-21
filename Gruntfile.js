@@ -42,16 +42,20 @@ module.exports = function (grunt) {
         tasks: ['coffee:test']
       },
       compass: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-        tasks: ['compass:server']
+        files: ['<%= yeoman.app %>/styles/*.sass'], // orig= files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+        tasks: ['compass:server'],
+        options: {
+          nospawn: false  // override
+        }
       },
       livereload: {
         options: {
           livereload: LIVERELOAD_PORT
         },
         files: [
-          '<%= yeoman.app %>/{,*/,*/*/}*.html',
-          '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
+          '<%= yeoman.app %>/*.html', // orig= '<%= yeoman.app %>/{,*/,*/*/}*.html',
+          '<%= yeoman.app %>/views/{,*/}*.html', // explicit folder for performance
+          '{.tmp,<%= yeoman.app %>}/styles/*.css', // orig= '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
           '<%= yeoman.app %>/styles/special/*', // special style files
           '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
@@ -186,8 +190,8 @@ module.exports = function (grunt) {
     // not used since Uglify task does concat,
     // but still available if needed
     /*concat: {
-      dist: {}
-    },*/
+     dist: {}
+     },*/
 //    concat: {
 //      dist: {
 //        files: {
@@ -248,14 +252,14 @@ module.exports = function (grunt) {
       dist: {
         options: {
           /*removeCommentsFromCDATA: true,
-          // https://github.com/yeoman/grunt-usemin/issues/44
-          //collapseWhitespace: true,
-          collapseBooleanAttributes: true,
-          removeAttributeQuotes: true,
-          removeRedundantAttributes: true,
-          useShortDoctype: true,
-          removeEmptyAttributes: true,
-          removeOptionalTags: true*/
+           // https://github.com/yeoman/grunt-usemin/issues/44
+           //collapseWhitespace: true,
+           collapseBooleanAttributes: true,
+           removeAttributeQuotes: true,
+           removeRedundantAttributes: true,
+           useShortDoctype: true,
+           removeEmptyAttributes: true,
+           removeOptionalTags: true*/
         },
         files: [{
           expand: true,
@@ -418,7 +422,7 @@ module.exports = function (grunt) {
     return grunt.task.run(['build-appdist']); // default to build-appdist
   });
 
-    grunt.registerTask('build-dist', [
+  grunt.registerTask('build-dist', [
     'clean:dist',
     'useminPrepare',
     'concurrent:dist',
