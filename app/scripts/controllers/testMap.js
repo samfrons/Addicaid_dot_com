@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .controller('TestMapCtrl', ['$scope', 'meetings', 'Restangular', '$resource', '$http', function($scope, meetings, Restangular, $resource, $http) {
+  .controller('TestMapCtrl', ['$scope', 'meetings', '$resource', '$http', function($scope, meetings, $resource, $http) {
 
 
     $scope.myMarkers = [];

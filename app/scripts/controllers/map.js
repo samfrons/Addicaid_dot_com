@@ -1,20 +1,19 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .controller('MapCtrl', ['$scope', 'meetings', 'Restangular', '$resource', '$http', '$filter', '$rootScope', 'browserDetection', '$location', function($scope, meetings, Restangular, $resource, $http, $filter, $rootScope, browserDetection, $location) {
+  .controller('MapCtrl', ['$scope', 'meetings', '$resource', '$http', '$filter', '$rootScope', 'browserDetection', '$location', function($scope, meetings, $resource, $http, $filter, $rootScope, browserDetection, $location) {
+
 
     $rootScope.useMobileHeaderFooter = browserDetection.isMobile();
+    geolocation.startPolling();
 
 
 
 
 
-
-    $scope.meetings = [];
     // meetings
+    $scope.meetings = [];
     $scope.$on(meetings.meetingsChangedEvent, function(event, args) {
-      console.log('MapCtrl#on_meetingsChanged', event, args);
-//      $scope.meetings = $filter('andOrFilter')(meetings.getMeetings('map-on'), filterSvc.filtersToApply());
       var meetingsList = meetings.getMeetings('map-on');
       angular.forEach(meetingsList, function(meeting) {
         var marker = new google.maps.Marker({
