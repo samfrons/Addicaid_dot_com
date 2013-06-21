@@ -13,6 +13,9 @@
 
 $gray: rgba(230,230,230,1)
 
+$AA: #005d9a
+$NA: #ca3347
+
 
 html
  overflow-x: hidden !important
@@ -53,9 +56,7 @@ button[type="submit"]
  text-transform: uppercase
 button
  border: 1px solid rgba(220,220,220,1)
- opacity: .9
  padding: 3px
- background-color: transparent
  text-transform: uppercase
  color: rgba(184,176,184,1)
  font-weight: 500
@@ -159,6 +160,7 @@ div.signup
 
 .awards
  background-image: url(../images/filter_background.png)
+
  width: 100% !important
  height: inherit
  padding: 20px 0 20px 0
@@ -289,7 +291,7 @@ div.meeting_results
  div.meeting_result
   width: 100%
   max-width: 500px
-  background: rgba(240,237,235,1)
+  border-bottom: 1px solid gray
   margin: 2px 0 0 0
   padding: 3.5px
   div#meeting_info
@@ -327,12 +329,14 @@ div.meeting_results
 
 #filter_page
  background: #18c9bf
- background-image: url(../images/filter_background.png)
- background: rgba(180,220,226,1)
+ background-image: url(../images/filter_background.jpeg)
+ background-size: cover
  button
-  background-color: #cfeae7
-  box-shadow: 0px 1px 2px #7f8f8d
+  background-color: white
   color: #5e5d5d
+  box-shadow: 0px 1px 2px black
+ button.selected
+
 .filter
  padding: 0 0 0 2%
  background-color: (250,250,250,0.2)
@@ -347,12 +351,23 @@ div.meeting_results
   text-transform: uppercase
  .type
   width: auto
- 
   margin: 2px
   button
    padding: 2px
    width: auto
    margin: 3px
+  .NA
+   color: $NA !important
+  .AA
+   color: $AA !important
+   -webkit-transition: .5s all ease-in
+   &:hover
+    color: white !important
+    background-color: $AA
+    border-color: $AA
+
+
+
  .day
   width: auto
   button
@@ -371,16 +386,28 @@ div.meeting_results
    margin: 2px 11px 2px 11px
 
 .location
- min-width: 200px
+ min-width: 269px
  width: 20% !important
-
  padding: 5px
- color: #5e5d5d
- vertical-align: bottom
+ color: white
  input
-  width: 50px
+  width: 100px
   border: 1px solid rgba(220,220,220,1)
   padding: 2px
+  text-transform: uppercase
+  -webkit-appearance: none
+  &:focus
+   border-color: #e9322d
+   -moz-box-shadow: 0 0 6px #f8b9b7
+   box-shadow: 0 0 6px #f8b9b7
+   -webkit-appearance: none
+ button.here
+  background-image: url(../images/location.png)
+  background-size: 40px auto
+  background-repeat: no-repeat
+  border-radius: 40px
+  height: 40px
+  width: 40px
 
 nav.bottom
  display: none
