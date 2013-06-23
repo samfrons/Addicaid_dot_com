@@ -1,6 +1,7 @@
 
 section.mobile_page {
 	display: block;
+      font-family: futura !important;
 }
 
 div.filter div {
@@ -23,6 +24,9 @@ nav.bottom_map {
   display: block;
 }
 
+button.find_meeting {
+ margin: 2% 0 0 0
+}
 
 button.time {
   background-color: red !important;
@@ -50,6 +54,7 @@ section.filter_page {
 	height: 100% !important;
 	min-height: 100% !important;
 	max-height: 100% !important;
+      background-color: red !important;
 }
 
 footer {
