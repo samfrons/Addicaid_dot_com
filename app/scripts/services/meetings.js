@@ -98,7 +98,7 @@ angular.module('addicaidSiteApp')
 
       isDirty = false;
       console.log('*** got '+ meetingsCache.length + ' meetings ***');
-      $rootScope.$broadcast(serviceAPI.meetingsChangedEvent, [/* meetingsChangedArgs */]);
+      $rootScope.$broadcast(serviceAPI.meetingsChangedEvent, [/* meetingsChangedArgs */]);  // TODO: change name to meetingsProcessedEvent
     };
 
 
