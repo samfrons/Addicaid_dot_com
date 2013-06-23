@@ -47,7 +47,7 @@
   "featureType": "poi.park",
   "elementType": "geometry.fill",
   "stylers": [
-    { "hue": "#b2ff00" },
+    { "hue": "#b8dd38" },
     { "gamma": 1.07 },
     { "saturation": 52 },
     { "lightness": -18 }
