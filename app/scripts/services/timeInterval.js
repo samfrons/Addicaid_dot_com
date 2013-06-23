@@ -30,6 +30,15 @@ angular.module('addicaidSiteApp')
       stopPolling: function(id) {
         isPolling[id] = false;
       }
+
+//      // https://developer.mozilla.org/en-US/docs/Web/API/window.setInterval
+//      setInterval: function(func, delay) {
+//
+//      },
+//      // https://developer.mozilla.org/en-US/docs/Web/API/window.clearInterval
+//      clearInterval: function(intervalID) {
+//
+//      }
     });
   }]);
 
