@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .factory('meetingsData', ['$http', '$q', function($http, $q) {
+  .factory('meetingServer', ['$http', '$q', function($http, $q) {
 
 
     // Url creation

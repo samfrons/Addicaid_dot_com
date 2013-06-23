@@ -50,7 +50,7 @@ angular.module('addicaidSiteApp')
       waitingForServerResults: false, // flag to make sure only one server request at a time
 
       meetingsCache: [], // latest list of meetings retrieved from server
-      meetingsChangedEvent: 'meetingsChanged'
+      meetingsProcessedEvent: 'meetingsChanged'
     };
 
     // current location
@@ -102,7 +102,7 @@ angular.module('addicaidSiteApp')
 //
 //
 //                                meetingSvc.isFilterDirty = false;
-//                                $rootScope.$broadcast(meetingSvc.meetingsChangedEvent, [/* meetingsChangedArgs */]);
+//                                $rootScope.$broadcast(meetingSvc.meetingsProcessedEvent, [/* meetingsChangedArgs */]);
 //                            })
 
 //                        // TODO: fake data-favorites
@@ -142,7 +142,7 @@ angular.module('addicaidSiteApp')
             meetingSvc.isFilterDirty = false;
             meetingSvc.waitingForServerResults = false;
             console.log('******** got '+ meetingSvc.meetingsCache.length + ' meetings **********');
-            $rootScope.$broadcast(meetingSvc.meetingsChangedEvent, [/* meetingsChangedArgs */]);
+            $rootScope.$broadcast(meetingSvc.meetingsProcessedEvent, [/* meetingsChangedArgs */]);
           })
           .error(function(data,status) {
             // TODO: error handling

@@ -1,8 +1,7 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .factory('meetings', ['$http', '$rootScope', '$filter', 'timeInterval', '$timeout', 'meetingsData', 'distanceMath', function($http, $rootScope, $filter, timeInterval, $timeout, meetingsData, distanceMath) {
-//  .factory('meetings', ['$resource', function($resource) {
+  .factory('meetingCache', ['$http', '$rootScope', '$filter', 'timeInterval', '$timeout', 'meetingServer', 'distanceMath', function($http, $rootScope, $filter, timeInterval, $timeout, meetingServer, distanceMath) {
 //    var defaultCoordinates = new google.maps.LatLng(40.763562, -73.97140100000001);  // NYC
 //    var defaultCoordinates = new google.maps.LatLng(42.25113,-73.791435);  // upstate NY, for testfile
     var defaultCoordinates = new google.maps.LatLng(37.771139, -122.403424);  // San Francisco
@@ -10,7 +9,7 @@ angular.module('addicaidSiteApp')
 
 
     var serviceAPI = {
-      meetingsChangedEvent: 'meetingsChanged',
+      meetingsProcessedEvent: 'meetingsChanged',
       defaultCoordinates: defaultCoordinates // for debugging, until geolocation works
     };
 
@@ -98,7 +97,7 @@ angular.module('addicaidSiteApp')
 
       isDirty = false;
       console.log('*** got '+ meetingsCache.length + ' meetings ***');
-      $rootScope.$broadcast(serviceAPI.meetingsChangedEvent, [/* meetingsChangedArgs */]);  // TODO: change name to meetingsProcessedEvent
+      $rootScope.$broadcast(serviceAPI.meetingsProcessedEvent, [/* meetingsProcessedArgs */]);
     };
 
 
@@ -132,7 +131,7 @@ angular.module('addicaidSiteApp')
         // bb is the bounding box of type google.maps.LatLngBounds
         console.log('getMeetings - '+ callingFuncName + ' and isDirty='+isDirty); // optional arg used for logging to determine where call originated
         if (isDirty && angular.isDefined(searchBounds)) {
-          meetingsData.getMeetings(searchBounds).then(function(meetings) {
+          meetingServer.getMeetings(searchBounds).then(function(meetings) {
             processMeetings(meetings);
           });
         }

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .controller('MapCtrl', ['$scope', 'meetings', '$resource', '$http', '$filter', '$rootScope', 'browserDetection', 'geolocation', function($scope, meetings, $resource, $http, $filter, $rootScope, browserDetection, geolocation) {
+  .controller('MapCtrl', ['$scope', 'meetingCache', '$resource', '$http', '$filter', '$rootScope', 'browserDetection', 'geolocation', function($scope, meetingCache, $resource, $http, $filter, $rootScope, browserDetection, geolocation) {
 
 
     $rootScope.useMobileHeaderFooter = browserDetection.isMobile();
@@ -15,10 +15,10 @@ angular.module('addicaidSiteApp')
 
 
 
-    // meetings
+    // meetingCache
     $scope.meetings = [];
-    $scope.$on(meetings.meetingsChangedEvent, function(event, args) {
-      var meetingsList = meetings.getMeetings('map-on');
+    $scope.$on(meetingCache.meetingsProcessedEvent, function(event, args) {
+      var meetingsList = meetingCache.getMeetings('map-on');
       angular.forEach(meetingsList, function(meeting) {
         var marker = new google.maps.Marker({
           map: $scope.map,
@@ -52,7 +52,7 @@ angular.module('addicaidSiteApp')
 //      center: new google.maps.LatLng(40.763562,-73.97140100000001),
 //      center: new google.maps.LatLng(42.25113,-73.791435),
 //      center: new google.maps.LatLng(42.633326 , -73.801232),
-      center: meetings.defaultCoordinates,
+      center: meetingCache.defaultCoordinates,
       zoom: 13,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
@@ -60,7 +60,7 @@ angular.module('addicaidSiteApp')
     $scope.$on(geolocation.locationChangedEvent, function(latLng) {
       console.log('map.$scope.on(locationChangedEvent)');
       $scope.map.setCenter($rootScope.geolocationLatLng);
-      meetings.setCurrentLocation($rootScope.geolocationLatLng);
+      meetingCache.setCurrentLocation($rootScope.geolocationLatLng);
     });
 
 
@@ -78,8 +78,8 @@ angular.module('addicaidSiteApp')
 
     $scope.updateMapBounds = function() {
       console.log('update map bounds', $scope.map.getBounds());
-      meetings.setMapBounds($scope.map.getBounds());
-      meetings.getMeetings('updateMapBounds');
+      meetingCache.setMapBounds($scope.map.getBounds());
+      meetingCache.getMeetings('updateMapBounds');
     };
 
 
@@ -108,7 +108,7 @@ angular.module('addicaidSiteApp')
 
 
 
-//    meetings.setLimitTo(10);
+//    meetingCache.setLimitTo(10);
     // PAGINATION
     $scope.currentPage = 0;
     $scope.pageSize = 6;

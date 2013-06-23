@@ -1,16 +1,16 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .controller('TestMapCtrl', ['$scope', 'meetings', '$resource', '$http', function($scope, meetings, $resource, $http) {
+  .controller('TestMapCtrl', ['$scope', 'meetingCache', '$resource', '$http', function($scope, meetingCache, $resource, $http) {
 
 
     $scope.myMarkers = [];
 
-    // meetings
-    $scope.$on(meetings.meetingsChangedEvent, function(event, args) {
+    // meetingCache
+    $scope.$on(meetingCache.meetingsProcessedEvent, function(event, args) {
       console.log('MapCtrl#on_meetingsChanged', event, args);
-//      $scope.meetings = $filter('andOrFilter')(meetings.getMeetings('map-on'), filterSvc.filtersToApply());
-      var meetingsList = meetings.getMeetings('map-on');
+//      $scope.meetingCache = $filter('andOrFilter')(meetingCache.getMeetings('map-on'), filterSvc.filtersToApply());
+      var meetingsList = meetingCache.getMeetings('map-on');
       angular.forEach(meetingsList, function(meeting) {
         var marker = new google.maps.Marker({
           map: $scope.map,
@@ -22,8 +22,8 @@ angular.module('addicaidSiteApp')
       $scope.meetings = meetingsList;
 
     });
-//    $scope.meetings = $filter('andOrFilter')(meetingSvc.getMeetings('map-init'), filterSvc.filtersToApply());
-    $scope.meetings = meetings.getMeetings('map-init');
+//    $scope.meetingCache = $filter('andOrFilter')(meetingSvc.getMeetings('map-init'), filterSvc.filtersToApply());
+    $scope.meetings = meetingCache.getMeetings('map-init');
 
 
     $scope.openMarkerInfo = function(meeting) {
@@ -61,7 +61,7 @@ angular.module('addicaidSiteApp')
 
 //    console.log('start http');
 //    var fullUrl = 'http://localhost:8080/meeting?swLat=30.584995&swLong=-83.673372&neLat=50.605068&neLong=-63.629084';
-//    fullUrl = 'testfiles/meetings.json';
+//    fullUrl = 'testfiles/meetingCache.json';
 //    $http.get(fullUrl)
 ////    $http({
 ////      url: 'http://localhost\\:8080/meeting',
@@ -84,7 +84,7 @@ angular.module('addicaidSiteApp')
 //        params: getParams
 //      }
 //    });
-//    var meetings = meetingResource.query({
+//    var meetingCache = meetingResource.query({
 //      params: getParams
 //    }, function(data) {
 //      console.log('ngResource success');
