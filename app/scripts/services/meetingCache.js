@@ -9,7 +9,8 @@ angular.module('addicaidSiteApp')
 
 
     var serviceAPI = {
-      meetingsProcessedEvent: 'meetingsChanged',
+      meetingsProcessedEvent: 'meetingsProcessed',
+      meetingsFilterChangedEvent: 'meetingsFilterChanged',
       defaultCoordinates: defaultCoordinates // for debugging, until geolocation works
     };
 
@@ -62,21 +63,44 @@ angular.module('addicaidSiteApp')
         // clean up time
         var day;
         switch (meeting.schedule.dayAbbrev) {
-          case 'SU': day = 0; break;
-          case 'MO': day = 1; break;
-          case 'TU': day = 2; break;
-          case 'WE': day = 3; break;
-          case 'TH': day = 4; break;
-          case 'FR': day = 5; break;
-          case 'SA': day = 6; break;
+        case 'SU':
+          day = 0;
+          break;
+        case 'MO':
+          day = 1;
+          break;
+        case 'TU':
+          day = 2;
+          break;
+        case 'WE':
+          day = 3;
+          break;
+        case 'TH':
+          day = 4;
+          break;
+        case 'FR':
+          day = 5;
+          break;
+        case 'SA':
+          day = 6;
+          break;
         }
-        var dt = new Date(1,0,day); // we dont care about year/month, but let's set day of week
-        dt.setUTCHours(meeting.schedule.time.split(':')[0]);
-        dt.setUTCMinutes(meeting.schedule.time.split(':')[1]);
-        dt.setUTCSeconds(0);
+//        var dt = new Date(1,0,day,0,0,0,0); // we dont care about year/month, but let's set day of week
+        var dt = new Date();
+        dt.setFullYear(1,0,day); // we dont care about year/month, but let's set day of week
+        dt.setHours(meeting.schedule.time.split(':')[0], meeting.schedule.time.split(':')[1], 0);
+//        console.log(dt.toUTCString())
+//        console.log(meeting.schedule.dayAbbrev, meeting.schedule.time, meeting.schedule.time.split(':'), dt.getDay(), dt.getUTCDay())
+//        console.log(meeting.schedule.time.split(':'))
+//        dt.setHours(meeting.schedule.time.split(':')[0]);
+//        dt.setMinutes(meeting.schedule.time.split(':')[1]);
+//        dt.setSeconds(0);
         angular.extend(meeting.schedule, {
           timeObj: dt
         });
+        console.log(meeting.schedule.dayAbbrev, meeting.schedule.time, meeting.schedule.time.split(':'), dt.getDay(), dt.getUTCDay())
+        // todo: clean console.logs
+
 
         // add isSoon info
         angular.extend(meeting.schedule, {
@@ -96,7 +120,7 @@ angular.module('addicaidSiteApp')
       });
 
       isDirty = false;
-      console.log('*** got '+ meetingsCache.length + ' meetings ***');
+      console.log('*** got '+ meetingsCache.length + ' meetings ***', meetingsCache);
       $rootScope.$broadcast(serviceAPI.meetingsProcessedEvent, [/* meetingsProcessedArgs */]);
     };
 
@@ -104,13 +128,17 @@ angular.module('addicaidSiteApp')
 
 
 
+    var dayFilter = function(item) {
+//      return $filter('filter')(['MO','TU'], item.schedule.dayAbbrev).length > 0;
+      return true;
+    };
 
 
 
 
 
 
-    // Public API
+// Public API
     angular.extend(serviceAPI, {
       setMapBounds: function(mapBounds) {
         // sets the searchBounds based on the input map bounds
@@ -137,8 +165,15 @@ angular.module('addicaidSiteApp')
         }
 
         // TODO: need promises here.  for now, returns the old meetingsCache and use broadcast to make change
-        return meetingsCache;
+        return $filter('filter')(meetingsCache, dayFilter);
         // return: array of meeting objects from server
+      },
+
+      filterChanged: function() {
+        $rootScope.$broadcast(serviceAPI.meetingsFilterChangedEvent);
+      },
+      setDayFilter: function(newDayFilter) {
+        dayFilter = newDayFilter;
       }
 
     });

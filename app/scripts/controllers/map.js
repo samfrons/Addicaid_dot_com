@@ -17,7 +17,7 @@ angular.module('addicaidSiteApp')
 
     // meetingCache
     $scope.meetings = [];
-    $scope.$on(meetingCache.meetingsProcessedEvent, function(event, args) {
+    var loadCachedMeetings = function() {
       var meetingsList = meetingCache.getMeetings('map-on');
       angular.forEach(meetingsList, function(meeting) {
         var marker = new google.maps.Marker({
@@ -25,7 +25,6 @@ angular.module('addicaidSiteApp')
           position: new google.maps.LatLng(meeting.location.center.latitude, meeting.location.center.longitude),
           icon: {
             url: 'images/' + meeting.fellowship.abbrevName + 'pin' + (meeting.schedule.isSoon?'-soon.gif':'.png')
-//            scaledSize: new google.maps.Size(64,64)
           },
           shadow: {
             url: 'images/' + meeting.fellowship.abbrevName + 'pin-shadow.png'
@@ -34,7 +33,14 @@ angular.module('addicaidSiteApp')
         angular.extend(meeting, { marker: marker });
       });
       $scope.meetings = meetingsList;
+    };
 
+    $scope.$on(meetingCache.meetingsProcessedEvent, function(event, args) {
+      loadCachedMeetings();
+    });
+
+    $scope.$on(meetingCache.meetingsFilterChangedEvent, function(event, args) {
+      loadCachedMeetings();
     });
 
 
