@@ -98,6 +98,9 @@ angular.module('addicaidSiteApp')
       },
       stopPolling: function() {
         timeInterval.stopPolling('geolocation');
+      },
+      getLocation: function() {
+        return getCurrentPosition();
       }
     });
   }]);
