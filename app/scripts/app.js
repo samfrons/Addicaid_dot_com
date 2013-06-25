@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('addicaidSiteApp', ['ngResource', 'restangular', 'ui'])
+angular.module('addicaidSiteApp', ['ngResource', 'ui.map', 'ui.showhide'])
   .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 //    $locationProvider.html5Mode(true);
     $routeProvider

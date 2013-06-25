@@ -1,19 +1,19 @@
 <div class="meeting_result">
- <div class="meeting_entry">
-  <div id="meeting_info">
-    <p>
-      <span id="location_name" style="font-weight: bold; display: block">{{meeting.title}}</span>
-      <span class="address">{{meeting.location.address.address1}}</span>
-      <span class="city_state">{{meeting.location.address.city.city}},{{meeting.location.address.city.state}}</span><br/>
-      <span class="type" style="">{{meeting.fellowship.displayText}}</span>
-    </p>
-  </div>
-  <div id="info">
-    <span class="time">{{meeting.schedule.timeObj | date:'shortTime'}}</span></br>
-    <span class="day">{{meeting.schedule.timeObj | date:'EEE'}}</span><br/>
-    <span class="distance">{{meeting.distance | number:1}} miles</span>
-    <a ng-href="http://maps.google.com/maps?q={{meeting.location.google.q}}&f=d" target="_blank"><button class="directions">directions</button></a>
-  </div>
+  <div class="meeting_entry">
+    <div id="meeting_info">
+      <p>
+        <span id="location_name" style="font-weight: bold; display: block">{{meeting.title}}</span>
+        <span class="address">{{meeting.location.address.address1}}</span>
+        <span class="city_state">{{meeting.location.address.city.city}},{{meeting.location.address.city.state}}</span><br/>
+        <span class="type" style="">{{meeting.fellowship.displayText}}</span>
+      </p>
+    </div>
+    <div id="info">
+      <span class="time">{{meeting.schedule.timeObj | date:'shortTime'}}</span></br>
+      <span class="day">{{meeting.schedule.timeObj | date:'EEE'}}</span><br/>
+      <span class="distance">{{meeting.distance | number:1}} miles</span>
+      <a ng-href="http://maps.google.com/maps?q={{meeting.location.google.q}}&f=d" target="_blank"><button class="directions">directions</button></a>
+    </div>
 
-</div>
+  </div>
 </div>

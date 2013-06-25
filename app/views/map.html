@@ -38,14 +38,10 @@
 
   <section class="mobile_page map_page" id="map_page">
    <div id="map_canvas" ui-map="map" class="span8 map" title="hi" width="67.95745%"
-
- 
-
-   <div id="map_canvas" ui-map="map" class="span8 map" width="67.95745%"
-         ui-event="{'map-bounds_changed': 'updateMapBounds()', 'map-center_changed': 'updateCurrentLocationFromMapCenter()'}"
+         ui-event="{'map-bounds_changed': 'updateMapBounds()'}"
          ui-options="mapOptions">
     </div>
-
+<!--ui-event="{'map-bounds_changed': 'updateMapBounds()', 'map-center_changed': 'updateCurrentLocationFromMapCenter()'}"-->
       <!-- Giving the div an id="map_canvas" fix problems with twitter bootstrap affecting google maps -->
  
 
