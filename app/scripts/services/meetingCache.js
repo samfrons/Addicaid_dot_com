@@ -98,7 +98,7 @@ angular.module('addicaidSiteApp')
         angular.extend(meeting.schedule, {
           timeObj: dt
         });
-        console.log(meeting.schedule.dayAbbrev, meeting.schedule.time, meeting.schedule.time.split(':'), dt.getDay(), dt.getUTCDay())
+//        console.log(meeting.schedule.dayAbbrev, meeting.schedule.time, meeting.schedule.time.split(':'), dt.getDay(), dt.getUTCDay())
         // todo: clean console.logs
 
 

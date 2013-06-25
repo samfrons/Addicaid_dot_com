@@ -7,13 +7,23 @@ angular.module('addicaidSiteApp')
     $rootScope.useMobileHeaderFooter = browserDetection.isMobile();
 
     // location polling
-    geolocation.startPolling();
-    $scope.$on('$destroy', function() {
-      geolocation.stopPolling();
+//    geolocation.startPolling();
+//    $scope.$on('$destroy', function() {
+//      geolocation.stopPolling();
+//    });
+    geolocation.getLocation();
+
+
+
+    // make sure to destroy old map markers before creating new ones
+    $scope.$watch('meetings', function(newValue, oldValue) {
+      if (newValue !== oldValue) {
+        console.log('destroying map markers', oldValue.length);
+        angular.forEach(oldValue, function(meeting) {
+          meeting.marker.setMap(null);
+        });
+      }
     });
-
-
-
 
     // meetingCache
     $scope.meetings = [];
@@ -70,8 +80,6 @@ angular.module('addicaidSiteApp')
     });
 
 
-
-
     $http.get('styles/special/mapStyle.json')
       .success(function(data, status) {
         $scope.map.setOptions({styles: data});
@@ -83,9 +91,9 @@ angular.module('addicaidSiteApp')
 
 
     $scope.updateMapBounds = function() {
-      console.log('update map bounds', $scope.map.getBounds());
+//      console.log('update map bounds', $scope.map.getBounds());
       meetingCache.setMapBounds($scope.map.getBounds());
-      meetingCache.getMeetings('updateMapBounds');
+//      meetingCache.getMeetings('updateMapBounds');
     };
 
 

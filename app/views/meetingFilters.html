@@ -25,13 +25,13 @@
   </div>
 
   <div class="span4 location">
-    <button class="here"></button>
+    <button class="here" ng-click="getCurrentLocation()"></button>
     or
-    <input class="zipcode" placeholder="zipcode"/>
+    <input class="zipcode" placeholder="address" ng-model="customAddress"/>
   </div>
 
   <div class="span3">
-    <button class="find_meeting" type="submit">find a meeting! <img src="../images/find_meeting.gif"></button>
+    <button class="find_meeting" ng-click="findMeetings()">find a meeting! <img src="../images/find_meeting.gif"></button>
   </div>
 </div>
 

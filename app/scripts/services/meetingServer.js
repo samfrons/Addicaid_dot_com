@@ -34,19 +34,17 @@ angular.module('addicaidSiteApp')
         console.log('entering getMeetingsFromServer');
 
         var deferred = $q.defer();
-//        if (angular.isDefined(bb)) {
-          // populate meetings from server
-          $http.jsonp(getUrl(bb))
+        // populate meetings from server
+        $http.jsonp(getUrl(bb))
 //        $http.get('testfiles/meetings.json')// TODO: HACK using local json file
-            .success(function(data, status, headers, config) {
-              deferred.resolve(data);
-            })
-            .error(function(data, status, headers, config) {
-              // TODO: error handling
-              console.error('meeting service FAILURE', data, status);
-              deferred.reject(status);
-            });
-//        }
+          .success(function(data, status, headers, config) {
+            deferred.resolve(data);
+          })
+          .error(function(data, status, headers, config) {
+            // TODO: error handling
+            console.error('meeting service FAILURE', data, status);
+            deferred.reject(status);
+          });
         return deferred.promise;
       }
     };
