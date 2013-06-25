@@ -34,7 +34,7 @@ angular.module('addicaidSiteApp')
           map: $scope.map,
           position: new google.maps.LatLng(meeting.location.center.latitude, meeting.location.center.longitude),
           icon: {
-            url: 'images/' + meeting.fellowship.abbrevName + 'pin' + (meeting.schedule.isSoon?'-soon.gif':'.png')
+            url: 'images/' + meeting.fellowship.abbrevName + 'pin' + (meeting.schedule.isSoon?'-soon.png':'.png')
           },
           shadow: {
             url: 'images/' + meeting.fellowship.abbrevName + 'pin-shadow.png'

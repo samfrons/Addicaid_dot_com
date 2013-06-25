@@ -35,8 +35,8 @@ angular.module('addicaidSiteApp')
 
         var deferred = $q.defer();
         // populate meetings from server
-        $http.jsonp(getUrl(bb))
-//        $http.get('testfiles/meetings.json')// TODO: HACK using local json file
+//         $http.jsonp(getUrl(bb))
+       $http.get('testfiles/meetings1.json')// TODO: HACK using local json file
           .success(function(data, status, headers, config) {
             deferred.resolve(data);
           })
