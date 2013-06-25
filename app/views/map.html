@@ -4,6 +4,7 @@
 
 <!--Giving the div an id="map_canvas" fix problems with twitter bootstrap affecting google maps-->
 <section class="mobile_page" id="filter_page" ng-show="show.filter">
+  <h1 class="mobile">filter</h1>
   <ng-include src="getPartialUrl('meetingFilters')" ng-controller="MeetingFiltersCtrl" id="meetingFiltersSection" class="filter_partial"></ng-include>
 </section>
 
@@ -14,7 +15,7 @@
   <!--<h1 class="section_head" id="meeting"></h1>-->
   <section class="mobile_page" id="list_page">
     
-
+ <h1 class="mobile">nearby meetings</h1>
   <section class="mobile_page" id="list_page" ng-show="show.list">
 
     <div class="span4 meeting_results">
@@ -22,12 +23,12 @@
         <ng-include src="getPartialUrl('meetingDetailSmall')" ng-controller="MeetingDetailSmallCtrl"></ng-include>
       </div>
       <div class="pagination">
-      <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
-        Previous
+      <button class="previous" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+        <
       </button>
       {{currentPage+1}} of {{numberOfPages()}}
-      <button ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1">
-        Next
+      <button class="next" ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+        >
       </button>
     </div>
     </div>
@@ -35,9 +36,9 @@
 
 
 
-
+<h1 class="mobile">map</h1>
   <section class="mobile_page map_page" id="map_page">
-   <div id="map_canvas" ui-map="map" class="span8 map" title="hi" width="67.95745%"
+   <div id="map_canvas" ui-map="map" class="span8 map" width="67.95745%"
          ui-event="{'map-bounds_changed': 'updateMapBounds()'}"
          ui-options="mapOptions">
     </div>

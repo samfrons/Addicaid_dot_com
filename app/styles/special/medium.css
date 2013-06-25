@@ -17,25 +17,47 @@ nav.header {
  display: none;
 }
 
-nav.bottom_map {
-	position: fixed;
-  bottom: 0px;
-  margin: 0 auto;
-  display: block;
-}
 
 button.find_meeting {
  margin: 2% 0 0 0
 }
 
-button.time {
-  background-color: red !important;
+.time button {
+  min-width: 112px !important;
 }
+
+nav.bottom_map {
+  position: fixed;
+  bottom: 0px;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0px 1px 5px 2px rgba(20,0,10,1);
+  background-image: url(/../images/cheerleaders.jpeg) !important;
+}
+#filter_page {
+  background: white;
+}
+
+div.filter div {
+  border-bottom: 1px solid gray;
+  width: 100% !important;
+  text-align: center;
+}
+
+button.find_meeting {
+  color: white !important;
+  background-image: url(/../images/filter_background.jpeg);
+}
+
+div.location {
+ color: gray;
+}
+
+
 nav.bottom_map ul {
-	text-align: left;
+text-align: left;
    margin: 0;
-   background-color:white;
-   border-top: 1px solid gray;
+  
    width: 100%;
 }
 nav.bottom_map ul li {
@@ -43,11 +65,13 @@ nav.bottom_map ul li {
     width: 15.9% !important;
     min-width: auto !important;
     margin: 0;
-    font-size: .7em;
+    font-size: 1.2em;
     border-left: 1px solid gray;
-    padding: 5px 0 5px 2px;
+    padding: 10px 0 10px 2px;
     text-align: center;
-    background-color: white;
+    color: white;
+    text-shadow: 0px 1px 2px black;
+    
 }
 
 section.filter_page {
@@ -55,6 +79,18 @@ section.filter_page {
 	min-height: 100% !important;
 	max-height: 100% !important;
       background-color: red !important;
+}
+
+h1.mobile {
+  display: block;
+  background-color: #f05122;
+  background-image: url(/../images/people_background.jpeg);
+  box-shadow: 0px 1px 3px black;
+  text-transform: uppercase;
+  color: white;
+  margin: 0px;
+  text-align: center;
+  text-shadow: 0px 1px 2px black;
 }
 
 footer {

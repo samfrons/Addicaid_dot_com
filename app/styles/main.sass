@@ -340,7 +340,7 @@ div.meeting_results
   
 .filter
  button.ui-show
-  background-color: lime !important
+  background-color: rgba(201,231,91,1) !important
  padding: 0 0 0 2%
  background-color: (250,250,250,0.2)
  text-transform: uppercase
@@ -359,6 +359,7 @@ div.meeting_results
    margin: 3px
   .NA
    color: $NA !important
+   padding: 2px 6.5px 2px 6.5px !important
   .AA
    color: $AA !important
    -webkit-transition: .5s all ease-in
@@ -370,8 +371,9 @@ div.meeting_results
   width: auto
   button
    width: 30px
+   -webkit-transition: .5s all ease-in
   button.weekend
-   color: #e5dd0d !important
+   color: rgba(94, 93, 93,.6) !important
 
  .time
   width: auto
@@ -500,11 +502,26 @@ nav.bottom
      text-align: center
      background-color: white
 
+
+/* mobile no displays */
+h1.mobile
+ display: none
+
 nav.bottom_map
  display: none
 
 div.pagination
  text-align: center
+ button
+  height: 30px 
+  width: 30px
+  border-radius: 30px
+  background-color: rgba(20,20,20,0.8)
+  -webkit-transition: .5s all ease-in
+  &:hover
+   box-shadow: 0px 1px 4px black
+  &:active
+   box-shadow: inset 0px 1px 4px gray
 
 h1.section_head
  color: white

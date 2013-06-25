@@ -10,9 +10,9 @@
     },
     "schedule": {
       "id": null,
-      "dayAbbrev": "TH",
-      "day": "THURSDAY",
-      "time": "19:30"
+      "dayAbbrev": "TU",
+      "day": "MONDAY",
+      "time": "3:30"
     },
     "location": {
       "id": null,
@@ -640,9 +640,9 @@
     },
     "schedule": {
       "id": null,
-      "dayAbbrev": "WE",
-      "day": "WEDNESDAY",
-      "time": "19:30"
+      "dayAbbrev": "TU",
+      "day": "TUESDAY",
+      "time": "8:30"
     },
     "location": {
       "id": null,
