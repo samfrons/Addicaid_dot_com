@@ -15,20 +15,18 @@ angular.module('addicaidSiteApp')
 
 
 
-    // make sure to destroy old map markers before creating new ones
-    $scope.$watch('meetings', function(newValue, oldValue) {
-      if (newValue !== oldValue) {
-        console.log('destroying map markers', oldValue.length);
-        angular.forEach(oldValue, function(meeting) {
-          meeting.marker.setMap(null);
-        });
-      }
-    });
-
     // meetingCache
     $scope.meetings = [];
     var loadCachedMeetings = function() {
+
+      // load latest meetings from cache
       var meetingsList = meetingCache.getMeetings('map-on');
+
+      // clear markers
+      angular.forEach($scope.meetings, function(meeting) {
+        meeting.marker.setMap(null);
+      });
+
       angular.forEach(meetingsList, function(meeting) {
         var marker = new google.maps.Marker({
           map: $scope.map,
@@ -43,6 +41,7 @@ angular.module('addicaidSiteApp')
         angular.extend(meeting, { marker: marker });
       });
       $scope.meetings = meetingsList;
+
     };
 
     $scope.$on(meetingCache.meetingsProcessedEvent, function(event, args) {

@@ -2,29 +2,24 @@
 
 
 <div class="row-fluid filter">
-  <div class=" span2 type">
-    <!--<h5><button class="all">all</button></h5>-->
-    <button class="AA selected">alcoholics anonymous</button>
-    <button class="NA">narcotics anonymous</button>
-    <!--<button>smart recovery</button>-->
+  <div class="span2 type">
+    <or-filter default-filter-items="fellowshipFilterItems" on-filter-changed="onFellowshipFilterChanged(selectedFilters)"></or-filter>
   </div>
 
+
+
   <div class="span4 day">
-    <day-filter></day-filter>
+    <or-filter default-filter-items="dayFilterItems" on-filter-changed="onDayFilterChanged(selectedFilters)"></or-filter>
   </div>
 </div>
 
 <div class="row-fluid filter">
   <div class="span2 time">
-    <!--<h5><button class="all">all</button></h5>-->
-    <button>morning</button>
-    <button>afternoon</button>
-    <button>evening</button>
-    <button>night</button>
+    <or-filter default-filter-items="timeFilterItems" on-filter-changed="onTimeFilterChanged(selectedFilters)"></or-filter>
   </div>
 
   <div class="span4 location">
-    <button class="here" ng-click="getCurrentLocation()"></button>
+    <button class="here" ng-click="clickGeolocation()"></button>
     or
     <input class="zipcode" placeholder="address" ng-model="customAddress"/>
   </div>

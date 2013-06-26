@@ -96,8 +96,10 @@ angular.module('addicaidSiteApp')
 //        dt.setMinutes(meeting.schedule.time.split(':')[1]);
 //        dt.setSeconds(0);
         angular.extend(meeting.schedule, {
-          timeObj: dt
+          timeObj: dt,
+          timeAsNumber: parseInt(meeting.schedule.time.split(':')[0] + meeting.schedule.time.split(':')[1], 10)
         });
+//        console.log(meeting.schedule.time, meeting.schedule.timeAsNumber)
 //        console.log(meeting.schedule.dayAbbrev, meeting.schedule.time, meeting.schedule.time.split(':'), dt.getDay(), dt.getUTCDay())
         // todo: clean console.logs
 
@@ -120,7 +122,7 @@ angular.module('addicaidSiteApp')
       });
 
       isDirty = false;
-      console.log('*** got '+ meetingsCache.length + ' meetings ***', meetingsCache);
+      console.log('*** got '+ meetingsCache.length + ' meetings (' + serviceAPI.getMeetings().length + ' filtered) ***', meetingsCache);
       $rootScope.$broadcast(serviceAPI.meetingsProcessedEvent, [/* meetingsProcessedArgs */]);
     };
 
@@ -130,6 +132,12 @@ angular.module('addicaidSiteApp')
 
     var dayFilter = function(item) {
 //      return $filter('filter')(['MO','TU'], item.schedule.dayAbbrev).length > 0;
+      return true;
+    };
+    var fellowshipFilter = function(item) {
+      return true;
+    };
+    var timeFilter = function(item) {
       return true;
     };
 
@@ -165,7 +173,11 @@ angular.module('addicaidSiteApp')
         }
 
         // TODO: need promises here.  for now, returns the old meetingsCache and use broadcast to make change
-        return $filter('filter')(meetingsCache, dayFilter);
+        var filteredMeetings = meetingsCache;
+        filteredMeetings = $filter('filter')(filteredMeetings, dayFilter);
+        filteredMeetings = $filter('filter')(filteredMeetings, fellowshipFilter);
+        filteredMeetings = $filter('filter')(filteredMeetings, timeFilter);
+        return filteredMeetings;
         // return: array of meeting objects from server
       },
 
@@ -174,6 +186,12 @@ angular.module('addicaidSiteApp')
       },
       setDayFilter: function(newDayFilter) {
         dayFilter = newDayFilter;
+      },
+      setFellowshipFilter: function(newFellowshipFilter) {
+        fellowshipFilter = newFellowshipFilter;
+      },
+      setTimeFilter: function(newTimeFilter) {
+        timeFilter = newTimeFilter;
       }
 
     });
