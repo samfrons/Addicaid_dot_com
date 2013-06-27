@@ -51,6 +51,7 @@
     <div ng-repeat="meeting in meetings" ui-map-marker="meeting.marker"
          ui-event="{'map-click': 'openMarkerInfo(meeting)'}">
     </div>
+    <div ui-map-marker="currentLocationMarker"><!-- current location marker --></div>
     <div ui-map-info-window="myInfoWindow" >
       <ng-include src="getPartialUrl('meetingDetailSmall')" ng-controller="MeetingDetailSmallCtrl"></ng-include>
     </div>

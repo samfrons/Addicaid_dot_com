@@ -1,10 +1,12 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .factory('currentLocations', ['$rootScope', 'geolocation', function($rootScope, geolocation) {
+  .factory('currentLocations', ['$rootScope', 'geolocation', 'googleGeocoder', function($rootScope, geolocation, geocoder) {
 
     var serviceAPI = {
-      geolocationChangedEvent: 'currentLocations_geolocationChanged'
+      geolocationChangedEvent: 'currentLocations_geolocationChanged',
+      manualMapCenterChangedEvent: 'currentLocations_manualMapCenterChanged',
+      locationChangedEvent: 'currentLocations_locationChanged'
     };
 
     var locations = {
@@ -26,10 +28,12 @@ angular.module('addicaidSiteApp')
       },
       manual: {
         input: null,
-        geocodedResponse: null,
-        mapCenter: null
+        geocodedResults: null
       }
     };
+    var useGeolocation = 'geolocation';
+    var useManual = 'manual';
+    var whichLocation = useGeolocation;
 
 
     var areGeolocationPositionsEqual = function(a, b) {
@@ -49,23 +53,21 @@ angular.module('addicaidSiteApp')
     };
 
     var changeGeolocation = function(geolocationObj) {
-      if (!areGeolocationPositionsEqual(geolocationObj.position, locations.geolocation.position)) {
+      if (whichLocation === useManual || (!areGeolocationPositionsEqual(geolocationObj.position, locations.geolocation.position))) {
         console.log('currentLocations service: updating geolocation');
         locations.geolocation.position = geolocationObj.position;
         locations.geolocation.latLng = geolocationObj.latLng;
+        whichLocation = useGeolocation;
         $rootScope.$broadcast(serviceAPI.geolocationChangedEvent, locations.geolocation);
+        $rootScope.$broadcast(serviceAPI.locationChangedEvent, serviceAPI.getCurrentLocationLatLng());
       }
     };
 
 
 
 
-
     return angular.extend(serviceAPI, {
 
-      getGeolocation: function() {
-        return locations.geolocation;
-      },
       updateGeolocation: function() {
         geolocation.getCurrentGeolocation()
           .then(function(geolocationObj) {
@@ -73,9 +75,33 @@ angular.module('addicaidSiteApp')
           });
       },
 
-
-      setMapCenter: function(latLng) {
-        locations.map.center = latLng;
+      setManualInput: function(input) {
+        var oldInput = locations.manual.input;
+        locations.manual.input = input;
+        geocoder.geocode(input)
+          .then(function(results) {
+            console.log('geocode top 1 result', results[0]);
+            locations.manual.geocodedResults = results;
+            whichLocation = useManual;
+            $rootScope.$broadcast(serviceAPI.manualMapCenterChangedEvent);
+            $rootScope.$broadcast(serviceAPI.locationChangedEvent, serviceAPI.getCurrentLocationLatLng());
+          }, function(reason) {
+            console.log('geocode failed', reason);
+            locations.manual.input = oldInput;
+          });
+      },
+      getCurrentLocationLatLng: function() {
+        if (whichLocation === useManual) {
+          if (locations.manual !== null && locations.manual.geocodedResults !== null && locations.manual.geocodedResults.length > 0) {
+            return locations.manual.geocodedResults[0].geometry.location;
+          } else {
+            return null;
+          }
+        } else { // useGeolocation
+          return locations.geolocation.latLng;
+        }
       }
+
+
     });
   }]);

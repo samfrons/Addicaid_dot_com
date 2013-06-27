@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .factory('meetingCache', ['$http', '$rootScope', '$filter', 'timeInterval', '$timeout', 'meetingServer', 'distanceMath', function($http, $rootScope, $filter, timeInterval, $timeout, meetingServer, distanceMath) {
+  .factory('meetingCache', ['$http', '$rootScope', '$filter', 'timeInterval', '$timeout', 'meetingServer', 'distanceMath', 'currentLocations', function($http, $rootScope, $filter, timeInterval, $timeout, meetingServer, distanceMath, currentLocations) {
 //    var defaultCoordinates = new google.maps.LatLng(40.763562, -73.97140100000001);  // NYC
 //    var defaultCoordinates = new google.maps.LatLng(42.25113,-73.791435);  // upstate NY, for testfile
     var defaultCoordinates = new google.maps.LatLng(37.771139, -122.403424);  // San Francisco
@@ -16,7 +16,6 @@ angular.module('addicaidSiteApp')
 
 
     var searchBounds; //new google.maps.LatLngBounds(new google.maps.LatLng(0,0), new google.maps.LatLng(0,0)); // google.maps.LatLngBounds
-    var currentLocation = new google.maps.LatLng(defaultCoordinates.lat(), defaultCoordinates.lng()); // google.maps.LatLng
     var limitTo;
 
     var isDirty = true; // flag used to determine whether server needs to be called for new data
@@ -117,7 +116,7 @@ angular.module('addicaidSiteApp')
         });
 
         // distance calculation
-        var distance = distanceMath.distance(currentLocation.lat(), currentLocation.lng(), meeting.location.center.latitude, meeting.location.center.longitude, 'M');
+        var distance = distanceMath.distance(currentLocations.getCurrentLocationLatLng().lat(), currentLocations.getCurrentLocationLatLng().lng(), meeting.location.center.latitude, meeting.location.center.longitude, 'M');
         angular.extend(meeting, { distance: distance });
       });
 
@@ -130,7 +129,10 @@ angular.module('addicaidSiteApp')
 
 
 
-
+    $rootScope.$on(currentLocations.locationChangedEvent, function(latLng) {
+      console.log('cache')
+      isDirty = true;
+    });
 
 
 
@@ -151,12 +153,12 @@ angular.module('addicaidSiteApp')
           $rootScope.$broadcast(serviceAPI.initSearchBoundsDefinedEvent);
         }
       },
-      setCurrentLocation: function(latLng) {
-        // sets the current location
-        // latLng is of type google.maps.LatLng
-        currentLocation = new google.maps.LatLng(latLng.lat(), latLng.lng());
-        isDirty = true;
-      },
+//      setCurrentLocation: function(latLng) {
+//        // sets the current location
+//        // latLng is of type google.maps.LatLng
+//        currentLocation = new google.maps.LatLng(latLng.lat(), latLng.lng());
+//        isDirty = true;
+//      },
       setLimitTo: function(limit) {
         limitTo = limit;
       },

@@ -46,11 +46,9 @@ console.log(meetingsList.length)
     $rootScope.$on(meetingCache.meetingsProcessedEvent, function(event, args) {
       loadCachedMeetings();
     });
-
     $rootScope.$on(meetingFilter.meetingFilterChangedEvent, function(event, args) {
       loadCachedMeetings();
     });
-
     $rootScope.$on(meetingFilter.refreshMeetingsEvent, function() {
       loadCachedMeetings();
     });
@@ -75,11 +73,26 @@ console.log(meetingsList.length)
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
-    $scope.$on(currentLocations.geolocationChangedEvent, function(geolocationObj) {
-      if (angular.isDefined(currentLocations.getGeolocation().latLng)) {
+    var setCurrentLocationMarker = function(latLng) {
+      if (angular.isDefined($scope.currentLocationMarker)) {
+        // delete old location
+        $scope.currentLocationMarker.setMap(null);
+        $scope.currentLocationMarker = null;
+      }
+      $scope.currentLocationMarker = new google.maps.Marker({
+        map: $scope.map,
+        position: latLng,
+        icon: 'http://www.google.com/mapfiles/marker.png',
+        shadow: 'http://www.google.com/mapfiles/shadow50.png'
+      });
+    };
+
+    $scope.$on(currentLocations.locationChangedEvent, function(latLng) {
+      if (angular.isDefined(currentLocations.getCurrentLocationLatLng())) {
         console.log('map.$scope.$on(locationChangedEvent)');
-        $scope.map.setCenter(currentLocations.getGeolocation().latLng);
-        meetingCache.setCurrentLocation(currentLocations.getGeolocation().latLng);
+        $scope.map.setCenter(currentLocations.getCurrentLocationLatLng());
+//        meetingCache.setCurrentLocation(currentLocations.getCurrentLocationLatLng());
+        setCurrentLocationMarker(currentLocations.getCurrentLocationLatLng());
       }
     });
 
@@ -95,7 +108,7 @@ console.log(meetingsList.length)
 
 
     $scope.updateMapBounds = function() {
-//      console.log('update map bounds', $scope.map.getBounds());
+      console.log('update map bounds', $scope.map.getBounds());
       meetingCache.setMapBounds($scope.map.getBounds());
     };
 

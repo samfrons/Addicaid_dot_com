@@ -3,26 +3,35 @@
 angular.module('addicaidSiteApp')
   .controller('MeetingFiltersCtrl', ['$scope', 'meetingFilter', 'currentLocations', '$filter', function ($scope, meetingFilter, currentLocations, $filter) {
 
-    $scope.customAddress = '';
+    $scope.formData = {
+      customAddress: '',
+      geolocationSelected: true
+    };
+
+//    $scope.$watch('a', function(oldVal, newVal) {
+//      console.log('custom watch', $scope.a, newVal, oldVal)
+//    });
 
     $scope.findMeetings = function() {
-      if ($scope.customAddress !== '') {
+      console.log($scope.formData.customAddress)
+      if ($scope.formData.customAddress !== '' && !$scope.formData.geolocationSelected) {
         // do custom address
-      } else {
-        // use geolocation
+        currentLocations.setManualInput($scope.formData.customAddress);
+      } else { // use geolocation
+        currentLocations.updateGeolocation();
       }
       console.log('findMeetings')
       meetingFilter.sendRefreshEvent();
     };
 
     $scope.clickGeolocation = function() {
-      $scope.geolocationSelected = !$scope.geolocationSelected;
-      if ($scope.geolocationSelected) {
+      $scope.formData.geolocationSelected = !$scope.formData.geolocationSelected;
+      if ($scope.formData.geolocationSelected) {
+        $scope.formData.customAddress = '';
         currentLocations.updateGeolocation();
       }
     };
 
-    $scope.geolocationSelected = true;
     currentLocations.updateGeolocation(); // run once
 
 

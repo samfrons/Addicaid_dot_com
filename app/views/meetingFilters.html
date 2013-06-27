@@ -19,9 +19,9 @@
   </div>
 
   <div class="span4 location">
-    <button class="here" ui-show='geolocationSelected' ng-click="clickGeolocation()"></button>
+    <button class="here" ui-show='formData.geolocationSelected' ng-click="clickGeolocation()"></button>
     or
-    <input class="zipcode" placeholder="address" ng-model="customAddress"/>
+    <input type="text" placeholder="address" ng-model="formData.customAddress" />
   </div>
 
   <div class="span3">
