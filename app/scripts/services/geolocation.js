@@ -3,38 +3,16 @@
 angular.module('addicaidSiteApp')
   .factory('geolocation', ['$q', '$rootScope', '$timeout', '$window', 'timeInterval', function($q, $rootScope, $timeout, $window, timeInterval) {
     var serviceAPI = {
-      locationChangedEvent: 'locationChanged'
-    };
-
-
-
-    var convertCoordsToLatLng = function(coords) {
-      return new google.maps.LatLng(coords.latitude, coords.longitude);
-    };
-
-    var arePositionsEqual = function(a, b) {
-      if (angular.isDefined(a) && angular.isDefined(b)) {
-        if (a.coords.latitude === b.coords.latitude
-          && a.coords.longitude === b.coords.longitude
-          && a.coords.accuracy === b.coords.accuracy) {
-          return true;
-        }
-      }
-
-      return false;
-    };
-
-    var changeLocation = function(position) {
-      if (!arePositionsEqual(position, $rootScope.geolocationPosition)) {
-        console.log('updating geolocation');
-        $rootScope.geolocationLatLng = convertCoordsToLatLng(position.coords);
-        $rootScope.geolocationPosition = position;
-        $rootScope.$broadcast(serviceAPI.locationChangedEvent, {
-          position: position,
-          latLng: convertCoordsToLatLng(position.coords)
-        });
+//      locationChangedEvent: 'geolocation_locationChanged'
+      convertCoordsToLatLng: function(coords) { // todo: make private if no longer needed publicly
+        return new google.maps.LatLng(coords.latitude, coords.longitude);
       }
     };
+
+
+
+
+
 
 
 
@@ -55,10 +33,10 @@ angular.module('addicaidSiteApp')
        */
       var d = $q.defer();
       var geolocationSuccess = function(position) {
-        changeLocation(position);
+//        changeLocation(position);
         d.resolve({
           position: position,
-          latLng: convertCoordsToLatLng(position.coords)
+          latLng: serviceAPI.convertCoordsToLatLng(position.coords)
         });
       };
 
@@ -99,7 +77,7 @@ angular.module('addicaidSiteApp')
       stopPolling: function() {
         timeInterval.stopPolling('geolocation');
       },
-      getLocation: function() {
+      getCurrentGeolocation: function() { // returns promise
         return getCurrentPosition();
       }
     });

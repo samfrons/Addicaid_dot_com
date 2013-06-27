@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .controller('MapCtrl', ['$scope', 'meetingCache', '$resource', '$http', '$filter', '$rootScope', 'browserDetection', 'geolocation', function($scope, meetingCache, $resource, $http, $filter, $rootScope, browserDetection, geolocation) {
+  .controller('MapCtrl', ['$scope', 'meetingCache', 'meetingFilter', '$resource', '$http', '$filter', '$rootScope', 'browserDetection', 'currentLocations', function($scope, meetingCache, meetingFilter, $resource, $http, $filter, $rootScope, browserDetection, currentLocations) {
 
 
     $rootScope.useMobileHeaderFooter = browserDetection.isMobile();
@@ -11,17 +11,16 @@ angular.module('addicaidSiteApp')
 //    $scope.$on('$destroy', function() {
 //      geolocation.stopPolling();
 //    });
-    geolocation.getLocation();
+//    geolocation.getLocation();
 
 
 
     // meetingCache
     $scope.meetings = [];
     var loadCachedMeetings = function() {
-
-      // load latest meetings from cache
-      var meetingsList = meetingCache.getMeetings('map-on');
-
+      // load latest filtered meetings from cache
+      var meetingsList = meetingFilter.getFilteredMeetings('MapCtrl.loadCachedMeetings');
+console.log(meetingsList.length)
       // clear markers
       angular.forEach($scope.meetings, function(meeting) {
         meeting.marker.setMap(null);
@@ -44,11 +43,15 @@ angular.module('addicaidSiteApp')
 
     };
 
-    $scope.$on(meetingCache.meetingsProcessedEvent, function(event, args) {
+    $rootScope.$on(meetingCache.meetingsProcessedEvent, function(event, args) {
       loadCachedMeetings();
     });
 
-    $scope.$on(meetingCache.meetingsFilterChangedEvent, function(event, args) {
+    $rootScope.$on(meetingFilter.meetingFilterChangedEvent, function(event, args) {
+      loadCachedMeetings();
+    });
+
+    $rootScope.$on(meetingFilter.refreshMeetingsEvent, function() {
       loadCachedMeetings();
     });
 
@@ -72,10 +75,12 @@ angular.module('addicaidSiteApp')
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
-    $scope.$on(geolocation.locationChangedEvent, function(latLng) {
-      console.log('map.$scope.on(locationChangedEvent)');
-      $scope.map.setCenter($rootScope.geolocationLatLng);
-      meetingCache.setCurrentLocation($rootScope.geolocationLatLng);
+    $scope.$on(currentLocations.geolocationChangedEvent, function(geolocationObj) {
+      if (angular.isDefined(currentLocations.getGeolocation().latLng)) {
+        console.log('map.$scope.$on(locationChangedEvent)');
+        $scope.map.setCenter(currentLocations.getGeolocation().latLng);
+        meetingCache.setCurrentLocation(currentLocations.getGeolocation().latLng);
+      }
     });
 
 
@@ -92,13 +97,11 @@ angular.module('addicaidSiteApp')
     $scope.updateMapBounds = function() {
 //      console.log('update map bounds', $scope.map.getBounds());
       meetingCache.setMapBounds($scope.map.getBounds());
-//      meetingCache.getMeetings('updateMapBounds');
     };
 
 
 
     $scope.$watch('map', function(mapObj) {
-//      $scope.updateCurrentLocationFromMapCenter();
     });
 
 

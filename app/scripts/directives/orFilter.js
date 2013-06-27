@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .directive('orFilter', ['$filter', 'meetingCache', function ($filter, meetingCache) {
+  .directive('orFilter', ['$filter', function ($filter) {
     return {
       template: '' +
         '<button ng-repeat="item in filterItems" ' +

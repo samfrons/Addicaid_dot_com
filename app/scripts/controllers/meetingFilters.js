@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .controller('MeetingFiltersCtrl', ['$scope', 'meetingCache', 'geolocation', '$filter', function ($scope, meetingCache, geolocation, $filter) {
+  .controller('MeetingFiltersCtrl', ['$scope', 'meetingFilter', 'currentLocations', '$filter', function ($scope, meetingFilter, currentLocations, $filter) {
 
     $scope.customAddress = '';
 
@@ -11,16 +11,19 @@ angular.module('addicaidSiteApp')
       } else {
         // use geolocation
       }
-      meetingCache.getMeetings();
+      console.log('findMeetings')
+      meetingFilter.sendRefreshEvent();
     };
 
     $scope.clickGeolocation = function() {
-      geolocation.getLocation();
-//        .then(function(pos) {
-//          console.log(pos);
-//        });
+      $scope.geolocationSelected = !$scope.geolocationSelected;
+      if ($scope.geolocationSelected) {
+        currentLocations.updateGeolocation();
+      }
     };
 
+    $scope.geolocationSelected = true;
+    currentLocations.updateGeolocation(); // run once
 
 
 
@@ -64,8 +67,8 @@ angular.module('addicaidSiteApp')
         return $filter('filter')(selectedFilters, item.schedule.dayAbbrev).length > 0;
       };
 
-      meetingCache.setDayFilter(filterFunction);
-      meetingCache.filterChanged();
+      meetingFilter.setDayFilter(filterFunction);
+      meetingFilter.filterChanged();
     };
 
     $scope.fellowshipFilterItems = [{
@@ -85,8 +88,8 @@ angular.module('addicaidSiteApp')
         return $filter('filter')(selectedFilters, item.fellowship.abbrevName).length > 0;
       };
 
-      meetingCache.setFellowshipFilter(filterFunction);
-      meetingCache.filterChanged();
+      meetingFilter.setFellowshipFilter(filterFunction);
+      meetingFilter.filterChanged();
     };
 
 
@@ -128,7 +131,8 @@ angular.module('addicaidSiteApp')
         return isValidTime;
       };
 
-      meetingCache.setTimeFilter(filterFunction);
-      meetingCache.filterChanged();
+      meetingFilter.setTimeFilter(filterFunction);
+      meetingFilter.filterChanged();
     };
+
   }]);
