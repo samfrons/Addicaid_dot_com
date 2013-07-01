@@ -193,7 +193,8 @@ footer
  text-align: center
  margin: 50px 0 20px 0
 
-
+.abouthead
+ padding: 0 0 0 10px
 .investors
  background-image: url(../images/bender.jpeg)
  background-size: cover
@@ -228,8 +229,11 @@ label
  background-size: cover
  hgroup
   text-align: left
+ h2, h3
+  font-weight: lighter !important
 
 .person
+ padding: 10px
  img 
   height: 60px
 
@@ -248,6 +252,7 @@ label
 .press
  div
   img
+  text-align: center
   opacity: .5
   -webkit-transition: 1s opacity ease
   &:hover
@@ -516,6 +521,7 @@ div.pagination
   height: 30px 
   width: 30px
   border-radius: 30px
+  color: white
   background-color: rgba(20,20,20,0.8)
   -webkit-transition: .5s all ease-in
   &:hover
@@ -528,11 +534,17 @@ h1.section_head
  text-transform: uppercase
  padding: 3px
 
-#map_canvas:after
- display: none
- content: 'Where Are We? Here\'s a map'
- color: rgba(240,81,35,1)
- text-transform: uppercase
- position: absolute
- top: 0px
- width: 100%
+
+/* media queries */
+
+
+@media (max-width: 600px)
+ .aboutus 
+  hgroup
+   font-size: .7em
+   
+ .investors
+  hgroup
+   font-size: .7em
+ .offset1
+  margin-left: 0px !important
