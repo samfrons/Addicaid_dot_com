@@ -9,7 +9,9 @@ angular.module('addicaidSiteApp')
       // bb is the bounding box of type google.maps.LatLngBounds
       // TODO: comment and test
 //      var baseUrl = 'http://causecodetech.appspot.com/meeting';
-      var baseUrl = 'http://addicaid-backend-causecode.appspot.com/meeting';
+//      var baseUrl = 'http://addicaid-backend-causecode.appspot.com/meeting';
+      var baseUrl = 'http://addicaid-backend.appspot.com/meeting';
+//      var baseUrl = 'http://localhost:8080/meeting';
       var url = baseUrl;
       url += '?';
       url +=  'swLat=' + bb.getSouthWest().lat();
