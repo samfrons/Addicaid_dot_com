@@ -13,18 +13,19 @@ angular.module('addicaidSiteApp')
 //    });
 
     $scope.findMeetings = function() {
-      console.log($scope.formData.customAddress)
+      console.log('MeetingFiltersCtrl.findMeetings',$scope.formData.customAddress);
       if ($scope.formData.customAddress !== '' && !$scope.formData.geolocationSelected) {
         // do custom address
         currentLocations.setManualInput($scope.formData.customAddress);
       } else { // use geolocation
         currentLocations.updateGeolocation();
       }
-      console.log('findMeetings')
+      console.log('findMeetings');
       meetingFilter.sendRefreshEvent();
     };
 
     $scope.clickGeolocation = function() {
+      console.log('MeetingFiltersCtrl.clickGeolocation');
       $scope.formData.geolocationSelected = !$scope.formData.geolocationSelected;
       if ($scope.formData.geolocationSelected) {
         $scope.formData.customAddress = '';

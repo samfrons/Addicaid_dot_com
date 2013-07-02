@@ -1,5 +1,9 @@
 'use strict';
 
+
+// TODO: geolocation from ip: http://www.geoplugin.net/json.gp?ip=142.255.92.169&jsoncallback=h
+
+
 angular.module('addicaidSiteApp')
   .factory('geolocation', ['$q', '$rootScope', '$timeout', '$window', 'timeInterval', function($q, $rootScope, $timeout, $window, timeInterval) {
     var serviceAPI = {
@@ -34,6 +38,8 @@ angular.module('addicaidSiteApp')
       var d = $q.defer();
       var geolocationSuccess = function(position) {
 //        changeLocation(position);
+        console.log('geolocationSuccess');
+
         d.resolve({
           position: position,
           latLng: serviceAPI.convertCoordsToLatLng(position.coords)
@@ -41,6 +47,7 @@ angular.module('addicaidSiteApp')
       };
 
       var geolocationError = function(error) {
+        console.error('geolocationError', error);
         d.reject(error);
       };
 
@@ -53,7 +60,7 @@ angular.module('addicaidSiteApp')
             {
               enableHighAccuracy: false,
               timeout: 5000,
-              maximumAge: 15000
+              maximumAge: 75000
             });
         }
         else {
