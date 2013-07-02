@@ -20,7 +20,6 @@ angular.module('addicaidSiteApp')
     var loadCachedMeetings = function() {
       // load latest filtered meetings from cache
       var meetingsList = meetingFilter.getFilteredMeetings('MapCtrl.loadCachedMeetings');
-console.log(meetingsList.length)
       // clear markers
       angular.forEach($scope.meetings, function(meeting) {
         meeting.marker.setMap(null);
@@ -65,10 +64,7 @@ console.log(meetingsList.length)
 
 
     $scope.mapOptions = {
-//      center: new google.maps.LatLng(40.763562,-73.97140100000001),
-//      center: new google.maps.LatLng(42.25113,-73.791435),
-//      center: new google.maps.LatLng(42.633326 , -73.801232),
-      center: meetingCache.defaultCoordinates,
+      center: currentLocations.getCurrentLocationLatLng(),
       zoom: 13,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
@@ -88,6 +84,7 @@ console.log(meetingsList.length)
     };
 
     $scope.$on(currentLocations.locationChangedEvent, function(latLng) {
+      console.log('2222222222222222maps ctrl location changed event')
       if (angular.isDefined(currentLocations.getCurrentLocationLatLng())) {
         console.log('map.$scope.$on(locationChangedEvent)');
         $scope.map.setCenter(currentLocations.getCurrentLocationLatLng());

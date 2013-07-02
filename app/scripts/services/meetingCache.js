@@ -2,16 +2,9 @@
 
 angular.module('addicaidSiteApp')
   .factory('meetingCache', ['$http', '$rootScope', '$filter', 'timeInterval', '$timeout', 'meetingServer', 'distanceMath', 'currentLocations', function($http, $rootScope, $filter, timeInterval, $timeout, meetingServer, distanceMath, currentLocations) {
-//    var defaultCoordinates = new google.maps.LatLng(40.763562, -73.97140100000001);  // NYC
-//    var defaultCoordinates = new google.maps.LatLng(42.25113,-73.791435);  // upstate NY, for testfile
-    var defaultCoordinates = new google.maps.LatLng(37.771139, -122.403424);  // San Francisco
-//    var defaultCoordinates = new google.maps.LatLng(34.536107,-117.291156);  // Victorville, CA
-
-
     var serviceAPI = {
       meetingsProcessedEvent: 'meetingCache_meetingsProcessed',
       initSearchBoundsDefinedEvent: 'meetingCache_initSearchBoundsDefined',
-      defaultCoordinates: defaultCoordinates // for debugging, until geolocation works
     };
 
 

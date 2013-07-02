@@ -2,29 +2,32 @@
 
 angular.module('addicaidSiteApp')
   .factory('currentLocations', ['$rootScope', 'geolocation', 'googleGeocoder', function($rootScope, geolocation, geocoder) {
+    var defaultCoordinates = new google.maps.LatLng(40.763562, -73.97140100000001);  // NYC
+//    var defaultCoordinates = new google.maps.LatLng(42.25113,-73.791435);  // upstate NY, for testfile
+//    var defaultCoordinates = new google.maps.LatLng(37.771139, -122.403424);  // San Francisco
+//    var defaultCoordinates = new google.maps.LatLng(34.536107,-117.291156);  // Victorville, CA
 
     var serviceAPI = {
       geolocationChangedEvent: 'currentLocations_geolocationChanged',
       manualMapCenterChangedEvent: 'currentLocations_manualMapCenterChanged',
-      locationChangedEvent: 'currentLocations_locationChanged'
+      locationChangedEvent: 'currentLocations_locationChanged',
     };
 
     var locations = {
       geolocation: {
-        position: null,
-//        {
-//          coords: {
-//          accuracy: 150,
-//            altitude: null,
-//            altitudeAccuracy: null,
-//            heading: null,
-//            latitude: 34.536107,
-//            longitude: -117.291156,
-//            speed: null
-//          },
-//          timestamp: null
-//        },
-        latLng: null // new google.maps.LatLng
+        position: {
+          coords: {
+            accuracy: 150,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            latitude: defaultCoordinates.lat(),
+            longitude: defaultCoordinates.lng(),
+            speed: null
+          },
+          timestamp: null
+        },
+        latLng: defaultCoordinates // new google.maps.LatLng
       },
       manual: {
         input: null,
