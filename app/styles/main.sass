@@ -37,6 +37,10 @@ h2
 h3
  font-size: 2em
 
+
+a
+ cursor: pointer !important
+
 nav
  width: 100%
  ul
@@ -99,9 +103,18 @@ p
  text-transform: uppercase
  font-weight: bold
  padding: 15px 0 10px 0
- background-color: rgba(240, 81, 35, .7)
- color: white
- font-size: 2em
+ background-color: rgba(240, 81, 35, .9)
+ box-shadow: 0px 1px 2px rgba(40, 11, 25, .9)
+ -webkit-transition: .5s all ease
+ cursor: pointer
+ a
+  color: white
+  font-size: 1.7em
+  padding: 5px
+  text-shadow: none
+  text-decoration: none
+ &:hover
+  background-color: rgba(250, 31, 15, .9)
 
 .container
  margin: 0 auto
@@ -400,6 +413,7 @@ div.meeting_results
   padding: 2px
   text-transform: uppercase
   -webkit-appearance: none
+  border-radius: 0px !important
   &:focus
    border-color: #e9322d
    -moz-box-shadow: 0 0 6px #f8b9b7
@@ -454,7 +468,7 @@ nav.bottom
 
  
  div.copy 
-  background-image: url(../images/meeting_background.png)
+  background-image: url(../images/filter_background.jpeg)
   margin: 50px 0 0 0
   min-width: 320px
   width: 100%
@@ -485,6 +499,8 @@ nav.bottom
   bottom: 0px
   margin: 0 auto
   display: block
+  box-shadow: 0px 1px 5px 2px rgba(20,0,10,1)
+  background-image: url(/../images/cheerleaders.jpeg) !important
   ul
    text-align: center
    border-top: 1px solid gray
@@ -501,11 +517,12 @@ nav.bottom
      width: 16.99% !important
      min-width: auto !important
      margin: 0 auto
-     font-size: .7em
+     font-size: .8em
      border-left: 1px solid gray
      padding: 5px 2px 5px 2px
      text-align: center
-     background-color: white
+     color: white
+  
 
 
 /* mobile no displays */
