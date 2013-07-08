@@ -37,18 +37,22 @@ angular.module('addicaidSiteApp')
        */
       var d = $q.defer();
       var geolocationSuccess = function(position) {
-//        changeLocation(position);
-        console.log('geolocationSuccess');
+        $rootScope.$apply(function() { // use $apply because geolocation is outside of angular
+          console.log('geolocationSuccess');
 
-        d.resolve({
-          position: position,
-          latLng: serviceAPI.convertCoordsToLatLng(position.coords)
+          d.resolve({
+            position: position,
+            latLng: serviceAPI.convertCoordsToLatLng(position.coords)
+          });
         });
       };
 
       var geolocationError = function(error) {
-        console.error('geolocationError', error);
-        d.reject(error);
+        $rootScope.$apply(function() { // use $apply because geolocation is outside of angular
+
+          console.error('geolocationError', error);
+          d.reject(error);
+        });
       };
 
 

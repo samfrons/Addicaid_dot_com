@@ -1,39 +1,27 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .controller('MeetingFiltersCtrl', ['$scope', 'meetingFilter', 'currentLocations', '$filter', function ($scope, meetingFilter, currentLocations, $filter) {
+  .controller('MeetingFiltersCtrl', ['$scope', 'filterService', '$filter', function ($scope, filterService, $filter) {
 
-    $scope.formData = {
-      customAddress: '',
-      geolocationSelected: true
-    };
-
-//    $scope.$watch('a', function(oldVal, newVal) {
-//      console.log('custom watch', $scope.a, newVal, oldVal)
-//    });
+    $scope.locationFilter = filterService.getLocationFilter();
 
     $scope.findMeetings = function() {
-      console.log('MeetingFiltersCtrl.findMeetings',$scope.formData.customAddress);
-      if ($scope.formData.customAddress !== '' && !$scope.formData.geolocationSelected) {
-        // do custom address
-        currentLocations.setManualInput($scope.formData.customAddress);
-      } else { // use geolocation
-        currentLocations.updateGeolocation();
-      }
-      console.log('findMeetings');
-      meetingFilter.sendRefreshEvent();
+      console.log('MeetingFiltersCtrl.findMeetings',$scope.locationFilter.customAddress);
+//      filterService.setCurrentLocationFilter($scope.locationFilter);
+      filterService.setLocationFilter($scope.locationFilter);
+      filterService.doSearch();
     };
 
     $scope.clickGeolocation = function() {
       console.log('MeetingFiltersCtrl.clickGeolocation');
-      $scope.formData.geolocationSelected = !$scope.formData.geolocationSelected;
-      if ($scope.formData.geolocationSelected) {
-        $scope.formData.customAddress = '';
-        currentLocations.updateGeolocation();
+      $scope.locationFilter.useGeolocation = !$scope.locationFilter.useGeolocation;
+      if ($scope.locationFilter.useGeolocation) {
+        $scope.locationFilter.customAddress = '';
+//        currentLocations.updateGeolocation();
       }
     };
 
-    currentLocations.updateGeolocation(); // run once
+//    currentLocations.updateGeolocation(); // run once
 
 
 
@@ -77,8 +65,7 @@ angular.module('addicaidSiteApp')
         return $filter('filter')(selectedFilters, item.schedule.dayAbbrev).length > 0;
       };
 
-      meetingFilter.setDayFilter(filterFunction);
-      meetingFilter.filterChanged();
+      filterService.setDayFilter(filterFunction);
     };
 
     $scope.fellowshipFilterItems = [{
@@ -98,8 +85,7 @@ angular.module('addicaidSiteApp')
         return $filter('filter')(selectedFilters, item.fellowship.abbrevName).length > 0;
       };
 
-      meetingFilter.setFellowshipFilter(filterFunction);
-      meetingFilter.filterChanged();
+      filterService.setFellowshipFilter(filterFunction);
     };
 
 
@@ -141,8 +127,8 @@ angular.module('addicaidSiteApp')
         return isValidTime;
       };
 
-      meetingFilter.setTimeFilter(filterFunction);
-      meetingFilter.filterChanged();
+      filterService.setTimeFilter(filterFunction);
     };
+
 
   }]);

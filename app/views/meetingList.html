@@ -1,0 +1,17 @@
+<section class="mobile_page" id="list_page">
+
+  <div class="span4 meeting_results">
+    <div ng-repeat="meeting in meetings | orderBy:distance | startFrom:currentPage*pageSize | limitTo:pageSize">
+      <ng-include src="getPartialUrl('meetingDetailSmall')" ng-controller="MeetingDetailSmallCtrl"></ng-include>
+    </div>
+    <div class="pagination" ng-hide="numberOfPages() <= 0">
+      <button class="previous" ng-disabled="currentPage <= 0" ng-click="currentPage=currentPage-1">
+        <
+      </button>
+      {{currentPage+1}} of {{numberOfPages()}}
+      <button class="next" ng-disabled="currentPage >= meetings.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+        >
+      </button>
+    </div>
+  </div>
+</section>

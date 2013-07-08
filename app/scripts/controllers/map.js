@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .controller('MapCtrl', ['$scope', 'meetingCache', 'meetingFilter', '$resource', '$http', '$filter', '$rootScope', 'browserDetection', 'currentLocations', function($scope, meetingCache, meetingFilter, $resource, $http, $filter, $rootScope, browserDetection, currentLocations) {
+  .controller('MapCtrl', ['$scope', 'eventService', 'meetingCache', '$resource', '$http', '$filter', '$rootScope', 'browserDetection', 'mapModuleInterface', '$q', function($scope, eventService, meetingCache, $resource, $http, $filter, $rootScope, browserDetection, mapModuleInterface, $q) {
 
 
     $rootScope.useMobileHeaderFooter = browserDetection.isMobile();
@@ -17,20 +17,21 @@ angular.module('addicaidSiteApp')
 
     // meetingCache
     $scope.meetings = [];
-    var loadCachedMeetings = function() {
+    var loadMarkerData = function() {
       // load latest filtered meetings from cache
-      var meetingsList = meetingFilter.getFilteredMeetings('MapCtrl.loadCachedMeetings');
+      var meetingsList = mapModuleInterface.getMarkerData('MapCtrl.loadMarkerData');
       // clear markers
       angular.forEach($scope.meetings, function(meeting) {
         meeting.marker.setMap(null);
       });
+      console.log('MapCtrl.loadMarkerData', meetingsList.length);
 
       angular.forEach(meetingsList, function(meeting) {
         var marker = new google.maps.Marker({
           map: $scope.map,
           position: new google.maps.LatLng(meeting.location.center.latitude, meeting.location.center.longitude),
           icon: {
-            url: 'images/' + meeting.fellowship.abbrevName + 'pin' + (meeting.schedule.isSoon?'-soon.png':'.png')
+            url: 'images/' + meeting.fellowship.abbrevName + 'pin' + (meeting.schedule.isSoon?'-soon':'') + '.png'
           },
           shadow: {
             url: 'images/' + meeting.fellowship.abbrevName + 'pin-shadow.png'
@@ -38,36 +39,17 @@ angular.module('addicaidSiteApp')
         });
         angular.extend(meeting, { marker: marker });
       });
+//      setMapCenter();
+
       $scope.meetings = meetingsList;
 
     };
-
-    $rootScope.$on(meetingCache.meetingsProcessedEvent, function(event, args) {
-      loadCachedMeetings();
-    });
-    $rootScope.$on(meetingFilter.meetingFilterChangedEvent, function(event, args) {
-      loadCachedMeetings();
-    });
-    $rootScope.$on(meetingFilter.refreshMeetingsEvent, function() {
-      loadCachedMeetings();
-    });
-
 
     $scope.openMarkerInfo = function(meeting) {
       $scope.currentMeeting = meeting;
       $scope.myInfoWindow.open($scope.map, meeting.marker, meeting);
     };
-
-
-
-
-
-
-    $scope.mapOptions = {
-      center: currentLocations.getCurrentLocationLatLng(),
-      zoom: 13,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
+    $scope.mapOptions = mapModuleInterface.getDefaultMapOptions();
 
     var setCurrentLocationMarker = function(latLng) {
       if (angular.isDefined($scope.currentLocationMarker)) {
@@ -83,38 +65,48 @@ angular.module('addicaidSiteApp')
       });
     };
 
-    $scope.$on(currentLocations.locationChangedEvent, function(latLng) {
-      console.log('2222222222222222maps ctrl location changed event')
-      if (angular.isDefined(currentLocations.getCurrentLocationLatLng())) {
-        console.log('map.$scope.$on(locationChangedEvent)');
-        $scope.map.setCenter(currentLocations.getCurrentLocationLatLng());
-//        meetingCache.setCurrentLocation(currentLocations.getCurrentLocationLatLng());
-        setCurrentLocationMarker(currentLocations.getCurrentLocationLatLng());
+    var waitingForMapBounds = false;
+
+    var setMapCenter = function() {
+      if (angular.isDefined(mapModuleInterface.getCurrentLocationLatLng())) {
+        waitingForMapBounds = true;
+        $scope.map.setCenter(mapModuleInterface.getCurrentLocationLatLng());
+        setCurrentLocationMarker(mapModuleInterface.getCurrentLocationLatLng());
       }
-    });
-
-
-    $http.get('styles/special/mapStyle.json')
-      .success(function(data, status) {
-        $scope.map.setOptions({styles: data});
-      })
-      .error(function(data,status) {
-        // TODO: error handling
-        console.error('http mapStyle FAILURE', data, status);
-      });
-
-
-    $scope.updateMapBounds = function() {
-      console.log('update map bounds', $scope.map.getBounds());
-      meetingCache.setMapBounds($scope.map.getBounds());
     };
 
 
 
-    $scope.$watch('map', function(mapObj) {
+    $scope.updateMapBounds = function() {
+//      console.log('update map bounds');
+      mapModuleInterface.setMapBounds($scope.map.getBounds());
+      if (waitingForMapBounds) {
+        loadMarkerData();
+        waitingForMapBounds = false;
+      }
+    };
+
+
+
+    $scope.$watch('map', function() {
+      if (angular.isDefined($scope.map)) {
+        console.log('map ready');
+        mapModuleInterface.addListenerToLoadMarkerData(loadMarkerData);
+        mapModuleInterface.addListenerToChangeCurrentLocation(setMapCenter);
+
+        $http.get('styles/special/mapStyle.json')
+          .success(function(data, status) {
+            $scope.map.setOptions({styles: data});
+          })
+          .error(function(data,status) {
+            // TODO: error handling
+            console.error('http mapStyle FAILURE', data, status);
+          });
+      }
     });
 
 
+    // show/hide elements for mobile view
     $scope.show = {
       filter: true,
       list: true,
@@ -134,21 +126,5 @@ angular.module('addicaidSiteApp')
 
 
 
-//    meetingCache.setLimitTo(10);
-    // PAGINATION
-    $scope.currentPage = 0;
-    $scope.pageSize = 6;
-    $scope.numberOfPages = function() {
-      return Math.ceil($scope.meetings.length/$scope.pageSize);
-    };
+
   }]);
-
-
-// TODO: move filter to another file
-angular.module('addicaidSiteApp')
-  .filter('startFrom', function() {
-    return function(input, start) {
-      start = +start; //parse to int
-      return input.slice(start);
-    }
-  });

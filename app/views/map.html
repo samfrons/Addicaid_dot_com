@@ -12,39 +12,20 @@
 
 <div class="row-fluid">
 
-  <!--<h1 class="section_head" id="meeting"></h1>-->
-  <section class="mobile_page" id="list_page">
-    
- <h1 class="mobile">nearby meetings</h1>
-  <section class="mobile_page" id="list_page" ng-show="show.list">
-
-    <div class="span4 meeting_results">
-      <div ng-repeat="meeting in meetings | orderBy:distance | startFrom:currentPage*pageSize | limitTo:pageSize">
-        <ng-include src="getPartialUrl('meetingDetailSmall')" ng-controller="MeetingDetailSmallCtrl"></ng-include>
-      </div>
-      <div class="pagination">
-      <button class="previous" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
-        <
-      </button>
-      {{currentPage+1}} of {{numberOfPages()}}
-      <button class="next" ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1">
-        >
-      </button>
-    </div>
-    </div>
-  </section>
+  <h1 class="mobile">nearby meetings</h1>
+  <ng-include src="getPartialUrl('meetingList')" ng-controller="MeetingListCtrl" ng-show="show.list"></ng-include>
 
 
 
-<h1 class="mobile">map</h1>
+  <h1 class="mobile">map</h1>
   <section class="mobile_page map_page" id="map_page">
-   <div id="map_canvas" ui-map="map" class="span8 map" width="67.95745%"
+    <div id="map_canvas" ui-map="map" class="span8 map" width="67.95745%"
          ui-event="{'map-bounds_changed': 'updateMapBounds()'}"
          ui-options="mapOptions">
     </div>
-<!--ui-event="{'map-bounds_changed': 'updateMapBounds()', 'map-center_changed': 'updateCurrentLocationFromMapCenter()'}"-->
-      <!-- Giving the div an id="map_canvas" fix problems with twitter bootstrap affecting google maps -->
- 
+    <!--ui-event="{'map-bounds_changed': 'updateMapBounds()', 'map-center_changed': 'updateCurrentLocationFromMapCenter()'}"-->
+    <!-- Giving the div an id="map_canvas" fix problems with twitter bootstrap affecting google maps -->
+
 
     <!-- this is the confusing part. we have to point the map marker directive
         at an existing google.maps.Marker object, so it can hook up events -->
@@ -59,9 +40,6 @@
 
   <nav class="bottom_map">
     <ul>
-      <!--<a ng-click="scrollTo('list_page')"><li class="span3">list</li></a>-->
-      <!--<a ng-click="scrollTo('map_page')"><li class="span3">map</li></a>-->
-      <!--<a ng-click="scrollTo('filter_page')"><li class="span3">filter</li></a>-->
       <a ng-click="showOnly('list')"><li class="span3">list</li></a>
       <a ng-click="showOnly('map')"><li class="span3">map</li></a>
       <a ng-click="showOnly('filter')"><li class="span3">filter</li></a>

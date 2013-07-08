@@ -19,13 +19,13 @@
   </div>
 
   <div class="span4 location">
-    <button class="here" ui-show='formData.geolocationSelected' ng-click="clickGeolocation()"></button>
+    <button class="here" ui-show='locationFilter.useGeolocation' ng-click="clickGeolocation()"></button>
     or
-    <input type="text" placeholder="address" ng-model="formData.customAddress" />
+    <input type="text" placeholder="address" ng-model="locationFilter.customAddress" />
   </div>
 
   <div class="span3">
-    <button class="find_meeting" ng-click="findMeetings()">find a meeting! <img src="../images/find_meeting.gif"></button>
+    <button class="find_meeting" ng-click="findMeetings()">find a meeting! <img src="images/find_meeting.gif"></button>
   </div>
 </div>
 

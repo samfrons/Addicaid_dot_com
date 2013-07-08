@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .factory('googleGeocoder', ['$q', function($q) {
+  .factory('googleGeocoder', ['$q', '$rootScope', function($q, $rootScope) {
 
 //    var googleGeocodeRestangular = Restangular.withConfig(function(RestangularConfigurer) {
 //      RestangularConfigurer.setBaseUrl('http://maps.googleapis.com/maps/api/geocode/json');
@@ -17,12 +17,14 @@ angular.module('addicaidSiteApp')
         };
 
         geocoder.geocode(request, function(results, status) {
-          console.log('geocode response', status, results);
-          if (status === google.maps.GeocoderStatus.OK) {
-            deferred.resolve(results);
-          } else {
-            deferred.reject(status);
-          }
+          $rootScope.$apply(function() { // use $apply because geocoder is outside of angular
+            console.log('geocode response', status, results);
+            if (status === google.maps.GeocoderStatus.OK) {
+              deferred.resolve(results);
+            } else {
+              deferred.reject(status);
+            }
+          });
         });
 
         return deferred.promise;

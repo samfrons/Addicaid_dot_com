@@ -1,10 +1,8 @@
 'use strict';
 
 angular.module('addicaidSiteApp')
-  .factory('meetingCache', ['$http', '$rootScope', '$filter', 'timeInterval', '$timeout', 'meetingServer', 'distanceMath', 'currentLocations', function($http, $rootScope, $filter, timeInterval, $timeout, meetingServer, distanceMath, currentLocations) {
+  .factory('meetingCache', ['eventService', '$http', '$rootScope', '$filter', 'timeInterval', '$timeout', 'meetingServer', 'distanceMath', 'filterModuleInterface', 'filterService', '$q', function(eventService, $http, $rootScope, $filter, timeInterval, $timeout, meetingServer, distanceMath, filterModuleInterface, filterService, $q) {
     var serviceAPI = {
-      meetingsProcessedEvent: 'meetingCache_meetingsProcessed',
-      initSearchBoundsDefinedEvent: 'meetingCache_initSearchBoundsDefined',
     };
 
 
@@ -12,6 +10,7 @@ angular.module('addicaidSiteApp')
     var limitTo;
 
     var isDirty = true; // flag used to determine whether server needs to be called for new data
+    var isWaitingForData = false;
 
     var cachedMeetings = []; // latest list of meetings retrieved from server
 
@@ -54,29 +53,32 @@ angular.module('addicaidSiteApp')
 
         // clean up time
         var day;
+        /* jshint -W015 */
         switch (meeting.schedule.dayAbbrev) {
-        case 'SU':
-          day = 0;
-          break;
-        case 'MO':
-          day = 1;
-          break;
-        case 'TU':
-          day = 2;
-          break;
-        case 'WE':
-          day = 3;
-          break;
-        case 'TH':
-          day = 4;
-          break;
-        case 'FR':
-          day = 5;
-          break;
-        case 'SA':
-          day = 6;
-          break;
+          case 'SU':
+            day = 0;
+            break;
+          case 'MO':
+            day = 1;
+            break;
+          case 'TU':
+            day = 2;
+            break;
+          case 'WE':
+            day = 3;
+            break;
+          case 'TH':
+            day = 4;
+            break;
+          case 'FR':
+            day = 5;
+            break;
+          case 'SA':
+            day = 6;
+            break;
         }
+        /* jshint +W015 */
+
 //        var dt = new Date(1,0,day,0,0,0,0); // we dont care about year/month, but let's set day of week
         var dt = new Date();
         dt.setFullYear(1,0,day); // we dont care about year/month, but let's set day of week
@@ -109,30 +111,31 @@ angular.module('addicaidSiteApp')
         });
 
         // distance calculation
-        var distance = distanceMath.distance(currentLocations.getCurrentLocationLatLng().lat(), currentLocations.getCurrentLocationLatLng().lng(), meeting.location.center.latitude, meeting.location.center.longitude, 'M');
+        var distance = distanceMath.distance(filterModuleInterface.getCurrentLocationLatLng().lat(), filterModuleInterface.getCurrentLocationLatLng().lng(), meeting.location.center.latitude, meeting.location.center.longitude, 'M');
         angular.extend(meeting, { distance: distance });
       });
 
       isDirty = false;
-      console.log('*** got '+ cachedMeetings.length + ' meetings (' + serviceAPI.getMeetingsFromCache().length + ' filtered) ***', cachedMeetings);
-      $rootScope.$broadcast(serviceAPI.meetingsProcessedEvent, [/* meetingsProcessedArgs */]);
+      console.log('*** got '+ cachedMeetings.length + ' meetings (' + serviceAPI.getMeetingsFromCache().length + ' filtered) ***');
+      eventService.broadcastRootEvent(eventService.dataCacheRefreshedEvent  );
     };
 
 
 
 
-
-    $rootScope.$on(currentLocations.locationChangedEvent, function(latLng) {
-      console.log('cache')
-      isDirty = true;
+    // register filter change events
+    eventService.registerRootEventHandler(eventService.filterChangedEvent, function() {
+      eventService.broadcastRootEvent(eventService.dataCacheRefreshedEvent  );
     });
+//    eventService.registerRootEventHandler(eventService.locationFilterChangedEvent, function() {
+//      eventService.broadcastRootEvent(eventService.dataCacheRefreshedEvent  );
+//    });
 
 
 
 
 
-
-// Public API
+    // Public API
     angular.extend(serviceAPI, {
       setMapBounds: function(mapBounds) {
         // sets the searchBounds based on the input map bounds
@@ -140,10 +143,9 @@ angular.module('addicaidSiteApp')
         var wasDefined = angular.isDefined(searchBounds);
         searchBounds = calculateSearchBounds(mapBounds);
         isDirty = true;
-
         if (!wasDefined && angular.isDefined(mapBounds)) {
           // send refresh event on first time setting searchBounds object
-          $rootScope.$broadcast(serviceAPI.initSearchBoundsDefinedEvent);
+          eventService.broadcastRootEvent(eventService.dataCacheRefreshedEvent  );
         }
       },
 //      setCurrentLocation: function(latLng) {
@@ -157,16 +159,27 @@ angular.module('addicaidSiteApp')
       },
       getMeetingsFromCache: function(callingFuncName) {
         // bb is the bounding box of type google.maps.LatLngBounds
-        console.log('getMeetingsFromCache - '+ callingFuncName + ' and isDirty='+isDirty+' and isDefined(searchBounds)='+angular.isDefined(searchBounds)); // optional arg used for logging to determine where call originated
-        if (isDirty && angular.isDefined(searchBounds)) {
-          meetingServer.getMeetingsFromServer(searchBounds).then(function(meetings) {
-            processMeetings(meetings);
-          });
+        console.log('***>>> meetingCache.getMeetingsFromCache - '+ callingFuncName + ' and isDirty='+isDirty+' and isDefined(searchBounds)='+angular.isDefined(searchBounds)); // optional arg used for logging to determine where call originated
+
+        var deferred = $q.defer();
+
+        if (isDirty && angular.isDefined(searchBounds) && !isWaitingForData) {
+          isWaitingForData = true;
+          meetingServer.getMeetingsFromServer(searchBounds, callingFuncName)
+            .then(function(meetings) {
+              processMeetings(meetings);
+              isWaitingForData = false;
+            }, function(reason) {
+              isWaitingForData = false;
+            });
         }
 
         // TODO: need promises here.  for now, returns the old cachedMeetings and use broadcast to make change
-        return cachedMeetings;
+        return filterService.filter(cachedMeetings);
         // return: array of meeting objects from server
+      },
+      getCurrentLocationLatLng: function() {
+        return filterModuleInterface.getCurrentLocationLatLng();
       }
 
 
