@@ -46,7 +46,7 @@ div.filter div {
 
 button.find_meeting {
   color: white !important;
-  background-image: url(/../images/filter_background.jpeg);
+  background-color:  rgb(240,81,35) !important;
 }
 
 div.location {
@@ -77,13 +77,12 @@ section.filter_page {
 	height: 100% !important;
 	min-height: 100% !important;
 	max-height: 100% !important;
-      background-color: red !important;
 }
 
 h1.mobile {
   display: block;
   background-color: #f05122;
-  background-image: url(/../images/people_background.jpeg);
+  
   box-shadow: 0px 1px 3px black;
   text-transform: uppercase;
   color: white;

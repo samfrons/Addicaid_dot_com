@@ -9,9 +9,10 @@
 @import "compass"
 @import "compass/css3/font-face"
 
-+font-face("Mensch", sans-serif, font-files("fonts/mensch.ttf"))
+
 
 $gray: rgba(230,230,230,1)
+$orange: rgb(240,81,35)
 
 $AA: #005d9a
 $NA: #ca3347
@@ -37,8 +38,19 @@ h2
 h3
  font-size: 2em
 
+input
+ -webkit-appearance: none
+ border-radius: 0px !important
 
 a
+
+nav.header
+ ul
+  li.signup
+   text-align: right
+   width: 35%
+   color: $orange
+
 
 
 nav
@@ -141,7 +153,7 @@ p
  hgroup
   margin: 0 auto
   text-align: center
-  font-family: Mensch, sans-serif
+
   padding: 50px 40px 0px 40px
   color: white
   text-shadow: 0px 1px 1px black
@@ -155,11 +167,26 @@ p
    font-size: 3.5em !important
 
 /* signup */
-div.signup
- width: 80%
+
+div.signup_box
+ background: rgba(240,81,35,.8)
+ margin: 5% 0 0 0
  form.signup
+  border-right: 1px solid white
+  margin: 10px
   max-width: 100%
-  margin: 10px 0 0 0
+ h1, h2
+  color: white
+ #age2
+  width: 20%
+ select
+  width: 40%
+ li.login
+  min-width: 200px
+
+
+ 
+
   
   label
    font-weight: bold !important
@@ -357,13 +384,10 @@ div.meeting_results
    font-weight: normal
 
 #filter_page
- background: #18c9bf
- background-image: url(../images/filter_background.jpeg)
- background-size: cover
+ background: rgb(240,81,35)
  button
   background-color: white
   color: #5e5d5d
-  box-shadow: 0px 1px 2px gray, 0px 1px 3px black
  button.selected
   box-shadow: 0px 1px 2px black
 
@@ -490,7 +514,7 @@ nav.bottom
  .word9 
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de
   text-shadow: none
-  font-family: 'Mensch', sans-serif
+  font-family: '', sans-serif
   -webkit-animation-delay: 2.4s
   -webkit-animation-name: bounceInLeft
   font-size: 1.1em
@@ -565,7 +589,12 @@ h1.section_head
 
 
 /* media queries */
+@media (max-width: 1080px)
+ .refresh
+  width: 15% !important
+  button.find_meeting
 
+   display: inline-block
 
 @media (max-width: 600px)
  .aboutus 
