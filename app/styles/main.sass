@@ -41,32 +41,7 @@ h3
 input
  -webkit-appearance: none
  border-radius: 0px !important
-
-a
-
-nav.header
- ul
-  li.signup
-   text-align: right
-   width: 35%
-   color: $orange
-
-
-
-nav
- width: 100%
- ul
-  width: 100%
-  li
-   display: inline-block
-   text-transform: uppercase
-   margin: 0 20px 0 0
-   font-weight: bold
-   a
-    color: #0088cc
-
-
-button[type="submit"]
+ button[type="submit"]
  background-color: #20499d
  color: white
  text-transform: uppercase
@@ -80,12 +55,156 @@ button
 .selected
  color: white
  background-color: rgba(20,20,20,.7)
-button.find_meeting
- text-align: center
- width: 95%
- margin: -50px 0 0 0
 
-  
+nav
+ width: 100%
+ ul
+  width: 100%
+  li
+   display: inline-block
+   text-transform: uppercase
+   margin: 0 20px 0 0
+   font-weight: bold
+   a
+    color: #0088cc
+
+.container
+ margin: 0 auto
+ width: 100%
+
+.row-fluid
+ margin: 0 auto
+
+p
+ font-weight: 200
+
+nav.bottom
+ display: none
+
+.headline
+ height: 100%
+ min-height: 500px
+ background-repeat: repeat-x
+ hgroup
+  margin: 0 auto
+  text-align: center
+  padding: 50px 40px 0px 40px
+  color: white
+  text-shadow: 0px 1px 1px black
+
+footer
+ text-align: center
+ margin: 50px 0 20px 0
+
+.offset1
+ margin-left: 10.21111% !important
+
+.social
+ background-size: 20px 20px
+ background-repeat: no-repeat
+ background-position: 5px 5px
+ height: 20px
+ display: inline-block
+ padding: 5px
+ min-width: 20px
+ text-indent: 25px
+ color: white
+ font-weight: bold
+ opacity: 0.9
+ &:hover
+  color: white
+  text-decoration: none
+  opacity: 1
+  -webkit-transition: .5s all ease-in
+.twitter_link 
+ background-image: url(../images/twitter.png)
+ background-color: rgba(27,182,236,1)
+.linkedin_link
+ background-image: url(../images/linkedin_icon.png)
+ background-color: rgba(0,118,158,1)
+.facebook_link
+ background-image: url(../images/facebook.png)
+ background-color: #3d5a9c
+ background-size: 13px 20px
+ background-position:  7px 5px
+
+
+nav.header
+ ul
+  li.signup
+   text-align: right
+   width: 35%
+   color: $orange
+ /* ----------------- general styles end ----------------- */
+
+/* ----------------- welcome page copy ----------------- */
+ div.copy 
+  background-image: url(../images/filter_background.jpeg)
+  margin: 50px 0 0 0
+  min-width: 320px
+  width: 100%
+  max-width: 100%
+  background-size: cover
+
+ .word9 
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de
+  text-shadow: none
+  font-family: '', sans-serif
+  -webkit-animation-delay: 2.4s
+  -webkit-animation-name: bounceInLeft
+  font-size: 1.1em
+  padding: 10px 0 0 0
+
+ .word13 
+  text-transform: capitalize
+  font-family: Alright Sans, Open Sans, sans-serif
+  position: relative
+  color: rgba(0,0,0,.8)
+  font-size: .5em
+  font-weight: normal
+  margin: 0 0 50px 0
+
+
+/* ----------------- signup ----------------- */
+
+div#signup_box
+ background-color: rgba(240,81,35,.8)
+ width: 600px
+ margin: 5% 0 0 0
+ form.signup
+  border-right: 1px solid white
+  padding: 5px
+  margin: 5px
+  max-width: 100%
+ h1, h2
+  color: white
+ #age2
+  width: 20%
+ select
+  width: 40%
+ li.login
+  min-width: 200px
+  label
+   font-weight: bold !important
+  input
+   max-width: 305px
+   padding: 8px
+   border: 1px solid #999
+   -webkit-appearance: none
+   width: 100%
+   border-radius: 0px !important    
+  div
+   ul
+    margin: 0 0 5px 0
+    li
+     display: inline-block
+    .or
+     font-weight: bold
+     .social
+      padding: 8px
+      min-width: 100px
+
+/* ----------------- meeting finder ----------------- */
 
 h5
  border-bottom: 1px solid rgba(220,220,220,1)
@@ -106,9 +225,8 @@ h5
    padding: 0 2px 1px 2px
 
 
-p
- font-weight: 200
 
+/* ----------------- corporate site styles ----------------- */
 .latest
  margin-left: 20px !important
  .competitions
@@ -122,42 +240,6 @@ p
    background-repeat: no-repeat
    height: 30px
 
-.meeting_button
- text-align: center
- text-transform: uppercase
- font-weight: bold
- padding: 15px 0 10px 0
- background-color: rgba(240, 81, 35, .9)
- box-shadow: 0px 1px 2px rgba(40, 11, 25, .9)
- -webkit-transition: .5s all ease
- a
-  color: white !important
-  font-size: 1.7em
-  padding: 5px
-  text-shadow: none
-  text-decoration: none !important
- &:hover
-  background-color: rgba(250, 31, 15, .9)
-
-.container
- margin: 0 auto
- width: 100%
-
-.row-fluid
- margin: 0 auto
-
-.headline
- height: 100%
- min-height: 500px
- background-repeat: repeat-x
- hgroup
-  margin: 0 auto
-  text-align: center
-
-  padding: 50px 40px 0px 40px
-  color: white
-  text-shadow: 0px 1px 1px black
-
 .people_background
  background-image: url("../images/people_background.jpeg")
  width: 100% !important
@@ -166,52 +248,8 @@ p
   h2
    font-size: 3.5em !important
 
-/* signup */
-
-div.signup_box
- background: rgba(240,81,35,.8)
- margin: 5% 0 0 0
- form.signup
-  border-right: 1px solid white
-  margin: 10px
-  max-width: 100%
- h1, h2
-  color: white
- #age2
-  width: 20%
- select
-  width: 40%
- li.login
-  min-width: 200px
-
-
- 
-
-  
-  label
-   font-weight: bold !important
-  input
-   max-width: 305px
-   padding: 8px
-   border: 1px solid #999
-   -webkit-appearance: none
-   width: 100%
-   border-radius: 0px !important
-      
-  div
-   ul
-    margin: 0 0 5px 0
-    li
-     display: inline-block
-    .or
-     font-weight: bold
-     .social
-      padding: 8px
-      min-width: 100px
-
 .awards
  background-image: url(../images/cheerleaders.jpeg)
-
  width: 100% !important
  height: inherit
  padding: 20px 0 20px 0
@@ -224,7 +262,6 @@ div.signup_box
   text-transform: uppercase
   font-weight: bold
   margin: 10px 0 0 0
-
  .span4
   text-align: center
 
@@ -240,16 +277,11 @@ div.signup_box
  img
   height: 40px
 
-footer
- text-align: center
- margin: 50px 0 20px 0
-
 .abouthead
  padding: 0 0 0 10px
 .investors
  background-image: url(../images/bender.jpeg)
  background-size: cover
- 
  hgroup
   text-align: left
   h2
@@ -260,17 +292,14 @@ footer
    font-style: italic
    font-size: 2em
    font-weight: normal
-
 .videos
  width: 90%
  margin: 0 auto
  h2
   text-transform: uppercase
   text-align: center
-
 .investor_info
  padding: 5px
-
 label 
  font-weight: 100 !important
  margin: 5px 0 0 0
@@ -308,40 +337,9 @@ label
   -webkit-transition: 1s opacity ease
   &:hover
    opacity: 1
-.offset1
- margin-left: 10.21111% !important
 
-.social
- background-size: 20px 20px
- background-repeat: no-repeat
- background-position: 5px 5px
- height: 20px
- display: inline-block
- padding: 5px
- min-width: 20px
- text-indent: 25px
- color: white
- font-weight: bold
- opacity: 0.9
- &:hover
-  color: white
-  text-decoration: none
-  opacity: 1
-  -webkit-transition: .5s all ease-in
 
-.twitter_link 
- background-image: url(../images/twitter.png)
- background-color: rgba(27,182,236,1)
-.linkedin_link
- background-image: url(../images/linkedin_icon.png)
- background-color: rgba(0,118,158,1)
-.facebook_link
- background-image: url(../images/facebook.png)
- background-color: #3d5a9c
- background-size: 13px 20px
- background-position:  7px 5px
-
-/* meeting page */
+/* ------------------------------- meeting page ------------------------------- */
 div.meeting_results
  display: inline-block
  div.meeting_result
@@ -370,7 +368,6 @@ div.meeting_results
     opacity: 0.8
    .type
     opacity: 0.6
-
   div#info
    width: 25%
    text-align: center
@@ -463,16 +460,13 @@ div.meeting_results
   height: 40px
   width: 40px
 
-nav.bottom
- display: none
 
 
-/* mobile main page */
+
+/* --------------------------------mobile ------------------------------------- */
 #main_page
  text-align: center
  overflow-x: hidden !important
-
-
  .bigdealcontainer#mobile_view
   height: auto
   font-family: 'Alright Sans', sans-serif
@@ -483,7 +477,6 @@ nav.bottom
   color: white
   margin: 0
   width: 100%
-  
   .icon_part
    img.icon_large
     -webkit-animation-fill-mode: both
@@ -495,40 +488,11 @@ nav.bottom
     display: inline-block
     height: 50%
     width: 50%
-
   .homescreen_add
    color: rgba(240,80,35,1)
    text-transform: capitalize
    font-style: italic
    font-size: .5em
-
- 
- div.copy 
-  background-image: url(../images/filter_background.jpeg)
-  margin: 50px 0 0 0
-  min-width: 320px
-  width: 100%
-  max-width: 100%
-  background-size: cover
-
- .word9 
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de
-  text-shadow: none
-  font-family: '', sans-serif
-  -webkit-animation-delay: 2.4s
-  -webkit-animation-name: bounceInLeft
-  font-size: 1.1em
-  padding: 10px 0 0 0
-  
-
- .word13 
-  text-transform: capitalize
-  font-family: Alright Sans, Open Sans, sans-serif
-  position: relative
-  color: rgba(0,0,0,.8)
-  font-size: .5em
-  font-weight: normal
-  margin: 0 0 50px 0
 
  nav.bottom_mobile
   position: fixed
@@ -559,9 +523,6 @@ nav.bottom
      text-align: center
      color: white
   
-
-
-/* mobile no displays */
 h1.mobile
  display: none
 
@@ -588,13 +549,21 @@ h1.section_head
  padding: 3px
 
 
-/* media queries */
+
+
+
+
+/* ----------------- media queries ----------------- */
 @media (max-width: 1080px)
  .refresh
   width: 15% !important
   button.find_meeting
 
    display: inline-block
+
+ #signup_box 
+  width: 50% !important
+
 
 @media (max-width: 600px)
  .aboutus 
@@ -606,3 +575,7 @@ h1.section_head
    font-size: .7em
  .offset1
   margin-left: 0px !important
+
+@media (max-width: 767px)
+ #signup_box 
+  width: 100% !important
