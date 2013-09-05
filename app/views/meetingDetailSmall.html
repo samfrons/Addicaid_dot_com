@@ -1,6 +1,6 @@
  
-<div class="meeting_result">
-
+<div class="meeting_result small">
+<a class="meetingentry" href="#meetingentry">
   <div class="meeting_entry">
     <div id="meeting_info">
       <p>
@@ -9,13 +9,17 @@
         <span class="city_state">{{meeting.location.address.city.city}},{{meeting.location.address.city.state}}</span><br/>
         <span class="type" style="">{{meeting.fellowship.displayText}}</span>
       </p>
+      <p class="details tags">snacks and coffee, young people, nice venue</p>
+      <p><span class="details comments">13 comments</span>
+      <span class="details members"> 42 members</span></p>
     </div>
     <div id="info">
-      <span class="time">{{meeting.schedule.timeObj | date:'shortTime'}}</span></br>
-      <span class="day">{{meeting.schedule.timeObj | date:'EEE'}}</span><br/>
-      <span class="distance">{{meeting.distance | number:1}} miles</span>
-      <a ng-href="http://maps.google.com/maps?q={{meeting.location.google.q}}&f=d" target="_blank"><button class="directions">directions</button></a>
-    </div>
+      <h3 class="time">{{meeting.schedule.timeObj | date:'shortTime'}}</h3>
+      <h3 class="day">{{meeting.schedule.timeObj | date:'EEE'}}</h3>
 
+      <a ng-href="http://maps.google.com/maps?q={{meeting.location.google.q}}&f=d" class="directions" target="_blank">
+        <p class="distance"><img src="../images/directions.png"/><br/>{{meeting.distance | number:1}} miles</p></a>
+    </div>
   </div>
+</a>
 </div>

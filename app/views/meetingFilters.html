@@ -1,7 +1,19 @@
 <hr/>
 
+<div class="row-fluid filter">
+  <div class="span5">
+    <input type="text" class="span12 search_text" placeholder="Search by meeting name or keywords" />
+  </div>
+
+ <div class="span2 offset3 reset">
+    <button class="find_meeting" ng-click="findMeetings()">Refresh</button>
+  </div>
+
+</div>
+
 
 <div class="row-fluid filter">
+
   <div class="span2 type">
     <or-filter default-filter-items="fellowshipFilterItems" on-filter-changed="onFellowshipFilterChanged(selectedFilters)"></or-filter>
   </div>
@@ -11,23 +23,19 @@
   <div class="span4 day">
     <or-filter default-filter-items="dayFilterItems" on-filter-changed="onDayFilterChanged(selectedFilters)"></or-filter>
   </div>
-</div>
 
-<div class="row-fluid filter">
+
+
   <div class="span2 time">
     <or-filter default-filter-items="timeFilterItems" on-filter-changed="onTimeFilterChanged(selectedFilters)"></or-filter>
   </div>
 
-  <div class="span4 location">
+  <div class="span2 location">
     <button class="here" ui-show='locationFilter.useGeolocation' ng-click="clickGeolocation()"></button>
     or
     <input type="text" placeholder="address" ng-model="locationFilter.customAddress" />
   </div>
 
-  <div class="span3 refresh">
-    <button class="find_meeting" ng-click="findMeetings()">find a meeting! <img src="images/find_meeting.gif"></button>
-  </div>
+ 
 </div>
 
-<div class="row-fluid">
-</div>

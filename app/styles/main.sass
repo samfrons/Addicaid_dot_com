@@ -8,7 +8,10 @@
 @import "map"
 @import "compass"
 @import "compass/css3/font-face"
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900)
 
+a:hover
+ text-decoration: none
 
 
 $gray: rgba(230,230,230,1)
@@ -28,7 +31,7 @@ html
  width: 100%
 
 body
- font-family:  futura, sans-serif
+ font-family: 'Source Sans Pro', sans-serif
  padding: 0px !important
  overflow-x: hidden !important
  width: 100%
@@ -45,17 +48,20 @@ h3
 input
  -webkit-appearance: none
  border-radius: 0px !important
+ button[type="submit"]
+ background-color: #20499d
+ color: white
 
-a
-
-nav.header
- ul
-  li.signup
-   text-align: right
-   width: 35%
-   color: $orange
-
-
+button
+ border: 1px solid rgba(220,220,220,1)
+ padding: 3px
+ text-transform: uppercase
+ color: rgba(40,40,40,1)
+ font-weight: 500
+ letter-spacing: .2em
+.selected
+ color: white
+ background-color: rgba(20,20,20,.7)
 
 nav
  width: 100%
@@ -69,27 +75,146 @@ nav
    a
     color: #0088cc
 
+.container
+ margin: 0 auto
+ width: 100%
 
-button[type="submit"]
- background-color: #20499d
- color: white
- text-transform: uppercase
-button
- border: 1px solid rgba(220,220,220,1)
- padding: 3px
- text-transform: uppercase
- color: rgba(40,40,40,1)
- font-weight: 500
- letter-spacing: .2em
-.selected
- color: white
- background-color: rgba(20,20,20,.7)
-button.find_meeting
+.row-fluid
+ margin: 0 auto
+
+p
+ font-weight: 200
+
+nav.bottom
+ display: none
+
+.headline
+ height: 100%
+ min-height: 500px
+ background-repeat: repeat-x
  text-align: center
- width: 95%
- margin: -50px 0 0 0
+ hgroup
+  margin: 0 auto
+  text-align: center
+  padding: 50px 40px 0px 40px
+  color: white
+  text-shadow: 0px 1px 1px black
 
-  
+footer
+ text-align: center
+ margin: 50px 0 20px 0
+
+.offset1
+ margin-left: 10.21111% !important
+
+.social
+ background-size: 20px 20px
+ background-repeat: no-repeat
+ background-position: 5px 5px
+ height: 20px
+ display: inline-block
+ padding: 5px
+ min-width: 20px
+ text-indent: 25px
+ color: white
+ font-weight: bold
+ opacity: 0.9
+ &:hover
+  color: white
+  text-decoration: none
+  opacity: 1
+  -webkit-transition: .5s all ease-in
+.twitter_link 
+ background-image: url(../images/twitter.png)
+ background-color: rgba(27,182,236,1)
+.linkedin_link
+ background-image: url(../images/linkedin_icon.png)
+ background-color: rgba(0,118,158,1)
+.facebook_link
+ background-image: url(../images/facebook.png)
+ background-color: #3d5a9c
+ background-size: 13px 20px
+ background-position:  7px 5px
+
+
+nav.header
+ ul
+  li.signup
+   text-align: right
+   width: 35%
+   color: $orange
+ /* ----------------- general styles end ----------------- */
+
+/* ----------------- welcome page copy ----------------- */
+ div.copy 
+  background-image: url(../images/filter_background.jpeg)
+  margin: 50px 0 0 0
+  min-width: 320px
+  width: 100%
+  max-width: 100%
+  background-size: cover
+
+ .word9 
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de
+  text-shadow: none
+  font-family: '', sans-serif
+  -webkit-animation-delay: 2.4s
+  -webkit-animation-name: bounceInLeft
+  font-size: 1.1em
+  padding: 10px 0 0 0
+
+ .word13 
+  text-transform: capitalize
+  font-family: Alright Sans, Open Sans, sans-serif
+  position: relative
+  color: rgba(0,0,0,.8)
+  font-size: .5em
+  font-weight: normal
+  margin: 0 0 50px 0
+
+
+/* ----------------- signup ----------------- */
+
+div#signup_box
+ background-color: rgba(240,81,35,.8)
+ width: 600px
+ margin: 5% 0 0 0
+ color: white
+ form.signup
+  border-right: 1px solid white
+  padding: 5px
+  margin: 5px
+  max-width: 100%
+ h1, h2
+  color: white
+ #age2
+  width: 20%
+ select
+  width: 40%
+ li.login
+  min-width: 200px
+  margin: 10px
+  label
+   font-weight: bold !important
+  input
+   max-width: 305px
+   padding: 8px
+   border: 1px solid #999
+   -webkit-appearance: none
+   width: 100%
+   border-radius: 0px !important    
+  div
+   ul
+    margin: 0 0 5px 0
+    li
+     display: inline-block
+    .or
+     font-weight: bold
+     .social
+      padding: 8px
+      min-width: 100px
+
+/* ----------------- meeting finder ----------------- */
 
 h5
  border-bottom: 1px solid rgba(220,220,220,1)
@@ -110,9 +235,8 @@ h5
    padding: 0 2px 1px 2px
 
 
-p
- font-weight: 200
 
+/* ----------------- corporate site styles ----------------- */
 .latest
  margin-left: 20px !important
  .competitions
@@ -126,99 +250,16 @@ p
    background-repeat: no-repeat
    height: 30px
 
-.meeting_button
- text-align: center
- text-transform: uppercase
- font-weight: bold
- padding: 15px 0 10px 0
- background-color: rgba(240, 81, 35, .9)
- box-shadow: 0px 1px 2px rgba(40, 11, 25, .9)
- -webkit-transition: .5s all ease
- a
-  color: white !important
-  font-size: 1.7em
-  padding: 5px
-  text-shadow: none
-  text-decoration: none !important
- &:hover
-  background-color: rgba(250, 31, 15, .9)
-
-.container
- margin: 0 auto
- width: 100%
-
-.row-fluid
- margin: 0 auto
-
-.headline
- height: 100%
- min-height: 500px
- background-repeat: repeat-x
- text-align: center
- hgroup
-  margin: 0 auto
-  text-align: center
-
-  padding: 50px 40px 0px 40px
-  color: white
-  text-shadow: 0px 1px 1px black
-
 .people_background
  background-image: url("../images/people_background.jpeg")
  width: 100% !important
  hgroup
   font-size: 90% !important
   h2
-   font-size: 3.5em !important
-
-/* signup */
-
-div.signup_box
- background: rgba(240,81,35,.8)
- margin: 5% 0 0 0
- color: white
- form.signup
-  border-right: 1px solid white
-  margin: 10px
-  max-width: 100%
- h1, h2
-  color: white
- #age2
-  width: 20%
- select
-  width: 40%
- li.login
-  min-width: 200px
-  margin: 10px
-
-
- 
-
-  
-  label
-   font-weight: bold !important
-  input
-   max-width: 305px
-   padding: 8px
-   border: 1px solid #999
-   -webkit-appearance: none
-   width: 100%
-   border-radius: 0px !important
-      
-  div
-   ul
-    margin: 0 0 5px 0
-    li
-     display: inline-block
-    .or
-     font-weight: bold
-     .social
-      padding: 8px
-      min-width: 100px
+   font-size: 3.2em !important
 
 .awards
  background-image: url(../images/cheerleaders.jpeg)
-
  width: 100% !important
  height: inherit
  padding: 20px 0 20px 0
@@ -231,7 +272,6 @@ div.signup_box
   text-transform: uppercase
   font-weight: bold
   margin: 10px 0 0 0
-
  .span4
   text-align: center
 
@@ -247,16 +287,11 @@ div.signup_box
  img
   height: 40px
 
-footer
- text-align: center
- margin: 50px 0 20px 0
-
 .abouthead
  padding: 0 0 0 10px
 .investors
  background-image: url(../images/bender.jpeg)
  background-size: cover
- 
  hgroup
   text-align: left
   h2
@@ -267,17 +302,14 @@ footer
    font-style: italic
    font-size: 2em
    font-weight: normal
-
 .videos
  width: 90%
  margin: 0 auto
  h2
   text-transform: uppercase
   text-align: center
-
 .investor_info
  padding: 5px
-
 label 
  font-weight: 100 !important
  margin: 5px 0 0 0
@@ -315,61 +347,53 @@ label
   -webkit-transition: 1s opacity ease
   &:hover
    opacity: 1
-.offset1
- margin-left: 10.21111% !important
 
-.social
- background-size: 20px 20px
- background-repeat: no-repeat
- background-position: 5px 5px
- height: 20px
- display: inline-block
- padding: 5px
- min-width: 20px
- text-indent: 25px
- color: white
- font-weight: bold
- opacity: 0.9
- &:hover
-  color: white
-  text-decoration: none
-  opacity: 1
-  -webkit-transition: .5s all ease-in
 
-.twitter_link 
- background-image: url(../images/twitter.png)
- background-color: rgba(27,182,236,1)
-.linkedin_link
- background-image: url(../images/linkedin_icon.png)
- background-color: rgba(0,118,158,1)
-.facebook_link
- background-image: url(../images/facebook.png)
- background-color: #3d5a9c
- background-size: 13px 20px
- background-position:  7px 5px
-
-/* meeting page */
+/* ------------------------------- meeting page ------------------------------- */
 div.meeting_results
  display: inline-block
+ a.meetingentry
+  color: rgb(40, 40, 40)
  div.meeting_result
   width: 100%
-  max-width: 500px
   border-bottom: 1px solid gray
   margin: 2px 0 0 0
   padding: 3.5px
   div#meeting_info
-   width: 72%
-   font-size: 1em
-   font-weight: 600
+   width: 73%
+   font-size: 1.2em
+   font-weight: 500
    padding: 5px 0 0 5px
    display: inline-block !important
-   text-transform: capitalize
+   p
+    text-transform: capitalize
+    color: rgb(40, 40, 40) !important
+    font-weight: 500
+   .details
+    padding-left: 35px
+    height: 30px
+    background-repeat: no-repeat
+   .tags
+    background-image: url(../images/tags.png)
+    opacity: 0.8
+   .comments
+    background-image: url(../images/comments.png)
+    opacity: 0.8
+   .members
+    background-image: url(../images/members.png)
+    opacity: 0.8
+    margin: 0 0 0 5px
   button.directions
    letter-spacing: auto
    font-size: .9em !important
    position: relative
    background: white
    border: none
+  p.distance
+   &:hover
+    background-color: rgba(239,235,226,0.9) !important
+
+
   p
    .city_state
     opacity: 0.8
@@ -377,40 +401,63 @@ div.meeting_results
     opacity: 0.8
    .type
     opacity: 0.6
-
   div#info
-   width: 25%
-   text-align: center
+   width: 24%
+   background: rgb(231, 222, 189)
    display: inline-block !important
    vertical-align: top
-   font-weight: bold
-  span.time
-  span.day
+   height: 145px
+   text-align: center
+   font-weight: 600
+   font-size: 1em
+   color: white
+  .time
+   margin: 2px 0 2px 0 !important
+   color: white
+   font-weight: 600
+   padding: 5px 0 0 0
+   text-shadow: 0px 1px 2px rgba(131, 122, 89,0.9)
+ 
+  .day
    text-transform: uppercase
-  span.distance
+   padding: 2px 0 2px 0 !important
+   color: white
+   font-weight: 600
+   text-shadow: 0px 1px 2px rgba(131, 122, 89,0.9)
+   line-height: 2px
+  .distance
    font-weight: normal
+   padding: 10px 0 2px 0
 
 #filter_page
- background: rgb(240,81,35)
+ background: rgb(0, 136, 204)
  button
   background-color: white
   color: #5e5d5d
  button.selected
   box-shadow: 0px 1px 2px black
 
+.gm-style-iw > *
+ font-weight: normal
+ color: rgb(40, 40, 40)
 
 .filter
  button.ui-show
-  background-color: rgba(201,231,91,1) !important
+  background-color: #c0cb17 !important
  padding: 0 0 0 2%
  background-color: (250,250,250,0.2)
  text-transform: uppercase
  div
   margin: 5px
-  padding: 10px
+  padding: 15px
+  opacity: 0.9
  h5
   font-style: normal
   text-transform: uppercase
+ button
+  text-transform: capitalize
+ input[type="placeholder"]
+  text-transform: capitalize
  .type
   width: auto
   margin: 2px
@@ -445,15 +492,20 @@ div.meeting_results
    min-width: 75px
    margin: 2px 11px 2px 11px
 
+.search_text 
+ width: 100%
+
 .location
- min-width: 269px
- width: 20% !important
+ width: 209px
+
  padding: 5px
  color: white
+ font-weight: 600
  input
   width: 100px
   border: 1px solid rgba(220,220,220,1)
   padding: 2px
+  margin: 3px 0 0 2px
   text-transform: uppercase
   -webkit-appearance: none
   border-radius: 0px !important
@@ -470,16 +522,13 @@ div.meeting_results
   height: 40px
   width: 40px
 
-nav.bottom
- display: none
 
 
-/* mobile main page */
+
+/* --------------------------------mobile ------------------------------------- */
 #main_page
  text-align: center
  overflow-x: hidden !important
-
-
  .bigdealcontainer#mobile_view
   height: auto
   font-family: 'Alright Sans', sans-serif
@@ -490,7 +539,6 @@ nav.bottom
   color: white
   margin: 0
   width: 100%
-  
   .icon_part
    img.icon_large
     -webkit-animation-fill-mode: both
@@ -502,40 +550,11 @@ nav.bottom
     display: inline-block
     height: 50%
     width: 50%
-
   .homescreen_add
    color: rgba(240,80,35,1)
    text-transform: capitalize
    font-style: italic
    font-size: .5em
-
- 
- div.copy 
-  background-image: url(../images/filter_background.jpeg)
-  margin: 50px 0 0 0
-  min-width: 320px
-  width: 100%
-  max-width: 100%
-  background-size: cover
-
- .word9 
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de
-  text-shadow: none
-  font-family: '', sans-serif
-  -webkit-animation-delay: 2.4s
-  -webkit-animation-name: bounceInLeft
-  font-size: 1.1em
-  padding: 10px 0 0 0
-  
-
- .word13 
-  text-transform: capitalize
-  font-family: Alright Sans, Open Sans, sans-serif
-  position: relative
-  color: rgba(0,0,0,.8)
-  font-size: .5em
-  font-weight: normal
-  margin: 0 0 50px 0
 
  nav.bottom_mobile
   position: fixed
@@ -566,9 +585,6 @@ nav.bottom
      text-align: center
      color: white
   
-
-
-/* mobile no displays */
 h1.mobile
  display: none
 
@@ -595,13 +611,21 @@ h1.section_head
  padding: 3px
 
 
-/* media queries */
+
+
+
+
+/* ----------------- media queries ----------------- */
 @media (max-width: 1080px)
  .refresh
   width: 15% !important
   button.find_meeting
 
    display: inline-block
+
+ #signup_box 
+  width: 50% !important
+
 
 @media (max-width: 600px)
  .aboutus 
@@ -613,3 +637,7 @@ h1.section_head
    font-size: .7em
  .offset1
   margin-left: 0px !important
+
+@media (max-width: 767px)
+ #signup_box 
+  width: 100% !important

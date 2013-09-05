@@ -84,6 +84,11 @@ angular.module('addicaidSiteApp', ['ngResource', 'ui.map', 'ui.showhide'])
         templateUrl: 'views/signupFlow.html',
         controller: 'SignupFlowCtrl'
       })
+
+      .when('/meetingentry', {
+        templateUrl: 'views/meetingEntry.html',
+        controller: 'MeetingEntryCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
