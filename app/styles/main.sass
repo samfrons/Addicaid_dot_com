@@ -102,7 +102,7 @@ nav.bottom
 
 footer
  text-align: center
- margin: 50px 0 20px 0
+ margin: 0px 0 20px 0
 
 .offset1
  margin-left: 10.21111% !important
@@ -118,7 +118,6 @@ footer
  text-indent: 25px
  color: white
  font-weight: bold
- opacity: 0.9
  &:hover
   color: white
   text-decoration: none
@@ -138,7 +137,13 @@ footer
 
 
 nav.header
+ position: fixed
+ background: #f05123
+ height: 52px
+ display: block
+ z-index: 1000
  ul
+  li
   li.signup
    text-align: right
    width: 35%
@@ -154,6 +159,19 @@ nav.header
   max-width: 100%
   background-size: cover
 
+div.iphone
+ position: relative
+ float: right
+ display: block
+ left: -3%
+ img
+  position: relative
+  top: 148px
+  bottom: 0
+  margin: auto
+  display: inline-block
+  max-width: 350px !important
+
  .word9 
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de
   text-shadow: none
@@ -161,7 +179,11 @@ nav.header
   -webkit-animation-delay: 2.4s
   -webkit-animation-name: bounceInLeft
   font-size: 1.1em
-  padding: 10px 0 0 0
+  top: 15px !important
+  span
+   padding: 15px 0 0 0 !important
+   position: relative
+   top: 15px !important
 
  .word13 
   text-transform: capitalize
@@ -251,15 +273,20 @@ h5
    height: 30px
 
 .people_background
- background-image: url("../images/people_background.jpeg")
+ background-image: url("../images/peopleheaderv2.jpeg")
  width: 100% !important
+ margin-top: 60px
  hgroup
   font-size: 90% !important
   h2
+<<<<<<< HEAD
    font-size: 3.2em !important
+=======
+   font-size: 2.5em !important
+>>>>>>> aaed5a4f39d4ba57a89485bf48eeea05b51e27a7
 
 .awards
- background-image: url(../images/cheerleaders.jpeg)
+ background-image: url(../images/cheerleaders_new.jpeg)
  width: 100% !important
  height: inherit
  padding: 20px 0 20px 0
@@ -277,6 +304,7 @@ h5
 
 .quotes
  margin: 20px 1% 0 1%
+ width: 97%
  div.span4
   text-align: center
  blockquote
@@ -610,10 +638,82 @@ h1.section_head
  text-transform: uppercase
  padding: 3px
 
+/* ----------------- features section ----------------- */
+
+
+div.features
+ width: 95%
+ .feature_entry
+  padding: 5px 0 5px 0
+  h4
+   font-size: 1.5em
+  p
+   font-size: 1.5em
+   line-height: 1.2em
+  img
+   max-height: 400px
+
+h3.features
+ text-align: center
+
+.missionbutton
+ text-align: center
+ margin: 50px 0 0 0
+ button.mission
+  background-color: #f05123
+  color: white
+  text-align: center
+  margin: 0 auto
+  text-transform: capitalize
+  padding: 20px
 
 
 
+/* ----------------- misson page ----------------- */
 
+div.container-squeeze
+ width: 85%
+ margin: 0 auto !important
+ p
+  font-size: 1.1em
+  line-height: 1.5em
+  font-weight: 400
+
+div#missionhead
+ background-size: 100% auto
+ h1
+ h2
+  font-weight: lighter
+
+div.centered 
+ text-align: center
+
+h2.centered
+ text-align: center
+ line-height: 20px
+ min-height: 100px
+
+
+
+.wordmark
+ background-color: #f05123
+
+span.arrow
+ font-weight: bold
+ font-size: 40px
+ padding: 0 20px 0 20px
+ color: gray
+ vertical-align: middle
+
+.missioncopy
+ .span4
+  padding: 10px
+  p
+   font-size: 1.1em
+   line-height: 1.5em
+   font-weight: 400
+  a
+   font-weight: bold
 
 /* ----------------- media queries ----------------- */
 @media (max-width: 1080px)
@@ -641,3 +741,9 @@ h1.section_head
 @media (max-width: 767px)
  #signup_box 
   width: 100% !important
+
+ div.iphone
+  display: none
+  img.iphone
+   display: none
+
