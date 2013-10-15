@@ -1,19 +1,80 @@
 <div class="headline people_background">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <hgroup>
+            <img src="images/addicaid_wordmark.png" class="img-responsive" />
+            <h2>A new kind of treatment</h2>
+            <div class="bigdealcontainer">
+                <div class="words"><span class="word1">
+    Your </span> <span class="word2">life</span> <span class="word3">is</span> <span class="word4">about </span> <span class="word5">to</span> <span class="word6"> get</span> <span class="word7">way</span> <span class="word8">more</span><br/><br/><span class="word9">awesome !</span><br/> <span class="word10"></span> <span class="word11"></span> <span class="word13"></span></div>
+        </hgroup>
+    </div>
 
+    <div class="col-md-6 col-lg-6 visible-md visible-lg" ng-controller="RegisterCtrl"><!-- <img class="iphone" src="images/iPhoneflat.png"/> -->
+        <form name="registerForm">
+            <span class="alert alert-danger hide" id="errormsg">Please provide valid information</span>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Username" ng-model="user.username" />
+                <span class="input-group-addon"><img src="images/user_field.png" style="height: 16px" /></span>
+            </div>
+            <br />
+            <div class="input-group">
+                <input type="email" class="form-control" placeholder="Email" ng-model="user.email">
+                <span class="input-group-addon"><img src="images/email_field.png" style="height: 12px" /></span>
+            </div>
+            <br />
+            <div class="input-group">
+                <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
+                <span class="input-group-addon"><img src="images/password_field.png" style="width: auto; height: 16px" /></span>
+            </div>
+            <br />
+            <div class="input-group">
+                <input type="password" class="form-control" placeholder="Confirm Password" ng-model="user.passwordConfirmation">
+                <span class="input-group-addon"><img src="images/password_field.png" style="width: auto; height: 16px" /></span>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-xs-4 col-4 col-sm-4 col-lg-4">
+                    <div class="input-group">
+                        <select ng-model="user.gender" class="form-control">
+                            <option value="">Gender</option>
+                            <option value="m">Male</option>
+                            <option value="f">Female</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-3 col-4 col-sm-4 col-lg-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Age" ng-model="user.age">
+                    </div>
+                </div>
+                <div class="col-xs-4 col-4 col-sm-4 col-lg-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Zipcode" ng-model="user.zipcode">
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="row avatar_select">
+              <h2>Choose Your Avatar</h2>
+                <div class="btn-group">
+                    <button ng-repeat="avatar in avatars" ng-model="user.avatarId" btn-radio="avatar"
+                            class="avatar {{ avatar }}">
+                    </button>
 
-<div class="span6">
-    <hgroup>
-        <img src="images/addicaid_wordmark.png"/>
-        <h2>A new kind of treatment</h2>
+                </div>
+            </div>
 
-
-        <div class="bigdealcontainer">
-            <div class="words"><span class="word1">
-Your </span> <span class="word2">life</span> <span class="word3">is</span> <span class="word4">about </span> <span class="word5">to</span> <span class="word6"> get</span> <span class="word7">way</span> <span class="word8">more</span><br/><br/><span class="word9">awesome !</span><br/> <span class="word10"></span> <span class="word11"></span> <span class="word13"></span></div>
-    </hgroup>
-</div>
-
-<div class="span6 iphone"><img class="iphone" src="images/iPhoneflat.png"/></div>
+            <div class="row pull-right">
+                <div class="col-12 col-sm-12 col-lg-12">
+                    <button type="button" class="btn btn-primary btn-signup-next" ng-click="doRegister()">
+                        <div class="pull-left">Submit</div><i class="icon-play icon-x arrow" style="position: absolute; top:15px"></i>
+                    </button>
+                    <br />
+                    <a href="#" class="do-it-later bold_link"><h4>Or do it later&nbsp;&nbsp;</h4></a>
+                </div>
+            </div>
+        </form>
+    </div>
 
 
 <!--

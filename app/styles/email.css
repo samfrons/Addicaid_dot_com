@@ -89,6 +89,8 @@ form .button {
     text-indent: 5px;
     min-width: 130px;
     max-width: 300px;
+    background-color: #fff;
+    color: #b94a48;
 }
 
 #mc_embed_signup input.button {

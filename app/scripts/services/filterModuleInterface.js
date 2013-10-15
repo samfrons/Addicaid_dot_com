@@ -42,9 +42,9 @@ angular.module('addicaidSiteApp')
       } else if (a.coords === null || b.coords === null) {
         return false;
       } else {
-        return a.coords.latitude === b.coords.latitude
+        return (a.coords.latitude === b.coords.latitude
           && a.coords.longitude === b.coords.longitude
-          && a.coords.accuracy === b.coords.accuracy;
+          && a.coords.accuracy === b.coords.accuracy);
       }
     };
 

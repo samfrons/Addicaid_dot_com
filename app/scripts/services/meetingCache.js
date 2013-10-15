@@ -53,7 +53,7 @@ angular.module('addicaidSiteApp')
 
         // clean up time
         var day;
-        /* jshint -W015 */
+        
         switch (meeting.schedule.dayAbbrev) {
           case 'SU':
             day = 0;
