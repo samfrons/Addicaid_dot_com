@@ -13,9 +13,52 @@ Your </span> <span class="word2">life</span> <span class="word3">is</span> <span
     </hgroup>
 </div>
 
-<div class="span6 iphone"><img class="iphone" src="images/iPhoneflat.png"/></div>
+<!--<div class="span6 iphone"><img class="iphone" src="images/iPhoneflat.png"/></div>-->
 
-
+<div class="row span6">
+    <form name="registerForm" class="register col-xs-12 col-8 col-sm-10 col-lg-9">
+        <span class="alert danger hide" id="errormsg">Please provide valid information</span>
+        <div class="input-group input-group-lg">
+            <input type="text" class="form-control" placeholder="Username" ng-model="user.username" />
+            <span class="input-group-addon"><img src="/images/user_field.png" style="height: 16px" /></span>
+        </div>
+        <br />
+        <div class="input-group input-group-lg">
+            <input type="email" class="form-control" placeholder="Email" ng-model="user.email">
+            <span class="input-group-addon"><img src="/images/email_field.png" style="height: 12px" /></span>
+        </div>
+        <br />
+        <div class="input-group input-group-lg">
+            <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
+            <span class="input-group-addon"><img src="/images/password_field.png" style="width: auto; height: 16px" /></span>
+        </div>
+        <br />
+        <div class="input-group input-group-lg">
+            <input type="password" class="form-control" placeholder="Confirm Password" ng-model="user.passwordConfirmation">
+            <span class="input-group-addon"><img src="/images/password_field.png" style="width: auto; height: 16px" /></span>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-4 col-4 col-sm-4 col-lg-4">
+                <div class="input-group input-group-lg">
+                    <select ng-model="user.gender" class="form-control">
+                        <option value="">Gender</option>
+                        <option value="m">Male</option>
+                        <option value="f">Female</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-3 col-4 col-sm-4 col-lg-4">
+                <div class="input-group input-group-lg">
+                    <input type="text" class="form-control" placeholder="Age" ng-model="user.age">
+                </div>
+            </div>
+            <div class="col-xs-4 col-4 col-sm-4 col-lg-4">
+                <div class="input-group input-group-lg">
+                    <input type="text" class="form-control" placeholder="Zipcode" ng-model="user.zipcode">
+                </div>
+            </div>
+        </div>
 <!--
 <div class="span6">
     <hgroup>
